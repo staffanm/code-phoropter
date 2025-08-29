@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Phoropter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h1>Code Phoropter</h1>
+            <p class="subtitle">Find your perfect code display settings</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="status" id="status">Starting calibration...</p>
+        </div>
+
+
+        <div class="comparison-container">
+            <div class="code-panel" id="panelA">
+                <div class="panel-label">Option A</div>
+                <div class="panel-summary" id="summaryA"></div>
+                <pre><code id="codeA"></code></pre>
+                <button class="floating-choice-btn" id="btnA" onclick="selectOption('A')">
+                    <span class="key-hint">[A]</span> Prefer A
+                </button>
+            </div>
+            
+            <div class="divider">
+                <div class="vs">VS</div>
+                <button class="floating-choice-btn neutral" id="btnEqual" onclick="selectOption('equal')">
+                    <span class="key-hint">[S]</span> No Preference
+                </button>
+            </div>
+            
+            <div class="code-panel" id="panelB">
+                <div class="panel-label">Option B</div>
+                <div class="panel-summary" id="summaryB"></div>
+                <pre><code id="codeB"></code></pre>
+                <button class="floating-choice-btn" id="btnB" onclick="selectOption('B')">
+                    <span class="key-hint">[D]</span> Prefer B
+                </button>
+            </div>
+        </div>
+
+        <div class="description-section">
+            <p class="description">Just like an eye doctor uses a phoropter to find your perfect vision prescription through "better 1 or 2?" comparisons, Code Phoropter helps you discover your ideal coding font, size, colors, and spacing through side-by-side A/B tests. Compare code samples across different settings until you find the combination that makes your code most readable and comfortable for long coding sessions. Once you've found your perfect settings, export them directly to your favorite editor or terminal.</p>
+        </div>
+
+        <div id="fontFamilySelector" class="font-family-selector hidden">
+            <h2>Choose Your Preferred Font Style</h2>
+            <p class="selector-subtitle">Click on the font style that appeals to you most</p>
+            <div class="font-families-grid" id="fontFamiliesGrid">
+                <!-- Font family options will be dynamically populated -->
+            </div>
+            
+            <div id="importSection" class="import-section-inline">
+                <h4>Import Previous Settings</h4>
+                <div class="import-field">
+                    <input type="text" id="importSettings" placeholder="Paste your settings string here...">
+                    <button onclick="importAndStart()">Import & Start</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="theme-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="themeToggle" onchange="toggleThemeMode()">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label" id="toggleLabel">Dark Mode</span>
+                </label>
+            </div>
+            <select id="languageSelect" onchange="changeLanguage()">
+                <option value="javascript">JavaScript</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+                <option value="rust">Rust</option>
+                <option value="go">Go</option>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="yaml">YAML</option>
+                <option value="json">JSON</option>
+                <option value="markdown">Markdown</option>
+                <option value="self">This App's Code</option>
+            </select>
+            <button class="reset-btn" onclick="resetTest()">Start Over</button>
+            <span class="comparison-count" id="comparisonCount">Comparison 1</span>
+        </div>
+
+        <div id="results" class="results hidden">
+            <h2>Your Ideal Code Display Settings</h2>
+            <div class="result-details" id="resultDetails"></div>
+            <div class="result-preview">
+                <h3>Preview with your settings:</h3>
+                <pre><code id="resultCode"></code></pre>
+            </div>
+            <div class="result-actions">
+                <button onclick="copySettings()">Copy CSS Settings</button>
+                <button onclick="resetTest()">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
