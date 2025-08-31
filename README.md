@@ -16,10 +16,10 @@ Code Phoropter helps developers discover their ideal coding font, size, colors, 
 
 ### 🔍 Comprehensive Testing
 - **Font families**: Find your preferred style first
-- **Font sizes**: Test readability from 10px to 24px
+- **Font sizes**: 10px to 24px range testing
 - **Font weights**: Light (300) to Bold (700)
-- **Line heights**: Optimize vertical spacing (1.2 to 2.0)
-- **Color schemes**: Light and dark themes with syntax highlighting
+- **Line heights**: 1.2 to 2.0 spacing optimization
+- **Color schemes**: 50+ light and dark themes with syntax highlighting
 
 ### 💾 Export Options
 - **Download Package**: ZIP file with font files, configuration, and installation instructions
@@ -63,11 +63,13 @@ python -m http.server 8000  # Then visit http://localhost:8000
 
 ## Keyboard Shortcuts
 
-- **A** / **Left Arrow**: Prefer Option A (left)
-- **S** / **Down Arrow**: No Preference
-- **D** / **Right Arrow**: Prefer Option B (right)
-- **R**: Reset/Start Over
-- **T**: Toggle Theme (Light/Dark)
+| Key | Action |
+|-----|--------|
+| `A` | Prefer left option |
+| `S` | No preference |  
+| `D` | Prefer right option |
+| `R` | Reset/Start Over |
+| `T` | Toggle theme |
 
 ## How It Works
 

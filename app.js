@@ -530,19 +530,19 @@ const colorSchemes = {
     ]
 };
 
-// Code sample URLs - loading real code from files and external sources
+// Code sample URLs - loading real code from local files
 const codeSampleUrls = {
     javascript: './samples/javascript.js',
     python: './samples/python.py',
     rust: './samples/rust.rs',
     go: './samples/go.go',
-    java: 'https://raw.githubusercontent.com/spring-projects/spring-boot/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java',
-    css: 'https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css',
-    html: 'https://raw.githubusercontent.com/h5bp/html5-boilerplate/main/src/index.html',
-    yaml: 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json',
-    json: 'https://raw.githubusercontent.com/microsoft/vscode/main/package.json',
-    markdown: 'https://raw.githubusercontent.com/microsoft/vscode/main/README.md',
-    legal: null, // Use fallback sample (GDPR text)
+    java: './samples/Application.java',
+    css: './samples/styles.css',
+    html: './samples/index.html',
+    yaml: './samples/config.yml',
+    json: './samples/config.json',
+    markdown: './README.md',
+    legal: './samples/gdpr.txt',
     self: './app.js',
     custom: null // Will be set by user input
 };

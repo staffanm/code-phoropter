@@ -1,0 +1,338 @@
+# Code Phoropter Configuration
+# YAML configuration file for font testing application
+
+name: code-phoropter
+version: 1.0.0
+description: Systematic font preference discovery tool
+
+# Application settings
+app:
+  name: Code Phoropter
+  environment: production
+  debug: false
+  port: 3000
+  host: localhost
+  
+  # Feature flags
+  features:
+    font_detection: true
+    custom_fonts: true
+    color_schemes: true
+    export_functionality: true
+    import_settings: true
+    keyboard_shortcuts: true
+    dark_mode: true
+    
+  # Rate limiting
+  rate_limit:
+    enabled: false
+    max_requests: 100
+    window_minutes: 1
+
+# Font configuration
+fonts:
+  # Font sources in priority order
+  sources:
+    - type: google_fonts
+      enabled: true
+      api_key: null  # Not required for web fonts
+      families:
+        - family: Fira Code
+          weights: [300, 400, 500, 600, 700]
+          subsets: [latin, latin-ext]
+        - family: JetBrains Mono
+          weights: [100, 200, 300, 400, 500, 600, 700, 800]
+        - family: Source Code Pro
+          weights: [200, 300, 400, 500, 600, 700, 900]
+        - family: IBM Plex Mono
+          weights: [100, 200, 300, 400, 500, 600, 700]
+    
+    - type: system_fonts
+      enabled: true
+      auto_detect: true
+      common_fonts:
+        - Consolas
+        - Monaco  
+        - Menlo
+        - SF Mono
+        - Courier New
+        - DejaVu Sans Mono
+        - Ubuntu Mono
+    
+    - type: embedded_fonts
+      enabled: true
+      base_url: https://cdn.jsdelivr.net
+      fonts:
+        - name: Hack
+          url: /npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2
+          format: woff2
+          weight: 400
+        - name: Cascadia Code
+          url: /npm/@fontsource/cascadia-code@5.0.0/files/cascadia-code-latin-400-normal.woff2
+          format: woff2
+          weight: 400
+  
+  # Font fallback chain
+  fallback:
+    - Consolas
+    - Monaco
+    - "Liberation Mono"
+    - "Courier New" 
+    - monospace
+
+# Display settings ranges
+display:
+  font_size:
+    min: 10
+    max: 24
+    step: 2
+    default: 14
+    unit: px
+    
+  font_weight:
+    available: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+    default: 400
+    labels:
+      100: Thin
+      200: Extra Light
+      300: Light
+      400: Regular
+      500: Medium
+      600: Semi Bold
+      700: Bold
+      800: Extra Bold
+      900: Black
+      
+  line_height:
+    min: 1.2
+    max: 2.0
+    step: 0.1
+    default: 1.5
+    
+  letter_spacing:
+    min: -1.0
+    max: 1.0
+    step: 0.2
+    default: 0.0
+    unit: px
+
+# Color scheme definitions
+color_schemes:
+  default_mode: dark
+  
+  dark:
+    - name: Monokai
+      background: "#272822"
+      foreground: "#f8f8f2"
+      cursor: "#f8f8f0"
+      selection: "#49483e"
+      syntax:
+        keyword: "#f92672"
+        string: "#e6db74"
+        comment: "#75715e"
+        function: "#66d9ef"
+        variable: "#f8f8f2"
+        number: "#ae81ff"
+        operator: "#f92672"
+        type: "#66d9ef"
+        
+    - name: Dracula
+      background: "#282a36"
+      foreground: "#f8f8f2"
+      selection: "#44475a"
+      syntax:
+        keyword: "#ff79c6"
+        string: "#f1fa8c"
+        comment: "#6272a4"
+        function: "#50fa7b"
+        variable: "#f8f8f2"
+        number: "#bd93f9"
+        
+    - name: One Dark
+      background: "#282c34"
+      foreground: "#abb2bf"
+      syntax:
+        keyword: "#c678dd"
+        string: "#98c379"
+        comment: "#5c6370"
+        function: "#61afef"
+        
+  light:
+    - name: GitHub Light
+      background: "#ffffff"
+      foreground: "#24292e"
+      selection: "#0366d625"
+      syntax:
+        keyword: "#d73a49"
+        string: "#032f62"
+        comment: "#6a737d"
+        function: "#6f42c1"
+        variable: "#24292e"
+        number: "#005cc5"
+        
+    - name: Solarized Light
+      background: "#fdf6e3"
+      foreground: "#657b83"
+      selection: "#eee8d5"
+      syntax:
+        keyword: "#859900"
+        string: "#2aa198"
+        comment: "#93a1a1"
+        function: "#268bd2"
+
+# Tournament algorithm settings
+tournament:
+  algorithm: round_robin
+  
+  # Scoring system
+  scoring:
+    win: 3
+    tie: 1
+    loss: 0
+    
+  # Testing phases
+  phases:
+    - name: font_family
+      description: Choose preferred font family
+      comparisons_per_round: 2
+      
+    - name: font_size  
+      description: Optimize font size
+      range: [12, 14, 16, 18]
+      
+    - name: font_weight
+      description: Find ideal weight
+      range: [300, 400, 500, 600, 700]
+      
+    - name: line_height
+      description: Adjust line spacing
+      range: [1.3, 1.4, 1.5, 1.6]
+      
+    - name: color_scheme
+      description: Select color theme
+      include_both_modes: true
+      
+  # Font similarity algorithm
+  similarity:
+    enabled: true
+    threshold: 0.7
+    weights:
+      category: 0.4
+      weight: 0.2
+      width: 0.2
+      style: 0.2
+
+# Code samples for testing
+code_samples:
+  languages:
+    javascript:
+      file: ./samples/javascript.js
+      highlight: true
+      
+    python:
+      file: ./samples/python.py  
+      highlight: true
+      
+    rust:
+      file: ./samples/rust.rs
+      highlight: true
+      
+    go:
+      file: ./samples/go.go
+      highlight: true
+      
+    css:
+      file: ./samples/styles.css
+      highlight: true
+      
+    html:
+      file: ./samples/index.html
+      highlight: true
+      
+    json:
+      file: ./samples/config.json
+      highlight: true
+      
+    yaml:
+      file: ./samples/config.yml
+      highlight: true
+      
+    markdown:
+      file: ./samples/README.md
+      highlight: true
+      
+    legal:
+      file: ./samples/gdpr.txt
+      highlight: false
+      
+    custom:
+      allow_upload: true
+      max_file_size: 1MB
+      
+  # Default sample if file loading fails
+  fallback: |
+    function example() {
+        const message = "Hello, world!";
+        console.log(message);
+        return message.length > 0;
+    }
+
+# Export configuration
+export:
+  formats:
+    - name: css
+      extension: .css
+      mime_type: text/css
+      
+    - name: json
+      extension: .json
+      mime_type: application/json
+      
+    - name: vscode
+      extension: .json
+      description: VS Code settings.json format
+      
+    - name: sublime
+      extension: .sublime-settings
+      description: Sublime Text preferences
+      
+    - name: vim
+      extension: .vim
+      description: Vim configuration
+      
+  # Package options
+  package:
+    include_fonts: true
+    include_readme: true
+    include_examples: true
+    compression_level: 6
+    
+# Storage settings  
+storage:
+  type: localStorage
+  prefix: "codePhoropter_"
+  max_size_mb: 5
+  encryption: false
+  auto_cleanup: true
+  retention_days: 90
+
+# Analytics and telemetry
+analytics:
+  enabled: false
+  provider: null
+  tracking_id: null
+  collect_anonymous_usage: false
+  
+# Logging
+logging:
+  level: info
+  console: true
+  file: false
+  max_file_size_mb: 10
+  
+# Development settings
+development:
+  hot_reload: true
+  source_maps: true
+  debug_mode: true
+  mock_font_detection: false

@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "code-phoropter-config",
+  "version": "1.0.0",
+  "description": "Configuration for Code Phoropter font testing application",
+  "config": {
+    "application": {
+      "name": "Code Phoropter",
+      "version": "1.0.0",
+      "environment": "production",
+      "debug": false,
+      "features": {
+        "enableFontDetection": true,
+        "enableCustomFonts": true,
+        "enableColorSchemes": true,
+        "enableExport": true,
+        "maxComparisons": 100
+      }
+    },
+    "fonts": {
+      "sources": [
+        {
+          "type": "google",
+          "enabled": true,
+          "fonts": [
+            "Fira Code",
+            "JetBrains Mono",
+            "Source Code Pro",
+            "IBM Plex Mono",
+            "Roboto Mono"
+          ]
+        },
+        {
+          "type": "system",
+          "enabled": true,
+          "autoDetect": true,
+          "fonts": [
+            "Consolas",
+            "Monaco",
+            "Menlo",
+            "Courier New"
+          ]
+        },
+        {
+          "type": "embedded",
+          "enabled": true,
+          "baseUrl": "https://cdn.jsdelivr.net",
+          "fonts": [
+            {
+              "name": "Hack",
+              "url": "/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2",
+              "weight": 400
+            },
+            {
+              "name": "Cascadia Code",
+              "url": "/npm/@fontsource/cascadia-code@5.0.0/files/cascadia-code-latin-400-normal.woff2",
+              "weight": 400
+            }
+          ]
+        }
+      ],
+      "defaultFamily": "monospace",
+      "fallbackChain": ["Consolas", "Monaco", "monospace"]
+    },
+    "display": {
+      "sizes": {
+        "min": 10,
+        "max": 24,
+        "step": 2,
+        "default": 14,
+        "unit": "px"
+      },
+      "weights": {
+        "available": [100, 200, 300, 400, 500, 600, 700, 800, 900],
+        "default": 400,
+        "labels": {
+          "100": "Thin",
+          "200": "Extra Light",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "Semi Bold",
+          "700": "Bold",
+          "800": "Extra Bold",
+          "900": "Black"
+        }
+      },
+      "lineHeights": {
+        "min": 1.2,
+        "max": 2.0,
+        "step": 0.1,
+        "default": 1.5
+      },
+      "letterSpacing": {
+        "min": -1.0,
+        "max": 1.0,
+        "step": 0.2,
+        "default": 0,
+        "unit": "px"
+      }
+    },
+    "colorSchemes": {
+      "dark": [
+        {
+          "name": "Monokai",
+          "background": "#272822",
+          "foreground": "#f8f8f2",
+          "syntax": {
+            "keyword": "#f92672",
+            "string": "#e6db74",
+            "comment": "#75715e",
+            "function": "#66d9ef",
+            "variable": "#f8f8f2",
+            "number": "#ae81ff",
+            "operator": "#f92672"
+          }
+        },
+        {
+          "name": "Dracula",
+          "background": "#282a36",
+          "foreground": "#f8f8f2",
+          "syntax": {
+            "keyword": "#ff79c6",
+            "string": "#f1fa8c",
+            "comment": "#6272a4",
+            "function": "#50fa7b",
+            "variable": "#f8f8f2",
+            "number": "#bd93f9",
+            "operator": "#ff79c6"
+          }
+        }
+      ],
+      "light": [
+        {
+          "name": "GitHub Light",
+          "background": "#ffffff",
+          "foreground": "#24292e",
+          "syntax": {
+            "keyword": "#d73a49",
+            "string": "#032f62",
+            "comment": "#6a737d",
+            "function": "#6f42c1",
+            "variable": "#24292e",
+            "number": "#005cc5",
+            "operator": "#d73a49"
+          }
+        }
+      ],
+      "default": "dark"
+    },
+    "tournament": {
+      "algorithm": "round-robin",
+      "scoring": {
+        "win": 3,
+        "tie": 1,
+        "loss": 0
+      },
+      "rounds": [
+        "fontFamily",
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "colorScheme"
+      ],
+      "similarity": {
+        "enabled": true,
+        "threshold": 0.7,
+        "weights": {
+          "category": 0.4,
+          "weight": 0.2,
+          "width": 0.2,
+          "style": 0.2
+        }
+      }
+    },
+    "export": {
+      "formats": ["css", "json", "vscode", "sublime", "vim"],
+      "includeTimestamp": true,
+      "includeMetadata": true,
+      "compression": false
+    },
+    "api": {
+      "endpoints": {
+        "fonts": "/api/fonts",
+        "config": "/api/config",
+        "export": "/api/export"
+      },
+      "rateLimit": {
+        "enabled": false,
+        "maxRequests": 100,
+        "windowMs": 60000
+      }
+    },
+    "storage": {
+      "type": "localStorage",
+      "prefix": "codePhoropter_",
+      "maxSize": 5242880,
+      "compression": false,
+      "encryption": false
+    },
+    "telemetry": {
+      "enabled": false,
+      "endpoint": null,
+      "events": []
+    }
+  }
+}
