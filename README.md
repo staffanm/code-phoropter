@@ -1,6 +1,6 @@
-# Code Phoropter 👁️
+# Code Phoropter
 
-> Find your perfect code display settings through scientific A/B testing
+> Find your perfect code display settings through systematic A/B testing
 
 Code Phoropter helps developers discover their ideal coding font, size, colors, and spacing through side-by-side comparisons — just like an eye doctor uses a phoropter to find your perfect vision prescription through "better 1 or 2?" tests.
 
@@ -8,7 +8,7 @@ Code Phoropter helps developers discover their ideal coding font, size, colors, 
 
 ## Features
 
-### 🎯 Scientific Font Selection
+### 🎯 Systematic Font Selection
 - **Tournament-style comparisons**: Side-by-side A/B testing of fonts
 - **6 Font categories**: Classic Terminal, Modern Development, Ligature-Enabled, Variable Width, Open Source Favorites, and Unique & Distinctive
 - **100+ coding fonts**: Comprehensive database including system, Google Fonts, and premium options

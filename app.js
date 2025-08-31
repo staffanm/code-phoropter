@@ -1936,25 +1936,8 @@ function init() {
     // Show start screen with both import and font family options
     showStartScreen();
     
-    // Give critical fonts time to load, then allow start
-    setTimeout(() => {
-        // Add "Start Fresh" button to footer
-        const footer = document.querySelector('.footer');
-        if (!document.getElementById('startFreshBtn')) {
-            const startBtn = document.createElement('button');
-            startBtn.id = 'startFreshBtn';
-            startBtn.textContent = 'Start Fresh';
-            startBtn.className = 'reset-btn';
-            startBtn.onclick = () => {
-                document.getElementById('importSection').classList.add('hidden');
-                document.getElementById('fontFamilySelector').classList.add('hidden');
-                // Reset engine to ensure clean start
-                engine = new ComparisonEngine();
-                showNextComparison();
-            };
-            footer.insertBefore(startBtn, footer.firstChild);
-        }
-    }, 500);
+    // Give critical fonts time to load before allowing start
+    // (No need for extra Start Fresh button - Start Over handles this)
     
     // Keyboard shortcuts
     document.addEventListener('keydown', (e) => {

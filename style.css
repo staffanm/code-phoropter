@@ -395,6 +395,20 @@ body.show-summaries .panel-summary {
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
+.about-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.about-link:hover {
+    color: var(--text-primary);
+    background: var(--bg-tertiary);
+}
+
 #languageSelect {
     padding: 5px 10px;
     background: var(--bg-tertiary);
