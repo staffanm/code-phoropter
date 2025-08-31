@@ -1,13 +1,351 @@
+// Font source configurations - handling multiple font sources
+const fontSources = {
+    // Google Fonts (loaded via Google Fonts API)
+    googleFonts: [
+        'Fira+Code:wght@300;400;500;600;700',
+        'JetBrains+Mono:wght@300;400;500;600;700',
+        'Victor+Mono:wght@300;400;500;600;700',
+        'Recursive:wght@300;400;500;600;700&MONO=1',
+        'Source+Code+Pro:wght@300;400;500;600;700',
+        'IBM+Plex+Mono:wght@300;400;500;600;700',
+        'Roboto+Mono:wght@300;400;500;600;700',
+        'Red+Hat+Mono:wght@300;400;500;600;700',
+        'DM+Mono:wght@300;400;500',
+        'Geist+Mono:wght@100;200;300;400;500;600;700;800;900',
+        'Martian+Mono:wght@300;400;500;600;700',
+        'Ubuntu+Mono:wght@400;700',
+        'Inconsolata:wght@200;300;400;500;600;700;800;900',
+        'Anonymous+Pro:wght@400;700',
+        'Oxygen+Mono:wght@400',
+        'PT+Mono:wght@400',
+        'Overpass+Mono:wght@300;400;500;600;700;800',
+        'Cousine:wght@400;700',
+        'Fira+Mono:wght@400;500;700',
+        'Space+Mono:wght@400;700',
+        'Courier+Prime:wght@400;700',
+        'Sometype+Mono:wght@400;500;600;700',
+        'Spline+Sans+Mono:wght@300;400;500;600;700',
+        'B612+Mono:wght@400;700',
+        'Noto+Sans+Mono:wght@300;400;500;600;700;800;900',
+        'Share+Tech+Mono:wght@400',
+        'Nova+Mono:wght@400',
+        'Cutive+Mono:wght@400',
+        'Nanum+Gothic+Coding:wght@400;700',
+        'Lekton:wght@400;700',
+        'VT323:wght@400',
+        'Major+Mono+Display:wght@400',
+        'Press+Start+2P:wght@400'
+    ],
+    
+    // Custom font sources (loaded via @font-face)
+    customFonts: [
+        {
+            name: 'Hack',
+            url: 'https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2',
+            weight: 400
+        },
+        {
+            name: 'Cascadia Code',
+            url: 'https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@5.0.0/files/cascadia-code-latin-400-normal.woff2',
+            weight: 400
+        },
+        {
+            name: 'Cascadia Mono',
+            url: 'https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.0.0/files/cascadia-mono-latin-400-normal.woff2',
+            weight: 400
+        },
+        {
+            name: 'Iosevka',
+            url: 'https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/files/iosevka-latin-400-normal.woff2',
+            weight: 400
+        },
+        {
+            name: 'Hasklig',
+            url: 'https://cdn.jsdelivr.net/gh/i-tu/Hasklig/woff/Hasklig-Regular.woff',
+            weight: 400
+        },
+        {
+            name: 'Fantasque Sans Mono',
+            url: 'https://cdn.jsdelivr.net/gh/belluzj/fantasque-sans/fonts-woff/FantasqueSansMono-Regular.woff',
+            weight: 400
+        },
+        {
+            name: 'Mononoki',
+            url: 'https://cdn.jsdelivr.net/gh/madmalik/mononoki/export/mononoki-Regular.woff2',
+            weight: 400
+        },
+        {
+            name: 'Go Mono',
+            url: 'https://cdn.jsdelivr.net/gh/golang/image/font/gofont/ttfs/Go-Mono.ttf',
+            weight: 400
+        },
+        {
+            name: 'JuliaMono',
+            url: 'https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2',
+            weight: 400
+        },
+        {
+            name: 'Intel One Mono',
+            url: 'https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2',
+            weight: 400
+        },
+        {
+            name: 'Liberation Mono',
+            url: 'https://cdn.jsdelivr.net/gh/liberationfonts/liberation-fonts/src/LiberationMono-Regular.ttf',
+            weight: 400
+        },
+        {
+            name: 'Serious Shanns',
+            url: 'https://kabeech.github.io/serious-shanns/fonts/serious-shanns-regular.woff2',
+            weight: 400,
+            fallbackUrl: 'https://kabeech.github.io/serious-shanns/fonts/serious-shanns-regular.ttf'
+        },
+        {
+            name: 'Monocraft',
+            url: 'https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft/dist/Monocraft.otf',
+            weight: 400
+        },
+        {
+            name: 'Agave',
+            url: 'https://cdn.jsdelivr.net/gh/agarick/agave/dist/Agave-Regular.ttf',
+            weight: 400
+        },
+        {
+            name: 'Office Code Pro',
+            url: 'https://cdn.jsdelivr.net/gh/nathco/Office-Code-Pro/Fonts/Office%20Code%20Pro/OTF/OfficeCodePro-Regular.otf',
+            weight: 400
+        },
+        {
+            name: 'Hermit',
+            url: 'https://pcaro.es/d/otf/Hermit-Regular.otf',
+            weight: 400
+        },
+        {
+            name: '3270',
+            url: 'https://cdn.jsdelivr.net/gh/rbanffy/3270font/build/3270-Regular.woff2',
+            weight: 400
+        }
+    ],
+    
+    // System fonts to check for local availability (non-embeddable only)
+    systemFonts: [
+        'Aptos Mono', 'Consolas', 'SF Mono', 'Monaco', 'Menlo',
+        'Courier New', 'Lucida Console', 'Andale Mono', 'DejaVu Sans Mono',
+        'Meslo LG', 'Input Mono', 'Operator Mono', 'Dank Mono',
+        'MonoLisa', 'Berkeley Mono', 'Commit Mono', 'Comic Code',
+        'PragmataPro', 'APL2741', 'APL385 Unicode'
+    ]
+};
+
+// Helper function to load custom fonts via @font-face
+function loadCustomFonts() {
+    const style = document.createElement('style');
+    let css = '';
+    
+    fontSources.customFonts.forEach(font => {
+        css += `
+            @font-face {
+                font-family: '${font.name}';
+                src: url('${font.fallbackUrl || font.url}') format('${font.url.endsWith('.woff2') ? 'woff2' : font.url.endsWith('.woff') ? 'woff' : font.url.endsWith('.ttf') ? 'truetype' : 'opentype'}');
+                font-weight: ${font.weight || 400};
+                font-style: normal;
+                font-display: swap;
+            }
+        `;
+    });
+    
+    style.textContent = css;
+    document.head.appendChild(style);
+}
+
+// Font availability detection
+const detectedFonts = new Set();
+const fontCheckCache = new Map();
+
+// Check if a font is available using FontDetective results
+function isFontAvailable(fontName) {
+    // Check cache first
+    if (fontCheckCache.has(fontName)) {
+        return fontCheckCache.get(fontName);
+    }
+    
+    // Check if font is in the detected fonts set
+    const isAvailable = detectedFonts.has(fontName);
+    
+    // Cache the result
+    fontCheckCache.set(fontName, isAvailable);
+    
+    return isAvailable;
+}
+
+// Detect all available system fonts
+function detectSystemFonts() {
+    console.log('Detecting installed system fonts...');
+    const availableFonts = [];
+    
+    // Also check some common programming fonts that might be locally installed
+    const additionalFontsToCheck = [
+        'Hack', 'Cascadia Code', 'Cascadia Mono', 'JetBrains Mono',
+        'Fira Code', 'Source Code Pro', 'Iosevka', 'Hasklig',
+        'Victor Mono', 'Fantasque Sans Mono', 'Mononoki', 'Go Mono',
+        'JuliaMono', 'Intel One Mono', 'Liberation Mono', 'DejaVu Sans Mono'
+    ];
+    
+    // Combine system fonts with additional fonts to check
+    const allFontsToCheck = [...new Set([...fontSources.systemFonts, ...additionalFontsToCheck])];
+    
+    allFontsToCheck.forEach(fontName => {
+        if (isFontAvailable(fontName)) {
+            availableFonts.push(fontName);
+            detectedFonts.add(fontName);
+            console.log(`✓ ${fontName} is installed`);
+        } else {
+            console.log(`✗ ${fontName} is not installed`);
+        }
+    });
+    
+    // Separate non-embeddable fonts that are locally detected
+    const nonEmbeddableFonts = availableFonts.filter(font => {
+        return ['MonoLisa', 'Operator Mono', 'Dank Mono', 'Comic Code', 
+               'Berkeley Mono', 'PragmataPro', 'Input Mono', 'Aptos Mono',
+               'SF Mono', 'Monaco', 'Menlo', 'Consolas'].includes(font);
+    });
+    
+    console.log(`🔍 FONT DETECTION SUMMARY:`);
+    console.log(`📊 Total system fonts detected: ${availableFonts.length}`);
+    console.log(`💰 Non-embeddable/commercial fonts detected: ${nonEmbeddableFonts.length}`);
+    if (nonEmbeddableFonts.length > 0) {
+        console.log(`💰 Available commercial fonts:`, nonEmbeddableFonts);
+    }
+    
+    console.log(`Found ${availableFonts.length} of ${allFontsToCheck.length} checked fonts`);
+    return availableFonts;
+}
+
+// Filter font families to only include available fonts
+function filterFontFamilies() {
+    const availableSystemFonts = detectSystemFonts();
+    
+    // Create a filtered version of fontFamilies
+    const filteredFamilies = {};
+    
+    // List of fonts that are loaded via CDN or Google Fonts (always available)
+    const webFonts = new Set([
+        ...fontSources.googleFonts.map(f => f.split(':')[0].replace(/\+/g, ' ')),
+        ...fontSources.customFonts.map(f => f.name)
+    ]);
+    
+    Object.entries(fontFamiliesOriginal).forEach(([category, data]) => {
+        if (category === 'System Fonts') {
+            // For system fonts category, only include detected fonts
+            const availableFontsInCategory = data.fonts.filter(fontString => {
+                // Extract the primary font name from the font string
+                const match = fontString.match(/"([^"]+)"/);
+                if (match) {
+                    const fontName = match[1];
+                    return detectedFonts.has(fontName);
+                }
+                return false;
+            });
+            
+            if (availableFontsInCategory.length > 0) {
+                filteredFamilies[category] = {
+                    ...data,
+                    fonts: availableFontsInCategory,
+                    description: `${data.description} (${availableFontsInCategory.length} available)`
+                };
+            } else {
+                console.log('No system fonts detected - category will be hidden');
+            }
+        } else {
+            // For other categories, check each font
+            const availableFontsInCategory = data.fonts.filter(fontString => {
+                // Extract the primary font name
+                const match = fontString.match(/"([^"]+)"/);
+                if (match) {
+                    const fontName = match[1];
+                    
+                    // Check if it's a web font (always available)
+                    if (webFonts.has(fontName)) {
+                        return true;
+                    }
+                    
+                    // Check if it's locally installed
+                    if (detectedFonts.has(fontName)) {
+                        return true;
+                    }
+                    
+                    // Font is not available
+                    return false;
+                }
+                // Keep entries without quotes (shouldn't happen)
+                return true;
+            });
+            
+            if (availableFontsInCategory.length > 0) {
+                filteredFamilies[category] = {
+                    ...data,
+                    fonts: availableFontsInCategory,
+                    description: data.description + (availableFontsInCategory.length < data.fonts.length ? 
+                        ` (${availableFontsInCategory.length}/${data.fonts.length} available)` : '')
+                };
+            }
+        }
+    });
+    
+    console.log(`Categories with fonts: ${Object.keys(filteredFamilies).join(', ')}`);
+    return filteredFamilies;
+}
+
 // Configuration options - Top coding fonts organized by family
 // Using Comic Sans MS as fallback to make it obvious when fonts don't load
-const fontFamilies = {
+const fontFamiliesOriginal = {
+    'System Fonts': {
+        description: 'Pre-installed system and commercial fonts (must be installed locally)',
+        fonts: [
+            '"Aptos Mono", "Consolas", monospace',
+            '"Consolas", monospace',
+            '"SF Mono", "Monaco", monospace',
+            '"Monaco", monospace',
+            '"Menlo", monospace',
+            '"Cascadia Code", "Consolas", monospace',
+            '"Cascadia Mono", "Consolas", monospace',
+            '"Courier New", monospace',
+            '"Lucida Console", monospace',
+            '"Andale Mono", monospace',
+            '"DejaVu Sans Mono", monospace',
+            '"Droid Sans Mono", monospace',
+            '"Hack", monospace',
+            '"Meslo LG", monospace',
+            '"Input Mono", monospace',
+            '"Operator Mono", monospace',
+            '"Dank Mono", monospace',
+            '"MonoLisa", monospace',
+            '"Berkeley Mono", monospace',
+            '"Commit Mono", monospace',
+            '"Comic Code", monospace',
+            '"PragmataPro", monospace'
+        ],
+        representative: '"Consolas", monospace'
+    },
     'Ligature-Enabled': {
-        description: 'Fonts with programming ligatures for better readability',
+        description: 'Fonts with programming ligatures and specialized symbols',
         fonts: [
             '"Fira Code", "Comic Sans MS", cursive',
             '"JetBrains Mono", "Comic Sans MS", cursive',
             '"Victor Mono", "Comic Sans MS", cursive',
-            '"Recursive", "Comic Sans MS", cursive'
+            '"Recursive", "Comic Sans MS", cursive',
+            '"Cascadia Code", "Consolas", monospace',
+            '"Iosevka", "Comic Sans MS", cursive',
+            '"Hasklig", "Comic Sans MS", cursive',
+            '"MonoLisa", monospace',
+            '"Dank Mono", monospace',
+            '"Comic Code", monospace',
+            '"PragmataPro", monospace',
+            '"Operator Mono", monospace',
+            '"APL2741", "Comic Sans MS", cursive',
+            '"APL385 Unicode", "Comic Sans MS", cursive',
+            '"JuliaMono", "Comic Sans MS", cursive'
         ],
         representative: '"Fira Code", "Comic Sans MS", cursive'
     },
@@ -22,12 +360,23 @@ const fontFamilies = {
             '"Geist Mono", "Comic Sans MS", cursive',
             '"Martian Mono", "Comic Sans MS", cursive',
             '"Chivo Mono", "Comic Sans MS", cursive',
-            '"Kode Mono", "Comic Sans MS", cursive'
+            '"Kode Mono", "Comic Sans MS", cursive',
+            '"Intel One Mono", "Comic Sans MS", cursive',
+            '"Monaspace Argon", "Comic Sans MS", cursive',
+            '"Monaspace Krypton", "Comic Sans MS", cursive',
+            '"Monaspace Neon", "Comic Sans MS", cursive',
+            '"Monaspace Radon", "Comic Sans MS", cursive',
+            '"Monaspace Xenon", "Comic Sans MS", cursive',
+            '"Zed Mono", "Comic Sans MS", cursive',
+            '"Sudo", "Comic Sans MS", cursive',
+            '"Maple Mono", "Comic Sans MS", cursive',
+            '"League Mono", "Comic Sans MS", cursive',
+            '"Agave", "Comic Sans MS", cursive'
         ],
         representative: '"Source Code Pro", "Comic Sans MS", cursive'
     },
     'Classic Terminal': {
-        description: 'Traditional terminal and system fonts',
+        description: 'Traditional terminal, system, and retro fonts',
         fonts: [
             '"Ubuntu Mono", "Comic Sans MS", cursive',
             '"Inconsolata", "Comic Sans MS", cursive',
@@ -36,7 +385,34 @@ const fontFamilies = {
             '"PT Mono", "Comic Sans MS", cursive',
             '"Overpass Mono", "Comic Sans MS", cursive',
             '"Cousine", "Comic Sans MS", cursive',
-            '"Fira Mono", "Comic Sans MS", cursive'
+            '"Fira Mono", "Comic Sans MS", cursive',
+            '"Liberation Mono", "Comic Sans MS", cursive',
+            '"Go Mono", "Comic Sans MS", cursive',
+            '"Terminus", "Comic Sans MS", cursive',
+            '"Hermit", "Comic Sans MS", cursive',
+            '"Mononoki", "Comic Sans MS", cursive',
+            '"Office Code Pro", "Comic Sans MS", cursive',
+            '"Fantasque Sans Mono", "Comic Sans MS", cursive',
+            '"3270", "Comic Sans MS", cursive',
+            '"Anka/Coder", "Comic Sans MS", cursive',
+            '"ProFont", "Comic Sans MS", cursive',
+            '"Envy Code R", "Comic Sans MS", cursive',
+            '"VT323", "Comic Sans MS", cursive',
+            '"Major Mono Display", "Comic Sans MS", cursive',
+            '"Syne Mono", "Comic Sans MS", cursive',
+            '"Xanh Mono", "Comic Sans MS", cursive',
+            '"Press Start 2P", "Comic Sans MS", cursive',
+            '"Perfect DOS VGA 437", "Comic Sans MS", cursive',
+            '"IBM VGA 9x16", "Comic Sans MS", cursive',
+            '"PxPlus IBM VGA 8x16", "Comic Sans MS", cursive',
+            '"Pixel Operator", "Comic Sans MS", cursive',
+            '"Monocraft", "Comic Sans MS", cursive',
+            '"Bedstead", "Comic Sans MS", cursive',
+            '"GohuFont", "Comic Sans MS", cursive',
+            '"Proggy Vector", "Comic Sans MS", cursive',
+            '"Spleen", "Comic Sans MS", cursive',
+            '"Tamzen", "Comic Sans MS", cursive',
+            '"Fixedsys", monospace'
         ],
         representative: '"Ubuntu Mono", "Comic Sans MS", cursive'
     },
@@ -45,11 +421,19 @@ const fontFamilies = {
         fonts: [
             '"Space Mono", "Comic Sans MS", cursive',
             '"Courier Prime", "Comic Sans MS", cursive',
+            '"Courier Prime Code", "Comic Sans MS", cursive',
             '"Azeret Mono", "Comic Sans MS", cursive',
             '"Fragment Mono", "Comic Sans MS", cursive',
             '"Sometype Mono", "Comic Sans MS", cursive',
             '"Spline Sans Mono", "Comic Sans MS", cursive',
-            '"B612 Mono", "Comic Sans MS", cursive'
+            '"B612 Mono", "Comic Sans MS", cursive',
+            '"Sax Mono", "Comic Sans MS", cursive',
+            '"Code New Roman", "Comic Sans MS", cursive',
+            '"JuliaMono", "Comic Sans MS", cursive',
+            '"Input Mono", monospace',
+            '"Cartograph CF", monospace',
+            '"Aperçu Mono", monospace',
+            '"Triplicate Code", monospace'
         ],
         representative: '"Space Mono", "Comic Sans MS", cursive'
     },
@@ -60,65 +444,26 @@ const fontFamilies = {
             '"Share Tech Mono", "Comic Sans MS", cursive',
             '"Nova Mono", "Comic Sans MS", cursive',
             '"Cutive Mono", "Comic Sans MS", cursive',
-            '"Nanum Gothic Coding", "Comic Sans MS", cursive'
+            '"Nanum Gothic Coding", "Comic Sans MS", cursive',
+            '"Lekton", "Comic Sans MS", cursive',
+            '"Latin Modern Mono", "Comic Sans MS", cursive',
+            '"Luxi Mono", "Comic Sans MS", cursive',
+            '"NotCourierSans", "Comic Sans MS", cursive',
+            '"Sarasa Mono", "Comic Sans MS", cursive',
+            '"UDEV Gothic", "Comic Sans MS", cursive',
+            '"LXGW WenKai Mono", "Comic Sans MS", cursive',
+            '"Iosevka Term", "Comic Sans MS", cursive'
         ],
         representative: '"Noto Sans Mono", "Comic Sans MS", cursive'
     },
-    'Retro & Stylized': {
-        description: 'Nostalgic and artistic fonts',
-        fonts: [
-            '"VT323", "Comic Sans MS", cursive',
-            '"Major Mono Display", "Comic Sans MS", cursive',
-            '"Syne Mono", "Comic Sans MS", cursive',
-            '"Xanh Mono", "Comic Sans MS", cursive'
-        ],
-        representative: '"VT323", "Comic Sans MS", cursive'
-    }
 };
 
-// Flatten all fonts for backward compatibility
-const fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
+// This will be populated with filtered fonts after detection
+let fontFamilies = fontFamiliesOriginal;
+let fonts = [];
 
-// Google Fonts API info for each font (family name for URL)
-const googleFontFamilies = [
-    'Fira+Code:wght@300;400;500;600;700',
-    'JetBrains+Mono:wght@300;400;500;600;700',
-    'Source+Code+Pro:wght@300;400;500;600;700',
-    'IBM+Plex+Mono:wght@300;400;500;600;700',
-    'Roboto+Mono:wght@300;400;500;600;700',
-    'Ubuntu+Mono:wght@400;700',
-    'Inconsolata:wght@300;400;500;600;700',
-    'Space+Mono:wght@400;700',
-    'Courier+Prime:wght@400;700',
-    'DM+Mono:wght@300;400;500',
-    'Red+Hat+Mono:wght@300;400;500;600;700',
-    'Oxygen+Mono:wght@400',
-    'Anonymous+Pro:wght@400;700',
-    'Overpass+Mono:wght@300;400;500;600;700',
-    'Share+Tech+Mono:wght@400',
-    'VT323:wght@400',
-    'PT+Mono:wght@400',
-    'Noto+Sans+Mono:wght@300;400;500;600;700',
-    'Martian+Mono:wght@300;400;500;600;700',
-    'Azeret+Mono:wght@300;400;500;600;700',
-    'Major+Mono+Display:wght@400',
-    'Nova+Mono:wght@400',
-    'Cutive+Mono:wght@400',
-    'Syne+Mono:wght@400',
-    'Xanh+Mono:wght@400',
-    'Fragment+Mono:wght@400',
-    'Sometype+Mono:wght@400;500;600;700',
-    'Chivo+Mono:wght@300;400;500;600;700',
-    'Kode+Mono:wght@400;500;600;700',
-    'Geist+Mono:wght@300;400;500;600;700',
-    'Recursive:wght@300;400;500;600;700',
-    'Victor+Mono:wght@300;400;500;600;700',
-    'B612+Mono:wght@400;700',
-    'Cousine:wght@400;700',
-    'Fira+Mono:wght@400;500;700',
-    'Spline+Sans+Mono:wght@400;500;600;700',
-    'Nanum+Gothic+Coding:wght@400;700'
-];
+// Google Fonts list for backward compatibility (using fontSources.googleFonts)
+const googleFontFamilies = fontSources.googleFonts;
 
 const fontSizes = [12, 14, 16, 18]; // Reduced to 4 strategic sizes
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]; // Full weight range from ultra-light to black
@@ -185,8 +530,25 @@ const colorSchemes = {
     ]
 };
 
-// Code samples
-const codeSamples = {
+// Code sample URLs - loading real code from files and external sources
+const codeSampleUrls = {
+    javascript: './samples/javascript.js',
+    python: './samples/python.py',
+    rust: './samples/rust.rs',
+    go: './samples/go.go',
+    java: 'https://raw.githubusercontent.com/spring-projects/spring-boot/main/spring-boot-project/spring-boot/src/main/java/org/springframework/boot/SpringApplication.java',
+    css: 'https://raw.githubusercontent.com/necolas/normalize.css/master/normalize.css',
+    html: 'https://raw.githubusercontent.com/h5bp/html5-boilerplate/main/src/index.html',
+    yaml: 'https://raw.githubusercontent.com/kubernetes/kubernetes/master/api/openapi-spec/swagger.json',
+    json: 'https://raw.githubusercontent.com/microsoft/vscode/main/package.json',
+    markdown: 'https://raw.githubusercontent.com/microsoft/vscode/main/README.md',
+    legal: null, // Use fallback sample (GDPR text)
+    self: './app.js',
+    custom: null // Will be set by user input
+};
+
+// Fallback code samples (used if URL loading fails)
+const fallbackCodeSamples = {
     javascript: `// Advanced async data pipeline with error handling
 class DataPipeline {
     constructor(options = {}) {
@@ -1047,7 +1409,58 @@ The real treasure was the fonts we compared along the way.
 [rfc]: https://datatracker.ietf.org/doc/html/rfc2324
 
 <!-- Hidden comment: If you're reading this, you've gone 
-     too deep into the source. The exit is Alt+F4 -->`
+     too deep into the source. The exit is Alt+F4 -->`,
+
+    legal: `REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE
+COUNCIL of 27 April 2016 on the protection of natural persons with
+regard to the processing of personal data and on the free movement
+of such data, and repealing Directive 95/46/EC (General Data
+Protection Regulation)
+
+Article 1
+Subject-matter and objectives
+
+    1. This Regulation lays down rules relating to the protection
+       of natural persons with regard to the processing of personal
+       data and rules relating to the free movement of personal
+       data.
+
+    2. This Regulation protects fundamental rights and freedoms of
+       natural persons and in particular their right to the
+       protection of personal data.
+
+    3. The free movement of personal data within the Union shall
+       be neither restricted nor prohibited due to reasons
+       connected with the protection of natural persons with
+       regard to the processing of personal data.
+
+Article 2
+Material scope
+
+    1. This Regulation applies to the processing of personal data
+       wholly or partly by automated means and to the processing
+       other than by automated means of personal data which make
+       part of a filing system or are intended to make part of a
+       filing system.
+
+    2. This Regulation does not apply to the processing of
+       personal data:
+
+       (a) in the course of an activity which falls outside the
+           scope of Union law;
+
+       (b) by the Member States when carrying out activities
+           which fall within the scope of Chapter 2 of Title V of
+           the Treaty on European Union;
+
+       (c) by a natural person in the course of a purely personal
+           or household activity;
+
+       (d) by competent authorities concerning the prevention,
+           investigation, detection or prosecution of criminal
+           offences or the execution of criminal penalties,
+           including the safeguarding against and the prevention
+           of threats to public security.`
 };
 
 // Color similarity functions
@@ -1137,11 +1550,13 @@ let themeMode = 'dark'; // 'dark' or 'light' - user's selection
 // Tournament-style comparison generator
 class ComparisonEngine {
     constructor() {
+        this.fontRound = 0; // Track which round we're in for similarity-based pairing
         this.reset();
     }
     
     reset() {
         this.stage = 'fontFamily';
+        this.fontRound = 0; // Reset font round counter
         this.candidates = {
             fontFamily: Object.keys(fontFamilies), // Will show all at once, not tournament
             colorScheme: [...colorSchemes[themeMode]], // Moved to 2nd position
@@ -1184,28 +1599,44 @@ class ComparisonEngine {
             return;
         }
         
-        // For font stage, limit to just one round - pick top 2-3 winners
+        // For font stage, use similarity-based progressive pairing
         if (this.stage === 'font' && this.candidates.font.length > 4) {
-            // Just do ONE round of elimination, not a full tournament
+            this.fontRound++;
+            console.log(`[DEBUG] Font tournament round ${this.fontRound}`);
+            
+            // Use similarity-based pairing for fonts
+            const smartPairs = fontSimilarity.generateProgressivePairs(
+                this.candidates[this.stage], 
+                this.fontRound
+            );
+            
             this.currentPairs = [];
-            const items = [...this.candidates[this.stage]];
             
-            // Create pairs for ONE round only
-            while (items.length > 1) {
-                const indexA = Math.floor(Math.random() * items.length);
-                const itemA = items.splice(indexA, 1)[0];
-                const indexB = Math.floor(Math.random() * items.length);
-                const itemB = items.splice(indexB, 1)[0];
-                this.currentPairs.push([itemA, itemB]);
+            if (smartPairs.length > 0) {
+                // Use smart pairs
+                for (const [fontA, fontB] of smartPairs) {
+                    this.currentPairs.push([fontA, fontB]);
+                    console.log(`[DEBUG] Smart pair: ${fontSimilarity.calculate(fontA, fontB).toFixed(1)}% similar`);
+                }
+            } else {
+                // Fallback to random pairing if no smart pairs found
+                const items = [...this.candidates[this.stage]];
+                while (items.length > 1) {
+                    const indexA = Math.floor(Math.random() * items.length);
+                    const itemA = items.splice(indexA, 1)[0];
+                    const indexB = Math.floor(Math.random() * items.length);
+                    const itemB = items.splice(indexB, 1)[0];
+                    this.currentPairs.push([itemA, itemB]);
+                }
+                
+                // If odd number, the remaining item advances
+                if (items.length === 1) {
+                    this.currentPairs.push([items[0], null]);
+                }
             }
             
-            // If odd number, the remaining item advances
-            if (items.length === 1) {
-                this.currentPairs.push([items[0], null]);
-            }
-            
-            // Mark that we should stop after this round
-            this.fontRoundComplete = true;
+            // Mark that we should stop after this round if we have few candidates left
+            this.fontRoundComplete = this.candidates.font.length <= 6;
         } else {
             this.currentPairs = [];
             const items = [...this.candidates[this.stage]];
@@ -1311,6 +1742,12 @@ class ComparisonEngine {
         }
         
         const pair = this.currentPairs[0];
+        console.log(`[DEBUG] Getting pair: ${JSON.stringify(pair)}`);
+        if (!pair) {
+            console.error('[ERROR] No pair found despite currentPairs.length > 0');
+            console.error('[ERROR] currentPairs:', this.currentPairs);
+            return null;
+        }
         if (pair[1] === null) {
             // Auto-advance
             this.candidates[this.stage] = [pair[0], ...this.candidates[this.stage]];
@@ -1371,7 +1808,21 @@ class ComparisonEngine {
             return this.getNextComparison();
         }
         
-        return { optionA, optionB, stage: this.stage, pair };
+        // Add similarity information for font comparisons
+        let similarityInfo = null;
+        if (this.stage === 'font') {
+            const similarity = fontSimilarity.calculate(pair[0], pair[1]);
+            const category = fontSimilarity.categorize(similarity);
+            similarityInfo = {
+                score: similarity,
+                category: category,
+                round: this.fontRound
+            };
+        }
+        
+        const result = { optionA, optionB, stage: this.stage, pair, similarity: similarityInfo };
+        console.log(`[DEBUG] Returning comparison:`, result);
+        return result;
     }
     
     // Helper method to check if two options are visually identical
@@ -1517,9 +1968,63 @@ function init() {
     });
 }
 
-// Load Google Fonts - dynamically loads all fonts in chunks to avoid URL length limits
+// Load all fonts - dynamically loads Google Fonts and custom fonts
 function loadFonts() {
-    // Load critical fonts first (representatives from each family)
+    // Load custom fonts via @font-face
+    loadCustomFonts();
+    
+    // Use original font families initially (before detection) 
+    fontFamilies = fontFamiliesOriginal;
+    fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
+    
+    // Font detection with FontDetective.all()
+    function startFontDetection(attempts = 0) {
+        if (typeof FontDetective !== 'undefined') {
+            try {
+                console.log('Running font detection...');
+                
+                // Use FontDetective.all() to get all detected fonts
+                FontDetective.all((detectedFontObjects) => {
+                    console.log(`FontDetective detected ${detectedFontObjects.length} fonts`);
+                    
+                    // Clear and populate detectedFonts set
+                    detectedFonts.clear();
+                    detectedFontObjects.forEach(fontObj => {
+                        detectedFonts.add(fontObj.name);
+                        console.log(`✓ ${fontObj.name} is installed`);
+                    });
+                    
+                    // Now filter font families
+                    const filteredFamilies = filterFontFamilies();
+                    fontFamilies = filteredFamilies;
+                    fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
+                    console.log(`Font detection complete: ${fonts.length} fonts available`);
+                });
+                
+            } catch (error) {
+                console.error('❌ Font detection failed:', error.message);
+                document.getElementById('status').textContent = 'Font detection error';
+                document.getElementById('status').style.color = 'red';
+                console.warn('⚠️  Proceeding with all fonts (not filtered by availability)');
+            }
+        } else if (attempts < 10) {
+            // Wait up to 5 seconds for FontDetective to load
+            console.log(`Waiting for FontDetective library... (attempt ${attempts + 1}/10)`);
+            setTimeout(() => startFontDetection(attempts + 1), 500);
+        } else {
+            console.error('❌ FontDetective library failed to load after 5 seconds');
+            document.getElementById('status').textContent = 'Font detection unavailable - library failed to load';
+            document.getElementById('status').style.color = 'orange';
+            console.warn('⚠️  Proceeding with all fonts (not filtered by availability)');
+        }
+    }
+    
+    // Start font detection after a brief delay
+    setTimeout(() => startFontDetection(), 500);
+    
+    console.log(`Using all fonts: ${fonts.length} fonts loaded`);
+    
+    // Load critical Google fonts first (representatives from each family)
     const criticalFonts = [
         'Fira+Code:wght@400;500;600',
         'Source+Code+Pro:wght@400;500;600', 
@@ -1562,20 +2067,85 @@ function loadFonts() {
     document.head.appendChild(iconsLink);
 }
 
-// Update code display
-function updateCode() {
-    const code = codeSamples[currentLanguage];
+// Cache for loaded code
+const codeCache = new Map();
+
+// Load code from URL or cache
+async function loadCode(language) {
+    // Check cache first
+    if (codeCache.has(language)) {
+        return codeCache.get(language);
+    }
+    
+    const url = codeSampleUrls[language];
+    
+    // For file:// protocol or missing URLs, use fallback to avoid CORS issues
+    if (!url || window.location.protocol === 'file:') {
+        const fallback = fallbackCodeSamples[language] || fallbackCodeSamples.javascript;
+        codeCache.set(language, fallback);
+        return fallback;
+    }
+    
+    try {
+        console.log(`Loading code from: ${url}`);
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const code = await response.text();
+        
+        // Truncate very long files for better comparison
+        const maxLength = 2000;
+        const truncatedCode = code.length > maxLength ? 
+            code.substring(0, maxLength) + '\n\n// ... (truncated for display)' : 
+            code;
+            
+        codeCache.set(language, truncatedCode);
+        return truncatedCode;
+        
+    } catch (error) {
+        console.warn(`Failed to load code from ${url}:`, error);
+        
+        // Fallback to embedded samples
+        const fallback = fallbackCodeSamples[language] || fallbackCodeSamples.javascript;
+        codeCache.set(language, fallback);
+        return fallback;
+    }
+}
+
+// Update code display with async loading
+async function updateCode() {
     const codeA = document.getElementById('codeA');
     const codeB = document.getElementById('codeB');
     
-    // Simple syntax highlighting
-    const highlighted = highlightCode(code, currentLanguage);
-    codeA.innerHTML = highlighted;
-    codeB.innerHTML = highlighted;
+    // Show loading state
+    codeA.innerHTML = '<div class="loading">Loading code...</div>';
+    codeB.innerHTML = '<div class="loading">Loading code...</div>';
+    
+    try {
+        const code = await loadCode(currentLanguage);
+        
+        // Simple syntax highlighting
+        const highlighted = highlightCode(code, currentLanguage);
+        codeA.innerHTML = highlighted;
+        codeB.innerHTML = highlighted;
+    } catch (error) {
+        console.error('Failed to update code:', error);
+        codeA.innerHTML = '<div class="error">Failed to load code</div>';
+        codeB.innerHTML = '<div class="error">Failed to load code</div>';
+    }
 }
 
 // Basic syntax highlighting
 function highlightCode(code, language) {
+    // Skip syntax highlighting for legal text
+    if (language === 'legal') {
+        return code
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;');
+    }
+    
     // This is a very basic syntax highlighter
     // First escape HTML
     let highlighted = code
@@ -1644,6 +2214,7 @@ function highlightCode(code, language) {
 // Show next comparison
 function showNextComparison() {
     const comparison = engine.getNextComparison();
+    console.log('[DEBUG] showNextComparison got:', comparison);
     
     if (!comparison) {
         showResults();
@@ -1656,7 +2227,14 @@ function showNextComparison() {
         return;
     }
     
-    const { optionA, optionB, stage, pair } = comparison;
+    const { optionA, optionB, stage, pair, similarity } = comparison;
+    
+    // Check if we have the required properties
+    if (!optionA || !optionB) {
+        console.error('[ERROR] Invalid comparison object - missing optionA or optionB:', comparison);
+        showResults();
+        return;
+    }
     
     // Hide font family selector if it was showing
     document.getElementById('fontFamilySelector').classList.add('hidden');
@@ -1681,14 +2259,16 @@ function showNextComparison() {
         fontStretch: 'Font Stretch',
         letterSpacing: 'Letter Spacing'
     };
-    document.getElementById('status').textContent = `Comparing: ${stageNames[stage]}`;
+    // Update status (similarity info moved to hidden summary)
+    const statusText = `Comparing: ${stageNames[stage]}`;
+    document.getElementById('status').textContent = statusText;
     
     // Update comparison count
     document.getElementById('comparisonCount').textContent = `Comparison ${comparisons.length + 1}`;
     
-    // Apply styles and summaries
-    applyStyles('codeA', 'panelA', optionA, 'summaryA');
-    applyStyles('codeB', 'panelB', optionB, 'summaryB');
+    // Apply styles and summaries (pass similarity info)
+    applyStyles('codeA', 'panelA', optionA, 'summaryA', similarity);
+    applyStyles('codeB', 'panelB', optionB, 'summaryB', similarity);
 }
 
 // Show font family selector
@@ -1713,32 +2293,128 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
     const result = n * 2;
     return result; // => ${8}
 }`;
+    const ligatureText = '*fi->0;';
     
     Object.entries(fontFamilies).forEach(([familyName, familyData]) => {
         const option = document.createElement('div');
         option.className = 'font-family-option';
-        option.onclick = () => selectFontFamily(familyName);
+        option.onclick = (e) => {
+            // Don't trigger font selection if this was a drag operation
+            if (hasDragged) {
+                hasDragged = false;
+                return;
+            }
+            selectFontFamily(familyName);
+        };
         
-        // Create a pre element to ensure monospace formatting
+        // Create container for side-by-side previews (unified window)
+        const previewContainer = document.createElement('div');
+        previewContainer.style.display = 'flex';
+        previewContainer.style.border = '1px solid rgba(0,0,0,0.2)';
+        previewContainer.style.borderRadius = '6px';
+        previewContainer.style.overflow = 'hidden';
+        previewContainer.style.backgroundColor = 'rgba(0,0,0,0.1)';
+        
+        // Create the main preview element
         const preview = document.createElement('pre');
         preview.className = 'font-family-preview';
         preview.style.fontFamily = familyData.representative;
         preview.style.fontSize = '13px';
         preview.style.lineHeight = '1.5';
+        preview.style.flex = '1';
+        preview.style.margin = '0';
+        preview.style.padding = '12px';
+        preview.style.backgroundColor = 'transparent';
+        preview.style.border = 'none';
         preview.textContent = sampleCode;
+        
+        // Create draggable divider
+        const divider = document.createElement('div');
+        divider.className = 'preview-divider';
+        divider.style.width = '4px';
+        divider.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        divider.style.cursor = 'col-resize';
+        divider.style.flexShrink = '0';
+        divider.style.position = 'relative';
+        divider.style.zIndex = '10';
+        
+        // Add drag functionality
+        let isDragging = false;
+        let hasDragged = false;
+        let startX = 0;
+        let startWidths = { preview: 0, ligature: 0 };
+        
+        divider.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            hasDragged = false;
+            startX = e.clientX;
+            startWidths.preview = preview.offsetWidth;
+            startWidths.ligature = ligaturePreview.offsetWidth;
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+            e.preventDefault();
+            e.stopPropagation();
+        });
+        
+        const handleMouseMove = (e) => {
+            if (!isDragging) return;
+            const deltaX = e.clientX - startX;
+            
+            // Mark as dragged if moved more than 3 pixels
+            if (Math.abs(deltaX) > 3) {
+                hasDragged = true;
+            }
+            
+            const newPreviewWidth = startWidths.preview + deltaX;
+            const newLigatureWidth = startWidths.ligature - deltaX;
+            
+            // Prevent panels from getting too small
+            if (newPreviewWidth > 100 && newLigatureWidth > 60) {
+                preview.style.width = newPreviewWidth + 'px';
+                preview.style.flex = 'none';
+                ligaturePreview.style.width = newLigatureWidth + 'px';
+            }
+        };
+        
+        const handleMouseUp = () => {
+            isDragging = false;
+            document.removeEventListener('mousemove', handleMouseMove);
+            document.removeEventListener('mouseup', handleMouseUp);
+        };
+        
+        // Create the ligature close-up preview
+        const ligaturePreview = document.createElement('div');
+        ligaturePreview.className = 'ligature-preview';
+        ligaturePreview.style.fontFamily = familyData.representative;
+        ligaturePreview.style.fontSize = '32px';
+        ligaturePreview.style.lineHeight = '1.0';
+        ligaturePreview.style.textAlign = 'center';
+        ligaturePreview.style.padding = '12px';
+        ligaturePreview.style.backgroundColor = 'transparent';
+        ligaturePreview.style.flexShrink = '0';
+        ligaturePreview.style.width = '100px';
+        ligaturePreview.style.display = 'flex';
+        ligaturePreview.style.alignItems = 'center';
+        ligaturePreview.style.justifyContent = 'center';
+        ligaturePreview.style.whiteSpace = 'nowrap';
+        ligaturePreview.textContent = ligatureText;
+        
+        previewContainer.appendChild(preview);
+        previewContainer.appendChild(divider);
+        previewContainer.appendChild(ligaturePreview);
         
         option.innerHTML = `
             <div class="font-family-name">${familyName}</div>
             <div class="font-family-description">${familyData.description}</div>
         `;
-        option.appendChild(preview);
+        option.appendChild(previewContainer);
         
         grid.appendChild(option);
     });
     
     // Give fonts a moment to load and then refresh display
     setTimeout(() => {
-        const previews = document.querySelectorAll('.font-family-preview');
+        const previews = document.querySelectorAll('.font-family-preview, .ligature-preview');
         previews.forEach(preview => {
             // Force a reflow to ensure fonts are applied
             preview.style.display = 'none';
@@ -1754,12 +2430,16 @@ function selectFontFamily(familyName) {
     document.getElementById('importSection').classList.add('hidden');
     document.getElementById('fontFamilySelector').classList.add('hidden');
     
+    // Enable controls now that tournament has started
+    document.getElementById('languageSelect').disabled = false;
+    document.getElementById('resetBtn').disabled = false;
+    
     engine.selectFontFamily(familyName);
     showNextComparison();
 }
 
 // Apply styles to a code panel
-function applyStyles(codeId, panelId, option, summaryId) {
+function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
     const code = document.getElementById(codeId);
     const panel = document.getElementById(panelId);
     const summary = summaryId ? document.getElementById(summaryId) : null;
@@ -1794,11 +2474,18 @@ function applyStyles(codeId, panelId, option, summaryId) {
         const stretchNote = (option.fontStretch && option.fontStretch !== 'normal') ? 
             ` • ${option.fontStretch} (may not be visible)` : '';
         
+        let similarityText = '';
+        if (similarity && engine.stage === 'font') {
+            const categoryText = similarity.category.replace('-', ' ');
+            const scoreText = Math.round(similarity.score);
+            similarityText = `<br><em>Round ${similarity.round}: ${categoryText} (${scoreText}% similar)</em>`;
+        }
+        
         summary.innerHTML = `
             <strong>${fontName}</strong><br>
             ${option.fontSize}px • ${option.fontWeight}${stretchNote}<br>
             ${option.letterSpacing || 0}px spacing • ${option.lineHeight} line height<br>
-            ${themeName}
+            ${themeName}${similarityText}
         `;
     }
 }
@@ -1812,14 +2499,68 @@ function selectOption(choice) {
 
 // Change language
 function changeLanguage() {
-    currentLanguage = document.getElementById('languageSelect').value;
+    const newLanguage = document.getElementById('languageSelect').value;
+    
+    if (newLanguage === 'custom') {
+        showCustomUrlDialog();
+        return;
+    }
+    
+    currentLanguage = newLanguage;
     updateCode();
     
-    // Reapply current comparison styles
-    const comparison = engine.getNextComparison();
-    if (comparison) {
-        applyStyles('codeA', 'panelA', comparison.optionA);
-        applyStyles('codeB', 'panelB', comparison.optionB);
+    // Reapply current comparison styles after code loads
+    setTimeout(() => {
+        const comparison = engine.getNextComparison();
+        if (comparison && comparison.optionA) {
+            applyStyles('codeA', 'panelA', comparison.optionA, null, comparison.similarity);
+            applyStyles('codeB', 'panelB', comparison.optionB, null, comparison.similarity);
+        }
+    }, 100);
+}
+
+// Show custom URL input dialog
+function showCustomUrlDialog() {
+    const url = prompt(
+        'Enter URL to load code from:\n\n' +
+        'Examples:\n' +
+        '• GitHub raw file: https://raw.githubusercontent.com/user/repo/main/file.js\n' +
+        '• Gist raw: https://gist.githubusercontent.com/user/id/raw/file.js\n' +
+        '• Any public text file URL\n\n' +
+        'URL:'
+    );
+    
+    if (url && url.trim()) {
+        const cleanUrl = url.trim();
+        
+        // Validate URL format
+        try {
+            new URL(cleanUrl);
+        } catch {
+            alert('Invalid URL format. Please enter a valid URL.');
+            document.getElementById('languageSelect').value = currentLanguage;
+            return;
+        }
+        
+        // Set custom URL and load
+        console.log(`Setting custom URL: ${cleanUrl}`);
+        codeSampleUrls.custom = cleanUrl;
+        currentLanguage = 'custom';
+        
+        // Clear cache for custom to force reload
+        codeCache.delete('custom');
+        
+        console.log(`Loading custom code from: ${codeSampleUrls.custom}`);
+        updateCode();
+        
+        // Update select box to show custom is selected
+        const option = document.querySelector('#languageSelect option[value="custom"]');
+        if (option) {
+            option.text = `Custom (${cleanUrl.split('/').pop() || 'loaded'})`;
+        }
+    } else {
+        // User cancelled, revert selection
+        document.getElementById('languageSelect').value = currentLanguage;
     }
 }
 
@@ -1828,15 +2569,38 @@ function resetTest() {
     engine = new ComparisonEngine();
     comparisons = [];
     currentComparison = 0;
+    
+    // Reset UI to initial state
     document.getElementById('results').classList.add('hidden');
+    document.getElementById('fontFamilySelector').classList.remove('hidden');
+    document.getElementById('importSection').classList.remove('hidden');
     document.getElementById('progressFill').style.width = '0%';
+    
+    // Disable controls until tournament starts
+    document.getElementById('languageSelect').disabled = true;
+    document.getElementById('resetBtn').disabled = true;
+    
     updateCode();
     showNextComparison();
 }
 
 // Show results
 function showResults() {
-    const results = engine.winners;
+    const rawResults = engine.winners;
+    console.log('Raw engine results:', rawResults);
+    
+    // Normalize the results to expected format
+    const results = {
+        fontFamily: rawResults.fontFamily,
+        font: rawResults.font || rawResults.fontFamily || 'monospace',
+        size: rawResults.size || 16,
+        weight: rawResults.weight || 400,
+        lineHeight: rawResults.lineHeight || 1.5,
+        fontStretch: rawResults.fontStretch || 'normal',
+        letterSpacing: rawResults.letterSpacing || 0,
+        colorScheme: rawResults.colorScheme || { bg: '#1a1a1a', fg: '#e0e0e0' }
+    };
+    
     document.getElementById('progressFill').style.width = '100%';
     document.getElementById('status').textContent = 'Complete!';
     
@@ -1845,7 +2609,7 @@ function showResults() {
     
     const details = document.getElementById('resultDetails');
     const familyName = results.fontFamily || 'Unknown';
-    const familyDescription = results.fontFamily ? fontFamilies[results.fontFamily].description : '';
+    const familyDescription = results.fontFamily && fontFamilies[results.fontFamily] ? fontFamilies[results.fontFamily].description : '';
     details.innerHTML = `
         <div class="results-section">
             <h3>Your Optimal Settings</h3>
@@ -1858,19 +2622,19 @@ function showResults() {
             </div>
             ${familyDescription ? `<p class="family-description">${familyDescription}</p>` : ''}
             <div class="setting-item">
-                <strong>Font:</strong> ${results.font.split(',')[0].replace(/['"]/g, '').trim()}
+                <strong>Font:</strong> ${results.font ? results.font.split(',')[0].replace(/['"]/g, '').trim() : 'Not selected'}
                 <button class="re-compare-btn" onclick="recompareStage('font')">Re-compare</button>
             </div>
             <div class="setting-item">
-                <strong>Font Size:</strong> ${results.size}px
+                <strong>Font Size:</strong> ${results.size || 'Not selected'}px
                 <button class="re-compare-btn" onclick="recompareStage('size')">Re-compare</button>
             </div>
             <div class="setting-item">
-                <strong>Font Weight:</strong> ${results.weight}
+                <strong>Font Weight:</strong> ${results.weight || 'Not selected'}
                 <button class="re-compare-btn" onclick="recompareStage('weight')">Re-compare</button>
             </div>
             <div class="setting-item">
-                <strong>Line Height:</strong> ${results.lineHeight}
+                <strong>Line Height:</strong> ${results.lineHeight || 'Not selected'}
                 <button class="re-compare-btn" onclick="recompareStage('lineHeight')">Re-compare</button>
             </div>
             <div class="setting-item">
@@ -1913,7 +2677,14 @@ function showResults() {
     
     // Apply final styles to result preview
     const resultCode = document.getElementById('resultCode');
-    resultCode.innerHTML = highlightCode(codeSamples[currentLanguage], currentLanguage);
+    
+    // Load the current language code for results
+    loadCode(currentLanguage).then(code => {
+        resultCode.innerHTML = highlightCode(code, currentLanguage);
+    }).catch(error => {
+        console.error('Failed to load code for results:', error);
+        resultCode.innerHTML = '<div class="error">Failed to load code</div>';
+    });
     // Extract just the primary font name, not the fallback stack
     const primaryFont = results.font.split(',')[0].replace(/['"]/g, '').trim();
     resultCode.style.fontFamily = results.font;
@@ -2335,8 +3106,20 @@ function importSettings(encoded) {
 // Copy settings to clipboard
 function copySettings() {
     const results = engine.winners;
+    
+    // Check if the winning font is available locally
+    const fontName = results.font.replace(/["']/g, '').split(',')[0].trim();
+    const fontAvailable = isFontAvailable(fontName);
+    
+    // Get download info for the font if needed
+    const fontDownloadInfo = !fontAvailable ? getFontDownloadInfo(fontName) : null;
+    
+    // Add font download instructions if needed
+    const fontInstructions = !fontAvailable && fontDownloadInfo ? 
+        `/* ⚠️ Font '${fontName}' is not installed on your system */\n/* Download from: ${fontDownloadInfo.url} */\n/* ${fontDownloadInfo.instructions} */\n\n` : '';
+    
     const css = `/* Your optimized code display settings */
-font-family: ${results.font};
+${fontInstructions}font-family: ${results.font};
 font-size: ${results.size}px;
 font-weight: ${results.weight};
 line-height: ${results.lineHeight};
@@ -2349,11 +3132,270 @@ color: ${results.colorScheme.fg};
 .comment { color: ${results.colorScheme.comment}; }
 .function { color: ${results.colorScheme.function}; }`;
     
-    navigator.clipboard.writeText(css).then(() => {
-        alert('CSS settings copied to clipboard!');
+    // Create comprehensive export data
+    const exportData = {
+        settings: results,
+        css: css,
+        timestamp: new Date().toISOString(),
+        version: '1.0',
+        fontInfo: {
+            name: fontName,
+            available: fontAvailable,
+            downloadUrl: fontDownloadInfo?.url || null,
+            downloadInstructions: fontDownloadInfo?.instructions || null
+        }
+    };
+    
+    // Add settings data as comment for reimport
+    const fullExport = css + `\n\n/* Settings Data (for import): */\n/* ${JSON.stringify(exportData)} */`;
+    
+    navigator.clipboard.writeText(fullExport).then(() => {
+        // Show download prompt if font is missing
+        if (!fontAvailable && fontDownloadInfo) {
+            const message = `CSS settings copied! \n\nThe font '${fontName}' is not installed on your system.\nWould you like to download it?`;
+            if (confirm(message)) {
+                window.open(fontDownloadInfo.url, '_blank');
+            }
+        } else {
+            alert('CSS settings copied to clipboard!');
+        }
     }).catch(() => {
         alert('Failed to copy to clipboard. Please select and copy manually.');
     });
+}
+
+// Generate README.txt content
+function generateReadme(fontName, fontInfo, results) {
+    return `Code Phoropter - Font Configuration Package
+============================================
+
+Font: ${fontName}
+Generated: ${new Date().toLocaleDateString()} at ${new Date().toLocaleTimeString()}
+
+INSTALLATION INSTRUCTIONS
+========================
+
+1. INSTALL THE FONT
+   ${fontInfo.type === 'system' ? 
+     `This is a system font that should already be installed on your system.
+   If not available, ${fontInfo.instructions}` :
+     fontInfo.type === 'commercial' ?
+     `This is a commercial font. ${fontInfo.instructions}` :
+     `This is a free font. Extract the font files from this package and:
+   
+   Windows:
+   - Right-click on the .ttf/.otf files and select "Install"
+   - Or copy files to C:\\Windows\\Fonts\\
+   
+   macOS:
+   - Double-click the .ttf/.otf files and click "Install Font"
+   - Or copy files to ~/Library/Fonts/ (user) or /Library/Fonts/ (system)
+   
+   Linux:
+   - Copy files to ~/.fonts/ (user) or /usr/share/fonts/ (system)
+   - Run: fc-cache -f -v`}
+
+2. APPLY THE SETTINGS
+   Use the settings from config.css in your code editor:
+   
+   Font Family: ${results.font}
+   Font Size: ${results.size}px
+   Font Weight: ${results.weight}
+   Line Height: ${results.lineHeight}
+   Background: ${results.colorScheme.bg}
+   Text Color: ${results.colorScheme.fg}
+
+3. EDITOR CONFIGURATION
+   
+   VS Code:
+   Add to settings.json:
+   {
+     "editor.fontFamily": ${results.font},
+     "editor.fontSize": ${results.size},
+     "editor.fontWeight": "${results.weight}",
+     "editor.lineHeight": ${results.lineHeight}
+   }
+   
+   Sublime Text:
+   Add to Preferences > Settings:
+   {
+     "font_face": "${fontName}",
+     "font_size": ${results.size},
+     "line_padding_top": 1,
+     "line_padding_bottom": 1
+   }
+   
+   Vim/NeoVim:
+   Add to .vimrc:
+   set guifont=${fontName}:h${results.size}
+   
+   Terminal:
+   Configure your terminal to use "${fontName}" at ${results.size}pt
+
+TROUBLESHOOTING
+==============
+
+If the font doesn't appear in your editor:
+1. Restart your editor after installing the font
+2. Check that the font name matches exactly (case-sensitive)
+3. Verify the font is properly installed system-wide
+4. Some editors require the exact PostScript name of the font
+
+For support, visit: https://github.com/your-repo/code-phoropter
+
+Happy coding with your optimized font settings!
+`;
+}
+
+// Download font package with configuration
+async function downloadFontPackage() {
+    const results = engine.winners;
+    const fontName = results.font.replace(/["']/g, '').split(',')[0].trim();
+    const fontInfo = getFontDownloadInfo(fontName);
+    
+    if (!fontInfo) {
+        alert('Font download information not available for this font.');
+        return;
+    }
+    
+    // Create ZIP file
+    const zip = new JSZip();
+    
+    // Add configuration file
+    const css = `/* Your optimized code display settings */
+/* Generated by Code Phoropter on ${new Date().toLocaleDateString()} */
+
+font-family: ${results.font};
+font-size: ${results.size}px;
+font-weight: ${results.weight};
+line-height: ${results.lineHeight};
+background-color: ${results.colorScheme.bg};
+color: ${results.colorScheme.fg};
+
+/* Syntax highlighting colors */
+.keyword { color: ${results.colorScheme.keyword}; }
+.string { color: ${results.colorScheme.string}; }
+.comment { color: ${results.colorScheme.comment}; }
+.function { color: ${results.colorScheme.function}; }
+
+/* VS Code settings.json snippet */
+/*
+{
+  "editor.fontFamily": ${results.font},
+  "editor.fontSize": ${results.size},
+  "editor.fontWeight": "${results.weight}",
+  "editor.lineHeight": ${results.lineHeight},
+  "workbench.colorTheme": "your-preferred-theme"
+}
+*/`;
+    
+    zip.file('config.css', css);
+    
+    // Add README
+    const readme = generateReadme(fontName, fontInfo, results);
+    zip.file('README.txt', readme);
+    
+    // Add settings data for import
+    const exportData = {
+        settings: results,
+        css: css,
+        timestamp: new Date().toISOString(),
+        version: '1.0',
+        fontInfo: {
+            name: fontName,
+            downloadUrl: fontInfo?.downloadUrl || null,
+            instructions: fontInfo?.instructions || null,
+            type: fontInfo?.type || 'unknown'
+        }
+    };
+    zip.file('settings.json', JSON.stringify(exportData, null, 2));
+    
+    // Try to download font files if available and free
+    if (fontInfo.type === 'free' && fontInfo.downloadUrl) {
+        try {
+            // Show download progress
+            const button = event.target;
+            const originalText = button.textContent;
+            button.textContent = 'Preparing download...';
+            button.disabled = true;
+            
+            // For Google Fonts, we can't directly download, so add instructions
+            if (fontInfo.downloadUrl.includes('fonts.google.com/download')) {
+                zip.file('FONT_DOWNLOAD.txt', 
+                    `Font Download Instructions for ${fontName}
+====================================
+
+This package includes your configuration but not the font files themselves.
+To get the font files:
+
+1. Visit: ${fontInfo.downloadUrl}
+2. Click "Download family" to get a ZIP file
+3. Extract the font files (.ttf) from the downloaded ZIP
+4. Install the fonts on your system (see README.txt)
+
+The font files should be placed in this same folder if you want 
+a complete package for distribution.
+
+Note: Due to browser security restrictions, font files cannot be 
+automatically downloaded from Google Fonts.`);
+            } else {
+                // For other free fonts with direct download links, add placeholder
+                zip.file('FONT_DOWNLOAD.txt', 
+                    `Font files not included - Download separately from:
+${fontInfo.downloadUrl}
+
+Extract font files to this folder after downloading.`);
+            }
+            
+            button.textContent = originalText;
+            button.disabled = false;
+            
+        } catch (error) {
+            console.log('Could not automatically include font files:', error);
+        }
+    } else if (fontInfo.type === 'commercial') {
+        zip.file('COMMERCIAL_FONT.txt', 
+            `This is a commercial font: ${fontName}
+=====================================
+
+Font files are NOT included due to licensing restrictions.
+You must purchase and download this font separately.
+
+Purchase from: ${fontInfo.url}
+${fontInfo.instructions}
+
+Once purchased and installed, use the config.css settings
+in this package with your legally obtained font files.`);
+    } else if (fontInfo.type === 'system') {
+        zip.file('SYSTEM_FONT.txt', 
+            `This is a system font: ${fontName}
+===============================
+
+This font should already be installed on your system.
+No additional download required.
+
+If the font is missing: ${fontInfo.instructions}
+
+Use the config.css settings in this package.`);
+    }
+    
+    // Generate and download ZIP
+    try {
+        const content = await zip.generateAsync({type: 'blob'});
+        const url = URL.createObjectURL(content);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `code-phoropter-${fontName.replace(/\s+/g, '-').toLowerCase()}-config.zip`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        
+        alert(`Font package downloaded! Contains configuration files and installation instructions for ${fontName}.`);
+    } catch (error) {
+        console.error('Error creating ZIP file:', error);
+        alert('Failed to create download package. Please try copying the settings instead.');
+    }
 }
 
 // Toggle theme mode
@@ -2384,8 +3426,8 @@ function toggleThemeMode() {
     // Update current comparison if one is active
     const comparison = engine.getNextComparison();
     if (comparison && !comparison.showFontFamilySelector) {
-        applyStyles('codeA', 'panelA', comparison.optionA, 'summaryA');
-        applyStyles('codeB', 'panelB', comparison.optionB, 'summaryB');
+        applyStyles('codeA', 'panelA', comparison.optionA, 'summaryA', comparison.similarity);
+        applyStyles('codeB', 'panelB', comparison.optionB, 'summaryB', comparison.similarity);
     }
 }
 
@@ -2691,6 +3733,332 @@ function showStartScreen() {
     
     // Populate the font family selector (but keep description/import visible)
     showFontFamilySelector(true); // Pass flag to indicate this is for start screen
+}
+
+// Font similarity system - simplified approach for tournament enhancement
+const fontSimilarity = {
+    // Font characteristics database - simplified for practical implementation
+    traits: {
+        // Each font gets scores for key distinguishing characteristics (0-10 scale)
+        'Fira Code': { width: 6, weight: 4, style: 2, personality: 4, ligatures: 10 },
+        'JetBrains Mono': { width: 5, weight: 4, style: 2, personality: 3, ligatures: 10 },
+        'Cascadia Code': { width: 5, weight: 4, style: 3, personality: 3, ligatures: 10 },
+        'Source Code Pro': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'IBM Plex Mono': { width: 5, weight: 4, style: 3, personality: 3, ligatures: 0 },
+        'Roboto Mono': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'Consolas': { width: 5, weight: 4, style: 3, personality: 2, ligatures: 0 },
+        'Monaco': { width: 5, weight: 5, style: 2, personality: 3, ligatures: 0 },
+        'SF Mono': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'Ubuntu Mono': { width: 6, weight: 4, style: 3, personality: 3, ligatures: 0 },
+        'Inconsolata': { width: 5, weight: 4, style: 2, personality: 3, ligatures: 0 },
+        'Hack': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'Space Mono': { width: 6, weight: 4, style: 3, personality: 7, ligatures: 0 },
+        'Courier Prime': { width: 6, weight: 4, style: 4, personality: 5, ligatures: 0 },
+        'Courier New': { width: 6, weight: 4, style: 4, personality: 2, ligatures: 0 },
+        'Anonymous Pro': { width: 6, weight: 4, style: 2, personality: 4, ligatures: 0 },
+        'VT323': { width: 5, weight: 4, style: 0, personality: 10, ligatures: 0 },
+        'Press Start 2P': { width: 8, weight: 6, style: 0, personality: 10, ligatures: 0 },
+        'Operator Mono': { width: 5, weight: 3, style: 5, personality: 8, ligatures: 0 },
+        'MonoLisa': { width: 5, weight: 4, style: 3, personality: 6, ligatures: 0 },
+        'Comic Code': { width: 5, weight: 4, style: 3, personality: 9, ligatures: 0 },
+        'Input Mono': { width: 5, weight: 4, style: 3, personality: 5, ligatures: 0 },
+        'Go Mono': { width: 6, weight: 4, style: 3, personality: 3, ligatures: 0 },
+        'Victor Mono': { width: 5, weight: 3, style: 4, personality: 7, ligatures: 10 },
+        'Iosevka': { width: 3, weight: 3, style: 2, personality: 6, ligatures: 10 },
+        'Recursive': { width: 5, weight: 4, style: 3, personality: 6, ligatures: 10 },
+        'Dank Mono': { width: 5, weight: 4, style: 4, personality: 8, ligatures: 0 },
+        'Intel One Mono': { width: 5, weight: 4, style: 2, personality: 3, ligatures: 0 },
+        'JuliaMono': { width: 5, weight: 4, style: 3, personality: 5, ligatures: 0 },
+        'Monocraft': { width: 5, weight: 4, style: 0, personality: 10, ligatures: 0 },
+        'Hasklig': { width: 5, weight: 4, style: 3, personality: 3, ligatures: 10 },
+        'Geist Mono': { width: 5, weight: 4, style: 2, personality: 3, ligatures: 0 },
+        'Red Hat Mono': { width: 5, weight: 4, style: 2, personality: 3, ligatures: 0 },
+        'DM Mono': { width: 5, weight: 3, style: 3, personality: 4, ligatures: 0 },
+        'Noto Sans Mono': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'Liberation Mono': { width: 5, weight: 4, style: 3, personality: 2, ligatures: 0 },
+        'DejaVu Sans Mono': { width: 5, weight: 4, style: 2, personality: 2, ligatures: 0 },
+        'APL2741': { width: 5, weight: 4, style: 0, personality: 10, ligatures: 0 },
+        'APL385 Unicode': { width: 5, weight: 4, style: 0, personality: 10, ligatures: 0 },
+        '_default': { width: 5, weight: 4, style: 3, personality: 5, ligatures: 0 }
+    },
+    
+    // Calculate similarity between two fonts (0-100, higher = more similar)
+    calculate(font1, font2) {
+        const extractName = (font) => font.replace(/[\"']/g, '').split(',')[0].trim();
+        const name1 = extractName(font1);
+        const name2 = extractName(font2);
+        
+        const traits1 = this.traits[name1] || this.traits._default;
+        const traits2 = this.traits[name2] || this.traits._default;
+        
+        // Calculate weighted distance
+        let totalDiff = 0;
+        const weights = { width: 1.0, weight: 1.0, style: 0.8, personality: 1.2, ligatures: 1.5 };
+        let totalWeight = 0;
+        
+        for (const [key, weight] of Object.entries(weights)) {
+            const diff = Math.abs(traits1[key] - traits2[key]);
+            totalDiff += diff * weight;
+            totalWeight += weight * 10; // Max diff per dimension is 10
+        }
+        
+        // Convert to similarity score (0-100)
+        return Math.max(0, 100 - (totalDiff / totalWeight * 100));
+    },
+    
+    // Group fonts by similarity ranges for progressive tournament
+    categorize(similarity) {
+        if (similarity >= 80) return 'very-similar';
+        if (similarity >= 60) return 'similar';
+        if (similarity >= 40) return 'different';
+        return 'very-different';
+    },
+    
+    // Generate smart font pairs for tournament progression
+    generateProgressivePairs(fonts, round = 1) {
+        const pairs = [];
+        const maxRounds = 3; // Reduced tournament rounds
+        
+        // Target similarity based on round (avoid 100% similar forks)
+        const targetSimilarities = {
+            1: [30, 50],   // Start with moderately similar fonts
+            2: [50, 70],   // More similar fonts  
+            3: [60, 85]    // Similar fonts (avoid 100% forks)
+        };
+        
+        const [minSim, maxSim] = targetSimilarities[round] || [0, 100];
+        
+        // Generate all possible pairs and score them
+        const scoredPairs = [];
+        for (let i = 0; i < fonts.length - 1; i++) {
+            for (let j = i + 1; j < fonts.length; j++) {
+                const similarity = this.calculate(fonts[i], fonts[j]);
+                if (similarity >= minSim && similarity <= maxSim) {
+                    scoredPairs.push({
+                        pair: [fonts[i], fonts[j]],
+                        similarity: similarity,
+                        roundFit: round // How well this fits the current round
+                    });
+                }
+            }
+        }
+        
+        // Sort by how well they fit the round's target similarity
+        scoredPairs.sort((a, b) => {
+            const aDistance = Math.min(
+                Math.abs(a.similarity - minSim),
+                Math.abs(a.similarity - maxSim)
+            );
+            const bDistance = Math.min(
+                Math.abs(b.similarity - minSim),
+                Math.abs(b.similarity - maxSim)
+            );
+            return aDistance - bDistance;
+        });
+        
+        // Return best pairs for this round
+        return scoredPairs.slice(0, Math.min(8, scoredPairs.length)).map(sp => sp.pair);
+    }
+};
+
+// Helper function to get font download information
+function getFontDownloadInfo(fontName) {
+    const downloadLinks = {
+        // Google Fonts with direct TTF download links
+        'Fira Code': {
+            url: 'https://fonts.google.com/specimen/Fira+Code',
+            downloadUrl: 'https://fonts.google.com/download?family=Fira%20Code',
+            instructions: 'Download from Google Fonts and install locally',
+            type: 'free'
+        },
+        'JetBrains Mono': {
+            url: 'https://www.jetbrains.com/lp/mono/',
+            downloadUrl: 'https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip',
+            instructions: 'Download from JetBrains and install locally',
+            type: 'free'
+        },
+        'Source Code Pro': {
+            url: 'https://fonts.google.com/specimen/Source+Code+Pro',
+            downloadUrl: 'https://fonts.google.com/download?family=Source%20Code%20Pro',
+            instructions: 'Download from Google Fonts and install locally',
+            type: 'free'
+        },
+        'Cascadia Code': {
+            url: 'https://github.com/microsoft/cascadia-code/releases',
+            downloadUrl: 'https://github.com/microsoft/cascadia-code/releases/latest/download/CascadiaCode.zip',
+            instructions: 'Download from GitHub releases and install',
+            type: 'free'
+        },
+        'Cascadia Mono': {
+            url: 'https://github.com/microsoft/cascadia-code/releases',
+            downloadUrl: 'https://github.com/microsoft/cascadia-code/releases/latest/download/CascadiaCode.zip',
+            instructions: 'Download from GitHub releases and install (includes Cascadia Mono)',
+            type: 'free'
+        },
+        'Hack': {
+            url: 'https://github.com/source-foundry/Hack/releases',
+            downloadUrl: 'https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip',
+            instructions: 'Download from GitHub releases and install',
+            type: 'free'
+        },
+        'Iosevka': {
+            url: 'https://github.com/be5invis/Iosevka/releases',
+            downloadUrl: 'https://github.com/be5invis/Iosevka/releases/latest',
+            instructions: 'Download from GitHub releases and install (choose variant)',
+            type: 'free'
+        },
+        'Hasklig': {
+            url: 'https://github.com/i-tu/Hasklig/releases',
+            downloadUrl: 'https://github.com/i-tu/Hasklig/releases/latest',
+            instructions: 'Download from GitHub releases and install',
+            type: 'free'
+        },
+        'Victor Mono': {
+            url: 'https://rubjo.github.io/victor-mono/',
+            downloadUrl: 'https://fonts.google.com/download?family=Victor%20Mono',
+            instructions: 'Download from Google Fonts and install locally',
+            type: 'free'
+        },
+        'Geist Mono': {
+            url: 'https://fonts.google.com/specimen/Geist+Mono',
+            downloadUrl: 'https://fonts.google.com/download?family=Geist%20Mono',
+            instructions: 'Download from Google Fonts and install locally',
+            type: 'free'
+        },
+        'MonoLisa': {
+            url: 'https://www.monolisa.dev/',
+            instructions: 'Commercial font - purchase from official site',
+            type: 'commercial'
+        },
+        'Operator Mono': {
+            url: 'https://www.typography.com/fonts/operator/styles',
+            instructions: 'Commercial font - purchase from Hoefler&Co',
+            type: 'commercial'
+        },
+        'Dank Mono': {
+            url: 'https://dank.sh/',
+            instructions: 'Commercial font - purchase from official site',
+            type: 'commercial'
+        },
+        'Comic Code': {
+            url: 'https://tosche.net/fonts/comic-code',
+            instructions: 'Commercial font - purchase from Toshi Omagari',
+            type: 'commercial'
+        },
+        'Berkeley Mono': {
+            url: 'https://berkeleygraphics.com/typefaces/berkeley-mono/',
+            instructions: 'Commercial font - purchase from Berkeley Graphics',
+            type: 'commercial'
+        },
+        'PragmataPro': {
+            url: 'https://fsd.it/shop/fonts/pragmatapro/',
+            instructions: 'Commercial font - purchase from Fabrizio Schiavi Design',
+            type: 'commercial'
+        },
+        'Input Mono': {
+            url: 'https://input.djr.com/download/',
+            downloadUrl: 'https://input.djr.com/build/?family=InputMono&variant=InputMono-Regular&size=14&lineHeight=1.2&a=0&g=0&i=0&l=0&zero=0&asterisk=0&braces=0&preset=default&customize=please',
+            instructions: 'Free for personal use - download from DJR',
+            type: 'free'
+        },
+        'SF Mono': {
+            url: 'https://developer.apple.com/fonts/',
+            instructions: 'Available with Xcode or macOS Terminal',
+            type: 'system'
+        },
+        'Monaco': {
+            url: 'https://developer.apple.com/fonts/',
+            instructions: 'Pre-installed on macOS',
+            type: 'system'
+        },
+        'Consolas': {
+            url: 'https://docs.microsoft.com/en-us/typography/font-list/consolas',
+            instructions: 'Pre-installed on Windows Vista and later',
+            type: 'system'
+        },
+        'Aptos Mono': {
+            url: 'https://www.microsoft.com/en-us/microsoft-365/blog/2023/07/13/aptos-default-font/',
+            instructions: 'Pre-installed on Windows 11 and Microsoft 365',
+            type: 'system'
+        },
+        'Menlo': {
+            url: 'https://developer.apple.com/fonts/',
+            instructions: 'Pre-installed on macOS',
+            type: 'system'
+        },
+        'DejaVu Sans Mono': {
+            url: 'https://dejavu-fonts.github.io/',
+            downloadUrl: 'https://github.com/dejavu-fonts/dejavu-fonts/releases/latest/download/dejavu-fonts-ttf-2.37.zip',
+            instructions: 'Download from DejaVu Fonts project',
+            type: 'free'
+        },
+        'Liberation Mono': {
+            url: 'https://github.com/liberationfonts/liberation-fonts/releases',
+            downloadUrl: 'https://github.com/liberationfonts/liberation-fonts/releases/latest/download/liberation-fonts-ttf-2.1.5.tar.gz',
+            instructions: 'Download from GitHub releases',
+            type: 'free'
+        },
+        'Serious Shanns': {
+            url: 'https://kabeech.github.io/serious-shanns/',
+            instructions: 'Download from official site and install'
+        },
+        'Intel One Mono': {
+            url: 'https://github.com/intel/intel-one-mono/releases',
+            instructions: 'Download from GitHub releases and install'
+        },
+        'Geist Mono': {
+            url: 'https://vercel.com/font',
+            instructions: 'Download from Vercel and install'
+        },
+        'JuliaMono': {
+            url: 'https://juliamono.netlify.app/',
+            instructions: 'Download from official site and install'
+        },
+        'Monocraft': {
+            url: 'https://github.com/IdreesInc/Monocraft/releases',
+            instructions: 'Download from GitHub releases and install'
+        },
+        // Add more fonts from the CSV data
+        'IBM Plex Mono': {
+            url: 'https://fonts.google.com/specimen/IBM+Plex+Mono',
+            instructions: 'Download from Google Fonts and install locally'
+        },
+        'Roboto Mono': {
+            url: 'https://fonts.google.com/specimen/Roboto+Mono',
+            instructions: 'Download from Google Fonts and install locally'
+        },
+        'Ubuntu Mono': {
+            url: 'https://fonts.google.com/specimen/Ubuntu+Mono',
+            instructions: 'Download from Google Fonts and install locally'
+        },
+        'Space Mono': {
+            url: 'https://fonts.google.com/specimen/Space+Mono',
+            instructions: 'Download from Google Fonts and install locally'
+        },
+        'Inconsolata': {
+            url: 'https://fonts.google.com/specimen/Inconsolata',
+            instructions: 'Download from Google Fonts and install locally'
+        }
+    };
+    
+    // Check for exact match first
+    if (downloadLinks[fontName]) {
+        return downloadLinks[fontName];
+    }
+    
+    // Check for partial matches
+    for (const [key, value] of Object.entries(downloadLinks)) {
+        if (fontName.toLowerCase().includes(key.toLowerCase()) || 
+            key.toLowerCase().includes(fontName.toLowerCase())) {
+            return value;
+        }
+    }
+    
+    // Default fallback for unknown fonts
+    return {
+        url: `https://www.google.com/search?q=${encodeURIComponent(fontName + ' font download')}`,
+        instructions: 'Search for this font online'
+    };
 }
 
 // Start the app

@@ -39,6 +39,47 @@ body.light-theme {
     --preview-bg: #ffffff;
 }
 
+/* Loading and error states for code display */
+.loading, .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-style: italic;
+    opacity: 0.7;
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.loading {
+    color: var(--accent-primary);
+}
+
+.loading::before {
+    content: "⟳";
+    display: inline-block;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.error {
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+}
+
+.error::before {
+    content: "⚠";
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     background: var(--bg-primary);
@@ -68,6 +109,36 @@ body {
     justify-content: center;
     gap: 20px;
     transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Logo and title layout */
+.title-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    flex-shrink: 0;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+body.light-theme .logo {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* Disabled states for front page */
+select:disabled, button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.title-text {
+    flex: 1;
 }
 
 h1 {
