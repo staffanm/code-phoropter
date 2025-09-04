@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Phoropter</title>
+    <link rel="icon" type="image/png" href="phoropter-icon-2.png">
+    <link rel="shortcut icon" type="image/png" href="phoropter-icon-2.png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
         <div class="header">
             <div class="title-with-logo">
-                <img src="b00e6c8f-2ff0-47b9-a833-bd9fab5fa2a4.png" alt="Phoropter" class="logo">
+                <img src="phoropter-logo-2.png" alt="Phoropter" class="logo">
                 <div class="title-text">
                     <h1>Code Phoropter</h1>
                     <p class="subtitle">Find your perfect code display settings</p>
@@ -32,14 +34,15 @@
                     <span class="key-hint">[A]</span> Prefer A
                 </button>
             </div>
-            
-            <div class="divider">
-                <div class="vs">VS</div>
+            <!-- Neutral buttons centered between panels -->
+            <div class="center-buttons">
                 <button class="floating-choice-btn neutral" id="btnEqual" onclick="selectOption('equal')">
                     <span class="key-hint">[S]</span> No Preference
                 </button>
+                <button class="floating-choice-btn skip-stage" id="btnSkipStage" onclick="skipCurrentStage()" style="display: none;">
+                    <span class="key-hint">[Tab]</span> Skip Stage
+                </button>
             </div>
-            
             <div class="code-panel" id="panelB">
                 <div class="panel-label">Option B</div>
                 <div class="panel-summary" id="summaryB"></div>
@@ -71,6 +74,8 @@
         </div>
 
 
+        
+
         <div class="footer">
             <a href="about.html" class="about-link">About</a>
             <div class="theme-toggle">
@@ -80,23 +85,27 @@
                     <span class="toggle-label" id="toggleLabel">Dark Mode</span>
                 </label>
             </div>
+            
             <select id="languageSelect" onchange="changeLanguage()" disabled>
                 <option value="javascript">JavaScript (React)</option>
                 <option value="python">Python (Async)</option>
                 <option value="rust">Rust (Cache)</option>
                 <option value="go">Go (Web Service)</option>
                 <option value="java">Java (Spring Boot)</option>
+                <option value="clojure">Clojure (Ring)</option>
                 <option value="css">CSS (Normalize)</option>
                 <option value="html">HTML (Boilerplate)</option>
                 <option value="json">JSON (VS Code)</option>
                 <option value="markdown">Markdown (README)</option>
                 <option value="legal">Legal (GDPR)</option>
-                <option value="self">This App's Code</option>
+                <option value="powerline">Powerline & Nerd Fonts</option>
                 <option value="custom">📁 My Own Code...</option>
             </select>
             <button id="resetBtn" class="reset-btn" onclick="resetTest()" disabled>Start Over</button>
-            <span class="comparison-count" id="comparisonCount">Comparison 1</span>
+            <button id="skipRoleBtn" class="skip-role-btn hidden" onclick="skipRoleStage()">Skip Role</button>
         </div>
+
+        
 
         <div id="results" class="results hidden">
             <h2>Your Ideal Code Display Settings</h2>
@@ -111,12 +120,32 @@
                 <button onclick="resetTest()">Try Again</button>
             </div>
         </div>
+
+        <!-- Icons/Nerd Font prompt modal -->
+        <div id="iconsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="iconsModalTitle">
+            <div class="modal-content">
+                <h3 id="iconsModalTitle">Use Powerline/Nerd Font Icons?</h3>
+                <p class="modal-text">We detected a patched icon font for your selected family. While viewing a terminal sample, you can choose to use a patched variant for powerline and file icons.</p>
+                <div id="iconsOptions" class="modal-options"></div>
+                <div class="modal-actions">
+                    <button id="iconsKeepBaseBtn">Keep Base</button>
+                    <button id="iconsUsePatchedBtn" class="primary">Use Patched</button>
+                </div>
+            </div>
+        </div>
     </div>
 
+
     <!-- Font Detective library for reliable font detection (local copy) -->
-    <script src="font-detective.js"></script>
+    <script src="vendor/font-detective.js"></script>
     <!-- JSZip library for creating zip files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- Databases are JSON; app.js fetches them -->
+    <!-- Multi-font roles metadata and presets -->
+    <script src="font-roles.js"></script>
+    <!-- highlight.js (local copy expected in vendor/); no theme CSS on purpose -->
+    <script src="vendor/highlight.min.js"></script>
+    <script src="text-samples.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

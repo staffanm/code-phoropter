@@ -1,154 +1,56 @@
-GENERAL DATA PROTECTION REGULATION (GDPR)
-DATA PROCESSING AND PRIVACY NOTICE
+REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+of 27 April 2016
+on the protection of natural persons with regard to the processing of personal
+data and on the free movement of such data, and repealing Directive 95/46/EC
+(General Data Protection Regulation)
 
-This notice explains how Code Phoropter handles your personal data and 
-respects your privacy rights under the General Data Protection Regulation 
-(EU) 2016/679.
+CHAPTER I
+General provisions
 
-DATA CONTROLLER
-Code Phoropter acts as the data controller for any processing activities 
-performed through this application. Contact information:
-- Website: https://github.com/staffanm/code-phoropter
-- Repository: github.com/staffanm/code-phoropter
+Article 1
+Subject-matter and objectives
 
-WHAT DATA WE COLLECT
-Code Phoropter is designed with privacy by design principles:
+1. This Regulation lays down rules relating to the protection of natural
+   persons with regard to the processing of personal data and rules relating to the
+   free movement of personal data.
 
-1. NO PERSONAL DATA COLLECTION
-   - We do not collect, store, or process any personal information
-   - No names, email addresses, or contact details are requested
-   - No account creation or registration required
 
-2. TECHNICAL DATA PROCESSED LOCALLY
-   - Font preferences and display settings
-   - Tournament comparison results  
-   - Color scheme selections
-   - All processing occurs in your browser only
+2. This Regulation protects fundamental rights and freedoms of natural persons
+   and in particular their right to the protection of personal data.
 
-3. NO COOKIES OR TRACKING
-   - No cookies are set on your device
-   - No analytics or tracking scripts are used
-   - No third-party tracking services integrated
-   - No fingerprinting or behavioral tracking
+3. The free movement of personal data within the Union shall be neither
+   restricted nor prohibited for reasons connected with the protection of natural
+   persons with regard to the processing of personal data.
 
-LEGAL BASIS FOR PROCESSING
-Where any processing occurs, it is based on:
-- Article 6(1)(f) GDPR: Legitimate interests in providing font testing
-  functionality
-- Article 6(1)(a) GDPR: Your consent when you voluntarily use the 
-  application
+Article 2
+Material scope
 
-DATA STORAGE AND RETENTION
-- All preference data remains in your browser's local storage
-- No data is transmitted to external servers
-- Data persists only as long as you choose to keep it
-- You can clear all data by clearing your browser storage
+1. This Regulation applies to the processing of personal data wholly or partly
+   by automated means and to the processing other than by automated means of
+   personal data which form part of a filing system or are intended to form part of
+   a filing system. 
 
-THIRD-PARTY SERVICES
-Limited external requests may be made for:
-1. Google Fonts API: Loading web fonts when selected (Google's privacy 
-   policy applies)
-2. CDN Services: Loading font files from public content delivery networks
+2. This Regulation does not apply to the processing of personal data:
 
-These services have their own privacy policies and data processing terms.
+   (a) in the course of an activity which falls outside the scope of Union law;
 
-YOUR RIGHTS UNDER GDPR
-Since we don't collect personal data, most GDPR rights are not applicable. 
-However, you retain full control:
+   (b) by the Member States when carrying out activities which fall within the
+   scope of Chapter 2 of Title V of the TEU; 
 
-- Right to erasure: Clear your browser's local storage
-- Right to data portability: Export your settings using the app's export 
-  feature
-- Right to withdraw consent: Stop using the application at any time
+   (c) by a natural person in the course of a purely personal or household
+   activity; 
 
-DATA PROTECTION BY DESIGN
-Our privacy-first approach includes:
-- Client-side processing only
-- No external data transmission
-- No user accounts or profiles
-- No behavioral tracking
-- No data monetization
-- Open source transparency
+   (d) by competent authorities for the purposes of the prevention,
+   investigation, detection or prosecution of criminal offences or the execution
+   of criminal penalties, including the safeguarding against and the prevention
+   of threats to public security. 
 
-CHANGES TO THIS NOTICE
-Any changes to this privacy notice will be published in the application's 
-repository. As we don't collect contact information, we cannot notify users 
-directly of changes.
+3. For the processing of personal data by the Union institutions, bodies,
+   offices and agencies, Regulation (EC) No 45/2001 applies. Regulation (EC) No
+   45/2001 and other Union legal acts applicable to such processing of personal
+   data shall be adapted to the principles and rules of this Regulation in
+   accordance with Article 98.
 
-COMPLAINTS AND CONTACT
-For privacy-related concerns:
-1. Create an issue at: https://github.com/staffanm/code-phoropter/issues
-2. Contact your local data protection authority if you believe your rights 
-   have been violated
-
-SUPERVISORY AUTHORITY
-You have the right to lodge a complaint with your local data protection 
-supervisory authority if you believe we have not complied with GDPR 
-requirements.
-
-DATA BREACH PROCEDURE
-In the unlikely event of a data breach affecting user data:
-1. We will assess the risk to user rights and freedoms
-2. Notify relevant supervisory authorities within 72 hours if required
-3. Inform affected users without undue delay if there is a high risk
-
-However, since we don't collect or store personal data on our servers, the 
-risk of data breaches is minimal.
-
-INTERNATIONAL TRANSFERS
-No personal data is transferred outside the European Union as no personal 
-data is collected or stored by our systems.
-
-AUTOMATED DECISION-MAKING
-The application uses algorithmic processing for:
-- Font similarity calculations
-- Tournament scoring
-- Display setting optimizations
-
-This processing does not involve personal data and serves only to provide 
-better font recommendations based on your preferences.
-
-TECHNICAL AND ORGANIZATIONAL MEASURES
-Security measures include:
-- Client-side processing eliminates server-side risks
-- Open source code allows security auditing
-- No authentication systems to compromise
-- Minimal external dependencies
-- Regular security reviews of dependencies
-
-LAWFUL BASIS DETAILS
-Article 6(1)(f) GDPR - Legitimate Interests:
-- Our legitimate interest: Providing font testing functionality
-- Your interests: Finding optimal coding font settings
-- Balance assessment: No personal data collection minimizes privacy impact
-
-DATA MINIMIZATION
-We adhere to data minimization principles by:
-- Processing only necessary preference data
-- Keeping all processing local to your device
-- Not storing any data on external systems
-- Providing functionality without requiring personal information
-
-CONSENT MANAGEMENT
-By using this application, you consent to:
-- Local processing of your font preferences
-- Temporary loading of fonts from external sources when selected
-- Use of browser local storage for saving preferences
-
-You can withdraw consent at any time by:
-- Closing the application
-- Clearing your browser's local storage
-- Using private/incognito browsing mode
-
-This consent is freely given, specific, informed, and can be withdrawn at 
-any time without affecting the lawfulness of processing based on consent 
-before its withdrawal.
-
-EFFECTIVE DATE
-This privacy notice is effective from the date of first publication and 
-applies to all use of the Code Phoropter application.
-
-Last updated: August 2024
-
-For the most current version of this notice, please check:
-https://github.com/staffanm/code-phoropter
+4. This Regulation shall be without prejudice to the application of Directive
+   2000/31/EC, in particular of the liability rules of intermediary service
+   providers in Articles 12 to 15 of that Directive.

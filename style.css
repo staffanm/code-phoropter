@@ -39,6 +39,362 @@ body.light-theme {
     --preview-bg: #ffffff;
 }
 
+/* About page styles */
+body.about-page {
+    overflow-y: auto;
+    min-height: 100vh;
+}
+
+body.about-page ul {
+    padding-left: 20px;
+}
+
+body.about-page code {
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: 12px;
+    border-radius: 6px;
+    color: var(--accent-primary);
+}
+
+/* Multi-Font roles UI */
+.roles-panel {
+    margin: 10px auto;
+    padding: 12px;
+    max-width: 1100px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.roles-panel.hidden { display: none; }
+
+.roles-panel-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* rolesInfoToggle removed per design */
+
+.roles-panel label {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.roles-panel select {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+.roles-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px 16px;
+}
+
+.roles-summary .role-item {
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.roles-summary .role-item button {
+    margin-left: 8px;
+    padding: 2px 8px;
+    font-size: 12px;
+    background: var(--button-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.roles-summary .role-item button:hover {
+    background: var(--button-hover);
+}
+
+.role-compare-bar {
+    margin: 8px auto;
+    padding: 6px 10px;
+    max-width: 1100px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: none;
+    /* Compact horizontal layout */
+    display: none;
+}
+
+.role-compare-bar.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#roleCompareTitle,
+#roleComparePair { margin: 0; }
+
+#roleComparePair {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.role-compare-actions {
+    margin-top: 0;
+    display: flex;
+    gap: 6px;
+}
+
+.role-compare-actions button {
+    padding: 6px 8px;
+    font-size: 12px;
+    background: var(--button-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.role-compare-actions button:hover { background: var(--button-hover); }
+
+.multifont-toggle { margin: 0 12px; }
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.back-link:hover {
+    color: var(--text-primary);
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.about-header img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.about-subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.about-section {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    font-size: 24px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.about-section h3 {
+    color: var(--text-primary);
+    margin: 20px 0 10px 0;
+    font-size: 18px;
+}
+
+.about-section p, .about-section li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.privacy-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.privacy-box h3 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.font-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.font-table th {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.font-table td {
+    padding: 10px 12px;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Inline code scheme samples inside about tables */
+.scheme-sample {
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 6px;
+    padding: 12px 14px;
+    overflow: auto;
+    max-width: 420px;
+}
+
+/* Ensure inner code has no extra padding/offset */
+body.about-page .scheme-sample code {
+    padding: 0;
+    display: block;
+    font-family: inherit;
+}
+
+/* Toned-down, readable links in font table */
+.about-page .font-table a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
+.about-page .font-table a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+.font-table tr:last-child td {
+    border-bottom: none;
+}
+
+.font-table tr:hover {
+    background: var(--bg-tertiary);
+}
+
+/* Ensure start-screen highlighted code inherits preview font */
+.font-family-preview code.hljs {
+    font-family: inherit !important;
+}
+
+.font-source {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+}
+
+.font-source.embedded {
+    background: #4CAF50;
+    color: white;
+}
+
+.font-source.google {
+    background: #4285F4;
+    color: white;
+}
+
+.font-source.system {
+    background: #757575;
+    color: white;
+}
+
+.color-scheme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.color-scheme-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.color-scheme-card h4 {
+    margin: 0 0 10px 0;
+    color: var(--text-primary);
+}
+
+.color-preview {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+    height: 30px;
+}
+
+.color-swatch {
+    flex: 1;
+    border-radius: 4px;
+    position: relative;
+}
+
+.color-swatch:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 11px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.scheme-credit {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-top: 8px;
+}
+
+.scheme-credit a {
+    color: var(--accent-primary);
+    text-decoration: none;
+}
+
+.scheme-credit a:hover {
+    text-decoration: underline;
+}
+
 /* Loading and error states for code display */
 .loading, .error {
     display: flex;
@@ -100,7 +456,7 @@ body {
 }
 
 .header {
-    padding: 10px 20px;
+    padding: 5px 20px;
     text-align: center;
     background: var(--bg-secondary);
     border-bottom: 1px solid var(--border-color);
@@ -116,12 +472,12 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 .logo {
-    width: 64px;
-    height: 64px;
+    width: 80px;
+    height: auto;
     flex-shrink: 0;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
@@ -204,6 +560,7 @@ h1 {
     padding: 8px;
     gap: 12px;
     min-height: 0;
+    position: relative; /* for centering neutral button */
 }
 
 .code-panel {
@@ -217,6 +574,35 @@ h1 {
     transition: border-color 0.3s ease, background-color 0.3s ease;
     min-width: 0;
     width: 0;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 6px; /* Match panel border radius minus border */
+    opacity: 0.3;
+}
+
+.grid-lines {
+    position: absolute;
+    top: 30px; /* Match pre padding-top */
+    left: 20px; /* Match pre padding-left */
+    right: 20px;
+    bottom: 20px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    white-space: pre;
+    color: var(--border-color);
+    overflow: hidden;
 }
 
 .code-panel:hover {
@@ -269,6 +655,8 @@ body.show-summaries .panel-summary {
     overflow: auto;
     margin: 0;
     min-width: 0;
+    position: relative;
+    z-index: 2; /* Above grid overlay */
 }
 
 .code-panel code {
@@ -277,23 +665,12 @@ body.show-summaries .panel-summary {
     tab-size: 4;
     overflow-x: auto;
     width: 100%;
+    background: transparent;
 }
 
-.divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.vs {
-    background: var(--bg-tertiary);
-    color: var(--text-disabled);
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 14px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+
+/* divider removed to simplify A/B comparison */
 
 .controls {
     padding: 12px;
@@ -381,9 +758,65 @@ body.show-summaries .panel-summary {
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.1);
 }
 
-.divider .floating-choice-btn {
-    bottom: 20px;
+.center-buttons {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 20;
 }
+
+.center-buttons .floating-choice-btn {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 0;
+}
+
+.floating-choice-btn.skip-stage {
+    background: var(--accent-secondary);
+    color: white;
+    border: 1px solid var(--accent-secondary);
+}
+
+.floating-choice-btn.skip-stage:hover {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Ghost suggestion styling */
+.ghost-text {
+    opacity: 0.65;
+    font-style: italic;
+    font-weight: 300;
+    pointer-events: none;
+    user-select: none;
+}
+
+.ghost-caret {
+    display: inline-block;
+    width: 0;
+    border-left: 2px solid currentColor;
+    margin-left: -1px;
+    animation: ghost-blink 1s steps(1, end) infinite;
+    opacity: 0.85;
+}
+
+@keyframes ghost-blink {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Inline neutral button behavior (no transforms) */
+/* Keep neutral button centered and stable on hover/active */
+/* neutral button previously in divider has been removed; use [S] key */
+
+/* no divider-specific neutral button styles */
 
 .footer {
     padding: 8px 15px;
@@ -433,6 +866,27 @@ body.show-summaries .panel-summary {
 
 .reset-btn:hover {
     background: var(--button-hover);
+}
+
+.skip-role-btn {
+    padding: 4px 10px;
+    background: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.skip-role-btn:hover {
+    background: var(--accent-secondary);
+    border-color: var(--accent-secondary);
+}
+
+.skip-role-btn.hidden {
+    display: none;
 }
 
 .comparison-count {
@@ -602,6 +1056,31 @@ body.show-summaries .panel-summary {
 .results.hidden {
     display: none;
 }
+
+/* Simple modal for icons prompt */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modal.hidden { display: none; }
+.modal-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 560px;
+    width: 92%;
+    color: var(--text-primary);
+}
+.modal-text { color: var(--text-secondary); margin: 8px 0 12px; }
+.modal-options { margin: 8px 0 12px; color: var(--text-secondary); }
+.modal-actions { display: flex; gap: 8px; justify-content: flex-end; }
+.modal-actions .primary { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; border: none; }
 
 .results h2 {
     text-align: center;
@@ -996,4 +1475,78 @@ body.show-summaries .panel-summary {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
+}
+
+/* Role highlighting animations */
+@keyframes roleHighlight {
+    0% { 
+        box-shadow: 0 0 0 0 var(--accent-primary);
+        background-color: rgba(102, 126, 234, 0.2);
+    }
+    25% {
+        box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.4);
+        background-color: rgba(102, 126, 234, 0.15);
+    }
+    100% {
+        box-shadow: 0 0 0 0 var(--accent-primary);
+        background-color: transparent;
+    }
+}
+
+/* Role focus states */
+.role-focus-active {
+    position: relative;
+}
+
+.role-focus-active .hljs-comment,
+.role-focus-active .hljs-string,
+.role-focus-active .hljs-keyword,
+.role-focus-active .hljs-operator,
+.role-focus-active .hljs-function,
+.role-focus-active .hljs-title,
+.role-focus-active .ghost-text,
+.role-focus-active .copilot {
+    transition: all 0.3s ease;
+}
+
+/* Dim non-focused elements */
+.role-focus-active *:not(.role-highlight-target) {
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+/* Highlight target elements */
+.role-focus-active .role-highlight-target {
+    animation: roleHighlight 1.5s ease-out forwards;
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Ghost text styling - override all syntax highlighting */
+.ghost-text {
+    font-style: italic !important;
+    opacity: 0.6 !important;
+    color: inherit !important;
+    font-weight: 300 !important;
+}
+
+.ghost-text * {
+    color: inherit !important;
+    font-weight: inherit !important;
+    font-style: inherit !important;
+    background: none !important;
+    text-decoration: none !important;
+}
+
+/* Ghost caret */
+.ghost-caret::after {
+    content: '|';
+    opacity: 0.7;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 0.7; }
+    51%, 100% { opacity: 0.2; }
 }

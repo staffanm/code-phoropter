@@ -1,0 +1,5132 @@
+[
+  {
+    "name": "Aptos Mono",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Aptos Mono\"",
+    "homepage": "https://docs.microsoft.com/typography/font-list/aptos",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Windows 11 and Microsoft 365",
+    "id": 12
+  },
+  {
+    "name": "Consolas",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "Consolas",
+    "homepage": "https://docs.microsoft.com/typography/font-list/consolas",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Windows default console font",
+    "id": 29
+  },
+  {
+    "name": "SF Mono",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"SF Mono\"",
+    "homepage": "https://developer.apple.com/fonts/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "macOS system font",
+    "id": 135
+  },
+  {
+    "name": "Monaco",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Monaco\"",
+    "homepage": "https://en.wikipedia.org/wiki/Monaco_(typeface)",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Classic macOS terminal font",
+    "id": 95
+  },
+  {
+    "name": "Menlo",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Menlo\"",
+    "homepage": "https://en.wikipedia.org/wiki/Menlo_(typeface)",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "macOS default terminal font",
+    "id": 92
+  },
+  {
+    "name": "Courier New",
+    "source": "system",
+    "ligatures": false,
+    "description": "A classic monospaced serif with typewriter roots.",
+    "homepage": "https://learn.microsoft.com/en-us/typography/font-list/courier-new",
+    "comment": "Available from https://web.archive.org/web/20020124085641/http://www.microsoft.com/typography/fontpack/default.htm in a self-extracting executable",
+    "css": "\"Courier New\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Serif",
+    "id": 30
+  },
+  {
+    "name": "Lucida Console",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Lucida Console\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Windows console font",
+    "id": 87
+  },
+  {
+    "name": "Andale Mono",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "homepage": "https://learn.microsoft.com/en-us/typography/font-list/andale-mono",
+    "comment": "Available from https://web.archive.org/web/20020124085641/http://www.microsoft.com/typography/fontpack/default.htm in a self-extracting executable",
+    "css": "\"Andale Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 7
+  },
+  {
+    "name": "DejaVu Sans Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes, with multiple weights/styles.",
+    "css": "\"DejaVu Sans Mono\"",
+    "homepage": "https://dejavu-fonts.github.io/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "oblique"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff",
+      "files": {
+        "woff": "fonts/DejaVu Sans Mono/DejaVuSansMono{suffix|map}-webfont.woff",
+        "ttf": "fonts/DejaVu Sans Mono/DejaVuSansMono{suffix|map}-webfont.ttf"
+      },
+      "maps": {
+        "suffix": {
+          "400:normal": "",
+          "700:normal": "-Bold",
+          "400:oblique": "-Oblique",
+          "700:oblique": "-BoldOblique",
+          "400:italic": "Italic",
+          "700:italic": "BoldItalic"
+        },
+        "width": {
+          "normal": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "comment": "Linux default monospace",
+    "id": 38
+  },
+  {
+    "name": "Droid Sans Mono",
+    "source": "system",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Droid Sans Mono\"",
+    "homepage": "https://fonts.google.com/specimen/Droid+Sans+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 42
+  },
+  {
+    "name": "MonoLisa",
+    "source": "system",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"MonoLisa\"",
+    "homepage": "https://www.monolisa.dev/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 109
+  },
+  {
+    "name": "Operator Mono",
+    "source": "system",
+    "ligatures": true,
+    "description": "A mix between typewriter and handwritten, with a wide range of weights and a distinct italic.",
+    "css": "\"Operator Mono\"",
+    "homepage": "https://www.typography.com/fonts/operator/styles",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 118
+  },
+  {
+    "name": "Dank Mono",
+    "source": "system",
+    "ligatures": true,
+    "description": "A casual, humanist monospaced design with smooth curves and tasteful ligatures, designed for code.",
+    "css": "\"Dank Mono\"",
+    "homepage": "https://philpl.gumroad.com/l/dank-mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 37
+  },
+  {
+    "name": "Berkeley Mono",
+    "source": "system",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Berkeley Mono\"",
+    "homepage": "https://berkeleygraphics.com/typefaces/berkeley-mono/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 16
+  },
+  {
+    "name": "Comic Code",
+    "source": "system",
+    "ligatures": true,
+    "description": "An expressive, handwriting‑inspired monospaced face, with programming ligatures.",
+    "css": "\"Comic Code\"",
+    "homepage": "https://tosche.net/fonts/comic-code",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 24
+  },
+  {
+    "name": "PragmataPro",
+    "source": "system",
+    "ligatures": true,
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures.",
+    "css": "\"PragmataPro\"",
+    "homepage": "https://fsd.it/shop/fonts/pragmatapro/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Compact",
+    "id": 122
+  },
+  {
+    "name": "Input Mono",
+    "source": "system",
+    "ligatures": false,
+    "description": "A condensed monospaced design optimized for dense code.",
+    "css": "\"Input Mono\"",
+    "homepage": "https://input.djr.com/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Compact",
+    "id": 70
+  },
+  {
+    "name": "APL385 Unicode",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"APL385 Unicode\"",
+    "homepage": "https://apl385.com/fonts/",
+    "ttf": "fonts/APL385 Unicode/Apl385.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 11
+  },
+  {
+    "name": "Fira Code",
+    "source": "google",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Fira Code\"",
+    "homepage": "https://github.com/tonsky/FiraCode",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 48
+  },
+  {
+    "name": "JetBrains Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"JetBrains Mono\"",
+    "homepage": "https://www.jetbrains.com/mono/",
+    "ttf": "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/ttf/JetBrainsMono-Regular.ttf",
+    "woff2": "https://github.com/JetBrains/JetBrainsMono/raw/master/fonts/webfonts/JetBrainsMono-Regular.woff2",
+    "otf": null,
+    "category": "Sans",
+    "id": 78
+  },
+  {
+    "name": "Victor Mono",
+    "source": "google",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Victor Mono\"",
+    "homepage": "https://rubjo.github.io/victor-mono/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 150
+  },
+  {
+    "name": "Recursive",
+    "source": "google",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Recursive\"",
+    "homepage": "https://www.recursive.design/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 128
+  },
+  {
+    "name": "Cascadia Code",
+    "source": "google",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Cascadia Code\"",
+    "homepage": "https://github.com/microsoft/cascadia-code",
+    "ttf": null,
+    "woff2": null,
+    "otf": null,
+    "category": "Sans",
+    "comment": "Microsoft's default terminal font",
+    "id": 19
+  },
+  {
+    "name": "Iosevka",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures, multiple weights/styles and narrow proportions.",
+    "css": "\"Iosevka\"",
+    "homepage": "https://typeof.net/Iosevka/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal",
+        "italic",
+        "oblique"
+      ],
+      "widths": [
+        "normal",
+        "expanded"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Iosevka/Iosevka-{width|map}{weight|map}{style|map}.woff2",
+        "ttf": "fonts/Iosevka/Iosevka{width|map}{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "expanded": "Extended"
+        },
+        "weight": {
+          "100": "Thin",
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "-Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold",
+          "900": "Heavy"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic",
+          "oblique": "Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Compact",
+    "id": 73
+  },
+  {
+    "name": "Iosevka Slab",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A sturdy monospaced slab‑serif with blocky terminals, with programming ligatures, multiple weights/styles and narrow proportions.",
+    "css": "\"Iosevka Slab\"",
+    "homepage": "https://github.com/be5invis/Iosevka",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal",
+        "italic",
+        "oblique"
+      ],
+      "widths": [
+        "normal",
+        "expanded"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Iosevka Slab/IosevkaSlab-{width|map}{weight|map}{style|map}.woff2",
+        "ttf": "fonts/Iosevka Slab/IosevkaSlab-{width|map}{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "expanded": "Extended"
+        },
+        "weight": {
+          "100": "Thin",
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "-Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold",
+          "900": "Heavy"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic",
+          "oblique": "Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Slab",
+    "id": 75
+  },
+  {
+    "name": "Hasklig",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Hasklig\"",
+    "homepage": "https://github.com/i-tu/Hasklig",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 60
+  },
+  {
+    "name": "JuliaMono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures.",
+    "css": "\"JuliaMono\"",
+    "homepage": "https://juliamono.netlify.app/",
+    "ttf": "https://github.com/cormullion/juliamono/releases/download/v0.056/JuliaMono.tar.gz",
+    "otf": null,
+    "woff2": "https://github.com/cormullion/juliamono/releases/download/v0.058/JuliaMono-Regular.woff2",
+    "category": "Compact",
+    "id": 80
+  },
+  {
+    "name": "Fantasque Sans Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Fantasque Sans Mono\"",
+    "homepage": "https://github.com/belluzj/fantasque-sans",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 46
+  },
+  {
+    "name": "Commit Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Commit Mono\"",
+    "homepage": "https://commitmono.com/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 27
+  },
+  {
+    "name": "Sudo",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures.",
+    "css": "\"Sudo\"",
+    "homepage": "https://github.com/jenskutilek/sudo-font",
+    "ttf": "fonts/Sudo/SudoVariable.ttf",
+    "otf": null,
+    "woff2": "fonts/Sudo/SudoVariable.woff2",
+    "category": "Compact",
+    "id": 144
+  },
+  {
+    "name": "Liga Menlo",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Liga Menlo\"",
+    "homepage": "https://github.com/fabrizioschiavi/pragmatapro",
+    "otf": null,
+    "ttf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 85
+  },
+  {
+    "name": "Source Code Pro",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Source Code Pro\"",
+    "homepage": "https://adobe-fonts.github.io/source-code-pro/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 139
+  },
+  {
+    "name": "IBM Plex Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"IBM Plex Mono\"",
+    "homepage": "https://www.ibm.com/plex/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 66
+  },
+  {
+    "name": "Roboto Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Roboto Mono\"",
+    "homepage": "https://fonts.google.com/specimen/Roboto+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Google's monospace variant",
+    "id": 131
+  },
+  {
+    "name": "Red Hat Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Red Hat Mono\"",
+    "homepage": "https://github.com/RedHatOfficial/RedHatFont",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 130
+  },
+  {
+    "name": "DM Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"DM Mono\"",
+    "homepage": "https://fonts.google.com/specimen/DM+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 41
+  },
+  {
+    "name": "M Plus Code",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures and multiple weights/styles.",
+    "css": "\"M Plus Code\"",
+    "homepage": "https://mplusfonts.github.io/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal",
+        "expanded"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "ttf": "fonts/MPlus Code/MplusCodeLatin{width|map}-{weight|map}.ttf",
+        "otf": "fonts/MPlus Code/MplusCodeLatin{width|map}-{weight|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "50",
+          "expanded": "60"
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": false,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Compact",
+    "id": 88
+  },
+  {
+    "name": "Geist Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Geist Mono\"",
+    "homepage": "https://vercel.com/font",
+    "ttf": null,
+    "otf": null,
+    "woff2": "https://fonts.gstatic.com/s/geistmono/v1/q5uPsoa5M_v6E8RpVmD5jB2BJ1VIGWh7Hzsg.woff2",
+    "category": "Sans",
+    "id": 53
+  },
+  {
+    "name": "Martian Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Martian Mono\"",
+    "homepage": "https://github.com/evilmartians/mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": "https://fonts.gstatic.com/s/martianmono/v11/4iCn6KVwfJbD8YJQ9-DKBQBI1GFkBQXDGdE.woff2",
+    "category": "Sans",
+    "id": 90
+  },
+  {
+    "name": "Intel One Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes.",
+    "css": "\"Intel One Mono\"",
+    "homepage": "https://github.com/intel/intel-one-mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "id": 71
+  },
+  {
+    "name": "Agave",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A condensed monospaced design optimized for dense code.",
+    "css": "\"Agave\"",
+    "homepage": "https://b.agaric.net/page/agave",
+    "ttf": "https://github.com/agarick/agave/releases/download/v37/Agave-Regular.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Compact",
+    "id": 5
+  },
+  {
+    "name": "Ubuntu Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Ubuntu Mono\"",
+    "homepage": "https://fonts.google.com/specimen/Ubuntu+Mono",
+    "woff2": "https://fonts.gstatic.com/s/ubuntumono/v15/KFOjCneDtsqEr0keqCMhZydDaTlJJWA.woff2",
+    "ttf": null,
+    "otf": null,
+    "category": "Retro",
+    "comment": "Ubuntu's system font",
+    "id": 147
+  },
+  {
+    "name": "Inconsolata",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Inconsolata\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 68
+  },
+  {
+    "name": "Anonymous Pro",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Anonymous Pro\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 8
+  },
+  {
+    "name": "Oxygen Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Oxygen Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 121
+  },
+  {
+    "name": "PT Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"PT Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 127
+  },
+  {
+    "name": "Overpass Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Overpass Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 119
+  },
+  {
+    "name": "Cousine",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Cousine\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 32
+  },
+  {
+    "name": "Fira Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Fira Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 50
+  },
+  {
+    "name": "Liberation Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Liberation Mono\"",
+    "ttf": "https://github.com/liberationfonts/liberation-fonts/releases/latest/download/liberation-fonts-ttf-2.1.5.tar.gz",
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 83,
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Liberation Mono/LiberationMono-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    }
+  },
+  {
+    "name": "Go Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Go Mono\"",
+    "homepage": "https://blog.golang.org/go-fonts",
+    "ttf": "https://github.com/golang/image/raw/master/font/gofont/ttfs/Go-Mono.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "comment": "Google Go language font",
+    "id": 55
+  },
+  {
+    "name": "Terminus",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design, with pixel/CRT aesthetics.",
+    "css": "\"Terminus\"",
+    "homepage": "http://terminus-font.sourceforge.net/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 145
+  },
+  {
+    "name": "Hermit",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Hermit\"",
+    "homepage": "https://pcaro.es/p/hermit/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 63
+  },
+  {
+    "name": "Mononoki",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Mononoki\"",
+    "homepage": "https://madmalik.github.io/mononoki/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 110
+  },
+  {
+    "name": "Office Code Pro",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Office Code Pro\"",
+    "homepage": "https://github.com/nathco/Office-Code-Pro",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "comment": "Microsoft Office coding font",
+    "id": 117
+  },
+  {
+    "name": "3270",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design, with multiple weights/styles and pixel/CRT aesthetics.",
+    "css": "\"3270\"",
+    "homepage": "https://github.com/rbanffy/3270font",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal",
+        "semi-condensed",
+        "condensed"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff",
+      "files": {
+        "woff": "fonts/3270/3270{width|map}.woff",
+        "otf": "fonts/3270/3270{width|map}.otf",
+        "ttf": "fonts/3270/3270{width|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": "-Regular",
+          "semi-condensed": "SemiCondensed-Regular",
+          "condensed": "Condensed-Regular"
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Retro",
+    "id": 2
+  },
+  {
+    "name": "Envy Code R",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Envy Code R\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 44
+  },
+  {
+    "name": "VT323",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design, with pixel/CRT aesthetics.",
+    "css": "\"VT323\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 152
+  },
+  {
+    "name": "Major Mono Display",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Major Mono Display\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 89
+  },
+  {
+    "name": "Press Start 2P",
+    "source": "google",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Press Start 2P\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 123
+  },
+  {
+    "name": "Proggy Clean",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Proggy Clean\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 125
+  },
+  {
+    "name": "Monocraft",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Monocraft\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Retro",
+    "id": 106
+  },
+  {
+    "name": "Hack",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Hack\"",
+    "homepage": "https://sourcefoundry.org/hack/",
+    "ttf": null,
+    "woff2": "https://github.com/source-foundry/Hack/raw/master/build/web/fonts/hack-regular-subset.woff2",
+    "otf": null,
+    "category": "Retro",
+    "id": 58
+  },
+  {
+    "name": "APL2741",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"APL2741\"",
+    "homepage": "https://abrudz.github.io/APL2741/",
+    "ttf": null,
+    "woff2": null,
+    "otf": null,
+    "category": "Retro",
+    "id": 10
+  },
+  {
+    "name": "Hack Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Hack",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Hack Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Hack.NF/HackNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 59
+  },
+  {
+    "name": "Fira Code Nerd Font",
+    "source": "system",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
+    "css": "\"Fira Code Nerd Font\"",
+    "homepage": "https://github.com/ryanoasis/nerd-fonts",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "icons": true,
+    "category": "Sans",
+    "id": 49
+  },
+  {
+    "name": "Inconsolata Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Inconsolata",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Inconsolata Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Inconsolata.NF/InconsolataNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 69
+  },
+  {
+    "name": "Cascadia Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Cascadia Mono\"",
+    "homepage": "https://github.com/microsoft/cascadia-code",
+    "ttf": null,
+    "woff2": null,
+    "otf": null,
+    "category": "Retro",
+    "comment": "Microsoft's monospace version of Cascadia",
+    "id": 20
+  },
+  {
+    "name": "Meslo LG",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A retro, terminal‑inspired monospaced design.",
+    "css": "\"Meslo LG\"",
+    "homepage": "https://github.com/andreberg/Meslo-Font",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "category": "Retro",
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Meslo LG/MesloLGS-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic",
+          "oblique": "Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },    
+    "id": 93
+  },
+  {
+    "name": "Space Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A modern monospaced sans‑serif with clean shapes, with geometric forms and wide counters.",
+    "css": "\"Space Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Sans",
+    "comment": "Google's headline font",
+    "id": 141
+  },
+  {
+    "name": "Courier Prime",
+    "source": "google",
+    "ligatures": false,
+    "description": "A classic monospaced serif with typewriter roots.",
+    "css": "\"Courier Prime\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Serif",
+    "id": 31
+  },
+  {
+    "name": "Sometype Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Sometype Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 138
+  },
+  {
+    "name": "Spline Sans Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Spline Sans Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 143
+  },
+  {
+    "name": "B612 Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"B612 Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 15
+  },
+  {
+    "name": "Noto Sans Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Noto Sans Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "comment": "Google's universal font",
+    "id": 114
+  },
+  {
+    "name": "Share Tech Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Share Tech Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 136
+  },
+  {
+    "name": "Nova Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Nova Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 116
+  },
+  {
+    "name": "Cutive Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Cutive Mono\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 34
+  },
+  {
+    "name": "Nanum Gothic Coding",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Nanum Gothic Coding\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 113
+  },
+  {
+    "name": "Lekton",
+    "source": "google",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Lekton\"",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Playful",
+    "id": 81
+  },
+  {
+    "name": "Comic Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face.",
+    "css": "\"Comic Mono\"",
+    "homepage": "https://dtinth.github.io/comic-mono-font/",
+    "ttf": "https://raw.githubusercontent.com/dtinth/comic-mono-font/master/ComicMono.ttf",
+    "woff2": null,
+    "otf": null,
+    "category": "Playful",
+    "id": 25
+  },
+  {
+    "name": "Serious Shanns",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "An expressive, handwriting‑inspired monospaced face, with multiple weights/styles.",
+    "css": "\"Serious Shanns\"",
+    "homepage": "https://kabeech.github.io/serious-shanns/",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "axes": {
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/Serious Shanns/SeriousShanns-{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "Light",
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Playful",
+    "id": 133
+  },
+  {
+    "name": "0xProto Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "0xProto",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"0xProto Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/0xProto.NF/0xProtoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 1
+  },
+  {
+    "name": "3270 Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "3270",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures, multiple weights/styles and pixel/CRT aesthetics.",
+    "css": "\"3270 Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/3270.NF/3270NerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 3
+  },
+  {
+    "name": "AdwaitaMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "AdwaitaMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"AdwaitaMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/AdwaitaMono.NF/AdwaitaMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 4
+  },
+  {
+    "name": "Agave Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Agave",
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures and multiple weights/styles.",
+    "css": "\"Agave Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Agave.NF/AgaveNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Compact",
+    "id": 6
+  },
+  {
+    "name": "AnonymousPro Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Anonymous Pro",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"AnonymousPro Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/AnonymousPro.NF/AnonymiceProNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 9
+  },
+  {
+    "name": "BigBlueTerminal Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "BigBlueTerminal",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"BigBlueTerminal Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/BigBlueTerminal.NF/BigBlueTerm437NerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 17
+  },
+  {
+    "name": "BitstreamVeraSansMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "BitstreamVeraSansMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"BitstreamVeraSansMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/BitstreamVeraSansMono.NF/BitstromWeraNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 18
+  },
+  {
+    "name": "CascadiaCode Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Cascadia Code",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"CascadiaCode Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 21
+  },
+  {
+    "name": "CascadiaMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Cascadia Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"CascadiaMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 22
+  },
+  {
+    "name": "Cousine Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Cousine",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Cousine Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Cousine.NF/CousineNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 33
+  },
+  {
+    "name": "D2Coding Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "D2Coding",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"D2Coding Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/D2Coding.NF/D2CodingLigatureNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 35
+  },
+  {
+    "name": "DaddyTimeMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "DaddyTimeMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"DaddyTimeMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/DaddyTimeMono.NF/DaddyTimeMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 36
+  },
+  {
+    "name": "DejaVuSansMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "DejaVu Sans Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"DejaVuSansMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/DejaVuSansMono.NF/DejaVuSansMNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 39
+  },
+  {
+    "name": "EnvyCodeR Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Envy Code R",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"EnvyCodeR Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/EnvyCodeR.NF/EnvyCodeRNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 45
+  },
+  {
+    "name": "FantasqueSansMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Fantasque Sans Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"FantasqueSansMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/FantasqueSansMono.NF/FantasqueSansMNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 47
+  },
+  {
+    "name": "FiraCode Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Fira Code",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"FiraCode Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/FiraCode.NF/FiraCodeNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 51
+  },
+  {
+    "name": "Go-Mono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Go Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Go-Mono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Go-Mono.NF/GoMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 56
+  },
+  {
+    "name": "Gohu Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Gohu",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Gohu Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Gohu.NF/GohuFont11NerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 57
+  },
+  {
+    "name": "IBMPlexMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "IBM Plex Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"IBMPlexMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/IBMPlexMono.NF/BlexMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 67
+  },
+  {
+    "name": "IntelOneMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Intel One Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"IntelOneMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        500,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/IntelOneMono.NF/IntoneMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 72
+  },
+  {
+    "name": "Iosevka Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Iosevka",
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures, multiple weights/styles and narrow proportions.",
+    "css": "\"Iosevka Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Iosevka.NF/IosevkaNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "800": "-ExtraBold",
+          "900": "-Heavy"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Compact",
+    "id": 74
+  },
+  {
+    "name": "IosevkaTerm Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "IosevkaTerm",
+    "description": "A condensed monospaced design optimized for dense code, with programming ligatures, multiple weights/styles and narrow proportions.",
+    "css": "\"IosevkaTerm Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/IosevkaTerm.NF/IosevkaTermNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "800": "-ExtraBold",
+          "900": "-Heavy"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Compact",
+    "id": 76
+  },
+  {
+    "name": "IosevkaTermSlab Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "IosevkaTermSlab",
+    "description": "A sturdy monospaced slab‑serif with blocky terminals, with programming ligatures, multiple weights/styles and narrow proportions.",
+    "css": "\"IosevkaTermSlab Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        500,
+        700,
+        800
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold",
+          "800": "-ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Slab",
+    "id": 77
+  },
+  {
+    "name": "JetBrainsMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "JetBrains Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"JetBrainsMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/JetBrainsMono.NF/JetBrainsMonoNLNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "800": "-ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 79
+  },
+  {
+    "name": "Lekton Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Lekton",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Lekton Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Lekton.NF/LektonNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 82
+  },
+  {
+    "name": "Liberation Mono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Liberation Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"LiberationMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Liberation Mono.NF/LiterationMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 84
+  },
+  {
+    "name": "Lilex Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Lilex",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Lilex Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        400,
+        500,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Lilex.NF/LilexNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 86
+  },
+  {
+    "name": "MPlus Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "M Plus Code",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"MPlus Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal",
+        "expanded"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/MPlus.NF/M+CodeLat{width|map}NerdFont-{weight|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": "50",
+          "expanded": "60"
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": false,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 112
+  },
+  {
+    "name": "MartianMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Martian Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"MartianMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/MartianMono.NF/MartianMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 91
+  },
+  {
+    "name": "Meslo Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Meslo",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Meslo Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Meslo LG.NF/MesloLGSNerdFont-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic",
+          "oblique": "Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 94
+  },
+  {
+    "name": "Monofur Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monofur",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monofur Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Monofur.NF/MonofurNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 107
+  },
+  {
+    "name": "Monoid Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monoid",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monoid Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Monoid.NF/MonoidNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 108
+  },
+  {
+    "name": "Mononoki Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Mononoki",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Mononoki Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Mononoki.NF/MononokiNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 111
+  },
+  {
+    "name": "Noto Sans Mono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Noto Sans Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Noto Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Noto Sans Mono.NF/NotoSansMNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "800": "-ExtraBold",
+          "900": "-Heavy"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 115
+  },
+  {
+    "name": "ProFont Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "ProFont",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"ProFont Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/ProFont.NF/ProFontIIxNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 124
+  },
+  {
+    "name": "ProggyClean Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Proggy Clean",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"ProggyClean Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/ProggyClean.NF/ProggyCleanCENerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 126
+  },
+  {
+    "name": "Recursive Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Recursive",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Recursive Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Recursive.NF/RecMonoCasualNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 129
+  },
+  {
+    "name": "RobotoMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Roboto Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"RobotoMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/RobotoMono.NF/RobotoMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 132
+  },
+  {
+    "name": "ShareTechMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Share Tech Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"ShareTechMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/ShareTechMono.NF/ShureTechMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 137
+  },
+  {
+    "name": "SourceCodePro Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Source Code Pro",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"SourceCodePro Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        900
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/SourceCodePro.NF/SauceCodeProNerdFont-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "900": "Black"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 140
+  },
+  {
+    "name": "SpaceMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Space Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"SpaceMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/SpaceMono.NF/SpaceMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 142
+  },
+  {
+    "name": "Terminus Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Terminus",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures, multiple weights/styles and pixel/CRT aesthetics.",
+    "css": "\"Terminus Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Terminus.NF/TerminessNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 146
+  },
+  {
+    "name": "UbuntuMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Ubuntu Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"UbuntuMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/UbuntuMono.NF/UbuntuMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 148
+  },
+  {
+    "name": "UbuntuSans Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "UbuntuSans",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"UbuntuSans Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 149
+  },
+  {
+    "name": "VictorMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Victor Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"VictorMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/VictorMono.NF/VictorMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 151
+  },
+  {
+    "name": "ZedMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "ZedMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"ZedMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        500,
+        700,
+        800
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/ZedMono.NF/ZedMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold",
+          "800": "-ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 153
+  },
+  {
+    "name": "iA-Writer Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "iA Writer",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"iA-Writer Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/iA-Writer.NF/iMWritingMonoNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 65
+  },
+  {
+    "name": "AtkinsonHyperlegibleMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "AtkinsonHyperlegibleMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"AtkinsonHyperlegibleMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        500,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 13
+  },
+  {
+    "name": "AurulentSansMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "AurulentSansMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"AurulentSansMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/AurulentSansMono.NF/AurulentSansMNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 14
+  },
+  {
+    "name": "CodeNewRoman Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "CodeNewRoman",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"CodeNewRoman Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/CodeNewRoman.NF/CodeNewRomanNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 23
+  },
+  {
+    "name": "ComicShannsMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "ComicShannsMono",
+    "description": "An expressive, handwriting‑inspired monospaced face, with programming ligatures and multiple weights/styles.",
+    "css": "\"ComicShannsMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/ComicShannsMono.NF/ComicShannsMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Playful",
+    "id": 26
+  },
+  {
+    "name": "CommitMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Commit Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"CommitMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/CommitMono.NF/CommitMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 28
+  },
+  {
+    "name": "DepartureMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "DepartureMono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"DepartureMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/DepartureMono.NF/DepartureMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 40
+  },
+  {
+    "name": "DroidSansMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Droid Sans Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"DroidSansMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/DroidSansMono.NF/DroidSansMNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 43
+  },
+  {
+    "name": "FiraMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Fira Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"FiraMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        500,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/FiraMono.NF/FiraMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "500": "-Medium",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 52
+  },
+  {
+    "name": "GeistMono Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Geist Mono",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"GeistMono Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/GeistMono.NF/GeistMonoNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "-Thin",
+          "200": "-UltraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "800": "-Black",
+          "900": "-UltraBlack"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 54
+  },
+  {
+    "name": "Hasklig Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Hasklig",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Hasklig Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        900
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/Hasklig.NF/HasklugNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "-ExtraLight",
+          "300": "-Light",
+          "400": "-Regular",
+          "500": "-Medium",
+          "600": "-SemiBold",
+          "700": "-Bold",
+          "900": "-Black"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 61
+  },
+  {
+    "name": "Hermit Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Hermit",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Hermit Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/Hermit.NF/HurmitNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 64
+  },
+  {
+    "name": "Overpass Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Overpass",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Overpass Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        600,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/Overpass.NF/OverpassMNerdFont-{weight|map}.otf"
+      },
+      "maps": {
+        "weight": {
+          "300": "Light",
+          "400": "Regular",
+          "600": "SemiBold",
+          "700": "Bold"
+        }
+      }
+    },
+    "category": "Retro",
+    "id": 120
+  },
+  {
+    "name": "Serious Shanns Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Serious Shanns",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Serious Shanns Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        300,
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "otf",
+      "files": {
+        "otf": "fonts/Serious Shanns.NF/SeriousShannsNerdFont{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "300": "-Light",
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 134
+  },
+  {
+    "name": "Monaspace Argon",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Argon\"",
+    "homepage": "https://github.com/githubnext/monaspace",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Argon/Monaspace Argon Var.woff2",
+        "ttf": "fonts/Monaspace Argon/Monaspace Argon Var.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": ""
+        },
+        "style": {
+          "normal": "",
+          "italic": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "id": 96
+  },
+  {
+    "name": "Monaspace Krypton",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Krypton\"",
+    "homepage": "https://github.com/githubnext/monaspace",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Krypton/Monaspace Krypton Var.woff2",
+        "ttf": "fonts/Monaspace Krypton/Monaspace Krypton Var.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": ""
+        },
+        "style": {
+          "normal": "",
+          "italic": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "id": 98
+  },
+  {
+    "name": "Monaspace Neon",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Neon\"",
+    "homepage": "https://github.com/githubnext/monaspace",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Neon/Monaspace Neon Var.woff2",
+        "ttf": "fonts/Monaspace Neon/Monaspace Neon Var.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": ""
+        },
+        "style": {
+          "normal": "",
+          "italic": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "id": 100
+  },
+  {
+    "name": "Monaspace Radon",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Radon\"",
+    "homepage": "https://github.com/githubnext/monaspace",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Radon/Monaspace Radon Var.woff2",
+        "ttf": "fonts/Monaspace Radon/Monaspace Radon Var.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": ""
+        },
+        "style": {
+          "normal": "",
+          "italic": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "id": 102
+  },
+  {
+    "name": "Monaspace Xenon",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Xenon\"",
+    "homepage": "https://github.com/githubnext/monaspace",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Xenon/Monaspace Xenon Var.woff2",
+        "ttf": "fonts/Monaspace Xenon/Monaspace Xenon Var.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "",
+          "300": "",
+          "400": "",
+          "500": "",
+          "600": "",
+          "700": "",
+          "800": ""
+        },
+        "style": {
+          "normal": "",
+          "italic": ""
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Sans",
+    "id": 104
+  },
+  {
+    "name": "Monaspace Argon Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monaspace Argon",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Argon Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-wide",
+        "wide"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Argon.NF/MonaspaceArgonNF-{width|map}{weight|map}{style|map}.woff2",
+        "otf": "fonts/Monaspace Argon.NF/MonaspaceArgonNF-{width|map}{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-wide": "SemiWide",
+          "wide": "Wide"
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 97
+  },
+  {
+    "name": "Monaspace Krypton Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monaspace Krypton",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Krypton Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-wide",
+        "wide"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Krypton.NF/MonaspaceKryptonNF-{width|map}{weight|map}{style|map}.woff2",
+        "otf": "fonts/Monaspace Krypton.NF/MonaspaceKryptonNF-{width|map}{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-wide": "SemiWide",
+          "wide": "Wide"
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 99
+  },
+  {
+    "name": "Monaspace Neon Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monaspace Neon",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Neon Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-wide",
+        "wide"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Neon.NF/MonaspaceNeonNF-{width|map}{weight|map}{style|map}.woff2",
+        "otf": "fonts/Monaspace Neon.NF/MonaspaceNeonNF-{width|map}{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-wide": "SemiWide",
+          "wide": "Wide"
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 101
+  },
+  {
+    "name": "Monaspace Radon Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monaspace Radon",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Radon Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-wide",
+        "wide"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Radon.NF/MonaspaceRadonNF-{width|map}{weight|map}{style|map}.woff2",
+        "otf": "fonts/Monaspace Radon.NF/MonaspaceRadonNF-{width|map}{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-wide": "SemiWide",
+          "wide": "Wide"
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 103
+  },
+  {
+    "name": "Monaspace Xenon Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Monaspace Xenon",
+    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
+    "css": "\"Monaspace Xenon Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-wide",
+        "wide"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Monaspace Xenon.NF/MonaspaceXenonNF-{width|map}{weight|map}{style|map}.woff2",
+        "otf": "fonts/Monaspace Xenon.NF/MonaspaceXenonNF-{width|map}{weight|map}{style|map}.otf"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-wide": "SemiWide",
+          "wide": "Wide"
+        },
+        "weight": {
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "category": "Retro",
+    "id": 105
+  }
+]

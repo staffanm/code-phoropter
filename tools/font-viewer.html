@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Font Preview</title>
+<style>
+body { 
+    padding: 20px; 
+    font-family: system-ui, sans-serif; 
+    background: #f5f5f5;
+}
+@font-face {
+    font-family: 'Preview';
+    src: url('') format('truetype');
+}
+#preview {
+    font-family: 'Preview';
+    font-size: 36px;
+    line-height: 1.5;
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+#controls {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+.slider-group {
+    margin: 10px 0;
+}
+label {
+    display: inline-block;
+    width: 100px;
+}
+input[type="range"] {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+<h2 id="filename">Font Preview</h2>
+<div id="controls"></div>
+<div id="preview">
+    <p style="font-size: 18px;">The quick brown fox jumps over the lazy dog</p>
+    <p style="font-size: 24px;">The quick brown fox jumps over the lazy dog</p>
+    <p style="font-size: 36px;">The quick brown fox jumps over the lazy dog</p>
+    <p style="font-size: 48px;">The quick brown fox jumps over the lazy dog</p>
+    <p style="font-size: 72px;">The quick brown fox</p>
+    <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br>
+    abcdefghijklmnopqrstuvwxyz<br>
+    0123456789 !@#$%^&*()</p>
+</div>
+
+<script>
+// Get font file from URL parameter
+const params = new URLSearchParams(window.location.search);
+let fontPath = params.get('font');
+
+if (!fontPath && window.location.hash) {
+    fontPath = decodeURIComponent(window.location.hash.substring(1));
+}
+
+if (fontPath) {
+    // Update font-face
+    const style = document.createElement('style');
+    style.textContent = `
+        @font-face {
+            font-family: 'Preview';
+            src: url('file:///${fontPath.replace(/\\/g, '/')}');
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Show filename
+    document.getElementById('filename').textContent = fontPath.split(/[/\\]/).pop();
+    
+    // Try to detect variable axes (basic implementation)
+    setTimeout(() => {
+        // Check if font supports variations
+        if (CSS && CSS.supports && CSS.supports('font-variation-settings', '"wght" 400')) {
+            const axes = [
+                {tag: 'wght', name: 'Weight', min: 100, max: 900, default: 400},
+                {tag: 'wdth', name: 'Width', min: 50, max: 200, default: 100},
+                {tag: 'slnt', name: 'Slant', min: -15, max: 15, default: 0},
+                {tag: 'ital', name: 'Italic', min: 0, max: 1, default: 0}
+            ];
+            
+            const controls = document.getElementById('controls');
+            controls.innerHTML = '<h3>Variable Axes:</h3>';
+            
+            axes.forEach(axis => {
+                const group = document.createElement('div');
+                group.className = 'slider-group';
+                group.innerHTML = `
+                    <label>${axis.name}:</label>
+                    <input type="range" id="${axis.tag}" min="${axis.min}" max="${axis.max}" value="${axis.default}" step="1">
+                    <span id="${axis.tag}-val">${axis.default}</span>
+                `;
+                controls.appendChild(group);
+            });
+            
+            // Add event listeners
+            document.querySelectorAll('input[type="range"]').forEach(slider => {
+                slider.addEventListener('input', () => {
+                    const settings = [];
+                    axes.forEach(axis => {
+                        const val = document.getElementById(axis.tag).value;
+                        settings.push(`"${axis.tag}" ${val}`);
+                        document.getElementById(axis.tag + '-val').textContent = val;
+                    });
+                    document.getElementById('preview').style.fontVariationSettings = settings.join(', ');
+                });
+            });
+        }
+    }, 100);
+}
+</script>
+</body>
+</html>

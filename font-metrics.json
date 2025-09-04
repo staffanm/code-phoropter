@@ -1,0 +1,2909 @@
+{
+  "3270": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Aptos Mono": {
+    "avgCharWidth": {
+      "12": 7.201171875,
+      "14": 8.4013671875,
+      "16": 9.6015625
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 10,
+      "16": 11
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Consolas": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "SF Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Monaco": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Menlo": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Courier New": {
+    "avgCharWidth": {
+      "12": 7.201171875,
+      "14": 8.4013671875,
+      "16": 9.6015625
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 6,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 8,
+      "16": 9
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Lucida Console": {
+    "avgCharWidth": {
+      "12": 7.23046875,
+      "14": 8.435546875,
+      "16": 9.640625
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": false,
+    "source": "system"
+  },
+  "Andale Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "DejaVu Sans Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Droid Sans Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "MonoLisa": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Operator Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Dank Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Berkeley Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Comic Code": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "PragmataPro": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Input Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "APL385 Unicode": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Fira Code": {
+    "avgCharWidth": {
+      "12": 7.384613037109375,
+      "14": 8.615371704101562,
+      "16": 9.846145629882812
+    },
+    "xHeight": {
+      "12": 7,
+      "14": 8,
+      "16": 9
+    },
+    "capHeight": {
+      "12": 9,
+      "14": 10,
+      "16": 12
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "JetBrains Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Victor Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Recursive": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Cascadia Code": {
+    "avgCharWidth": {
+      "12": 7.03125,
+      "14": 8.203125,
+      "16": 9.375
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 10,
+      "16": 11
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Iosevka": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Iosevka Slab": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hasklig": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "JuliaMono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Fantasque Sans Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Commit Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Sudo": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Liga Menlo": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Source Code Pro": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "IBM Plex Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Roboto Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Red Hat Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "DM Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "M Plus Code": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Geist Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Martian Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Intel One Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Agave": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Ubuntu Mono": {
+    "avgCharWidth": {
+      "12": 6.7199859619140625,
+      "14": 7.839996337890625,
+      "16": 8.959991455078125
+    },
+    "xHeight": {
+      "12": 7,
+      "14": 8,
+      "16": 9
+    },
+    "capHeight": {
+      "12": 9,
+      "14": 10,
+      "16": 11
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Inconsolata": {
+    "avgCharWidth": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 11
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Anonymous Pro": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Oxygen Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "PT Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Overpass Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Cousine": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Fira Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Liberation Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Go Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Terminus": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hermit": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Mononoki": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Office Code Pro": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Envy Code R": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "VT323": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Major Mono Display": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Press Start 2P": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Proggy Clean": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monocraft": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hack": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "APL2741": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hack Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Fira Code Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "system"
+  },
+  "Inconsolata Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Cascadia Mono": {
+    "avgCharWidth": {
+      "12": 7.03125,
+      "14": 8.203125,
+      "16": 9.375
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 8
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 10,
+      "16": 11
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Meslo LG": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Space Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Courier Prime": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Sometype Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Spline Sans Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "B612 Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Noto Sans Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Share Tech Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Nova Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Cutive Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Nanum Gothic Coding": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Lekton": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "google"
+  },
+  "Comic Mono": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Serious Shanns": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "0xProto Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "3270 Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "AdwaitaMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Agave Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "AnonymousPro Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "BigBlueTerminal Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "BitstreamVeraSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "CascadiaCode Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "CascadiaMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Cousine Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "D2Coding Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "DaddyTimeMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "DejaVuSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "EnvyCodeR Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "FantasqueSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "FiraCode Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Go-Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Gohu Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "HeavyData Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "IBMPlexMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "IntelOneMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Iosevka Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "IosevkaTerm Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "IosevkaTermSlab Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "JetBrainsMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Lekton Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Liberation Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Lilex Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "MPlus Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "MartianMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Meslo Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monofur Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monoid Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Mononoki Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Noto Sans Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "ProFont Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "ProggyClean Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Recursive Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "RobotoMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "ShareTechMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "SourceCodePro Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "SpaceMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Terminus Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "UbuntuMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "UbuntuSans Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "VictorMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "ZedMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "iA-Writer Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "AtkinsonHyperlegibleMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "AurulentSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "CodeNewRoman Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "ComicShannsMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "CommitMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "DepartureMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "DroidSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "FiraMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "GeistMono Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hasklig Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Hermit Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Overpass Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Serious Shanns Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Argon": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Krypton": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Neon": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Radon": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Xenon": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Argon Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Krypton Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Neon Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Radon Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  },
+  "Monaspace Xenon Nerd Font": {
+    "avgCharWidth": {
+      "12": 6.59765625,
+      "14": 7.697265625,
+      "16": 8.796875
+    },
+    "xHeight": {
+      "12": 6,
+      "14": 7,
+      "16": 7
+    },
+    "capHeight": {
+      "12": 8,
+      "14": 9,
+      "16": 10
+    },
+    "monospace": true,
+    "source": "embedded"
+  }
+}

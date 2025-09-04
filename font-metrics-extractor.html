@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Metrics Extractor</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .controls {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .progress {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-family: monospace;
+        }
+        
+        .results {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        
+        button:hover {
+            background: #5a6fd8;
+        }
+        
+        button:disabled {
+            background: #555;
+            cursor: not-allowed;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 300px;
+            background: #1a1a1a;
+            color: #e0e0e0;
+            border: 1px solid #555;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .warning {
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+        
+        .success {
+            color: #51cf66;
+        }
+        
+        .info {
+            color: #74c0fc;
+        }
+        
+        .summary {
+            background: #333;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Font Metrics Extractor</h1>
+        <p>Extract character width and height metrics for monospace fonts</p>
+    </div>
+
+    <div class="controls">
+        <h3>Controls</h3>
+        <button id="loadFontsBtn" onclick="loadFontDatabase()">Load Font Database</button>
+        <button id="generateCssBtn" onclick="generateEmbeddedCSS()" disabled>Generate Embedded Fonts CSS</button>
+        <button id="extractBtn" onclick="startExtraction()" disabled>Extract All Metrics</button>
+        <button id="copyBtn" onclick="copyResults()" disabled style="background: #51cf66;">Copy JSON</button>
+        <button onclick="clearResults()">Clear Results</button>
+    </div>
+
+    <div id="summary" class="summary" style="display: none;">
+        <h3>Summary</h3>
+        <div id="summaryContent"></div>
+    </div>
+
+    <div id="progress" class="progress" style="display: none;">
+        <h3>Progress</h3>
+        <div id="progressContent"></div>
+    </div>
+
+    <div class="results">
+        <h3>Results</h3>
+        <textarea id="resultsOutput" placeholder="Font metrics JSON will appear here..."></textarea>
+    </div>
+
+    <!-- Include app.js and dependencies for font loading infrastructure -->
+    <script src="font-roles.js"></script>
+    <script src="text-samples.js"></script>
+    <script>
+        // Enable verbose logging for debugging
+        window.DEV_VERBOSE_LOGS = true;
+    </script>
+    <script src="app.js"></script>
+    <!-- WebFont Loader for proper font loading events -->
+    <script src="vendor/webfont.js"></script>
+    
+    <script>
+        let fontDatabase = [];
+        let fontMetrics = {};
+        let currentIndex = 0;
+        let isExtracting = false;
+
+        // Test strings for monospace validation
+        const TEST_STRINGS = {
+            special: '!"#¤%&/()=?@£$€{[]}\\',  // 20 chars
+            lowercase: 'abcdefghijklmnopqrst',   // 20 chars  
+            uppercase: 'ABCDEFGHIJKLMNOPQRST',   // 20 chars
+            mixed: 'ABCabc123!@#$%^&*(){}[]'    // Mixed for avgCharWidth
+        };
+
+        // Get width variants for fonts that support variable width axis
+        function getWidthVariants(fontName) {
+            const variants = ['normal']; // All fonts have normal width
+            
+            // Add width variants for specific font families
+            if (fontName.startsWith('Monaspace')) {
+                variants.push('semi-wide', 'wide');
+            } else if (fontName === 'M Plus Code Latin') {
+                variants.push('semi-expanded', 'expanded');
+            }
+            
+            return variants;
+        }
+
+
+        
+
+        async function generateEmbeddedCSS() {
+            const btn = document.getElementById('generateCssBtn');
+            btn.disabled = true;
+            btn.textContent = 'Generating...';
+            
+            try {
+                log('Generating CSS for embedded fonts...', 'info');
+                
+                const embeddedFonts = fontDatabase.filter(f => f.source === 'embedded');
+                log(`Found ${embeddedFonts.length} embedded fonts`, 'info');
+                
+                let css = '/* Generated embedded fonts CSS for Code Phoropter */\n';
+                css += '/* Generated by font-metrics-extractor.html */\n\n';
+                
+                let generatedCount = 0;
+                
+                embeddedFonts.forEach(font => {
+                    // Handle regular fonts with direct properties
+                    if (font.woff2 || font.ttf || font.otf) {
+                        const url = font.woff2 || font.ttf || font.otf;
+                        const format = getFormatFromUrl(url);
+                        
+                        // Skip archives and ensure CORS-friendly URLs
+                        if (isValidFontUrl(url)) {
+                            const srcUrl = /^https?:\/\//i.test(url) ? url : encodeURI(url);
+                            css += `@font-face {\n`;
+                            css += `    font-family: "${font.name}";\n`;
+                            css += `    src: url("${srcUrl}") format("${format}");\n`;
+                            css += `    font-weight: 400;\n`;
+                            css += `    font-style: normal;\n`;
+                            css += `    font-display: swap;\n`;
+                            css += `}\n\n`;
+                            generatedCount++;
+                        }
+                    }
+                    
+                    // Handle variant fonts with variantsMatrix
+                    if (font.variantsMatrix && font.variantsMatrix.files) {
+                        // Use only min/max weights for efficiency (same as FVD logic)
+                        const weights = font.axes?.weights || [400];
+                        const minWeight = Math.min(...weights);
+                        const maxWeight = Math.max(...weights);
+                        
+                        // Determine actual supported style (oblique vs italic)
+                        const supportedStyles = font.axes?.styles || ['normal'];
+                        const nonNormalStyle = supportedStyles.find(s => s !== 'normal') || 'italic';
+                        
+                        const variants = [
+                            { weight: minWeight, style: 'normal', width: 'normal' },
+                            ...(minWeight !== maxWeight ? [{ weight: maxWeight, style: 'normal', width: 'normal' }] : []),
+                            ...(supportedStyles.length > 1 ? [{ weight: minWeight, style: nonNormalStyle, width: 'normal' }] : [])
+                        ];
+                        
+                        variants.forEach(({ weight, style, width }) => {
+                            const resolved = resolveVariantUrl(font, weight, style, width);
+                            if (resolved) {
+                                const srcUrl = /^https?:\/\//i.test(resolved.url) ? resolved.url : encodeURI(resolved.url);
+                                css += `@font-face {\n`;
+                                css += `    font-family: "${font.name}";\n`;
+                                css += `    src: url("${srcUrl}") format("${resolved.format}");\n`;
+                                css += `    font-weight: ${weight};\n`;
+                                css += `    font-style: ${style};\n`;
+                                css += `    font-display: swap;\n`;
+                                css += `}\n\n`;
+                                generatedCount++;
+                            }
+                        });
+                    }
+                });
+                
+                log(`Generated CSS for ${generatedCount} font faces`, 'success');
+                log(`CSS size: ${css.length} characters`, 'info');
+                
+                // Create download
+                const blob = new Blob([css], { type: 'text/css' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'embedded-fonts.css';
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                log('✓ embedded-fonts.css file downloaded', 'success');
+                log('Place this file in your project root and include it before app.js', 'info');
+                
+                btn.textContent = '✓ CSS Generated';
+                
+            } catch (error) {
+                log(`✗ Failed to generate CSS: ${error.message}`, 'warning');
+                btn.disabled = false;
+                btn.textContent = 'Generate Embedded Fonts CSS';
+            }
+        }
+
+        // Helper functions for CSS generation
+        function getFormatFromUrl(url) {
+            if (url.includes('.woff2')) return 'woff2';
+            if (url.includes('.woff')) return 'woff';
+            if (url.includes('.ttf')) return 'truetype';
+            return 'opentype';
+        }
+        
+        function isValidFontUrl(url) {
+            // Skip archives
+            if (/\.(zip|tar\.gz)$/i.test(url)) return false;
+            
+            // Allow local files
+            if (!/^https?:\/\//i.test(url)) return true;
+            
+            // Allow only CORS-friendly hosts
+            return (
+                url.startsWith('https://cdn.jsdelivr.net/') ||
+                url.startsWith('https://cdn.jsdelivr.net/gh/') ||
+                url.startsWith('https://kabeech.github.io/') ||
+                url.startsWith('https://dtinth.github.io/') ||
+                url.startsWith('https://raw.githubusercontent.com/') ||
+                url.startsWith('https://objects.githubusercontent.com/')
+            );
+        }
+        
+        function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'normal') {
+            const vm = entry.variantsMatrix;
+            if (!vm || !vm.files || !vm.maps) return null;
+            
+            const maps = vm.maps || {};
+            const m = (axis, v) => (maps[axis] && (maps[axis][String(v)] ?? maps[axis][v])) ?? '';
+            
+            let weightPart = m('weight', weight);
+            const stylePart = m('style', style);  
+            const widthPart = m('width', width);
+            
+            const rules = vm.rules || {};
+            if (rules.regularOnlyOnBase && String(weight) === '400') {
+                const regName = rules.regularName || weightPart || '';
+                if (style !== 'normal' || width !== 'normal') {
+                    weightPart = '';
+                } else {
+                    weightPart = regName;
+                }
+            }
+            
+            const values = {
+                '{weight|map}': weightPart,
+                '{style|map}': stylePart,
+                '{width|map}': widthPart,
+                '{suffix|map}': (maps.suffix && (maps.suffix[`${weight}:${style}`] || '')) || ''
+            };
+            
+            function fill(tpl) {
+                let out = tpl;
+                Object.entries(values).forEach(([k, v]) => { out = out.replaceAll(k, v); });
+                return out.replace(/\/{2,}/g, '/').replace(/--+/g, '-').replace(/-\./g, '.').replace(/\/-/g, '/');
+            }
+            
+            const order = [vm.prefer, ...Object.keys(vm.files).filter(k => k !== vm.prefer)];
+            for (const fmt of order) {
+                const tpl = vm.files[fmt];
+                if (!tpl) continue;
+                const url = fill(tpl);
+                const format = (fmt === 'ttf') ? 'truetype' : (fmt === 'otf') ? 'opentype' : fmt;
+                return { url, format };
+            }
+            return null;
+        }
+
+        async function loadFontDatabase() {
+            document.getElementById('progress').style.display = 'block';
+
+            const btn = document.getElementById('loadFontsBtn');
+            btn.disabled = true;
+            btn.textContent = 'Loading...';
+
+            try {
+                // Use app.js initialization to load fonts properly
+                log('Loading databases...', 'info');
+                await loadDatabases();
+                fontDatabase = window.fontDatabase || [];
+                log(`Database loaded: ${fontDatabase.length} fonts`, 'info');
+                
+                log(`✓ Loaded ${fontDatabase.length} fonts from database`, 'success');
+                log(`✓ Font loading infrastructure initialized`, 'success');
+                log(`✓ All fonts loaded via unified WebFont Loader`, 'success');
+                
+                document.getElementById('extractBtn').disabled = false;
+                document.getElementById('generateCssBtn').disabled = false;
+                btn.textContent = `✓ ${fontDatabase.length} Fonts Loaded`;
+                
+                updateSummary();
+            } catch (error) {
+                log(`✗ Failed to load font database: ${error.message}`, 'warning');
+                btn.disabled = false;
+                btn.textContent = 'Load Font Database';
+            }
+        }
+
+        function updateSummary() {
+            const summary = document.getElementById('summary');
+            const content = document.getElementById('summaryContent');
+            
+            if (fontDatabase.length > 0) {
+                const totalFonts = fontDatabase.length;
+                const systemFonts = fontDatabase.filter(f => f.source === 'system').length;
+                const webFonts = fontDatabase.filter(f => f.source !== 'system').length;
+                
+                content.innerHTML = `
+                    <div>Total fonts to process: <strong>${totalFonts}</strong></div>
+                    <div>System fonts: <strong>${systemFonts}</strong></div>
+                    <div>Web fonts: <strong>${webFonts}</strong></div>
+                    <div>Test strings: special chars (${TEST_STRINGS.special.length}), lowercase (${TEST_STRINGS.lowercase.length}), uppercase (${TEST_STRINGS.uppercase.length})</div>
+                `;
+                summary.style.display = 'block';
+            }
+        }
+
+        async function startExtraction() {
+            if (isExtracting) return;
+            
+            isExtracting = true;
+            currentIndex = 0;
+            fontMetrics = {};
+            
+            const btn = document.getElementById('extractBtn');
+            btn.disabled = true;
+            btn.textContent = 'Extracting...';
+            
+            document.getElementById('progress').style.display = 'block';
+            
+            log('Starting font metrics extraction...', 'info');
+            
+            for (let i = 0; i < fontDatabase.length; i++) {
+                currentIndex = i;
+                const font = fontDatabase[i];
+                
+                try {
+                    const metrics = await extractFontMetrics(font);
+                    fontMetrics[font.name] = metrics;
+                    
+                    const status = metrics.monospace ? '✓' : '✗';
+                    const warning = metrics.monospace ? '' : ' (NOT MONOSPACE!)';
+                    const normalWidth = metrics.avgCharWidth["16"]?.normal;
+                    const widthStr = normalWidth ? `${normalWidth.toFixed(2)}px` : 'N/A';
+                    
+                    // Show width variants if available
+                    const variants = Object.keys(metrics.avgCharWidth["16"] || {});
+                    const variantInfo = variants.length > 1 ? ` [variants: ${variants.join(', ')}]` : '';
+                    
+                    log(`${status} ${font.name} - avgWidth: ${widthStr}${variantInfo}${warning}`, 
+                        metrics.monospace ? 'success' : 'warning');
+                        
+                } catch (error) {
+                    log(`✗ ${font.name} - Error: ${error.message}`, 'warning');
+                    fontMetrics[font.name] = { error: error.message };
+                }
+                
+                // Update progress
+                const progress = ((i + 1) / fontDatabase.length * 100).toFixed(1);
+                document.title = `Font Metrics Extractor - ${progress}%`;
+            }
+            
+            // Output results
+            const resultsTextarea = document.getElementById('resultsOutput');
+            resultsTextarea.value = JSON.stringify(fontMetrics, null, 2);
+            
+            document.getElementById('copyBtn').disabled = false;
+            btn.textContent = '✓ Extraction Complete';
+            document.title = 'Font Metrics Extractor - Complete';
+            
+            log(`\nExtraction complete! ${Object.keys(fontMetrics).length} fonts processed.`, 'success');
+            
+            // Show summary of results
+            const successful = Object.values(fontMetrics).filter(m => !m.error && m.monospace).length;
+            const nonMonospace = Object.values(fontMetrics).filter(m => !m.error && !m.monospace).length;
+            const errors = Object.values(fontMetrics).filter(m => m.error).length;
+            
+            log(`Summary: ${successful} monospace fonts, ${nonMonospace} non-monospace, ${errors} errors`, 'info');
+            
+            isExtracting = false;
+        }
+
+        async function extractFontMetrics(fontInfo) {
+            return new Promise(async (resolve, reject) => {
+                try {
+                    // Load the font first and wait for it
+                    await loadFont(fontInfo);
+                    
+                    // Additional wait to ensure font is fully loaded
+                    await new Promise(resolve => setTimeout(resolve, 100));
+                    
+                    const sizes = [12, 14, 16];
+                    const metrics = {
+                        avgCharWidth: {},
+                        xHeight: {},
+                        capHeight: {},
+                        monospace: true,
+                        source: fontInfo.source,
+                        fontName: fontInfo.name
+                    };
+
+                    // Get width variants from font-roles.js if available
+                    const widthVariants = getWidthVariants(fontInfo.name);
+                    
+                    // Test different weight/italic variations to ensure width consistency
+                    const styleVariations = [
+                        { weight: 'normal', style: 'normal' },
+                        { weight: 'bold', style: 'normal' },
+                        { weight: 'normal', style: 'italic' },
+                        { weight: 'bold', style: 'italic' }
+                    ];
+
+                    const canvas = document.createElement('canvas');
+                    const ctx = canvas.getContext('2d');
+                    
+                    // Test if font is actually available using comprehensive detection
+                    // Compare both character widths and font rendering characteristics
+                    const testStrings = [
+                        'MMMMMMMMMMWWWWWWWWWW', // Wide characters
+                        'iiiiiiiiiillllllllll', // Narrow characters  
+                        '1234567890abcdefghij', // Mixed alphanumeric
+                        '!@#$%^&*()[]{}|\\;:\'"' // Special characters
+                    ];
+                    
+                    let fontLoaded = false;
+                    let totalDifference = 0;
+                    
+                    for (const testString of testStrings) {
+                        ctx.font = `16px "${fontInfo.name}", monospace`;
+                        const testWidth = ctx.measureText(testString).width;
+                        ctx.font = `16px monospace`;  
+                        const fallbackWidth = ctx.measureText(testString).width;
+                        
+                        const diff = Math.abs(testWidth - fallbackWidth);
+                        totalDifference += diff;
+                        
+                        if (diff > 0.5) { // More generous threshold per string
+                            fontLoaded = true;
+                        }
+                    }
+                    
+                    // Also check if total difference across all test strings is significant
+                    if (totalDifference > 1.0) {
+                        fontLoaded = true;
+                    }
+                    
+                    // Special handling for system fonts that might be the default monospace font
+                    if (!fontLoaded && fontInfo.source === 'system') {
+                        // Check if this font is available in the system font list
+                        const availableFonts = Array.from(document.fonts.values()).map(f => f.family);
+                        const fontAvailable = availableFonts.includes(fontInfo.name) || 
+                                            availableFonts.includes(`"${fontInfo.name}"`);
+                        
+                        if (!fontAvailable) {
+                            // Try one more detection method - use a non-monospace fallback to force difference
+                            ctx.font = `16px "${fontInfo.name}", serif`;
+                            const serifTest = ctx.measureText('M').width;
+                            ctx.font = `16px serif`;
+                            const serifFallback = ctx.measureText('M').width;
+                            
+                            if (Math.abs(serifTest - serifFallback) < 0.1) {
+                                throw new Error('Font not loaded - measurements would use fallback font');
+                            }
+                        }
+                        // If font is in document.fonts or passes serif test, assume it's available
+                        log(`📋 ${fontInfo.name} detected as system default monospace font`, 'info');
+                    } else if (!fontLoaded) {
+                        throw new Error('Font not loaded - measurements would use fallback font');
+                    }
+                    
+                    // Initialize width variant structure for each size
+                    for (const size of sizes) {
+                        metrics.avgCharWidth[size] = {};
+                        metrics.xHeight[size] = {};
+                        metrics.capHeight[size] = {};
+                    }
+                    
+                    // Test each width variant
+                    for (const widthVariant of widthVariants) {
+                        let fontVariationSettings = '';
+                        if (widthVariant === 'semi-wide') {
+                            fontVariationSettings = '"wdth" 120';
+                        } else if (widthVariant === 'wide') {
+                            fontVariationSettings = '"wdth" 150';
+                        } else if (widthVariant === 'semi-expanded') {
+                            fontVariationSettings = '"wdth" 112.5';
+                        } else if (widthVariant === 'expanded') {
+                            fontVariationSettings = '"wdth" 125';
+                        }
+                        
+                        for (const size of sizes) {
+                            // Set base font with width variant
+                            let baseFontSpec = `${size}px "${fontInfo.name}", monospace`;
+                            if (fontVariationSettings) {
+                                ctx.font = baseFontSpec;
+                                ctx.fontVariationSettings = fontVariationSettings;
+                            } else {
+                                ctx.font = baseFontSpec;
+                                ctx.fontVariationSettings = '';
+                            }
+                            
+                            // Calculate average character width using mixed string (at correct size)
+                            const mixedWidth = ctx.measureText(TEST_STRINGS.mixed).width;
+                            metrics.avgCharWidth[size][widthVariant] = mixedWidth / TEST_STRINGS.mixed.length;
+                            
+                            // Measure x-height (height of 'x') at correct size
+                            const xMetrics = ctx.measureText('x');
+                            metrics.xHeight[size][widthVariant] = xMetrics.actualBoundingBoxAscent || size * 0.5; // fallback
+                            
+                            // Measure cap-height (height of 'H') at correct size
+                            const capMetrics = ctx.measureText('H');
+                            metrics.capHeight[size][widthVariant] = capMetrics.actualBoundingBoxAscent || size * 0.75; // fallback
+                            
+                            // Test monospace property by measuring individual glyphs (only for normal width)
+                            if (widthVariant === 'normal' && size === 16) {
+                                // Use larger font size to avoid rounding errors in measurement
+                                const testSize = 72;
+                                ctx.font = `${testSize}px "${fontInfo.name}", monospace`;
+                                if (fontVariationSettings) {
+                                    ctx.fontVariationSettings = fontVariationSettings;
+                                }
+                                
+                                // Test individual characters that should all have same width in monospace
+                                const testChars = [
+                                    // Wide characters
+                                    'M', 'W', 'O', 'Q', '@', '#', 
+                                    // Narrow characters  
+                                    'i', 'l', 'I', '1', '|', '.',
+                                    // Medium characters
+                                    'a', 'n', 'o', 'x', '0', '5',
+                                    // Special symbols
+                                    '!', '?', '(', ')', '[', ']', '{', '}',
+                                    '+', '-', '=', '_', ':', ';', '"', "'"
+                                ];
+                                
+                                const charWidths = {};
+                                let minWidth = Infinity;
+                                let maxWidth = 0;
+                                let totalWidth = 0;
+                                
+                                for (const char of testChars) {
+                                    const width = ctx.measureText(char).width;
+                                    charWidths[char] = width;
+                                    minWidth = Math.min(minWidth, width);
+                                    maxWidth = Math.max(maxWidth, width);
+                                    totalWidth += width;
+                                }
+                                
+                                const avgWidth = totalWidth / testChars.length;
+                                const widthRange = maxWidth - minWidth;
+                                const tolerance = avgWidth * 0.02; // 2% tolerance
+                                
+                                if (widthRange > tolerance) {
+                                    metrics.monospace = false;
+                                    
+                                    // Report the problematic characters
+                                    const narrow = testChars.filter(c => charWidths[c] < avgWidth - tolerance/2);
+                                    const wide = testChars.filter(c => charWidths[c] > avgWidth + tolerance/2);
+                                    
+                                    log(`📏 ${fontInfo.name} character width analysis:`, 'info');
+                                    log(`   Range: ${minWidth.toFixed(2)}px - ${maxWidth.toFixed(2)}px (Δ${widthRange.toFixed(2)}px)`, 'info');
+                                    log(`   Average: ${avgWidth.toFixed(2)}px, Tolerance: ${tolerance.toFixed(2)}px`, 'info');
+                                    if (narrow.length > 0) log(`   Narrow chars: ${narrow.join(' ')}`, 'warning');
+                                    if (wide.length > 0) log(`   Wide chars: ${wide.join(' ')}`, 'warning');
+                                }
+                                // Only log when there are issues - success is implied by lack of warnings
+                            }
+                            
+                            // Test weight/italic variations don't affect character width (only for normal width)
+                            if (widthVariant === 'normal' && size === 16) {
+                                // Use consistent font size for all measurements
+                                const testSize = 16;
+                                
+                                // Get baseline width with normal weight/style
+                                ctx.font = `${testSize}px "${fontInfo.name}", monospace`;
+                                if (fontVariationSettings) {
+                                    ctx.fontVariationSettings = fontVariationSettings;
+                                } else {
+                                    ctx.fontVariationSettings = '';
+                                }
+                                const baseWidth = ctx.measureText(TEST_STRINGS.mixed).width / TEST_STRINGS.mixed.length;
+                                let hasWidthVariation = false;
+                                
+                                for (const styleVar of styleVariations.slice(1)) { // Skip first (normal/normal)
+                                    // Set font with weight and style variations
+                                    const fontSpec = `${styleVar.style} ${styleVar.weight} ${testSize}px "${fontInfo.name}", monospace`;
+                                    ctx.font = fontSpec;
+                                    if (fontVariationSettings) {
+                                        ctx.fontVariationSettings = fontVariationSettings;
+                                    } else {
+                                        ctx.fontVariationSettings = '';
+                                    }
+                                    
+                                    const styleWidth = ctx.measureText(TEST_STRINGS.mixed).width / TEST_STRINGS.mixed.length;
+                                    const widthDiff = Math.abs(styleWidth - baseWidth);
+                                    
+                                    if (widthDiff > 0.1) {
+                                        hasWidthVariation = true;
+                                        log(`⚠️  ${fontInfo.name} width varies with ${styleVar.weight}/${styleVar.style}: ${baseWidth.toFixed(2)}px → ${styleWidth.toFixed(2)}px (Δ${widthDiff.toFixed(2)}px)`, 'warning');
+                                    }
+                                }
+                                
+                                // Only log weight/style variations when there are problems
+                            }
+                        }
+                    }
+                    
+                    resolve(metrics);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+        }
+
+        async function loadFont(fontInfo) {
+            // Simple font loading implementation
+            return new Promise((resolve, reject) => {
+                const timeout = setTimeout(() => {
+                    reject(new Error(`Font loading timeout for ${fontInfo.name}`));
+                }, 3000);
+                
+                const clearTimeoutAndResolve = () => {
+                    clearTimeout(timeout);
+                    resolve();
+                };
+                
+                // For system fonts, assume they're available
+                if (fontInfo.source === 'system') {
+                    setTimeout(clearTimeoutAndResolve, 50);
+                    return;
+                }
+
+                // For Google Fonts, they're loaded via CSS by app.js - just wait for them to be ready
+                if (fontInfo.source === 'google') {
+                    // Google fonts are loaded via CSS links, wait for document.fonts.ready
+                    document.fonts.ready.then(() => {
+                        setTimeout(clearTimeoutAndResolve, 500); // Extra time for CSS fonts to fully load
+                    });
+                } else if (fontInfo.files) {
+                    // For embedded/downloadable fonts, load via FontFace API
+                    const fontUrl = fontInfo.files.woff2 || fontInfo.files.ttf || fontInfo.files.otf;
+                    if (fontUrl) {
+                        try {
+                            const fontFace = new FontFace(fontInfo.name, `url(${fontUrl})`);
+                            fontFace.load().then((loadedFont) => {
+                                document.fonts.add(loadedFont);
+                                // Wait a bit for the font to be ready
+                                setTimeout(clearTimeoutAndResolve, 100);
+                            }).catch((error) => {
+                                clearTimeout(timeout);
+                                reject(new Error(`Failed to load font file: ${error.message}`));
+                            });
+                        } catch (error) {
+                            clearTimeout(timeout);
+                            reject(new Error(`Error creating FontFace: ${error.message}`));
+                        }
+                    } else {
+                        clearTimeoutAndResolve(); // No files available, proceed anyway
+                    }
+                } else {
+                    clearTimeoutAndResolve(); // No files available, proceed anyway
+                }
+            });
+        }
+
+        function copyResults() {
+            const textarea = document.getElementById('resultsOutput');
+            textarea.select();
+            document.execCommand('copy');
+            
+            const btn = document.getElementById('copyBtn');
+            const originalText = btn.textContent;
+            btn.textContent = '✓ Copied!';
+            setTimeout(() => {
+                btn.textContent = originalText;
+            }, 2000);
+        }
+
+        function clearResults() {
+            document.getElementById('resultsOutput').value = '';
+            document.getElementById('progressContent').innerHTML = '';
+            document.getElementById('copyBtn').disabled = true;
+            fontMetrics = {};
+        }
+
+        function log(message, type = 'info') {
+            console.log(`${type}: ${message}`);
+            const progress = document.getElementById('progressContent');
+            const className = type === 'warning' ? 'warning' : type === 'success' ? 'success' : 'info';
+            progress.innerHTML += `<div class="${className}">[${new Date().toLocaleTimeString()}] ${message}</div>`;
+            progress.scrollTop = progress.scrollHeight;
+        }
+
+        // Auto-load font database on page load
+        window.addEventListener('load', () => {
+            setTimeout(loadFontDatabase, 500);
+        });
+    </script>
+</body>
+</html>

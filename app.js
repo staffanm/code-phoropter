@@ -1,161 +1,359 @@
-// Font source configurations - handling multiple font sources
-const fontSources = {
-    // Google Fonts (loaded via Google Fonts API)
-    googleFonts: [
-        'Fira+Code:wght@300;400;500;600;700',
-        'JetBrains+Mono:wght@300;400;500;600;700',
-        'Victor+Mono:wght@300;400;500;600;700',
-        'Recursive:wght@300;400;500;600;700&MONO=1',
-        'Source+Code+Pro:wght@300;400;500;600;700',
-        'IBM+Plex+Mono:wght@300;400;500;600;700',
-        'Roboto+Mono:wght@300;400;500;600;700',
-        'Red+Hat+Mono:wght@300;400;500;600;700',
-        'DM+Mono:wght@300;400;500',
-        'Geist+Mono:wght@100;200;300;400;500;600;700;800;900',
-        'Martian+Mono:wght@300;400;500;600;700',
-        'Ubuntu+Mono:wght@400;700',
-        'Inconsolata:wght@200;300;400;500;600;700;800;900',
-        'Anonymous+Pro:wght@400;700',
-        'Oxygen+Mono:wght@400',
-        'PT+Mono:wght@400',
-        'Overpass+Mono:wght@300;400;500;600;700;800',
-        'Cousine:wght@400;700',
-        'Fira+Mono:wght@400;500;700',
-        'Space+Mono:wght@400;700',
-        'Courier+Prime:wght@400;700',
-        'Sometype+Mono:wght@400;500;600;700',
-        'Spline+Sans+Mono:wght@300;400;500;600;700',
-        'B612+Mono:wght@400;700',
-        'Noto+Sans+Mono:wght@300;400;500;600;700;800;900',
-        'Share+Tech+Mono:wght@400',
-        'Nova+Mono:wght@400',
-        'Cutive+Mono:wght@400',
-        'Nanum+Gothic+Coding:wght@400;700',
-        'Lekton:wght@400;700',
-        'VT323:wght@400',
-        'Major+Mono+Display:wght@400',
-        'Press+Start+2P:wght@400'
-    ],
-    
-    // Custom font sources (loaded via @font-face)
-    customFonts: [
-        {
-            name: 'Hack',
-            url: 'https://cdn.jsdelivr.net/npm/hack-font@3/build/web/fonts/hack-regular-subset.woff2',
-            weight: 400
-        },
-        {
-            name: 'Cascadia Code',
-            url: 'https://cdn.jsdelivr.net/npm/@fontsource/cascadia-code@5.0.0/files/cascadia-code-latin-400-normal.woff2',
-            weight: 400
-        },
-        {
-            name: 'Cascadia Mono',
-            url: 'https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.0.0/files/cascadia-mono-latin-400-normal.woff2',
-            weight: 400
-        },
-        {
-            name: 'Iosevka',
-            url: 'https://cdn.jsdelivr.net/npm/@fontsource/iosevka@5.0.0/files/iosevka-latin-400-normal.woff2',
-            weight: 400
-        },
-        {
-            name: 'Hasklig',
-            url: 'https://cdn.jsdelivr.net/gh/i-tu/Hasklig/woff/Hasklig-Regular.woff',
-            weight: 400
-        },
-        {
-            name: 'Fantasque Sans Mono',
-            url: 'https://cdn.jsdelivr.net/gh/belluzj/fantasque-sans/fonts-woff/FantasqueSansMono-Regular.woff',
-            weight: 400
-        },
-        {
-            name: 'Mononoki',
-            url: 'https://cdn.jsdelivr.net/gh/madmalik/mononoki/export/mononoki-Regular.woff2',
-            weight: 400
-        },
-        {
-            name: 'Go Mono',
-            url: 'https://cdn.jsdelivr.net/gh/golang/image/font/gofont/ttfs/Go-Mono.ttf',
-            weight: 400
-        },
-        {
-            name: 'JuliaMono',
-            url: 'https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono-Regular.woff2',
-            weight: 400
-        },
-        {
-            name: 'Intel One Mono',
-            url: 'https://cdn.jsdelivr.net/gh/intel/intel-one-mono@main/fonts/woff2/IntelOneMono-Regular.woff2',
-            weight: 400
-        },
-        {
-            name: 'Liberation Mono',
-            url: 'https://cdn.jsdelivr.net/gh/liberationfonts/liberation-fonts/src/LiberationMono-Regular.ttf',
-            weight: 400
-        },
-        {
-            name: 'Serious Shanns',
-            url: 'https://kabeech.github.io/serious-shanns/fonts/serious-shanns-regular.woff2',
-            weight: 400,
-            fallbackUrl: 'https://kabeech.github.io/serious-shanns/fonts/serious-shanns-regular.ttf'
-        },
-        {
-            name: 'Monocraft',
-            url: 'https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft/dist/Monocraft.otf',
-            weight: 400
-        },
-        {
-            name: 'Agave',
-            url: 'https://cdn.jsdelivr.net/gh/agarick/agave/dist/Agave-Regular.ttf',
-            weight: 400
-        },
-        {
-            name: 'Office Code Pro',
-            url: 'https://cdn.jsdelivr.net/gh/nathco/Office-Code-Pro/Fonts/Office%20Code%20Pro/OTF/OfficeCodePro-Regular.otf',
-            weight: 400
-        },
-        {
-            name: 'Hermit',
-            url: 'https://pcaro.es/d/otf/Hermit-Regular.otf',
-            weight: 400
-        },
-        {
-            name: '3270',
-            url: 'https://cdn.jsdelivr.net/gh/rbanffy/3270font/build/3270-Regular.woff2',
-            weight: 400
-        }
-    ],
-    
-    // System fonts to check for local availability (non-embeddable only)
-    systemFonts: [
-        'Aptos Mono', 'Consolas', 'SF Mono', 'Monaco', 'Menlo',
-        'Courier New', 'Lucida Console', 'Andale Mono', 'DejaVu Sans Mono',
-        'Meslo LG', 'Input Mono', 'Operator Mono', 'Dank Mono',
-        'MonoLisa', 'Berkeley Mono', 'Commit Mono', 'Comic Code',
-        'PragmataPro', 'APL2741', 'APL385 Unicode'
-    ]
-};
+// Font sources are defined in font-database.js
 
-// Helper function to load custom fonts via @font-face
-function loadCustomFonts() {
-    const style = document.createElement('style');
-    let css = '';
+// Dev config and logging
+//
+// Query parameters for development:
+//   ?dev=1         → enables eager font loading + verbose logs
+//   ?eagerFonts=1  → eagerly load all embedded faces (width × weight × style)
+//   ?verbose=1     → enable debug logging
+//
+// Use on either index.html or about.html while iterating locally, e.g.:
+//   http://localhost:8000/index.html?dev=1
+//   http://localhost:8000/about.html?eagerFonts=1
+function initDevConfig() {
+    try {
+        const params = new URLSearchParams(window.location.search || '');
+        window.DEV_EAGER_FONTS = params.has('eagerFonts') || params.get('dev') === '1';
+        window.DEV_VERBOSE_LOGS = params.has('verbose') || params.get('dev') === '1';
+        window.DEV_TOURNAMENT = params.has('devTournament');
+        window.DEV_AUTO_TOURNAMENT = params.has('autoTournament');
+    } catch {}
+    window.DEV_EAGER_FONTS = !!window.DEV_EAGER_FONTS;
+    window.DEV_VERBOSE_LOGS = !!window.DEV_VERBOSE_LOGS;
+    window.DEV_TOURNAMENT = !!window.DEV_TOURNAMENT;
+    window.DEV_AUTO_TOURNAMENT = !!window.DEV_AUTO_TOURNAMENT;
+}
+
+function devLog(...args) {
+    if (window.DEV_VERBOSE_LOGS) {
+        try { console.log(...args); } catch {}
+    }
+}
     
-    fontSources.customFonts.forEach(font => {
-        css += `
-            @font-face {
-                font-family: '${font.name}';
-                src: url('${font.fallbackUrl || font.url}') format('${font.url.endsWith('.woff2') ? 'woff2' : font.url.endsWith('.woff') ? 'woff' : font.url.endsWith('.ttf') ? 'truetype' : 'opentype'}');
-                font-weight: ${font.weight || 400};
+
+// Unified WebFont Loader for all fonts (Google + Embedded)
+function loadAllFonts() {
+    if (typeof WebFont === 'undefined') {
+        console.error('WebFont Loader is required but not loaded. Please include vendor/webfont.js');
+        return Promise.reject(new Error('WebFont Loader not available'));
+    }
+    
+    const db = window.fontDatabase || [];
+    const googleFonts = db.filter(f => f.source === 'google').map(f => f.name);
+    const embeddedFonts = db.filter(f => f.source === 'embedded').map(f => f.name);
+    
+    console.log(`[DEBUG] Loading fonts via unified WebFont Loader: ${googleFonts.length} Google + ${embeddedFonts.length} embedded`);
+    console.log(`[DEBUG] Sample embedded fonts:`, embeddedFonts.slice(0, 5));
+    
+    return new Promise((resolve) => {
+        const startTime = Date.now();
+        let loadedCount = 0;
+        const totalFonts = googleFonts.length + embeddedFonts.length;
+        
+        if (totalFonts === 0) {
+            devLog('No fonts to load via WebFont Loader');
+            resolve();
+            return;
+        }
+        
+        const loadedFamilies = new Set();
+        window.loadedEmbeddedFonts = window.loadedEmbeddedFonts || new Set();
+        
+        const config = {
+            fontactive: function(familyName, fvd) {
+                if (!loadedFamilies.has(familyName)) {
+                    loadedFamilies.add(familyName);
+                    loadedCount++;
+                    window.loadedEmbeddedFonts.add(familyName); // Track loaded fonts
+                    devLog(`✓ ${familyName} loaded (${loadedCount}/${totalFonts})`);
+                }
+            },
+            fontinactive: function(familyName, fvd) {
+                console.log(`[DEBUG] ✗ ${familyName} failed to load (${fvd}) - check embedded-fonts.css`);
+            },
+            active: function() {
+                const elapsed = Date.now() - startTime;
+                devLog(`✓ All fonts loaded after ${elapsed}ms`);
+                resolve();
+            },
+            inactive: function() {
+                const elapsed = Date.now() - startTime;
+                devLog(`⚠️ Some fonts failed to load after ${elapsed}ms`);
+                resolve(); // Continue with partial success
+            }
+        };
+        
+        // Add Google Fonts
+        if (googleFonts.length > 0) {
+            config.google = {
+                families: googleFonts.map(name => name + ':400,700')
+            };
+        }
+        
+        // Add embedded fonts via pregenerated CSS file
+        if (embeddedFonts.length > 0) {
+            console.log(`[DEBUG] Loading ${embeddedFonts.length} embedded fonts via embedded-fonts.css`);
+            
+            // Test if CSS file exists
+            fetch('embedded-fonts.css', {method: 'HEAD'}).then(response => {
+                console.log(`[DEBUG] embedded-fonts.css status: ${response.status}`);
+            }).catch(err => {
+                console.error(`[DEBUG] embedded-fonts.css not found:`, err);
+            });
+            
+            // Build FVDs for embedded fonts based on their axes (min/max weights + width variants)
+            const embeddedFamilies = embeddedFonts.map(fontName => {
+                const fontData = db.find(f => f.name === fontName);
+                if (!fontData || !fontData.axes) {
+                    // No axes = single variant, no FVD needed
+                    return fontName;
+                }
+                
+                const axes = fontData.axes;
+                const weights = axes.weights || [400];
+                const styles = axes.styles || ['normal'];
+                const widths = axes.widths || ['normal'];
+                
+                // Use only min/max weights for efficiency
+                const minWeight = Math.min(...weights);
+                const maxWeight = Math.max(...weights);
+                const testWeights = minWeight === maxWeight ? [minWeight] : [minWeight, maxWeight];
+                
+                // Build FVD combinations with width variants
+                const fvds = [];
+                testWeights.forEach(weight => {
+                    styles.forEach(style => {
+                        widths.forEach(width => {
+                            const styleCode = getStyleCode(style);
+                            const weightCode = Math.floor(weight / 100).toString(); // 200->2, 800->8
+                            const widthCode = getWidthCode(width);
+                            
+                            // Only add width code if there are multiple widths
+                            const fvd = widths.length > 1 ? styleCode + weightCode + widthCode : styleCode + weightCode;
+                            fvds.push(fvd);
+                        });
+                    });
+                });
+                
+                return fontName + ':' + fvds.join(',');
+            });
+            
+            function getStyleCode(style) {
+                switch (style) {
+                    case 'italic': return 'i';
+                    case 'oblique': return 'o';
+                    case 'normal': return 'n';
+                    default: return 'n';
+                }
+            }
+            
+            function getWidthCode(width) {
+                switch (width) {
+                    case 'ultra-condensed': return 'a';
+                    case 'extra-condensed': return 'b';
+                    case 'condensed': return 'c';
+                    case 'semi-condensed': return 'd';
+                    case 'normal': return 'n';
+                    case 'semi-expanded': return 'e';
+                    case 'expanded': return 'f';
+                    case 'extra-expanded': return 'g';
+                    case 'ultra-expanded': return 'h';
+                    case 'semi-wide': return 'e'; // Monaspace semi-wide maps to semi-expanded
+                    case 'wide': return 'f'; // Monaspace wide maps to expanded
+                    default: return 'n';
+                }
+            }
+            
+            config.custom = {
+                families: embeddedFamilies,
+                urls: ['embedded-fonts.css']
+            };
+            console.log(`[DEBUG] Embedded families with FVDs:`, embeddedFamilies);
+            console.log(`[DEBUG] WebFont config.custom:`, config.custom);
+        } else {
+            console.log(`[DEBUG] No embedded fonts found, skipping custom CSS`);
+        }
+        
+        // 15 second timeout
+        setTimeout(() => {
+            devLog(`⚠️ Font loading timed out after 15s`);
+            resolve();
+        }, 15000);
+        
+        WebFont.load(config);
+    });
+}
+
+// Generate CSS @font-face declarations for embedded fonts (for unified WebFont Loader)
+function generateEmbeddedFontCSS(variants = null) {
+    const db = window.fontDatabase || [];
+    const embedded = db.filter(f => f.source === 'embedded');
+    const css = [];
+    
+    // Default variants if none specified
+    const defaultVariants = [
+        { weight: 400, style: 'normal', width: 'normal' },
+        { weight: 700, style: 'normal', width: 'normal' },
+        { weight: 400, style: 'italic', width: 'normal' }
+    ];
+    const targetVariants = variants || defaultVariants;
+    
+    function cleanupPath(p) {
+        return p
+            .replace(/\/{2,}/g,'/')
+            .replace(/--+/g,'-')
+            .replace(/-\./g,'.')
+            .replace(/\/-/g,'/');
+    }
+    
+    function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'normal') {
+        const vm = entry.variantsMatrix;
+        if (!vm || !vm.files || !vm.maps) return null;
+        
+        const maps = vm.maps || {};
+        const m = (axis, v) => (maps[axis] && (maps[axis][String(v)] ?? maps[axis][v])) ?? '';
+        
+        let weightPart = m('weight', weight);
+        const stylePart = m('style', style);  
+        const widthPart = m('width', width);
+        
+        const rules = vm.rules || {};
+        if (rules.regularOnlyOnBase && String(weight) === '400') {
+            const regName = rules.regularName || weightPart || '';
+            if (style !== 'normal' || width !== 'normal') {
+                weightPart = '';
+            } else {
+                weightPart = regName;
+            }
+        }
+        
+        const values = {
+            '{weight|map}': weightPart,
+            '{style|map}': stylePart,
+            '{width|map}': widthPart,
+            '{suffix|map}': (maps.suffix && (maps.suffix[`${weight}:${style}`] || '')) || ''
+        };
+        
+        function fill(tpl) {
+            let out = tpl;
+            Object.entries(values).forEach(([k, v]) => { out = out.replaceAll(k, v); });
+            if (vm.cleanup) out = cleanupPath(out);
+            return out;
+        }
+        
+        const order = [vm.prefer, ...Object.keys(vm.files).filter(k => k !== vm.prefer)];
+        for (const fmt of order) {
+            const tpl = vm.files[fmt];
+            if (!tpl) continue;
+            const url = fill(tpl);
+            const format = (fmt === 'ttf') ? 'truetype' : (fmt === 'otf') ? 'opentype' : fmt;
+            return { url, format };
+        }
+        return null;
+    }
+    
+    function getFormatFromUrl(url) {
+        if (url.includes('.woff2')) return 'woff2';
+        if (url.includes('.woff')) return 'woff';
+        if (url.includes('.ttf')) return 'truetype';
+        return 'opentype';
+    }
+    
+    embedded.forEach(font => {
+        // Handle regular fonts with direct properties
+        if (font.woff2 || font.ttf || font.otf) {
+            const url = font.woff2 || font.ttf || font.otf;
+            const format = getFormatFromUrl(url);
+            
+            // Skip archives and ensure CORS-friendly URLs (same logic as loadCustomFonts)
+            if (/\.(zip|tar\.gz)$/i.test(url)) return;
+            if (/^https?:\/\//i.test(url)) {
+                const allow = (
+                    url.startsWith('https://cdn.jsdelivr.net/') ||
+                    url.startsWith('https://cdn.jsdelivr.net/gh/') ||
+                    url.startsWith('https://kabeech.github.io/') ||
+                    url.startsWith('https://dtinth.github.io/') ||
+                    url.startsWith('https://raw.githubusercontent.com/') ||
+                    url.startsWith('https://objects.githubusercontent.com/')
+                );
+                if (!allow) return;
+            }
+            
+            css.push(`@font-face {
+                font-family: "${font.name}";
+                src: url("${/^https?:\/\//i.test(url) ? url : encodeURI(url)}") format("${format}");
+                font-weight: 400;
                 font-style: normal;
                 font-display: swap;
-            }
-        `;
+            }`);
+        }
+        
+        // Handle variant fonts with variantsMatrix
+        if (font.variantsMatrix && font.variantsMatrix.files) {
+            targetVariants.forEach(({ weight, style, width }) => {
+                const resolved = resolveVariantUrl(font, weight, style, width);
+                if (resolved) {
+                    const srcUrl = /^https?:\/\//i.test(resolved.url) ? resolved.url : encodeURI(resolved.url);
+                    css.push(`@font-face {
+                        font-family: "${font.name}";
+                        src: url("${srcUrl}") format("${resolved.format}");
+                        font-weight: ${weight};
+                        font-style: ${style};
+                        font-display: swap;
+                    }`);
+                }
+            });
+        }
     });
     
-    style.textContent = css;
-    document.head.appendChild(style);
+    return css.join('\n');
+}
+
+// Generic library wait helper (unifies external lib readiness handling)
+function waitForLibrary(name, checkFn, onReady, options = {}) {
+    const attempts = options.attempts ?? 10;
+    const interval = options.interval ?? 500; // ms
+    const onTimeout = options.onTimeout ?? (() => console.warn(`[DEV] ${name} not found after waiting ${(attempts*interval)/1000}s`));
+    let tries = 0;
+    (function poll() {
+        if (checkFn()) {
+            try { onReady(); } catch (e) { console.error(`[DEV] ${name} onReady error:`, e); }
+        } else if (tries++ < attempts) {
+            setTimeout(poll, interval);
+        } else {
+            onTimeout();
+        }
+    })();
+}
+
+// Load databases from JSON if available; fallback to existing globals
+async function loadDatabases() {
+    async function fetchJSON(path) {
+        const res = await fetch(path, { cache: 'no-cache' });
+        if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+        return res.json();
+    }
+    try {
+        const [fonts, schemes, metrics] = await Promise.all([
+            fetchJSON('font-database.json'),
+            fetchJSON('color-schemes.json'),
+            fetchJSON('font-metrics.json').catch(() => null) // Optional file
+        ]);
+        window.fontDatabase = Array.isArray(fonts) ? fonts : (fonts.fonts || []);
+        window.colorSchemeDatabase = schemes || {};
+        window.fontMetrics = metrics || {};
+        console.log(`[DEBUG] Loaded font metrics for ${Object.keys(window.fontMetrics).length} fonts`);
+        
+        // Load fonts after database is ready
+        await loadAllFonts();
+        
+        return true;
+    } catch (e) {
+        devLog('[DEV] JSON databases not found; using JS files if present.', e.message);
+        if (!window.fontDatabase || !window.colorSchemeDatabase) {
+            throw e;
+        }
+    }
 }
 
 // Font availability detection
@@ -178,21 +376,59 @@ function isFontAvailable(fontName) {
     return isAvailable;
 }
 
+// Detect font-width support for a given font
+function detectFontWidthSupport(fontName) {
+    const testString = 'MMMMMMMMMM';
+    const container = document.createElement('div');
+    container.style.position = 'absolute';
+    container.style.visibility = 'hidden';
+    container.style.fontSize = '48px';
+    container.style.fontFamily = fontName;
+    container.style.whiteSpace = 'nowrap';
+    container.textContent = testString;
+    document.body.appendChild(container);
+    
+    const widthMap = {};
+    const supportedWidths = [];
+    
+    // First measure normal width
+    container.style.fontStretch = 'normal';
+    const normalWidth = container.offsetWidth;
+    widthMap['normal'] = normalWidth;
+    
+    // Test each width value except normal
+    const testWidths = ['ultra-condensed', 'extra-condensed', 'condensed', 'semi-condensed', 'semi-expanded', 'expanded', 'extra-expanded', 'ultra-expanded'];
+    
+    for (const width of testWidths) {
+        container.style.fontStretch = width;
+        const measuredWidth = container.offsetWidth;
+        
+        // If width differs from normal, this width is supported
+        if (measuredWidth !== normalWidth) {
+            supportedWidths.push(width);
+            widthMap[width] = measuredWidth;
+        }
+    }
+    
+    document.body.removeChild(container);
+    
+    // Always include normal as it's the default
+    if (!supportedWidths.includes('normal')) {
+        supportedWidths.unshift('normal');
+    }
+    
+    console.log(`Font ${fontName} supports ${supportedWidths.length} width values:`, supportedWidths);
+    return supportedWidths;
+}
+
 // Detect all available system fonts
 function detectSystemFonts() {
     console.log('Detecting installed system fonts...');
     const availableFonts = [];
-    
-    // Also check some common programming fonts that might be locally installed
-    const additionalFontsToCheck = [
-        'Hack', 'Cascadia Code', 'Cascadia Mono', 'JetBrains Mono',
-        'Fira Code', 'Source Code Pro', 'Iosevka', 'Hasklig',
-        'Victor Mono', 'Fantasque Sans Mono', 'Mononoki', 'Go Mono',
-        'JuliaMono', 'Intel One Mono', 'Liberation Mono', 'DejaVu Sans Mono'
-    ];
-    
-    // Combine system fonts with additional fonts to check
-    const allFontsToCheck = [...new Set([...fontSources.systemFonts, ...additionalFontsToCheck])];
+    // Check system fonts as defined in the external database
+    const allFontsToCheck = Array.from(new Set(
+        (window.fontDatabase || []).filter(f => f.source === 'system').map(f => f.name)
+    ));
     
     allFontsToCheck.forEach(fontName => {
         if (isFontAvailable(fontName)) {
@@ -216,6 +452,8 @@ function detectSystemFonts() {
     console.log(`💰 Non-embeddable/commercial fonts detected: ${nonEmbeddableFonts.length}`);
     if (nonEmbeddableFonts.length > 0) {
         console.log(`💰 Available commercial fonts:`, nonEmbeddableFonts);
+    } else {
+        console.log('💰 No commercial/non-embeddable fonts detected locally.');
     }
     
     console.log(`Found ${availableFonts.length} of ${allFontsToCheck.length} checked fonts`);
@@ -229,14 +467,13 @@ function filterFontFamilies() {
     // Create a filtered version of fontFamilies
     const filteredFamilies = {};
     
-    // List of fonts that are loaded via CDN or Google Fonts (always available)
-    const webFonts = new Set([
-        ...fontSources.googleFonts.map(f => f.split(':')[0].replace(/\+/g, ' ')),
-        ...fontSources.customFonts.map(f => f.name)
-    ]);
+    // Fonts that are loaded via web (non-system) are considered available
+    const webFonts = new Set(
+        (window.fontDatabase || []).filter(f => f.source !== 'system').map(f => f.name)
+    );
     
     Object.entries(fontFamiliesOriginal).forEach(([category, data]) => {
-        if (category === 'System Fonts') {
+        if (category === 'System Fonts' || category === 'System & Classics') {
             // For system fonts category, only include detected fonts
             const availableFontsInCategory = data.fonts.filter(fontString => {
                 // Extract the primary font name from the font string
@@ -252,7 +489,7 @@ function filterFontFamilies() {
                 filteredFamilies[category] = {
                     ...data,
                     fonts: availableFontsInCategory,
-                    description: `${data.description} (${availableFontsInCategory.length} available)`
+                    description: `${data.description} (${availableFontsInCategory.length}/${data.fonts.length} available)`
                 };
             } else {
                 console.log('No system fonts detected - category will be hidden');
@@ -286,8 +523,7 @@ function filterFontFamilies() {
                 filteredFamilies[category] = {
                     ...data,
                     fonts: availableFontsInCategory,
-                    description: data.description + (availableFontsInCategory.length < data.fonts.length ? 
-                        ` (${availableFontsInCategory.length}/${data.fonts.length} available)` : '')
+                    description: `${data.description} (${availableFontsInCategory.length}/${data.fonts.length} available)`
                 };
             }
         }
@@ -297,238 +533,210 @@ function filterFontFamilies() {
     return filteredFamilies;
 }
 
-// Configuration options - Top coding fonts organized by family
-// Using Comic Sans MS as fallback to make it obvious when fonts don't load
-const fontFamiliesOriginal = {
-    'System Fonts': {
-        description: 'Pre-installed system and commercial fonts (must be installed locally)',
-        fonts: [
-            '"Aptos Mono", "Consolas", monospace',
-            '"Consolas", monospace',
-            '"SF Mono", "Monaco", monospace',
-            '"Monaco", monospace',
-            '"Menlo", monospace',
-            '"Cascadia Code", "Consolas", monospace',
-            '"Cascadia Mono", "Consolas", monospace',
-            '"Courier New", monospace',
-            '"Lucida Console", monospace',
-            '"Andale Mono", monospace',
-            '"DejaVu Sans Mono", monospace',
-            '"Droid Sans Mono", monospace',
-            '"Hack", monospace',
-            '"Meslo LG", monospace',
-            '"Input Mono", monospace',
-            '"Operator Mono", monospace',
-            '"Dank Mono", monospace',
-            '"MonoLisa", monospace',
-            '"Berkeley Mono", monospace',
-            '"Commit Mono", monospace',
-            '"Comic Code", monospace',
-            '"PragmataPro", monospace'
-        ],
-        representative: '"Consolas", monospace'
-    },
-    'Ligature-Enabled': {
-        description: 'Fonts with programming ligatures and specialized symbols',
-        fonts: [
-            '"Fira Code", "Comic Sans MS", cursive',
-            '"JetBrains Mono", "Comic Sans MS", cursive',
-            '"Victor Mono", "Comic Sans MS", cursive',
-            '"Recursive", "Comic Sans MS", cursive',
-            '"Cascadia Code", "Consolas", monospace',
-            '"Iosevka", "Comic Sans MS", cursive',
-            '"Hasklig", "Comic Sans MS", cursive',
-            '"MonoLisa", monospace',
-            '"Dank Mono", monospace',
-            '"Comic Code", monospace',
-            '"PragmataPro", monospace',
-            '"Operator Mono", monospace',
-            '"APL2741", "Comic Sans MS", cursive',
-            '"APL385 Unicode", "Comic Sans MS", cursive',
-            '"JuliaMono", "Comic Sans MS", cursive'
-        ],
-        representative: '"Fira Code", "Comic Sans MS", cursive'
-    },
-    'Clean & Modern': {
-        description: 'Contemporary fonts with clean lines',
-        fonts: [
-            '"Source Code Pro", "Comic Sans MS", cursive',
-            '"IBM Plex Mono", "Comic Sans MS", cursive',
-            '"Roboto Mono", "Comic Sans MS", cursive',
-            '"Red Hat Mono", "Comic Sans MS", cursive',
-            '"DM Mono", "Comic Sans MS", cursive',
-            '"Geist Mono", "Comic Sans MS", cursive',
-            '"Martian Mono", "Comic Sans MS", cursive',
-            '"Chivo Mono", "Comic Sans MS", cursive',
-            '"Kode Mono", "Comic Sans MS", cursive',
-            '"Intel One Mono", "Comic Sans MS", cursive',
-            '"Monaspace Argon", "Comic Sans MS", cursive',
-            '"Monaspace Krypton", "Comic Sans MS", cursive',
-            '"Monaspace Neon", "Comic Sans MS", cursive',
-            '"Monaspace Radon", "Comic Sans MS", cursive',
-            '"Monaspace Xenon", "Comic Sans MS", cursive',
-            '"Zed Mono", "Comic Sans MS", cursive',
-            '"Sudo", "Comic Sans MS", cursive',
-            '"Maple Mono", "Comic Sans MS", cursive',
-            '"League Mono", "Comic Sans MS", cursive',
-            '"Agave", "Comic Sans MS", cursive'
-        ],
-        representative: '"Source Code Pro", "Comic Sans MS", cursive'
-    },
-    'Classic Terminal': {
-        description: 'Traditional terminal, system, and retro fonts',
-        fonts: [
-            '"Ubuntu Mono", "Comic Sans MS", cursive',
-            '"Inconsolata", "Comic Sans MS", cursive',
-            '"Anonymous Pro", "Comic Sans MS", cursive',
-            '"Oxygen Mono", "Comic Sans MS", cursive',
-            '"PT Mono", "Comic Sans MS", cursive',
-            '"Overpass Mono", "Comic Sans MS", cursive',
-            '"Cousine", "Comic Sans MS", cursive',
-            '"Fira Mono", "Comic Sans MS", cursive',
-            '"Liberation Mono", "Comic Sans MS", cursive',
-            '"Go Mono", "Comic Sans MS", cursive',
-            '"Terminus", "Comic Sans MS", cursive',
-            '"Hermit", "Comic Sans MS", cursive',
-            '"Mononoki", "Comic Sans MS", cursive',
-            '"Office Code Pro", "Comic Sans MS", cursive',
-            '"Fantasque Sans Mono", "Comic Sans MS", cursive',
-            '"3270", "Comic Sans MS", cursive',
-            '"Anka/Coder", "Comic Sans MS", cursive',
-            '"ProFont", "Comic Sans MS", cursive',
-            '"Envy Code R", "Comic Sans MS", cursive',
-            '"VT323", "Comic Sans MS", cursive',
-            '"Major Mono Display", "Comic Sans MS", cursive',
-            '"Syne Mono", "Comic Sans MS", cursive',
-            '"Xanh Mono", "Comic Sans MS", cursive',
-            '"Press Start 2P", "Comic Sans MS", cursive',
-            '"Perfect DOS VGA 437", "Comic Sans MS", cursive',
-            '"IBM VGA 9x16", "Comic Sans MS", cursive',
-            '"PxPlus IBM VGA 8x16", "Comic Sans MS", cursive',
-            '"Pixel Operator", "Comic Sans MS", cursive',
-            '"Monocraft", "Comic Sans MS", cursive',
-            '"Bedstead", "Comic Sans MS", cursive',
-            '"GohuFont", "Comic Sans MS", cursive',
-            '"Proggy Vector", "Comic Sans MS", cursive',
-            '"Spleen", "Comic Sans MS", cursive',
-            '"Tamzen", "Comic Sans MS", cursive',
-            '"Fixedsys", monospace'
-        ],
-        representative: '"Ubuntu Mono", "Comic Sans MS", cursive'
-    },
-    'Distinctive': {
-        description: 'Fonts with unique character',
-        fonts: [
-            '"Space Mono", "Comic Sans MS", cursive',
-            '"Courier Prime", "Comic Sans MS", cursive',
-            '"Courier Prime Code", "Comic Sans MS", cursive',
-            '"Azeret Mono", "Comic Sans MS", cursive',
-            '"Fragment Mono", "Comic Sans MS", cursive',
-            '"Sometype Mono", "Comic Sans MS", cursive',
-            '"Spline Sans Mono", "Comic Sans MS", cursive',
-            '"B612 Mono", "Comic Sans MS", cursive',
-            '"Sax Mono", "Comic Sans MS", cursive',
-            '"Code New Roman", "Comic Sans MS", cursive',
-            '"JuliaMono", "Comic Sans MS", cursive',
-            '"Input Mono", monospace',
-            '"Cartograph CF", monospace',
-            '"Aperçu Mono", monospace',
-            '"Triplicate Code", monospace'
-        ],
-        representative: '"Space Mono", "Comic Sans MS", cursive'
-    },
-    'Wide & Readable': {
-        description: 'Fonts optimized for extended reading',
-        fonts: [
-            '"Noto Sans Mono", "Comic Sans MS", cursive',
-            '"Share Tech Mono", "Comic Sans MS", cursive',
-            '"Nova Mono", "Comic Sans MS", cursive',
-            '"Cutive Mono", "Comic Sans MS", cursive',
-            '"Nanum Gothic Coding", "Comic Sans MS", cursive',
-            '"Lekton", "Comic Sans MS", cursive',
-            '"Latin Modern Mono", "Comic Sans MS", cursive',
-            '"Luxi Mono", "Comic Sans MS", cursive',
-            '"NotCourierSans", "Comic Sans MS", cursive',
-            '"Sarasa Mono", "Comic Sans MS", cursive',
-            '"UDEV Gothic", "Comic Sans MS", cursive',
-            '"LXGW WenKai Mono", "Comic Sans MS", cursive',
-            '"Iosevka Term", "Comic Sans MS", cursive'
-        ],
-        representative: '"Noto Sans Mono", "Comic Sans MS", cursive'
-    },
-};
+
+// (Removed unused fontFamilyCategories definition)
+
+// Generate grouped categories for the start screen (computed after DB load)
+let fontFamiliesOriginal;
+
+function generateFontFamilies() {
+    // Normalize legacy DB: map family->category and assign categories
+    const families = {};
+
+    // Canonical categories
+    const categoryDescriptions = {
+        'Sans':    'Monospaced sans-serif faces with clean, contemporary forms.',
+        'Serif':   'Monospaced faces with true serifs (e.g., Courier variants).',
+        'Slab':    'Monospaced slab serifs with blocky terminals.',
+        'Playful': 'Handwriting/comic-inspired monos with expressive forms.',
+        'Compact': 'Condensed/narrow metrics for dense code displays.',
+        'Retro':   'Retro terminal or pixel-emulation aesthetics.'
+    };
+
+    // Heuristic category assignment from legacy names and known fonts
+    function inferCategory(font) {
+        const n = (font.name || '').toLowerCase();
+        const legacy = (font.family || '').toLowerCase();
+        // Specific well-known mappings
+        if (n.includes('slab')) return 'Slab';
+        if (/(courier|courier\s*prime)/.test(n)) return 'Serif';
+        if (/(comic|hand|handjet)/.test(n)) return 'Playful';
+        if (/(3270|vt323|terminus|tty|pixel)/.test(n)) return 'Retro';
+        if (/(iosevka|agave|m\+|m plus|input|condensed|semi\s*condensed)/.test(n)) return 'Compact';
+        // Corrections
+        if (n.includes('space mono')) return 'Sans';
+        // Legacy family hints
+        if (/retro|terminal/.test(legacy)) return 'Retro';
+        if (/compact|scientific/.test(legacy)) return 'Compact';
+        if (/distinctive|playful/.test(legacy)) return 'Playful';
+        // Default
+        return 'Sans';
+    }
+
+    // Representative selection priority: google > embedded > system
+    const sourceRank = { google: 2, embedded: 1, system: 0 };
+
+    // Preferred representatives per category (used as fallback only)
+    const preferredRepresentatives = {
+        'Sans': ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'IBM Plex Mono'],
+        'Serif': ['Courier Prime', 'Courier New'],
+        'Slab': ['Iosevka Slab', 'Roboto Slab'],
+        'Playful': ['Comic Mono', 'Sometype Mono'],
+        'Compact': ['Iosevka', 'Agave'],
+        'Retro': ['3270', 'VT323', 'Terminus']
+    };
+
+    // Quick lookup for source by name using the database
+    const nameToSource = {};
+    (window.fontDatabase || []).forEach(f => { nameToSource[f.name] = f.source; });
+
+    (window.fontDatabase || []).forEach(font => {
+        if (font.name === 'M+ 1m') return; // exclude non-monospace
+        // Normalize category in-place for downstream lookups
+        font.category = font.category || inferCategory(font);
+        const category = font.category;
+        if (!families[category]) {
+            families[category] = {
+                description: categoryDescriptions[category] || category,
+                fonts: [],
+                representative: null,
+                _repRank: -1
+            };
+        }
+
+        // Add font to family list for later use
+        const cssName = `"${font.name}", "Redacted Script"`;
+        families[category].fonts.push(cssName);
+
+        // Choose representative by best available source
+        const rank = sourceRank[font.source] ?? 0;
+        if (rank > families[category]._repRank) {
+            families[category].representative = cssName;
+            families[category]._repRank = rank;
+        }
+    });
+
+    // Apply preferred representative overrides with web-first bias
+    Object.entries(families).forEach(([categoryName, fam]) => {
+        const preferred = preferredRepresentatives[categoryName] || [];
+        if (preferred.length === 0) return;
+        // Extract available font names in this family
+        const namesInFamily = fam.fonts.map(s => (s.match(/\"([^\"]+)\"/) || [,''])[1]).filter(Boolean);
+        // First try to pick a non-system preferred font for preview reliability
+        const webPreferred = preferred.find(n => namesInFamily.includes(n) && nameToSource[n] !== 'system');
+        const anyPreferred = webPreferred || preferred.find(n => namesInFamily.includes(n));
+        if (anyPreferred) {
+            fam.representative = `"${anyPreferred}", "Redacted Script"`;
+        }
+    });
+
+    // Dynamic selection: maximize distinction between family representatives using fontSimilarity
+    try {
+        const getName = (cssName) => (cssName.match(/\"([^\"]+)\"/) || [,''])[1] || '';
+        const pickOrder = [
+            'Sans', 'Serif', 'Slab', 'Compact', 'Retro', 'Playful'
+        ].filter(name => families[name]).concat(Object.keys(families).filter(n => !['Sans','Serif','Slab','Compact','Retro','Playful'].includes(n)));
+
+        const selected = {};
+        const selectedNames = [];
+
+        // Build candidate lists per category with web-first filtering
+        const candidates = {};
+        pickOrder.forEach(fname => {
+            const fam = families[fname];
+            // Prefer web fonts; allow system only for System & Classics or if no web fonts available
+            const names = fam.fonts.map(getName);
+            const web = names.filter(n => (nameToSource[n] && nameToSource[n] !== 'system'));
+            const sys = names.filter(n => (nameToSource[n] === 'system'));
+            const pool = (fname === 'Serif') ? (sys.length ? sys : names) : (web.length ? web : names);
+            candidates[fname] = pool;
+        });
+
+        // Helper to compute min dissimilarity to already selected
+        function minDissim(name) {
+            if (selectedNames.length === 0) return 100;
+            const css = `"${name}", "Redacted Script"`;
+            let min = Infinity;
+            for (const other of selectedNames) {
+                const sim = fontSimilarity.calculate(css, `"${other}", "Redacted Script"`);
+                const dis = 100 - sim;
+                if (dis < min) min = dis;
+            }
+            return min;
+        }
+
+        // For the first pick of each family: choose the most distinctive against the union of all candidates
+        const allCandidateNames = Array.from(new Set(Object.values(candidates).flat()));
+        function avgDissimToAll(name) {
+            const css = `"${name}", "Redacted Script"`;
+            let sum = 0;
+            let count = 0;
+            for (const other of allCandidateNames) {
+                if (other === name) continue;
+                const sim = fontSimilarity.calculate(css, `"${other}", "Redacted Script"`);
+                sum += (100 - sim);
+                count++;
+            }
+            return count ? (sum / count) : 0;
+        }
+
+        pickOrder.forEach(fname => {
+            const pool = candidates[fname];
+            if (!pool || pool.length === 0) return;
+            let choice = null;
+            if (selectedNames.length === 0) {
+                // First selection: maximize average dissimilarity to all
+                choice = pool
+                    .map(n => ({ n, score: avgDissimToAll(n), source: nameToSource[n] }))
+                    // Prefer non-system when scores tie
+                    .sort((a, b) => (b.score - a.score) || ((a.source === 'system') - (b.source === 'system')))[0].n;
+            } else {
+                // Greedy: maximize minimum dissimilarity to already selected
+                choice = pool
+                    .map(n => ({ n, score: minDissim(n), source: nameToSource[n] }))
+                    .sort((a, b) => (b.score - a.score) || ((a.source === 'system') - (b.source === 'system')))[0].n;
+            }
+            selected[fname] = choice;
+            selectedNames.push(choice);
+        });
+
+        // Apply dynamic representatives
+        Object.entries(selected).forEach(([fname, name]) => {
+            if (families[fname]) {
+                families[fname].representative = `"${name}", "Redacted Script"`;
+            }
+        });
+    } catch (e) {
+        console.warn('[DEV] Dynamic representative selection failed:', e);
+    }
+
+    // Cleanup helper metadata
+    Object.values(families).forEach(f => { delete f._repRank; });
+    return families;
+}
 
 // This will be populated with filtered fonts after detection
-let fontFamilies = fontFamiliesOriginal;
+let fontFamilies = {};
 let fonts = [];
 
-// Google Fonts list for backward compatibility (using fontSources.googleFonts)
-const googleFontFamilies = fontSources.googleFonts;
+// Convert flat font database to metadata format for about page generation
+let fontMetadata = {};
 
-const fontSizes = [12, 14, 16, 18]; // Reduced to 4 strategic sizes
+// Color scheme metadata holder (populated after DB load)
+let colorSchemeMetadata = {};
+
+// (obsolete table helpers removed)
+
+// Will be computed after DB load
+let googleFontFamilies = [];
+
+const fontSizes = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]; // All integer values from 10 to 20
 const fontWeights = [100, 200, 300, 400, 500, 600, 700, 800, 900]; // Full weight range from ultra-light to black
-const lineHeights = [1.3, 1.4, 1.5, 1.6]; // Reduced to 4 practical line heights
-const fontStretches = ['ultra-condensed', 'condensed', 'normal', 'semi-expanded', 'expanded']; // 5 stretch options
+const lineHeights = [1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0]; // Complete range from 1.0 to 2.0
+const fontWidths = ['ultra-condensed', 'extra-condensed', 'condensed', 'semi-condensed', 'normal', 'semi-expanded', 'expanded', 'extra-expanded', 'ultra-expanded']; // All 9 standard font-width values
 const letterSpacings = [-1.0, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1.0]; // More granular letter spacing options
 
-const colorSchemes = {
-    dark: [
-        // Popular dark themes
-        { name: 'Monokai', bg: '#272822', fg: '#f8f8f2', keyword: '#f92672', string: '#e6db74', comment: '#75715e', function: '#66d9ef' },
-        { name: 'Dracula', bg: '#282a36', fg: '#f8f8f2', keyword: '#ff79c6', string: '#f1fa8c', comment: '#6272a4', function: '#50fa7b' },
-        { name: 'One Dark', bg: '#282c34', fg: '#abb2bf', keyword: '#c678dd', string: '#98c379', comment: '#5c6370', function: '#61afef' },
-        { name: 'Solarized Dark', bg: '#002b36', fg: '#839496', keyword: '#b58900', string: '#2aa198', comment: '#586e75', function: '#268bd2' },
-        { name: 'Tomorrow Night', bg: '#1d1f21', fg: '#c5c8c6', keyword: '#b294bb', string: '#b5bd68', comment: '#969896', function: '#81a2be' },
-        { name: 'GitHub Dark', bg: '#0d1117', fg: '#c9d1d9', keyword: '#ff7b72', string: '#a5d6ff', comment: '#8b949e', function: '#d2a8ff' },
-        { name: 'Nord', bg: '#2e3440', fg: '#d8dee9', keyword: '#81a1c1', string: '#a3be8c', comment: '#616e88', function: '#88c0d0' },
-        { name: 'Gruvbox Dark', bg: '#282828', fg: '#ebdbb2', keyword: '#fb4934', string: '#b8bb26', comment: '#928374', function: '#83a598' },
-        { name: 'Material Theme', bg: '#263238', fg: '#eeffff', keyword: '#c792ea', string: '#c3e88d', comment: '#546e7a', function: '#82aaff' },
-        { name: 'Atom One Dark', bg: '#282c34', fg: '#abb2bf', keyword: '#c678dd', string: '#98c379', comment: '#5c6370', function: '#61afef' },
-        { name: 'Palenight', bg: '#292d3e', fg: '#a6accd', keyword: '#c792ea', string: '#c3e88d', comment: '#676e95', function: '#82aaff' },
-        { name: 'Synthwave 84', bg: '#262335', fg: '#ff7edb', keyword: '#fede5d', string: '#ff8b39', comment: '#495495', function: '#36f9f6' },
-        { name: 'Tokyo Night', bg: '#1a1b26', fg: '#a9b1d6', keyword: '#bb9af7', string: '#9ece6a', comment: '#565f89', function: '#7aa2f7' },
-        { name: 'Cobalt2', bg: '#193549', fg: '#ffc600', keyword: '#ff9d00', string: '#0088ff', comment: '#0088ff', function: '#ff628c' },
-        { name: 'Night Owl', bg: '#011627', fg: '#d6deeb', keyword: '#c792ea', string: '#ecc48d', comment: '#637777', function: '#82aaff' },
-        { name: 'Shades of Purple', bg: '#2d2b55', fg: '#a599e9', keyword: '#ff628c', string: '#a5ff90', comment: '#b362ff', function: '#fad000' },
-        { name: 'Ayu Dark', bg: '#0a0e14', fg: '#b3b1ad', keyword: '#ff8f40', string: '#c2d94c', comment: '#626a73', function: '#ffb454' },
-        { name: 'Horizon', bg: '#1c1e26', fg: '#fadad1', keyword: '#f43e5c', string: '#fab795', comment: '#6c6f93', function: '#25b0bc' },
-        { name: 'City Lights', bg: '#1d252c', fg: '#a0b3c5', keyword: '#5ec4ff', string: '#8bd49c', comment: '#41505e', function: '#e27e8d' },
-        { name: 'Moonlight', bg: '#222436', fg: '#c8d3f5', keyword: '#ff757f', string: '#c3e88d', comment: '#7a88cf', function: '#82aaff' },
-        { name: 'Panda', bg: '#292a2b', fg: '#e6e6e6', keyword: '#ff2c6d', string: '#19f9d8', comment: '#676b79', function: '#ffb86c' },
-        { name: 'Winter is Coming', bg: '#011627', fg: '#d6deeb', keyword: '#91dacd', string: '#ecc48d', comment: '#637777', function: '#82aaff' },
-        { name: 'Andromeda', bg: '#262a33', fg: '#d5ced9', keyword: '#ee5d43', string: '#96e072', comment: '#5f6167', function: '#ffe66d' },
-        { name: 'Material Ocean', bg: '#0f111a', fg: '#a6accd', keyword: '#c792ea', string: '#c3e88d', comment: '#464b5d', function: '#82aaff' },
-        { name: 'Slack Dark', bg: '#222222', fg: '#e6e6e6', keyword: '#6699cc', string: '#99cc99', comment: '#999999', function: '#cc99cc' }
-    ],
-    light: [
-        // Popular light themes
-        { name: 'GitHub Light', bg: '#ffffff', fg: '#24292e', keyword: '#d73a49', string: '#032f62', comment: '#6a737d', function: '#6f42c1' },
-        { name: 'Solarized Light', bg: '#fdf6e3', fg: '#657b83', keyword: '#859900', string: '#2aa198', comment: '#93a1a1', function: '#268bd2' },
-        { name: 'Atom One Light', bg: '#fafafa', fg: '#383a42', keyword: '#a626a4', string: '#50a14f', comment: '#a0a1a7', function: '#4078f2' },
-        { name: 'Tomorrow', bg: '#ffffff', fg: '#4d4d4c', keyword: '#8959a8', string: '#718c00', comment: '#8e908c', function: '#4271ae' },
-        { name: 'Material Light', bg: '#fafafa', fg: '#90a4ae', keyword: '#7c4dff', string: '#91b859', comment: '#ccd7da', function: '#39adb5' },
-        { name: 'Quiet Light', bg: '#f5f5f5', fg: '#333333', keyword: '#4b69c6', string: '#448c27', comment: '#aaaaaa', function: '#aa3731' },
-        { name: 'Eclipse', bg: '#ffffff', fg: '#000000', keyword: '#7f0055', string: '#2a00ff', comment: '#3f7f5f', function: '#000000' },
-        { name: 'IntelliJ Light', bg: '#ffffff', fg: '#000000', keyword: '#0033b3', string: '#067d17', comment: '#8c8c8c', function: '#00627a' },
-        { name: 'VS Light', bg: '#ffffff', fg: '#000000', keyword: '#0000ff', string: '#a31515', comment: '#008000', function: '#795e26' },
-        { name: 'XCode Light', bg: '#ffffff', fg: '#000000', keyword: '#aa0d91', string: '#d12f1b', comment: '#5d6c79', function: '#3900a0' },
-        { name: 'Paper', bg: '#f2eede', fg: '#0f0f0f', keyword: '#8b008b', string: '#008b8b', comment: '#5f5f5f', function: '#4169e1' },
-        { name: 'Gruvbox Light', bg: '#fbf1c7', fg: '#3c3836', keyword: '#9d0006', string: '#79740e', comment: '#928374', function: '#076678' },
-        { name: 'Spring', bg: '#ffffff', fg: '#000000', keyword: '#268bd2', string: '#859900', comment: '#93a1a1', function: '#b58900' },
-        { name: 'Slack Light', bg: '#ffffff', fg: '#2c2d30', keyword: '#0576b9', string: '#a0a0a0', comment: '#505050', function: '#d73a49' },
-        { name: 'Ayu Light', bg: '#fafafa', fg: '#575f66', keyword: '#ff6a00', string: '#86b300', comment: '#abb0b6', function: '#f07171' },
-        { name: 'Winter is Coming Light', bg: '#ffffff', fg: '#000000', keyword: '#236ebf', string: '#022c7d', comment: '#357b42', function: '#a44185' },
-        { name: 'Nord Light', bg: '#e5e9f0', fg: '#2e3440', keyword: '#5e81ac', string: '#a3be8c', comment: '#4c566a', function: '#88c0d0' },
-        { name: 'One Light', bg: '#fafafa', fg: '#383a42', keyword: '#a626a4', string: '#50a14f', comment: '#a0a1a7', function: '#4078f2' },
-        { name: 'Serendipity Light', bg: '#f8f8f8', fg: '#323232', keyword: '#c42775', string: '#379a37', comment: '#969896', function: '#0083d8' },
-        { name: 'Hopscotch', bg: '#ffffff', fg: '#5c545b', keyword: '#c85e7c', string: '#8fc13e', comment: '#989498', function: '#1290bf' },
-        { name: 'Kuroir', bg: '#e8e2b7', fg: '#363636', keyword: '#a55000', string: '#009900', comment: '#949494', function: '#cd3700' },
-        { name: 'Monochrome Light', bg: '#ffffff', fg: '#000000', keyword: '#000000', string: '#000000', comment: '#808080', function: '#000000' },
-        { name: 'Twilight Light', bg: '#f8f8f8', fg: '#464b50', keyword: '#aa73c2', string: '#8f9d6a', comment: '#5f5a60', function: '#cda869' },
-        { name: 'Dawn', bg: '#f9f9f9', fg: '#575279', keyword: '#b4637a', string: '#286983', comment: '#9893a5', function: '#907aa9' },
-        { name: 'Catppuccin Latte', bg: '#eff1f5', fg: '#4c4f69', keyword: '#8839ef', string: '#40a02b', comment: '#9ca0b0', function: '#1e66f5' }
-    ]
-};
+// Color schemes are defined in color-schemes.js (colorSchemeDatabase)
 
 // Code sample URLs - loading real code from local files
 const codeSampleUrls = {
@@ -537,1015 +745,562 @@ const codeSampleUrls = {
     rust: './samples/rust.rs',
     go: './samples/go.go',
     java: './samples/Application.java',
+    clojure: './samples/clojure.clj',
     css: './samples/styles.css',
     html: './samples/index.html',
     yaml: './samples/config.yml',
     json: './samples/config.json',
     markdown: './README.md',
     legal: './samples/gdpr.txt',
+    powerline: './samples/powerline.txt',
     self: './app.js',
     custom: null // Will be set by user input
 };
 
-// Fallback code samples (used if URL loading fails)
-const fallbackCodeSamples = {
-    javascript: `// Advanced async data pipeline with error handling
-class DataPipeline {
-    constructor(options = {}) {
-        this.transforms = [];
-        this.errorHandler = options.onError || 
-            (err => console.error(err));
-        this.cache = new Map();
-        this.metrics = { processed: 0, errors: 0, cached: 0 };
-    }
-    pipe(...transforms) {
-        this.transforms.push(
-            ...transforms.filter(fn => typeof fn === 'function')
-        );
-        return this;
-    }
-    async process(data, options = {}) {
-        const key = options.cacheKey || JSON.stringify(data);
-        if (!options.skipCache && this.cache.has(key)) {
-            this.metrics.cached++;
-            return this.cache.get(key);
-        }
-        try {
-            const result = await this.transforms.reduce(
-                async (acc, transform) => {
-                    const prev = await acc;
-                    return transform.call(this, prev, 
-                        { ...options, metrics: this.metrics });
-                }, Promise.resolve(data)
-            );
-            this.cache.set(key, result);
-            this.metrics.processed++;
-            return result;
-        } catch (error) {
-            this.metrics.errors++;
-            this.errorHandler(error);
-            throw error;
-        }
-    }
-}
-
-// Factory pattern with complex type inference
-const createProcessor = (config = {}) => {
-    const { mode = 'parallel', maxConcurrency = 10, 
-            timeout = 5000 } = config;
-    return mode === 'parallel' 
-        ? async (items) => Promise.all(
-            items.map(async (item, i) => ({
-                ...item,
-                processed: true,
-                timestamp: Date.now(),
-                index: i,
-                metadata: { mode, timeout }
-            }))
-        )
-        : async (items) => items.reduce(
-            async (chain, item, i) => {
-                const acc = await chain;
-                return [...acc, { ...item, processed: true, 
-                                  index: i }];
-            }, Promise.resolve([])
-        );
-};
-
-// Usage with arrow functions and destructuring
-const pipeline = new DataPipeline({ 
-    onError: e => console.warn('Pipeline:', e) 
-})
-    .pipe(data => data.filter(({ active }) => active))
-    .pipe(async items => Promise.all(
-        items.map(async ({ id, ...rest }) => ({
-            id: \`proc_\${id}\`,
-            ...rest,
-            tags: [...(rest.tags || []), 'processed']
-        }))
-    ))
-    .pipe(items => items.sort(
-        (a, b) => (b.priority || 0) - (a.priority || 0)
-    ));
-
-// Recursive binary tree traversal with async nodes
-const traverseAsync = async (node, depth = 0) => {
-    if (!node) return [];
-    const [left, right] = await Promise.all([
-        node.left ? traverseAsync(node.left, depth + 1) : [],
-        node.right ? traverseAsync(node.right, depth + 1) : []
-    ]);
-    return [...left, { value: node.value, depth }, ...right];
-};`,
-
-    python: `# Advanced decorator with metadata and async support
-from functools import wraps
-from typing import TypeVar, Callable, Any, Optional, Dict
-import asyncio
-import time
-
-def performance_monitor(threshold: float = 1.0, 
-                       cache_results: bool = True):
-    """Decorator factory for monitoring performance"""
-    cache: Dict[str, Any] = {}
-    def decorator(func: Callable) -> Callable:
-        @wraps(func)
-        async def async_wrapper(*args, **kwargs):
-            cache_key = str(args) + ":" + str(kwargs) \\
-                       if cache_results else None
-            if cache_key in cache:
-                return cache[cache_key]
-            start = time.perf_counter()
-            try:
-                result = await func(*args, **kwargs)
-                elapsed = time.perf_counter() - start
-                if elapsed > threshold:
-                    print(f"Warning: {func.__name__} "
-                          f"took {elapsed:.3f}s")
-                if cache_key:
-                    cache[cache_key] = result
-                return result
-            except Exception as e:
-                print(f"Error in {func.__name__}: {e}")
-                raise
-        @wraps(func)
-        def sync_wrapper(*args, **kwargs):
-            cache_key = str(args) + ":" + str(kwargs) \\
-                       if cache_results else None
-            if cache_key in cache:
-                return cache[cache_key]
-            start = time.perf_counter()
-            result = func(*args, **kwargs)
-            if cache_results and cache_key:
-                cache[cache_key] = result
-            return result
-        return async_wrapper if asyncio.iscoroutinefunction(func) \\
-               else sync_wrapper
-    return decorator
-
-class DataProcessor:
-    def __init__(self, config: Optional[Dict[str, Any]] = None):
-        self.config = config or {}
-        self.transforms = []
-        self._cache = {}
-    def add_transform(self, 
-                     func: Callable[[Any], Any]) -> 'DataProcessor':
-        self.transforms.append(func)
-        return self
-    @performance_monitor(threshold=0.5)
-    async def process_batch(self, items: list) -> list:
-        results = []
-        for item in items:
-            result = item
-            for transform in self.transforms:
-                if asyncio.iscoroutinefunction(transform):
-                    result = await transform(result)
-                else:
-                    result = transform(result)
-            results.append(result)
-        return results
-    def __repr__(self) -> str:
-        return (f"<DataProcessor "
-                f"transforms={len(self.transforms)} "
-                f"config={self.config}>")
-
-# Complex list comprehension with nested conditions
-processor = DataProcessor({'mode': 'async', 'batch_size': 100})
-data = [
-    {'id': i, 'value': i**2, 
-     'tags': ['even'] if i % 2 == 0 else ['odd']} 
-    for i in range(10) if i % 3 != 0
-]
-filtered = [
-    item for item in data 
-    if any(tag in ['even', 'prime'] 
-           for tag in item.get('tags', [])) 
-    and item['value'] > 5
-]
-
-# Async context manager with cleanup
-class AsyncResource:
-    async def __aenter__(self):
-        self.connection = await self._connect()
-        return self
-    async def __aexit__(self, exc_type, exc_val, exc_tb):
-        await self.connection.close()
-        if exc_type:
-            print(f"Error: {exc_val}")
-        return False`,
-
-    java: `public class QuickSort {
-    // Main quicksort method
-    public static void quickSort(int[] arr, int low, int high) {
-        if (low < high) {
-            // Find partition index
-            int pi = partition(arr, low, high);
-            
-            // Recursively sort elements
-            quickSort(arr, low, pi - 1);
-            quickSort(arr, pi + 1, high);
-        }
-    }
-    
-    private static int partition(int[] arr, int low, int high) {
-        int pivot = arr[high];
-        int i = (low - 1); // Index of smaller element
-        
-        for (int j = low; j < high; j++) {
-            if (arr[j] < pivot) {
-                i++;
-                // Swap elements
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-        
-        // Swap pivot element
-        int temp = arr[i + 1];
-        arr[i + 1] = arr[high];
-        arr[high] = temp;
-        
-        return i + 1;
-    }
-}`,
-
-    rust: `use std::collections::HashMap;
-
-// Define a simple cache structure
-pub struct LRUCache<K, V> {
-    capacity: usize,
-    cache: HashMap<K, V>,
-    order: Vec<K>,
-}
-
-impl<K: Clone + Eq + std::hash::Hash, V> LRUCache<K, V> {
-    pub fn new(capacity: usize) -> Self {
-        LRUCache {
-            capacity,
-            cache: HashMap::new(),
-            order: Vec::new(),
-        }
-    }
-    
-    pub fn get(&mut self, key: &K) -> Option<&V> {
-        if let Some(value) = self.cache.get(key) {
-            // Update access order
-            self.update_order(key.clone());
-            Some(value)
-        } else {
-            None
-        }
-    }
-    
-    fn update_order(&mut self, key: K) {
-        self.order.retain(|k| k != &key);
-        self.order.push(key);
-    }
-}`,
-
-    go: `package main
-
-import (
-    "fmt"
-    "sync"
-    "time"
-)
-
-// Worker pool implementation
-func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
-    defer wg.Done()
-    
-    for job := range jobs {
-        fmt.Printf("Worker %d processing job %d\\n", id, job)
-        time.Sleep(time.Second) // Simulate work
-        results <- job * 2
-    }
-}
-
-func main() {
-    const numJobs = 10
-    const numWorkers = 3
-    
-    jobs := make(chan int, numJobs)
-    results := make(chan int, numJobs)
-    
-    var wg sync.WaitGroup
-    
-    // Start workers
-    for w := 1; w <= numWorkers; w++ {
-        wg.Add(1)
-        go worker(w, jobs, results, &wg)
-    }
-    
-    // Send jobs
-    for j := 1; j <= numJobs; j++ {
-        jobs <- j
-    }
-    close(jobs)
-    
-    // Wait and collect results
-    go func() {
-        wg.Wait()
-        close(results)
-    }()
-}`,
-
-    self: `// This is the actual code of this application!
-const fonts = [
-    'Fira Code, monospace',
-    'JetBrains Mono, monospace',
-    'Source Code Pro, monospace',
-    'Cascadia Code, monospace',
-    'IBM Plex Mono, monospace'
-];
-
-function createComparison(optionA, optionB) {
-    const codeA = document.getElementById('codeA');
-    const codeB = document.getElementById('codeB');
-    
-    // Apply styles to panel A
-    codeA.style.fontFamily = optionA.font;
-    codeA.style.fontSize = optionA.fontSize + 'px';
-    codeA.style.fontWeight = optionA.fontWeight;
-    codeA.style.lineHeight = optionA.lineHeight;
-    
-    // Apply styles to panel B
-    codeB.style.fontFamily = optionB.font;
-    codeB.style.fontSize = optionB.fontSize + 'px';
-    codeB.style.fontWeight = optionB.fontWeight;
-    codeB.style.lineHeight = optionB.lineHeight;
-    
-    return { optionA, optionB };
-}`,
-
-    css: `/* Advanced CSS with modern features and animations */
-@import url('https://fonts.googleapis.com/css2?family=Inter');
-
-:root {
-    --primary: hsl(250, 60%, 60%);
-    --secondary: hsl(280, 60%, 50%);
-    --accent: hsl(200, 80%, 50%);
-    --bg-dark: hsl(220, 20%, 10%);
-    --text-light: hsl(220, 20%, 90%);
-    --spacing-unit: clamp(1rem, 2vw, 1.5rem);
-    --transition: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@layer components {
-    .card {
-        container-type: inline-size;
-        background: linear-gradient(
-            135deg,
-            hsl(250 60% 20% / 0.8),
-            hsl(280 60% 15% / 0.9)
-        );
-        backdrop-filter: blur(10px) saturate(180%);
-        border: 1px solid hsl(250 60% 50% / 0.2);
-        border-radius: 0.75rem;
-        padding: var(--spacing-unit);
-        transition: transform 300ms var(--transition),
-                    box-shadow 300ms var(--transition);
-    }
-    
-    .card:hover {
-        transform: translateY(-2px) scale(1.02);
-        box-shadow: 0 10px 30px -10px hsl(250 60% 40% / 0.5),
-                    0 20px 40px -20px hsl(280 60% 30% / 0.3);
-    }
-    
-    @container (min-width: 400px) {
-        .card__content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: var(--spacing-unit);
-            align-items: center;
-        }
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-.animated-element {
-    animation: slideIn 600ms var(--transition) forwards;
-    animation-timeline: view();
-    animation-range: entry 20% cover 40%;
-}
-
-/* The infamous CSS rules that shouldn't exist */
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-    /* This selector has a specificity of 0,0,1,1 */
-    /* (not that anyone's counting in 2024) */
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-@supports (backdrop-filter: blur(10px)) {
-    .glass {
-        background: hsl(250 60% 20% / 0.3);
-        backdrop-filter: blur(20px) saturate(200%);
-    }
-}`,
-
-    html: `<!-- Modern HTML5 with semantic markup and accessibility -->
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" 
-          content="width=device-width, initial-scale=1.0">
-    <meta name="description" 
-          content="Interactive code font selector">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://cdn.example.com">
-    <title>Code Font Optimizer</title>
-</head>
-<body>
-    <header role="banner" class="site-header">
-        <nav aria-label="Main navigation">
-            <ul role="list" class="nav-list">
-                <li><a href="#features" 
-                       aria-current="page">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><button aria-expanded="false" 
-                            aria-controls="menu"
-                            class="menu-toggle">
-                    <span class="sr-only">Menu</span>
-                    <svg aria-hidden="true" width="24" height="24">
-                        <use href="#icon-menu"></use>
-                    </svg>
-                </button></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main id="main" tabindex="-1">
-        <article class="content" 
-                 itemscope 
-                 itemtype="https://schema.org/Article">
-            <header>
-                <h1 itemprop="headline">
-                    Finding Your Perfect Code Font
-                </h1>
-                <time datetime="2024-01-15" 
-                      itemprop="datePublished">
-                    January 15, 2024
-                </time>
-            </header>
-            
-            <section aria-labelledby="intro">
-                <h2 id="intro">Introduction</h2>
-                <p>Choosing the right monospace font can 
-                   significantly impact your coding experience.</p>
-                
-                <!-- The classic lorem pixelsum generator -->
-                <figure role="img" 
-                        aria-labelledby="fig-caption">
-                    <picture>
-                        <source srcset="image.avif" type="image/avif">
-                        <source srcset="image.webp" type="image/webp">
-                        <img src="placekitten.com/800/450" 
-                             alt="Font comparison chart"
-                             loading="lazy"
-                             decoding="async"
-                             width="800" 
-                             height="450">
-                    </picture>
-                    <figcaption id="fig-caption">
-                        Comparison of popular coding fonts
-                        <small>(placeholder cats not included)</small>
-                    </figcaption>
-                </figure>
-            </section>
-            
-            <template id="card-template">
-                <div class="card" role="article">
-                    <slot name="content"></slot>
-                </div>
-            </template>
-        </article>
-    </main>
-</body>
-</html>`,
-
-    yaml: `# Kubernetes deployment with advanced configurations
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: code-optimizer
-  namespace: production
-  labels:
-    app: optimizer
-    version: v2.1.0
-    team: platform
-  annotations:
-    deployment.kubernetes.io/revision: "3"
-    prometheus.io/scrape: "true"
-    prometheus.io/port: "9090"
-spec:
-  replicas: 3
-  revisionHistoryLimit: 5
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 0
-  selector:
-    matchLabels:
-      app: optimizer
-      tier: backend
-  template:
-    metadata:
-      labels:
-        app: optimizer
-        tier: backend
-        version: v2.1.0
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: "/metrics"
-    spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: app
-                    operator: In
-                    values: [optimizer]
-              topologyKey: kubernetes.io/hostname
-      containers:
-        - name: optimizer
-          image: registry.io/optimizer:2.1.0
-          imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 8080
-              protocol: TCP
-              name: http
-            - containerPort: 9090
-              protocol: TCP
-              name: metrics
-          env:
-            - name: NODE_ENV
-              value: production
-            - name: LOG_LEVEL
-              value: info
-            - name: DB_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: db-secret
-                  key: password
-          resources:
-            requests:
-              memory: "256Mi"
-              cpu: "250m"
-            limits:
-              memory: "512Mi"
-              cpu: "500m"
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 8080
-            initialDelaySeconds: 30
-            periodSeconds: 10
-            timeoutSeconds: 5
-            failureThreshold: 3
-          readinessProbe:
-            httpGet:
-              path: /ready
-              port: 8080
-            initialDelaySeconds: 10
-            periodSeconds: 5
-          volumeMounts:
-            - name: config
-              mountPath: /etc/config
-              readOnly: true
-      volumes:
-        - name: config
-          configMap:
-            name: optimizer-config
-            items:
-              - key: app.yaml
-                path: app.yaml
-      tolerations:
-        - key: "node.kubernetes.io/not-ready"
-          operator: "Exists"
-          effect: "NoExecute"
-          tolerationSeconds: 418  # I'm a teapot`,
-
-    json: `{
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/font-config.schema.json",
-  "title": "Font Configuration Schema",
-  "description": "Defines font preferences and settings",
-  "type": "object",
-  "required": ["version", "preferences", "themes"],
-  "properties": {
-    "version": {
-      "type": "string",
-      "pattern": "^\\\\d+\\\\.\\\\d+\\\\.\\\\d+$",
-      "examples": ["1.0.0", "2.1.3"]
-    },
-    "preferences": {
-      "type": "object",
-      "properties": {
-        "fontFamily": {
-          "type": "string",
-          "enum": [
-            "Fira Code",
-            "JetBrains Mono",
-            "Source Code Pro",
-            "IBM Plex Mono"
-          ]
-        },
-        "fontSize": {
-          "type": "number",
-          "minimum": 10,
-          "maximum": 24,
-          "multipleOf": 0.5
-        },
-        "lineHeight": {
-          "type": "number",
-          "minimum": 1.0,
-          "maximum": 2.0
-        },
-        "ligatures": {
-          "type": "boolean",
-          "default": true
-        },
-        "antialiasing": {
-          "type": "string",
-          "enum": ["none", "grayscale", "subpixel"],
-          "default": "subpixel"
-        }
-      },
-      "additionalProperties": false
-    },
-    "themes": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "required": ["name", "colors"],
-        "properties": {
-          "name": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 50
-          },
-          "isDark": {
-            "type": "boolean"
-          },
-          "colors": {
-            "type": "object",
-            "properties": {
-              "background": {
-                "$ref": "#/$defs/color"
-              },
-              "foreground": {
-                "$ref": "#/$defs/color"
-              },
-              "keywords": {
-                "$ref": "#/$defs/color"
-              },
-              "strings": {
-                "$ref": "#/$defs/color"
-              },
-              "comments": {
-                "$ref": "#/$defs/color"
-              },
-              "functions": {
-                "$ref": "#/$defs/color"
-              }
-            },
-            "required": [
-              "background",
-              "foreground", 
-              "keywords",
-              "strings"
-            ]
-          },
-          "metadata": {
-            "type": "object",
-            "properties": {
-              "created": {
-                "type": "string",
-                "format": "date-time"
-              },
-              "author": {
-                "type": "string"
-              },
-              "tags": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "uniqueItems": true
-              }
-            }
-          }
-        }
-      }
-    },
-    "experimental": {
-      "type": "object",
-      "properties": {
-        "cursorAnimation": {
-          "type": "boolean"
-        },
-        "semanticHighlighting": {
-          "type": "boolean"
-        }
-      }
-    }
-  },
-  "$defs": {
-    "color": {
-      "type": "string",
-      "pattern": "^#[0-9A-Fa-f]{6}$",
-      "examples": ["#FF0000", "#C0FFEE", "#BADA55"]
-    }
-  },
-  "examples": [{
-    "version": "4.0.4",
-    "preferences": {
-      "fontFamily": "Comic Sans MS",
-      "fontSize": 13.37,
-      "lineHeight": 1.618
-    },
-    "themes": [{
-      "name": "Retro Terminal",
-      "isDark": true,
-      "colors": {
-        "background": "#0D0208",
-        "foreground": "#00FF41",
-        "keywords": "#FACADE",
-        "strings": "#DECADE"
-      }
-    }]
-  }]
-}`,
-
-    markdown: `# Advanced Markdown Documentation
-
-## Table of Contents
-- [Introduction](#introduction)
-- [Code Examples](#code-examples)
-- [Mathematical Formulas](#mathematical-formulas)
-- [Tables and Diagrams](#tables-and-diagrams)
-
-## Introduction
-
-This document demonstrates **advanced** _Markdown_ features 
-including ~~strikethrough~~, ==highlights==, and footnotes[^1].
-
-> "The best code is no code at all" - Jeff Atwood[^2]
-> 
-> Every line of code is a potential bug.
-
-### Task Lists
-
-- [x] Choose font family (Comic Sans unironically)
-- [x] Set font size to 13.37px
-- [ ] Achieve 100% test coverage (LOL)
-- [ ] Fix that one bug from 2019
-
-## Code Examples
-
-\\\`\\\`\\\`javascript
-// The infamous "banana" problem in JS
-console.log("b" + "a" + + "a" + "a"); // -> "baNaNa"
-
-// The WAT pyramid of doom
-Array(16).join("wat" - 1) + " Batman!";
-\\\`\\\`\\\`
-
-Inline code like \\\`rm -rf /\\\` should be used with caution.
-
-## Mathematical Formulas
-
-The golden ratio $$\\phi = \\frac{1 + \\sqrt{5}}{2} \\approx 1.618$$
-
-Euler's identity: $$e^{i\\pi} + 1 = 0$$
-
-Drake equation (simplified):
-$$N = R_* \\cdot f_p \\cdot n_e \\cdot f_l \\cdot f_i \\cdot f_c \\cdot L$$
-
-## Tables and Diagrams
-
-| Font | Ligatures | Rating | Secret Power |
-|:-----|:---------:|-------:|:------------|
-| Fira Code | ✅ | 9/10 | Transforms => into arrows |
-| Comic Sans | ❌ | 11/10 | Triggers developers |
-| Wingdings | ❓ | ???/10 | 🕈︎✋︎■︎♑︎♎︎♓︎■︎♑︎⬧︎ |
-
-### ASCII Art Diagram
-
-\\\`\\\`\\\`
-    ┌─────────┐
-    │ Parser  │──────➤ "Reticulating Splines"
-    └────┬────┘
-         │
-         ▼
-    ┌─────────┐
-    │  AST    │──────➤ Abstract Syntax 🌳
-    └────┬────┘
-         │
-         ▼
-    ┌─────────┐
-    │ Output  │──────➤ 💩 (usually)
-    └─────────┘
-\\\`\\\`\\\`
-
-## Links and References
-
-- [RFC 2324][rfc] - Hyper Text Coffee Pot Control Protocol
-- [XKCD 927](https://xkcd.com/927/) - Standards
-- [This link is definitely not suspicious](https://youtu.be/dQw4w9WgXcQ)
-
-### Definition Lists
-
-Monospace
-:   A font where i, m, and W are somehow the same width
-
-Kerning
-:   The art of making "rn" look like "m" in the wrong font
-
-Ligature
-:   When != becomes ≠ and you question reality
-
----
-
-<details>
-<summary>Spoiler Alert (click to reveal)</summary>
-
-The real treasure was the fonts we compared along the way.
-
-</details>
-
-## Footnotes
-
-[^1]: This is definitely a real footnote and not just 
-      procrastination.
-
-[^2]: Also known as the "404 Developer Not Found" principle.
-
-[rfc]: https://datatracker.ietf.org/doc/html/rfc2324
-
-<!-- Hidden comment: If you're reading this, you've gone 
-     too deep into the source. The exit is Alt+F4 -->`,
-
-    legal: `REGULATION (EU) 2016/679 OF THE EUROPEAN PARLIAMENT AND OF THE
-COUNCIL of 27 April 2016 on the protection of natural persons with
-regard to the processing of personal data and on the free movement
-of such data, and repealing Directive 95/46/EC (General Data
-Protection Regulation)
-
-Article 1
-Subject-matter and objectives
-
-    1. This Regulation lays down rules relating to the protection
-       of natural persons with regard to the processing of personal
-       data and rules relating to the free movement of personal
-       data.
-
-    2. This Regulation protects fundamental rights and freedoms of
-       natural persons and in particular their right to the
-       protection of personal data.
-
-    3. The free movement of personal data within the Union shall
-       be neither restricted nor prohibited due to reasons
-       connected with the protection of natural persons with
-       regard to the processing of personal data.
-
-Article 2
-Material scope
-
-    1. This Regulation applies to the processing of personal data
-       wholly or partly by automated means and to the processing
-       other than by automated means of personal data which make
-       part of a filing system or are intended to make part of a
-       filing system.
-
-    2. This Regulation does not apply to the processing of
-       personal data:
-
-       (a) in the course of an activity which falls outside the
-           scope of Union law;
-
-       (b) by the Member States when carrying out activities
-           which fall within the scope of Chapter 2 of Title V of
-           the Treaty on European Union;
-
-       (c) by a natural person in the course of a purely personal
-           or household activity;
-
-       (d) by competent authorities concerning the prevention,
-           investigation, detection or prosecution of criminal
-           offences or the execution of criminal penalties,
-           including the safeguarding against and the prevention
-           of threats to public security.`
-};
+// Color similarity functions
+// (removed duplicate color similarity helper set)
 
 // Color similarity functions
-function hexToRgb(hex) {
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16)
-    } : null;
+// (removed duplicate color similarity helper set)
+
+
+const STAGES = [
+    {
+        id: 'fontFamily',
+        name: 'Font Style',
+        description: 'Choose the font family that best suits your coding style and visual preferences.',
+        skippable: false,
+        minComparisons: 1,
+        showGrid: false  // No grid for font family selection
+    },
+    {
+        id: 'font',
+        name: 'Specific Font',
+        description: 'Compare specific fonts within your chosen family to find the perfect variant.',
+        skippable: true,
+        minComparisons: 4,
+        showGrid: true  // Show grid to verify monospace consistency
+    },
+    {
+        id: 'colorScheme',
+        name: 'Color Scheme',
+        description: 'Selecting the right color scheme for your particular display resolution, distance, lighting conditions and aesthetic preferences can improve scannability and legibility significantly.',
+        skippable: true,
+        minComparisons: 6,
+        useSmartGrouping: true,
+        showGrid: true  // Show grid to assess readability with colors
+    },
+    {
+        id: 'roleKeywords',
+        name: 'Keywords Font',
+        description: 'Customize how language keywords (if, for, function, etc.) appear in your code.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true  // Show grid to verify alignment with role fonts
+    },
+    {
+        id: 'roleStrings',
+        name: 'Strings Font',
+        description: 'Optimize the appearance of string literals and text content in your code.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true  // Show grid to verify alignment with role fonts
+    },
+    {
+        id: 'roleComments',
+        name: 'Comments Font',
+        description: 'Fine-tune how comments appear - often benefits from lighter weight or italic styling.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true  // Show grid to verify alignment with role fonts
+    },
+    {
+        id: 'roleFunction',
+        name: 'Functions Font',
+        description: 'Customize the appearance of function names and method calls.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true  // Show grid to verify alignment with role fonts
+    },
+    {
+        id: 'roleGhost',
+        name: 'AI Suggestions Font',
+        description: 'Configure how AI suggestions and ghost text appear in your editor.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true  // Show grid to verify alignment with role fonts
+    },
+    {
+        id: 'size',
+        name: 'Font Size',
+        description: 'Find the optimal font size for comfortable reading and reduced eye strain.',
+        skippable: true,
+        minComparisons: 3,
+        showGrid: true  // Show grid to assess character spacing
+    },
+    {
+        id: 'weight',
+        name: 'Font Weight',
+        description: 'Adjust the base font weight for better readability and visual hierarchy.',
+        skippable: true,
+        minComparisons: 4,
+        showGrid: true  // Show grid to assess visual density
+    },
+    {
+        id: 'lineHeight',
+        name: 'Line Height',
+        description: 'Optimize line spacing for improved code readability and visual flow.',
+        skippable: true,
+        minComparisons: 4,
+        showGrid: true  // Show grid to assess vertical alignment
+    },
+    {
+        id: 'fontWidth',
+        name: 'Font Width',
+        description: 'Adjust character width for better code density and horizontal space usage.',
+        skippable: true,
+        minComparisons: 3,
+        showGrid: true  // Show grid to assess width consistency
+    },
+    {
+        id: 'letterSpacing',
+        name: 'Letter Spacing',
+        description: 'Fine-tune character spacing for optimal readability and visual comfort.',
+        skippable: true,
+        minComparisons: 3,
+        showGrid: true  // Show grid to assess character spacing
+    }
+];
+
+// Helper function to get stage by ID
+function getStage(id) {
+    return STAGES.find(stage => stage.id === id);
 }
 
-function colorDistance(color1, color2) {
-    const c1 = hexToRgb(color1);
-    const c2 = hexToRgb(color2);
-    if (!c1 || !c2) return 1000; // Max distance for invalid colors
+// Helper function to get stage index
+function getStageIndex(id) {
+    return STAGES.findIndex(stage => stage.id === id);
+}
+
+// Theme mode state (dark|light). Default to dark until UI toggle changes it.
+let themeMode = 'dark';
+// Current language selection for code samples
+let currentLanguage = 'javascript';
+
+// Multi-font roles state
+let multiFontMode = false;
+let currentRolesPresetKey = null; // key in window.multiFontPresets
+let currentRoleCss = '';
+let currentRoleMapping = {}; // resolved role -> css font stack
+// Role names are not shown in roles panel; use panel summaries on '?'
+
+// Map selected roles to highlight.js selectors (subset that applies to code preview)
+const roleToHLJS = {
+    comments: ['.hljs-comment'],
+    strings: ['.hljs-string'],
+    keywords: ['.hljs-keyword', '.hljs-operator'],
+    function: ['.hljs-function', '.hljs-title'],
+    // Optional mappings for better coverage
+    documentation: ['.hljs-meta', '.hljs-doctag'],
+    errors: ['.hljs-error'],
+    ghost: ['.ghost-text', '.copilot'], // AI suggestions overlay classes if present
+    // We intentionally do not map 'base' to avoid overriding A/B font base per panel.
+};
+
+// Short labels for compact display
+const roleLabels = {
+    comments: 'Cmnt',
+    strings: 'Str',
+    keywords: 'Keyw',
+    documentation: 'Doc',
+    errors: 'Err',
+    ghost: 'Ghst'
+};
+
+function getRoleLabel(role) {
+    return roleLabels[role] || role;
+}
+
+// Role comparison state
+let roleCompare = null; // { role, a, b, candidates: [], index }
+let roleTournament = null; // tournament engine per-role
+
+function getRoleCandidates(role) {
+    const baseFont = engine && engine.winners && engine.winners.font;
+    const baseFontName = baseFont ? baseFont.split(',')[0].replace(/"/g, '') : 'monospace';
     
-    // Use weighted Euclidean distance (emphasize perceived brightness differences)
-    return Math.sqrt(
-        0.3 * Math.pow(c1.r - c2.r, 2) +
-        0.59 * Math.pow(c1.g - c2.g, 2) +
-        0.11 * Math.pow(c1.b - c2.b, 2)
-    );
-}
-
-function schemeDistance(scheme1, scheme2) {
-    // Calculate average distance across all color properties
-    const properties = ['bg', 'fg', 'keyword', 'string', 'comment', 'function'];
-    const distances = properties.map(prop => colorDistance(scheme1[prop], scheme2[prop]));
-    return distances.reduce((sum, d) => sum + d, 0) / distances.length;
-}
-
-function groupSimilarSchemes(schemes, threshold = 80) {
-    // Group schemes by similarity
-    const groups = [];
-    const used = new Set();
+    console.log(`[DEBUG] getRoleCandidates for role: ${role}, base font: ${baseFontName}`);
     
-    for (let i = 0; i < schemes.length; i++) {
-        if (used.has(i)) continue;
-        
-        const group = [schemes[i]];
-        used.add(i);
-        
-        for (let j = i + 1; j < schemes.length; j++) {
-            if (used.has(j)) continue;
-            
-            if (schemeDistance(schemes[i], schemes[j]) < threshold) {
-                group.push(schemes[j]);
-                used.add(j);
-            }
-        }
-        
-        groups.push(group);
+    const candidates = [
+        // Base font variations (always compatible with itself)
+        { type: 'weight', font: baseFontName, weight: 400, style: 'normal', label: 'Base weight (400)' },
+        { type: 'weight', font: baseFontName, weight: 600, style: 'normal', label: 'Semibold (600)' },
+        { type: 'weight', font: baseFontName, weight: 700, style: 'normal', label: 'Bold (700)' },
+        { type: 'style', font: baseFontName, weight: 400, style: 'italic', label: 'Italic' },
+    ];
+    
+    // Add role-specific variations
+    if (role === 'comments') {
+        candidates.push(
+            { type: 'style', font: baseFontName, weight: 300, style: 'italic', label: 'Light italic' },
+            { type: 'weight', font: baseFontName, weight: 300, style: 'normal', label: 'Light' }
+        );
     }
     
-    return groups;
+    // Find width-compatible fonts from database
+    const db = window.fontDatabase || [];
+    let compatibleCount = 0;
+    let rejectedCount = 0;
+    let metricsAvailable = !!window.fontMetrics && Object.keys(window.fontMetrics).length > 0;
+    
+    if (metricsAvailable) {
+        console.log(`[DEBUG] Font metrics available for compatibility checking`);
+        
+        // Get compatible fonts using metrics
+        const compatibleFonts = fontCompatibility.getCompatibleFonts(baseFontName);
+        
+        // Add compatible alternatives (limit to prevent too many comparisons)
+        compatibleFonts.slice(0, 4).forEach(fontName => {
+            candidates.push({ 
+                type: 'alternative', 
+                font: fontName, 
+                weight: 400, 
+                style: 'normal', 
+                label: fontName 
+            });
+            compatibleCount++;
+        });
+        
+        rejectedCount = db.length - compatibleFonts.length - 1; // -1 for base font
+        
+    } else {
+        console.log(`[DEBUG] No font metrics available, using legacy font selection`);
+        
+        // Fallback to legacy behavior when no metrics are available
+        const rec = [];
+        if (window.fontSuitabilityMatrix) {
+            const key1 = `${role}-excellent`;
+            const key2 = `${role}-good`;
+            if (Array.isArray(window.fontSuitabilityMatrix[key1])) rec.push(...window.fontSuitabilityMatrix[key1]);
+            if (Array.isArray(window.fontSuitabilityMatrix[key2])) rec.push(...window.fontSuitabilityMatrix[key2]);
+        }
+        const nonSystem = db.filter(f => f.source !== 'system').map(f => f.name);
+        const fontPool = Array.from(new Set([...rec, ...nonSystem]));
+        
+        // Add limited alternatives (no metrics checking)
+        fontPool.slice(0, 3).forEach(fontName => {
+            if (fontName !== baseFontName) {
+                candidates.push({ 
+                    type: 'font', 
+                    font: fontName, 
+                    weight: 400, 
+                    style: 'normal', 
+                    label: fontName 
+                });
+                compatibleCount++;
+            }
+        });
+    }
+    
+    console.log(`[DEBUG] Role candidates summary:`);
+    console.log(`  - Total candidates: ${candidates.length}`);
+    console.log(`  - Base font variations: ${candidates.filter(c => c.font === baseFontName).length}`);
+    console.log(`  - Compatible alternatives: ${compatibleCount}`);
+    if (metricsAvailable) {
+        console.log(`  - Rejected (incompatible): ${rejectedCount}`);
+        console.log(`  - Metrics checking: enabled`);
+    } else {
+        console.log(`  - Metrics checking: disabled (no font-metrics.json)`);
+    }
+    
+    return candidates.slice(0, 8); // Limit total candidates
 }
 
-// State management
-let currentLanguage = 'javascript';
-let comparisons = [];
-let currentComparison = 0;
-let preferences = {
-    fonts: {},
-    sizes: {},
-    weights: {},
-    lineHeights: {},
-    colorSchemes: {}
-};
+function startRoleCompare(role) {
+    const candidates = getRoleCandidates(role);
+    if (candidates.length < 2) {
+        alert('Not enough font candidates available for this role.');
+        return;
+    }
+    // Initialize simple Swiss-style tournament (2 rounds + finals)
+    roleTournament = new RoleTournament(role, candidates);
+    nextRoleComparePair();
+}
 
-// Tournament stage order
-const STAGES = ['fontFamily', 'font', 'colorScheme', 'size', 'weight', 'lineHeight', 'fontStretch', 'letterSpacing'];
+async function nextRoleComparePair() {
+    if (!roleTournament) return;
+    const pair = roleTournament.nextPair();
+    if (!pair) {
+        const winner = roleTournament.getWinner();
+        if (winner) {
+            const preset = (window.multiFontPresets || {})[currentRolesPresetKey] || { fonts: {} };
+            const newMapping = { ...(preset.fonts || {}) };
+            newMapping[roleTournament.role] = winner;
+            applyRoleFonts(newMapping);
+            renderRolesSummary(newMapping);
+        }
+        roleCompareEnd();
+        return;
+    }
+    roleCompare = { role: roleTournament.role, a: pair[0], b: pair[1], candidates: roleTournament.candidates, index: roleTournament.state.roundIndex };
+    // Prepare view: slice code for this role and preload faces
+    try {
+        await setRoleSliceInPanels(roleCompare.role);
+    } catch {}
+    try {
+        await preloadFontsForRolePair(roleCompare.role, roleCompare.a, roleCompare.b);
+    } catch {}
+    applyRoleCompareStyles(roleCompare.role, roleCompare.a, roleCompare.b);
+    const bar = document.getElementById('roleCompareBar');
+    bar.classList.add('active');
+    const roundText = `Round ${roleTournament.state.roundIndex + 1}/${roleTournament.state.totalRounds}`;
+    document.getElementById('roleCompareName').textContent = `${roleCompare.role} • ${roundText}`;
+    document.getElementById('roleCompareA').textContent = 'Option A';
+    document.getElementById('roleCompareB').textContent = 'Option B';
+    if (window.DEV_AUTO_TOURNAMENT) {
+        setTimeout(() => roleCompareChoose(Math.random() < 0.5 ? 'A' : 'B'), 500);
+    }
+}
 
-// Stage configuration - minimum comparisons before advancing
-const stageConfig = {
-    fontFamily: { minComparisons: 1 }, // Always just selection
-    colorScheme: { minComparisons: 6, useSmartGrouping: true }, // After font selection
-    font: { minComparisons: 4 }, // Allow more font comparisons
-    size: { minComparisons: 3 },
-    weight: { minComparisons: 4 }, // More weight comparisons
-    lineHeight: { minComparisons: 4 }, // More line height comparisons
-    fontStretch: { minComparisons: 3 }, // New font stretch comparisons
-    letterSpacing: { minComparisons: 3 } // New letter spacing comparisons
-};
-let themeMode = 'dark'; // 'dark' or 'light' - user's selection
+function roleCompareNext() {
+    nextRoleComparePair();
+}
+
+function applyRoleCompareStyles(role, aFontName, bFontName) {
+    const selectors = roleToHLJS[role] || [];
+    const aStack = resolveFontCssStack(aFontName);
+    const bStack = resolveFontCssStack(bFontName);
+    const scopedA = selectors.map(sel => `#panelA ${sel}`).join(', ');
+    const scopedB = selectors.map(sel => `#panelB ${sel}`).join(', ');
+    const css = `${scopedA} { font-family: ${aStack}; }\n${scopedB} { font-family: ${bStack}; }`;
+    let el = document.getElementById('role-compare-style');
+    if (!el) {
+        el = document.createElement('style');
+        el.id = 'role-compare-style';
+        document.head.appendChild(el);
+    }
+    el.textContent = css;
+}
+
+function clearRoleCompareStyles() {
+    console.log('[DEBUG] clearRoleCompareStyles called');
+    const el = document.getElementById('role-compare-style');
+    if (el) el.textContent = '';
+    
+    // Clear visual role highlighting as well
+    const codeA = document.getElementById('codeA');
+    const codeB = document.getElementById('codeB');
+    if (codeA) clearRoleHighlighting(codeA);
+    if (codeB) clearRoleHighlighting(codeB);
+}
+
+function roleCompareChoose(choice) {
+    if (!roleCompare || !roleTournament) return;
+    // Record result in tournament
+    if (choice === 'A' || choice === 'B' || choice === 'equal') {
+        roleTournament.recordResult(roleCompare.a, roleCompare.b, choice);
+    }
+    // Proceed
+    nextRoleComparePair();
+}
+
+function roleCompareEnd() {
+    clearRoleCompareStyles();
+    const bar = document.getElementById('roleCompareBar');
+    if (bar) bar.classList.remove('active');
+    roleCompare = null;
+    roleTournament = null;
+    // Restore full code
+    updateCode();
+}
+
+function resolveFontCssStack(fontName) {
+    // Returns a CSS font-family stack string like '"Fira Code", "Redacted Script"'
+    if (!fontName) return '"Redacted Script", monospace';
+    const source = (window.fontSourceByName && window.fontSourceByName[fontName]) || 'embedded';
+    const isSystem = source === 'system';
+    const available = !isSystem || isFontAvailable(fontName);
+    if (available) return `"${fontName}", "Redacted Script"`;
+
+    // Try fallback: pick another font from same family that's not system or available
+    const byName = (window.fontDatabase || []).find(f => f.name === fontName);
+    const family = byName?.family;
+    if (family) {
+        const alt = (window.fontDatabase || []).find(f => f.family === family && (f.source !== 'system' || isFontAvailable(f.name)));
+        if (alt) return `"${alt.name}", "Redacted Script"`;
+    }
+    // Global fallback: any non-system font
+    const anyAlt = (window.fontDatabase || []).find(f => f.source !== 'system');
+    if (anyAlt) return `"${anyAlt.name}", "Redacted Script"`;
+    return 'monospace';
+}
+
+function buildRolesCssFromMapping(mapping, scope = '') {
+    // mapping: role -> fontName (string). scope can be '#panelA ' etc, unused for MVP
+    let css = '';
+    currentRoleMapping = {};
+    Object.entries(mapping || {}).forEach(([role, name]) => {
+        const selectors = roleToHLJS[role];
+        if (!selectors || !selectors.length) return; // skip roles not tied to code tokens
+        let fontName = name;
+        let weight = undefined;
+        let style = undefined;
+        if (name && typeof name === 'object') {
+            console.log('[DEBUG] Processing role object:', role, name);
+            fontName = name.font || '';
+            weight = name.weight;
+            style = name.style;
+        }
+        console.log('[DEBUG] Before resolveFontCssStack:', role, 'fontName:', fontName, 'type:', typeof fontName);
+        const stack = resolveFontCssStack(fontName);
+        console.log('[DEBUG] After resolveFontCssStack:', role, 'stack:', stack);
+        currentRoleMapping[role] = { font: fontName, stack, weight, style };
+        const selectorList = selectors.map(sel => `${scope}${sel}`).join(', ');
+        css += `${selectorList} { font-family: ${stack};`;
+        if (typeof weight !== 'undefined') css += ` font-weight: ${weight};`;
+        if (typeof style !== 'undefined') css += ` font-style: ${style};`;
+        css += ` }\n`;
+        // Keep keyword emphasis if not explicitly set
+        if (role === 'keywords' && typeof weight === 'undefined') css += `${selectorList} { font-weight: 600; }\n`;
+    });
+    return css;
+}
+
+function applyRoleFonts(mapping) {
+    const styleId = 'role-fonts-style';
+    const css = buildRolesCssFromMapping(mapping);
+    currentRoleCss = css;
+    let el = document.getElementById(styleId);
+    if (!el) {
+        el = document.createElement('style');
+        el.id = styleId;
+        document.head.appendChild(el);
+    }
+    el.textContent = css;
+}
+
+function populateRolesPresetUI() {
+    const select = document.getElementById('rolesPresetSelect');
+    if (!select) return;
+    select.innerHTML = '';
+    const presets = (window.multiFontPresets || {});
+    Object.entries(presets).forEach(([key, val]) => {
+        const opt = document.createElement('option');
+        opt.value = key;
+        opt.textContent = val.name || key;
+        select.appendChild(opt);
+    });
+    // Pick a reasonable default
+    const firstKey = Object.keys(presets)[0] || null;
+    if (firstKey) {
+        select.value = firstKey;
+        currentRolesPresetKey = firstKey;
+    }
+}
+
+function renderRolesSummary(mapping) {
+    const c = document.getElementById('rolesSummary');
+    if (!c) return;
+    c.innerHTML = '';
+    const roles = Object.keys(roleToHLJS);
+    roles.forEach(role => {
+        const baseMap = (window.multiFontPresets?.[currentRolesPresetKey]?.fonts) || {};
+        const entry = mapping?.[role] || baseMap[role] || null;
+        const fontName = (entry && typeof entry === 'object') ? entry.font : entry;
+        if (!fontName) return;
+        const div = document.createElement('div');
+        div.className = 'role-item';
+        const stack = resolveFontCssStack(fontName);
+        const fallbackHint = stack.includes('Redacted Script') ? ' (fallback)' : '';
+        const w = (entry && typeof entry === 'object' && entry.weight) ? `, ${entry.weight}` : '';
+        const s = (entry && typeof entry === 'object' && entry.style) ? `, ${entry.style}` : '';
+        const title = showRoleNames ? `<strong>${fontName}</strong>${fallbackHint}${w}${s}` : '<em>selected</em>';
+        div.innerHTML = `${role}: ${title} <button onclick=\"startRoleCompare('${role}')\">Compare</button> <button onclick=\"openRolePicker('${role}')\">Change</button>`;
+        c.appendChild(div);
+    });
+}
+
+function openRolePicker(role) {
+    const c = document.getElementById('rolesSummary');
+    if (!c) return;
+    // Find this role's div (last rendered)
+    const items = Array.from(c.getElementsByClassName('role-item'));
+    const target = items.find(el => el.textContent.startsWith(role + ':')) || items[0];
+    if (!target) return;
+    // Build select
+    const sel = document.createElement('select');
+    sel.style.marginLeft = '8px';
+    const baseMap = (window.multiFontPresets?.[currentRolesPresetKey]?.fonts) || {};
+    const current = baseMap[role] || null;
+    const opts = getRoleCandidates(role);
+    // Ensure current (if not in candidates) appears first
+    const unique = Array.from(new Set([current, ...opts].filter(Boolean)));
+    unique.forEach(name => {
+        const o = document.createElement('option');
+        o.value = name; o.textContent = name; if (name === current) o.selected = true; sel.appendChild(o);
+    });
+    sel.onchange = () => {
+        const preset = (window.multiFontPresets || {})[currentRolesPresetKey] || { fonts: {} };
+        const newMapping = { ...(preset.fonts || {}) };
+        newMapping[role] = sel.value;
+        applyRoleFonts(newMapping);
+        renderRolesSummary(newMapping);
+        sel.remove();
+    };
+    target.appendChild(sel);
+    sel.focus();
+}
+
+// UI handlers
+function toggleMultiFontMode() {
+    const panel = document.getElementById('rolesPanel');
+    multiFontMode = !!document.getElementById('multiFontToggle')?.checked;
+    if (multiFontMode) {
+        panel.classList.remove('hidden');
+        // Ensure UI is populated and CSS applied
+        populateRolesPresetUI();
+        applyRolesPreset();
+    } else {
+        panel.classList.add('hidden');
+        applyRoleFonts({}); // clear styles
+    }
+}
+
+function applyRolesPreset() {
+    const select = document.getElementById('rolesPresetSelect');
+    if (!select) return;
+    currentRolesPresetKey = select.value;
+    const preset = (window.multiFontPresets || {})[currentRolesPresetKey];
+    if (!preset) return;
+    applyRoleFonts(preset.fonts || {});
+    renderRolesSummary(preset.fonts || {});
+}
+
+function renderRoleFontsInPanels() {
+    const a = document.getElementById('roleFontsA');
+    const b = document.getElementById('roleFontsB');
+    if (!a || !b) return;
+    if (!multiFontMode || !currentRoleMapping || !Object.keys(currentRoleMapping).length) {
+        a.textContent = '';
+        b.textContent = '';
+        return;
+    }
+    // Build compact inline listing using a stable order
+    const roleOrder = Object.keys(roleToHLJS || {});
+    const items = [];
+            roleOrder.forEach(role => {
+                const stack = currentRoleMapping[role];
+                if (!stack) return;
+                const primary = stack.split(',')[0].replace(/"/g, '').trim();
+                if (!primary) return;
+                items.push(`${getRoleLabel(role)}: ${primary}`);
+            });
+    const text = items.join('  •  ');
+    a.textContent = text;
+    b.textContent = text;
+}
+
+// Removed toggleRoleInfo; '?' should not affect roles panel
 
 // Tournament-style comparison generator
 class ComparisonEngine {
@@ -1559,12 +1314,12 @@ class ComparisonEngine {
         this.fontRound = 0; // Reset font round counter
         this.candidates = {
             fontFamily: Object.keys(fontFamilies), // Will show all at once, not tournament
-            colorScheme: [...colorSchemes[themeMode]], // Moved to 2nd position
+            colorScheme: [...((window.colorSchemeDatabase || {})[themeMode] || [])],
             font: [], // Will be populated after family selection
             size: [...fontSizes],
             weight: [...fontWeights],
             lineHeight: [...lineHeights],
-            fontStretch: [...fontStretches],
+            fontWidth: [], // Will be populated dynamically based on font support
             letterSpacing: [...letterSpacings]
         };
         this.currentPairs = [];
@@ -1573,28 +1328,79 @@ class ComparisonEngine {
         this.stageComparisons = {}; // Track comparisons made per stage
         this.colorSchemeGroups = null; // For similarity-based grouping
         this.preferredColorSchemes = []; // Track user's color preferences
+        this.currentRoleTournament = null;
+        this.currentRolePair = null;
+        this.winners.roles = this.winners.roles || {};
         this.generateNextStage();
     }
     
     generateNextStage() {
-        const stageIndex = STAGES.indexOf(this.stage);
+        const stageIndex = getStageIndex(this.stage);
         
-        console.log(`[DEBUG] generateNextStage: stage=${this.stage}, candidates=${this.candidates[this.stage]?.length}, stageIndex=${stageIndex}`);
+        devLog(`[DEBUG] generateNextStage: stage=${this.stage}, candidates=${this.candidates[this.stage]?.length}, stageIndex=${stageIndex}`);
         
+        // Role stages are handled by the role tournament path in getNextComparison.
+        // Avoid touching generic candidates for role* stages (no candidate arrays exist).
+        if (this.stage && this.stage.startsWith('role')) {
+            this.currentPairs = [];
+            return;
+        }
+
         if (stageIndex === -1 || this.candidates[this.stage].length <= 1) {
             if (stageIndex < STAGES.length - 1) {
                 this.winners[this.stage] = this.candidates[this.stage][0];
-                this.stage = STAGES[stageIndex + 1];
+                this.stage = STAGES[stageIndex + 1].id;
                 
                 // Special handling: when font family is chosen, populate fonts from that family
                 if (this.stage === 'font' && this.winners.fontFamily) {
-                    this.candidates.font = [...fontFamilies[this.winners.fontFamily].fonts];
+                    // Start from all fonts in the chosen family
+                    const allFonts = [...fontFamilies[this.winners.fontFamily].fonts]; // CSS strings
+                    // Filter: include all web fonts; include system fonts only if actually installed
+                    const filtered = allFonts.filter(cssString => {
+                        const m = cssString.match(/"([^\"]+)"/);
+                        if (!m) return false;
+                        const name = m[1];
+                        const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+                        // Exclude icon-patched fonts from base font tournament
+                        if (window.fontIconsByName && window.fontIconsByName[name]) return false;
+                        if (source !== 'system') return true; // embeddable (google/embedded) always allowed
+                        return isFontAvailable(name); // system only if detected locally
+                    });
+                    // Fallback: if everything filtered out (e.g., FontDetective not ready), keep only web fonts
+                    this.candidates.font = filtered.length > 0 ? filtered : allFonts.filter(cssString => {
+                        const m = cssString.match(/"([^\"]+)"/);
+                        if (!m) return false;
+                        const name = m[1];
+                        const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+                        if (window.fontIconsByName && window.fontIconsByName[name]) return false;
+                        return source !== 'system';
+                    });
+                    // Remove embedded fonts that failed to load (broken URLs/CORS)
+                    if (Array.isArray(this.candidates.font) && this.candidates.font.length) {
+                        const before = this.candidates.font.length;
+                        this.candidates.font = this.candidates.font.filter(cssString => {
+                            const m = cssString.match(/\"([^\"]+)\"/);
+                            if (!m) return false;
+                            const name = m[1];
+                            const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+                            if (source === 'embedded') {
+                                return !!(window.loadedEmbeddedFonts && window.loadedEmbeddedFonts.has(name));
+                            }
+                            return true;
+                        });
+                        const after = this.candidates.font.length;
+                        if (after < before) {
+                            devLog(`[DEBUG] Filtered out ${before - after} failed embedded fonts`);
+                        }
+                    }
+                    devLog(`[DEBUG] Populated fonts for family '${this.winners.fontFamily}': ${this.candidates.font.length} candidates`);
                 }
                 
                 this.generateNextStage();
             } else {
                 this.winners[this.stage] = this.candidates[this.stage][0];
                 this.complete = true;
+                // After tournament completes (end of last stage), no-op here
             }
             return;
         }
@@ -1602,7 +1408,7 @@ class ComparisonEngine {
         // For font stage, use similarity-based progressive pairing
         if (this.stage === 'font' && this.candidates.font.length > 4) {
             this.fontRound++;
-            console.log(`[DEBUG] Font tournament round ${this.fontRound}`);
+            devLog(`[DEBUG] Font tournament round ${this.fontRound}`);
             
             // Use similarity-based pairing for fonts
             const smartPairs = fontSimilarity.generateProgressivePairs(
@@ -1616,7 +1422,7 @@ class ComparisonEngine {
                 // Use smart pairs
                 for (const [fontA, fontB] of smartPairs) {
                     this.currentPairs.push([fontA, fontB]);
-                    console.log(`[DEBUG] Smart pair: ${fontSimilarity.calculate(fontA, fontB).toFixed(1)}% similar`);
+                    devLog(`[DEBUG] Smart pair: ${fontSimilarity.calculate(fontA, fontB).toFixed(1)}% similar`);
                 }
             } else {
                 // Fallback to random pairing if no smart pairs found
@@ -1668,6 +1474,86 @@ class ComparisonEngine {
         if (this.stage === 'fontFamily' && this.fontFamilySelectionMode) {
             return { showFontFamilySelector: true };
         }
+
+        // Helper: default scheme by theme
+        function getDefaultScheme(mode) {
+            const list = (window.colorSchemeDatabase && window.colorSchemeDatabase[mode]) || [];
+            const want = mode === 'dark' ? 'Monokai' : 'Catppuccin Latte';
+            return list.find(s => s.name === want) || list[0] || null;
+        }
+
+        // Role stages integration (handle before generic pairing/round logic)
+        const isRoleStage = this.stage && this.stage.startsWith('role');
+        const stageToRole = (st) => ({
+            roleKeywords: 'keywords', roleStrings: 'strings', roleComments: 'comments', roleFunction: 'function', roleGhost: 'ghost'
+        })[st];
+        if (isRoleStage) {
+            const roleKey = stageToRole(this.stage);
+            if (!this.currentRoleTournament || this._roleKey !== roleKey) {
+                const cands = getRoleCandidates(roleKey).slice(0, 8);
+                this.currentRoleTournament = new RoleTournament(roleKey, cands);
+                this._roleKey = roleKey;
+            }
+            const pair = this.currentRoleTournament.nextPair();
+            if (!pair) {
+                // Commit winner and advance
+                const winner = this.currentRoleTournament.getWinner();
+                if (winner) {
+                    this.winners.roles[roleKey] = winner;
+                    try { applyRoleFonts(this.winners.roles); } catch {}
+                }
+                this.currentRoleTournament = null;
+                // Advance stage
+                const idx = getStageIndex(this.stage);
+                if (idx >= 0 && idx < STAGES.length - 1) {
+                    this.stage = STAGES[idx + 1].id;
+                    this.generateNextStage();
+                    return this.getNextComparison();
+                }
+                this.complete = true;
+                return null;
+            }
+            this.currentRolePair = pair;
+            const baseOption = {
+                font: this.winners.font || (this.winners.fontFamily ? fontFamilies[this.winners.fontFamily].representative : fonts[0]),
+                fontSize: this.winners.size || 16,
+                fontWeight: this.winners.weight || 400,
+                lineHeight: this.winners.lineHeight || 1.5,
+                fontWidth: this.winners.fontWidth || 'normal',
+                letterSpacing: this.winners.letterSpacing || 0,
+                colorScheme: this.winners.colorScheme || getDefaultScheme(themeMode)
+            };
+            const optionA = { ...baseOption };
+            const optionB = { ...baseOption };
+            // Apply candidate settings to options
+            const candA = pair[0];
+            const candB = pair[1];
+            
+            if (candA && typeof candA === 'object') {
+                try { optionA.font = resolveFontCssStack(candA.font); } catch { optionA.font = `"${candA.font}", "Redacted Script"`; }
+                optionA.fontWeight = candA.weight || optionA.fontWeight;
+                optionA.fontStyle = candA.style || 'normal';
+            }
+            
+            if (candB && typeof candB === 'object') {
+                try { optionB.font = resolveFontCssStack(candB.font); } catch { optionB.font = `"${candB.font}", "Redacted Script"`; }
+                optionB.fontWeight = candB.weight || optionB.fontWeight;
+                optionB.fontStyle = candB.style || 'normal';
+            }
+            
+            return { 
+                optionA, 
+                optionB, 
+                stage: this.stage, 
+                roleTest: { 
+                    role: roleKey, 
+                    aFont: candA?.font || candA, 
+                    bFont: candB?.font || candB,
+                    aCandidate: candA,
+                    bCandidate: candB
+                } 
+            };
+        }
         
         if (this.currentPairs.length === 0) {
             // Round is complete, check what to do next
@@ -1675,20 +1561,37 @@ class ComparisonEngine {
                 console.log(`[DEBUG] Round complete: nextRound=${this.nextRound.length} candidates`);
                 
                 // Check if we have a winner AND have made minimum comparisons
-                const minComparisons = stageConfig[this.stage]?.minComparisons || 2;
+                const minComparisons = getStage(this.stage)?.minComparisons || 2;
                 const comparisons = this.stageComparisons[this.stage] || 0;
                 const hasWinner = this.nextRound.length <= 1;
                 const hasMinComparisons = comparisons >= minComparisons;
                 
-                console.log(`[DEBUG] Stage completion check: ${this.stage}, winner=${hasWinner}, comparisons=${comparisons}/${minComparisons}, canAdvance=${hasWinner && hasMinComparisons}`);
+                // Get winner name for debug logging
+                let winnerName = 'none';
+                if (hasWinner && this.nextRound.length > 0) {
+                    const winner = this.nextRound[0];
+                    if (this.stage === 'colorScheme' && winner && winner.name) {
+                        winnerName = winner.name;
+                    } else if (this.stage === 'fontFamily') {
+                        winnerName = winner;
+                    } else if (typeof winner === 'string') {
+                        winnerName = winner.replace(/"/g, '').split(',')[0];
+                    } else if (winner && winner.font) {
+                        winnerName = winner.font;
+                    } else {
+                        winnerName = String(winner);
+                    }
+                }
+                
+                console.log(`[DEBUG] Stage completion check: ${this.stage}, winner=${hasWinner ? winnerName : 'none'}, comparisons=${comparisons}/${minComparisons}, canAdvance=${hasWinner && hasMinComparisons}`);
                 
                 // If we have a winner AND have made minimum comparisons, move to next stage
                 if (hasWinner && hasMinComparisons) {
-                    const stageIndex = STAGES.indexOf(this.stage);
+                    const stageIndex = getStageIndex(this.stage);
                     
                     if (stageIndex < STAGES.length - 1) {
                         this.winners[this.stage] = this.nextRound[0];
-                        this.stage = STAGES[stageIndex + 1];
+                        this.stage = STAGES[stageIndex + 1].id;
                         
                         // Special handling: when font family is chosen, populate fonts from that family
                         if (this.stage === 'font' && this.winners.fontFamily) {
@@ -1716,7 +1619,7 @@ class ComparisonEngine {
                     console.log(`[DEBUG] Need more comparisons in ${this.stage}: ${comparisons}/${minComparisons}`);
                     
                     // For color schemes, use smart similarity-based selection
-                    if (this.stage === 'colorScheme' && stageConfig[this.stage].useSmartGrouping && this.preferredColorSchemes.length > 0) {
+                    if (this.stage === 'colorScheme' && getStage(this.stage)?.useSmartGrouping && this.preferredColorSchemes.length > 0) {
                         this.candidates[this.stage] = this.getSimilarColorSchemes();
                         console.log(`[DEBUG] Selected similar color schemes: ${this.candidates[this.stage].length} candidates`);
                     } else {
@@ -1754,16 +1657,16 @@ class ComparisonEngine {
             this.currentPairs.shift();
             return this.getNextComparison();
         }
-        
+
         // Build comparison options
         const baseOption = {
             font: this.winners.font || (this.winners.fontFamily ? fontFamilies[this.winners.fontFamily].representative : fonts[0]),
             fontSize: this.winners.size || 16,
             fontWeight: this.winners.weight || 400,
             lineHeight: this.winners.lineHeight || 1.5,
-            fontStretch: this.winners.fontStretch || 'normal',
+            fontWidth: this.winners.fontWidth || 'normal',
             letterSpacing: this.winners.letterSpacing || 0,
-            colorScheme: this.winners.colorScheme || colorSchemes[themeMode][0]
+            colorScheme: this.winners.colorScheme || getDefaultScheme(themeMode)
         };
         
         const optionA = { ...baseOption };
@@ -1790,9 +1693,9 @@ class ComparisonEngine {
                 optionA.lineHeight = pair[0];
                 optionB.lineHeight = pair[1];
                 break;
-            case 'fontStretch':
-                optionA.fontStretch = pair[0];
-                optionB.fontStretch = pair[1];
+            case 'fontWidth':
+                optionA.fontWidth = pair[0];
+                optionB.fontWidth = pair[1];
                 break;
             case 'letterSpacing':
                 optionA.letterSpacing = pair[0];
@@ -1831,7 +1734,7 @@ class ComparisonEngine {
                optionA.fontSize === optionB.fontSize &&
                optionA.fontWeight === optionB.fontWeight &&
                optionA.lineHeight === optionB.lineHeight &&
-               optionA.fontStretch === optionB.fontStretch &&
+               optionA.fontWidth === optionB.fontWidth &&
                optionA.letterSpacing === optionB.letterSpacing &&
                JSON.stringify(optionA.colorScheme) === JSON.stringify(optionB.colorScheme);
     }
@@ -1846,6 +1749,16 @@ class ComparisonEngine {
     }
     
     submitChoice(choice) {
+        // Handle role stages
+        if (this.stage && this.stage.startsWith('role')) {
+            if (this.currentRoleTournament && this.currentRolePair) {
+                const [a, b] = this.currentRolePair;
+                this.currentRoleTournament.recordResult(a, b, choice === 'equal' ? 'equal' : (choice === 'A' ? 'A' : 'B'));
+                // Clear pair; next call to getNextComparison will fetch next
+                this.currentRolePair = null;
+            }
+            return;
+        }
         if (this.currentPairs.length === 0) return;
         
         const pair = this.currentPairs.shift();
@@ -1884,7 +1797,7 @@ class ComparisonEngine {
     
     getSimilarColorSchemes() {
         // Find schemes similar to user's preferred ones
-        const allSchemes = [...colorSchemes[themeMode]];
+        const allSchemes = [...((window.colorSchemeDatabase || {})[themeMode] || [])];
         const similarSchemes = new Set();
         
         // Add schemes similar to each preferred scheme
@@ -1913,12 +1826,13 @@ class ComparisonEngine {
     }
     
     getProgress() {
-        const stageIndex = STAGES.indexOf(this.stage);
+        const stageIndex = getStageIndex(this.stage);
         const totalStages = STAGES.length;
         const baseProgress = (stageIndex / totalStages) * 100;
         
         // Add within-stage progress
-        const stageItems = this.candidates[this.stage].length + this.currentPairs.length;
+        const candidateCount = this.candidates[this.stage] ? this.candidates[this.stage].length : 0;
+        const stageItems = candidateCount + this.currentPairs.length;
         const stageProgress = stageItems > 0 ? 
             (1 - (this.currentPairs.length / stageItems)) * (100 / totalStages) : 0;
         
@@ -1926,15 +1840,116 @@ class ComparisonEngine {
     }
 }
 
-let engine = new ComparisonEngine();
-
 // Initialize the app
 function init() {
-    loadFonts();
-    updateCode();
-    
-    // Show start screen with both import and font family options
-    showStartScreen();
+    // Load databases first (JSON preferred), then continue
+    loadDatabases().then(() => {
+        fontFamiliesOriginal = generateFontFamilies();
+        fontFamilies = fontFamiliesOriginal;
+        googleFontFamilies = Array.from(new Set(
+            (window.fontDatabase || [])
+                .filter(f => f.source === 'google')
+                .map(f => f.name.replace(/\s+/g, '+'))
+        ));
+        // Build metadata and ID maps for about pages from DB
+        fontMetadata = {};
+        window.fontSourceByName = {};
+        (window.fontDatabase || []).forEach(font => {
+            fontMetadata[font.name] = {
+                source: font.source,
+                ligatures: font.ligatures,
+                description: font.description
+            };
+            window.fontSourceByName[font.name] = font.source;
+        });
+        colorSchemeMetadata = window.colorSchemeDatabase || {};
+        buildIdMaps();
+        buildRoleMaps();
+        // Build quick lookup for font sources by name
+        window.fontSourceByName = {};
+        (window.fontDatabase || []).forEach(f => { window.fontSourceByName[f.name] = f.source; });
+        // Build quick lookup for font sources and families by name
+        window.fontSourceByName = {};
+        window.fontCategoryByName = {};
+        (window.fontDatabase || []).forEach(f => { 
+            window.fontSourceByName[f.name] = f.source; 
+            // Normalize final category for lookups
+            f.category = f.category || f.family || null;
+            window.fontCategoryByName[f.name] = f.category;
+        });
+        buildIdMaps();
+        buildRoleMaps();
+        engine = new ComparisonEngine();
+        loadFonts();
+        updateCode();
+        showStartScreen();
+    }).catch(err => {
+        console.warn('[DEV] Failed to load JSON databases, attempting fallback globals:', err);
+        fontFamiliesOriginal = generateFontFamilies();
+        fontFamilies = fontFamiliesOriginal;
+        googleFontFamilies = Array.from(new Set(
+            (window.fontDatabase || [])
+                .filter(f => f.source === 'google')
+                .map(f => f.name.replace(/\s+/g, '+'))
+        ));
+        fontMetadata = {};
+        (window.fontDatabase || []).forEach(font => {
+            fontMetadata[font.name] = {
+                source: font.source,
+                ligatures: font.ligatures,
+                description: font.description
+            };
+        });
+        colorSchemeMetadata = window.colorSchemeDatabase || {};
+        buildIdMaps();
+        // Build quick lookup for font sources and families by name
+        window.fontSourceByName = {};
+        window.fontCategoryByName = {};
+        (window.fontDatabase || []).forEach(f => { 
+            window.fontSourceByName[f.name] = f.source; 
+            f.category = f.category || f.family || null;
+            window.fontCategoryByName[f.name] = f.category;
+        });
+        engine = new ComparisonEngine();
+        buildIdMaps();
+        loadFonts();
+        updateCode();
+        showStartScreen();
+    });
+    // Warn if highlight.js not present
+    if (!(window.hljs && typeof hljs.highlightElement === 'function')) {
+        console.warn('[DEV] highlight.js not detected. Place vendor/highlight.min.js to enable syntax highlighting.');
+    }
+    // Unify external library readiness handling
+    waitForLibrary(
+        'FontDetective',
+        () => typeof FontDetective !== 'undefined',
+        () => {
+            try {
+                FontDetective.all((detectedFontObjects) => {
+                    if (!window.fontDatabase || !fontFamiliesOriginal) {
+                        // DB not ready yet; skip filtering until it is
+                        return;
+                    }
+                    detectedFonts.clear();
+                    detectedFontObjects.forEach(fontObj => detectedFonts.add(fontObj.name));
+                    const filteredFamilies = filterFontFamilies();
+                    fontFamilies = filteredFamilies;
+                    fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
+                    console.log(`Font detection complete: ${fonts.length} fonts available`);
+                    // If the font family selector is visible, re-render it with available fonts
+                    const selector = document.getElementById('fontFamilySelector');
+                    if (selector && !selector.classList.contains('hidden')) {
+                        showFontFamilySelector(true);
+                    }
+                });
+            } catch (e) {
+                console.error('FontDetective error:', e);
+            }
+        },
+        { attempts: 10, interval: 500, onTimeout: () => console.warn('[DEV] FontDetective not detected; proceeding without system font filtering.') }
+    );
+    // Note: loadFonts, updateCode, and showStartScreen are called after DB load above
     
     // Give critical fonts time to load before allowing start
     // (No need for extra Start Fresh button - Start Over handles this)
@@ -1953,102 +1968,42 @@ function init() {
 
 // Load all fonts - dynamically loads Google Fonts and custom fonts
 function loadFonts() {
-    // Load custom fonts via @font-face
-    loadCustomFonts();
+    // Use unified WebFont Loader for all fonts
+    loadAllFonts().then(() => {
+        devLog('All fonts loaded via unified WebFont Loader');
+    }).catch(err => {
+        console.error('Font loading failed:', err);
+    });
     
     // Use original font families initially (before detection) 
     fontFamilies = fontFamiliesOriginal;
     fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
     
-    // Font detection with FontDetective.all()
-    function startFontDetection(attempts = 0) {
-        if (typeof FontDetective !== 'undefined') {
-            try {
-                console.log('Running font detection...');
-                
-                // Use FontDetective.all() to get all detected fonts
-                FontDetective.all((detectedFontObjects) => {
-                    console.log(`FontDetective detected ${detectedFontObjects.length} fonts`);
-                    
-                    // Clear and populate detectedFonts set
-                    detectedFonts.clear();
-                    detectedFontObjects.forEach(fontObj => {
-                        detectedFonts.add(fontObj.name);
-                        console.log(`✓ ${fontObj.name} is installed`);
-                    });
-                    
-                    // Now filter font families
-                    const filteredFamilies = filterFontFamilies();
-                    fontFamilies = filteredFamilies;
-                    fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
-                    console.log(`Font detection complete: ${fonts.length} fonts available`);
-                });
-                
-            } catch (error) {
-                console.error('❌ Font detection failed:', error.message);
-                document.getElementById('status').textContent = 'Font detection error';
-                document.getElementById('status').style.color = 'red';
-                console.warn('⚠️  Proceeding with all fonts (not filtered by availability)');
-            }
-        } else if (attempts < 10) {
-            // Wait up to 5 seconds for FontDetective to load
-            console.log(`Waiting for FontDetective library... (attempt ${attempts + 1}/10)`);
-            setTimeout(() => startFontDetection(attempts + 1), 500);
-        } else {
-            console.error('❌ FontDetective library failed to load after 5 seconds');
-            document.getElementById('status').textContent = 'Font detection unavailable - library failed to load';
-            document.getElementById('status').style.color = 'orange';
-            console.warn('⚠️  Proceeding with all fonts (not filtered by availability)');
-        }
-    }
+    console.log(`Using all fonts: ${fonts.length} fonts from database`);
     
-    // Start font detection after a brief delay
-    setTimeout(() => startFontDetection(), 500);
-    
-    console.log(`Using all fonts: ${fonts.length} fonts loaded`);
-    
-    // Load critical Google fonts first (representatives from each family)
-    const criticalFonts = [
-        'Fira+Code:wght@400;500;600',
-        'Source+Code+Pro:wght@400;500;600', 
-        'Ubuntu+Mono:wght@400;700',
-        'Space+Mono:wght@400;700',
-        'Noto+Sans+Mono:wght@400;500;600',
-        'VT323:wght@400'
-    ];
-    
-    // Load critical fonts immediately
-    const criticalLink = document.createElement('link');
-    criticalLink.href = `https://fonts.googleapis.com/css2?family=${criticalFonts.join('&family=')}&display=swap`;
-    criticalLink.rel = 'stylesheet';
-    document.head.appendChild(criticalLink);
-    
-    // Split remaining fonts into chunks to avoid URL length limits (2048 chars)
-    const chunkSize = 10;
-    const chunks = [];
-    
-    for (let i = 0; i < googleFontFamilies.length; i += chunkSize) {
-        chunks.push(googleFontFamilies.slice(i, i + chunkSize));
-    }
-    
-    // Load each chunk as a separate stylesheet with delay
-    chunks.forEach((chunk, index) => {
-        const link = document.createElement('link');
-        const families = chunk.join('&family=');
-        link.href = `https://fonts.googleapis.com/css2?family=${families}&display=swap`;
-        link.rel = 'stylesheet';
-        // Add a small delay between loads to be nice to Google's servers
-        setTimeout(() => {
-            document.head.appendChild(link);
-        }, index * 200 + 500);
-    });
-    
-    // Also load Material Icons for potential UI enhancements
+    // Load Material Icons for potential UI enhancements
     const iconsLink = document.createElement('link');
     iconsLink.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
     iconsLink.rel = 'stylesheet';
     document.head.appendChild(iconsLink);
 }
+
+// Ensure critical fallback fonts for About samples are present
+function injectCriticalAboutFonts() {
+    try {
+        if (document.getElementById('gf-redacted-style')) return;
+        const link = document.createElement('link');
+        link.id = 'gf-redacted-style';
+        link.href = 'https://fonts.googleapis.com/css2?family=Redacted+Script:wght@400&display=swap';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+    } catch {}
+}
+
+// Declare engine reference and global comparison log
+let engine;
+let comparisons = [];
+let currentComparison = 0;
 
 // Cache for loaded code
 const codeCache = new Map();
@@ -2064,7 +2019,9 @@ async function loadCode(language) {
     
     // For file:// protocol or missing URLs, use fallback to avoid CORS issues
     if (!url || window.location.protocol === 'file:') {
-        const fallback = fallbackCodeSamples[language] || fallbackCodeSamples.javascript;
+        const fallback = (window.textSamples && window.textSamples.buildLoadFallback)
+            ? window.textSamples.buildLoadFallback(language)
+            : `// ${String(language || 'Code').toUpperCase()} code sample\n// Please use a web server to load actual code samples\nconsole.log('Code Phoropter - Font Testing Application');`;
         codeCache.set(language, fallback);
         return fallback;
     }
@@ -2078,7 +2035,7 @@ async function loadCode(language) {
         
         const code = await response.text();
         
-        // Truncate very long files for better comparison
+        // Truncate very long files by characters (legacy behavior)
         const maxLength = 2000;
         const truncatedCode = code.length > maxLength ? 
             code.substring(0, maxLength) + '\n\n// ... (truncated for display)' : 
@@ -2090,11 +2047,108 @@ async function loadCode(language) {
     } catch (error) {
         console.warn(`Failed to load code from ${url}:`, error);
         
-        // Fallback to embedded samples
-        const fallback = fallbackCodeSamples[language] || fallbackCodeSamples.javascript;
+        // Fallback to simple sample (from text-samples.js)
+        const fallback = (window.textSamples && window.textSamples.buildErrorFallback)
+            ? window.textSamples.buildErrorFallback(language)
+            : `// ${String(language || 'Code').toUpperCase()} code sample (failed to load)\n// Please check that sample files exist\nconsole.log('Code Phoropter - Font Testing Application');`;
         codeCache.set(language, fallback);
         return fallback;
     }
+}
+
+// Monospace grid visualization
+function createGridOverlay(panelId, font, fontSize) {
+    const panel = document.getElementById(panelId);
+    if (!panel) return;
+    
+    // Remove existing grid overlay
+    const existingOverlay = panel.querySelector('.grid-overlay');
+    if (existingOverlay) {
+        existingOverlay.remove();
+    }
+    
+    // Create grid overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'grid-overlay';
+    
+    const gridLines = document.createElement('div');
+    gridLines.className = 'grid-lines';
+    gridLines.style.fontFamily = font;
+    gridLines.style.fontSize = fontSize + 'px';
+    
+    // Generate grid pattern - vertical lines every 8 characters
+    const gridPattern = '       |'; // 7 spaces + pipe character = 8 char width
+    const lines = [];
+    
+    // Generate enough lines to fill the panel height
+    for (let i = 0; i < 30; i++) { // 30 lines should be more than enough
+        let line = '';
+        // Generate enough repetitions to fill the panel width 
+        for (let j = 0; j < 20; j++) { // 20 * 8 = 160 characters wide
+            line += gridPattern;
+        }
+        lines.push(line);
+    }
+    
+    gridLines.textContent = lines.join('\n');
+    overlay.appendChild(gridLines);
+    
+    // Insert as first child so it appears behind content
+    panel.insertBefore(overlay, panel.firstChild);
+}
+
+// Grid toggle state
+let gridVisible = false;
+
+function updateGridOverlays(optionA, optionB, forceVisible = null) {
+    const shouldShowGrid = forceVisible !== null ? forceVisible : gridVisible;
+    
+    if (shouldShowGrid && optionA && optionB) {
+        // Use the base font for grid reference
+        const baseFont = engine.winners?.font || (engine.winners?.fontFamily ? fontFamilies[engine.winners.fontFamily].representative : fonts[0]);
+        const baseFontSize = optionA.fontSize || 16;
+        
+        console.log(`[DEBUG] Showing grid overlays with base font: ${baseFont} at ${baseFontSize}px`);
+        createGridOverlay('panelA', baseFont, baseFontSize);
+        createGridOverlay('panelB', baseFont, baseFontSize);
+    } else {
+        // Remove grid overlays
+        console.log(`[DEBUG] Hiding grid overlays`);
+        ['panelA', 'panelB'].forEach(panelId => {
+            const panel = document.getElementById(panelId);
+            const overlay = panel?.querySelector('.grid-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        });
+    }
+}
+
+function initializeGridForStage(stage) {
+    const stageObj = getStage(stage);
+    if (stageObj && typeof stageObj.showGrid === 'boolean') {
+        gridVisible = stageObj.showGrid;
+        console.log(`[DEBUG] Initialized grid for stage '${stage}': ${gridVisible ? 'ON' : 'OFF'} (default from stage config)`);
+    }
+}
+
+function toggleGrid() {
+    gridVisible = !gridVisible;
+    console.log(`[DEBUG] Grid toggle: ${gridVisible ? 'ON' : 'OFF'}`);
+    
+    // Get current comparison options
+    const comparison = engine.getNextComparison();
+    if (comparison && comparison.optionA && comparison.optionB) {
+        updateGridOverlays(comparison.optionA, comparison.optionB, gridVisible);
+    }
+    
+    // Show temporary feedback
+    const status = document.getElementById('status');
+    const originalText = status.textContent;
+    status.textContent = `Grid overlay: ${gridVisible ? 'ON' : 'OFF'} (press 'g' to toggle)`;
+    setTimeout(() => {
+        status.textContent = originalText;
+    }, 2000);
 }
 
 // Update code display with async loading
@@ -2102,96 +2156,362 @@ async function updateCode() {
     const codeA = document.getElementById('codeA');
     const codeB = document.getElementById('codeB');
     
+    // Failsafe: Clear any stuck role highlighting
+    console.log('[DEBUG] updateCode: Clearing any stuck role highlighting');
+    if (codeA) clearRoleHighlighting(codeA);
+    if (codeB) clearRoleHighlighting(codeB);
+    
     // Show loading state
-    codeA.innerHTML = '<div class="loading">Loading code...</div>';
-    codeB.innerHTML = '<div class="loading">Loading code...</div>';
+    codeA.textContent = 'Loading code...';
+    codeB.textContent = 'Loading code...';
     
     try {
         const code = await loadCode(currentLanguage);
         
-        // Simple syntax highlighting
-        const highlighted = highlightCode(code, currentLanguage);
-        codeA.innerHTML = highlighted;
-        codeB.innerHTML = highlighted;
+        const lang = mapLanguageForHLJS(currentLanguage);
+        setCodeWithHighlight(codeA, code, lang);
+        setCodeWithHighlight(codeB, code, lang);
     } catch (error) {
         console.error('Failed to update code:', error);
-        codeA.innerHTML = '<div class="error">Failed to load code</div>';
-        codeB.innerHTML = '<div class="error">Failed to load code</div>';
+        codeA.textContent = 'Failed to load code';
+        codeB.textContent = 'Failed to load code';
     }
 }
 
 // Basic syntax highlighting
-function highlightCode(code, language) {
-    // Skip syntax highlighting for legal text
-    if (language === 'legal') {
-        return code
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;');
+// Removed built-in syntax highlighter; using highlight.js instead
+
+function mapLanguageForHLJS(language) {
+    switch (language) {
+        case 'javascript': return 'javascript';
+        case 'python': return 'python';
+        case 'rust': return 'rust';
+        case 'go': return 'go';
+        case 'java': return 'java';
+        case 'clojure': return 'clojure';
+        case 'css': return 'css';
+        case 'html': return 'xml';
+        case 'json': return 'json';
+        case 'yaml': return 'yaml';
+        case 'markdown': return 'markdown';
+        case 'legal':
+        case 'powerline':
+        case 'custom':
+        default: return 'plaintext';
     }
+}
+
+function setCodeWithHighlight(el, code, lang) {
+    el.className = '';
+    el.classList.add('hljs');
+    if (lang && lang !== 'plaintext') {
+        el.classList.add(`language-${lang}`);
+    }
+    // Reset any prior highlight.js state before re-highlighting
+    el.removeAttribute('data-highlighted');
+    el.textContent = code;
+    if (window.hljs && typeof hljs.highlightElement === 'function') {
+        try { hljs.highlightElement(el); } catch {}
+    }
+    // Process ghost markers after highlighting, to wrap DOM safely
+    try { processGhostMarkers(el); } catch (e) { devLog('Ghost processing failed', e); }
+}
+
+// Wrap ghost sections and caret markers in code blocks
+function processGhostMarkers(codeEl) {
+    if (!codeEl || !codeEl.textContent) return;
+    const MARK_BEGIN = '<<ghost:begin>>';
+    const MARK_END = '<<ghost:end>>';
+    const MARK_CARET = '<<ghost:caret>>';
+    // Quick check
+    const fullText = codeEl.textContent;
+    if (!fullText.includes(MARK_BEGIN) && !fullText.includes(MARK_CARET)) return;
+
+    const walker = document.createTreeWalker(codeEl, NodeFilter.SHOW_TEXT, null);
+    let node;
+    let startBoundary = null; // {node, offset}
+    function splitTextNode(n, index) {
+        if (index <= 0) return n;
+        if (index >= n.nodeValue.length) return n;
+        return n.splitText(index);
+    }
+    function removeMarkerAt(n, index, marker) {
+        const val = n.nodeValue;
+        n.nodeValue = val.slice(0, index) + val.slice(index + marker.length);
+    }
+    function insertCaret(n, index) {
+        const after = splitTextNode(n, index);
+        const caret = document.createElement('span');
+        caret.className = 'ghost-caret';
+        caret.setAttribute('role', 'img');
+        caret.setAttribute('aria-label', 'Cursor');
+        after.parentNode.insertBefore(caret, after);
+    }
+    while ((node = walker.nextNode())) {
+        let i = 0;
+        // Loop to handle multiple markers in the same text node
+        while (node) {
+            const text = node.nodeValue || '';
+            const nextBegin = text.indexOf(MARK_BEGIN, i);
+            const nextEnd = text.indexOf(MARK_END, i);
+            const nextCaret = text.indexOf(MARK_CARET, i);
+            const minIdx = [nextBegin, nextEnd, nextCaret]
+                .filter(idx => idx !== -1)
+                .sort((a,b) => a - b)[0];
+            if (minIdx === undefined) break;
+            // Ensure we operate on current node after potential split
+            if (minIdx > 0) {
+                node = splitTextNode(node, minIdx);
+                i = 0;
+                continue;
+            }
+            // Marker at start of node text
+            if (nextBegin === 0) {
+                removeMarkerAt(node, 0, MARK_BEGIN);
+                startBoundary = { node, offset: 0 };
+                i = 0;
+                continue;
+            }
+            if (nextEnd === 0 && startBoundary) {
+                // Remove end marker then wrap range
+                removeMarkerAt(node, 0, MARK_END);
+                const range = document.createRange();
+                range.setStart(startBoundary.node, startBoundary.offset);
+                range.setEnd(node, 0);
+                const span = document.createElement('span');
+                span.className = 'ghost-text';
+                span.setAttribute('aria-label', 'Ghost suggestion');
+                try { range.surroundContents(span); } catch (e) {
+                    // Fallback: wrap by cloning contents
+                    const contents = range.extractContents();
+                    span.appendChild(contents);
+                    range.insertNode(span);
+                }
+                // Strip syntax highlighting classes from ghost text
+                stripSyntaxHighlighting(span);
+                startBoundary = null;
+                i = 0;
+                continue;
+            }
+            if (nextCaret === 0) {
+                removeMarkerAt(node, 0, MARK_CARET);
+                insertCaret(node, 0);
+                i = 0;
+                continue;
+            }
+            // Safety break
+            break;
+        }
+    }
+}
+
+// Simple per-role tournament engine
+class RoleTournament {
+    constructor(role, candidates) {
+        this.role = role;
+        // Cap and dedupe candidates for speed
+        const unique = Array.from(new Set(candidates)).slice(0, 8);
+        this.candidates = unique;
+        this.scores = Object.fromEntries(unique.map(n => [n, 0]));
+        this.state = { phase: 'swiss', roundIndex: 0, totalRounds: Math.min(3, Math.max(2, Math.ceil(unique.length / 2))), finals: null };
+        this.pairs = [];
+        this._buildSwissPairs();
+    }
+    _shuffle(arr) {
+        const a = [...arr];
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+    _buildSwissPairs() {
+        const order = this._shuffle(this.candidates);
+        this.pairs = [];
+        for (let i = 0; i < order.length - 1; i += 2) {
+            this.pairs.push([order[i], order[i+1]]);
+        }
+        if (order.length % 2 === 1) {
+            // Bye: last one gets 0.5
+            const bye = order[order.length - 1];
+            this.scores[bye] += 0.5;
+        }
+    }
+    nextPair() {
+        if (this.state.phase === 'finals') {
+            const { a, b, aWins, bWins } = this.state.finals;
+            if (aWins >= 2 || bWins >= 2) return null;
+            return [a, b];
+        }
+        if (this.pairs.length === 0) {
+            // Round complete
+            this.state.roundIndex++;
+            if (this.state.roundIndex >= this.state.totalRounds) {
+                // Move to finals: top 2
+                const ranked = Object.entries(this.scores).sort((x,y) => y[1] - x[1]);
+                const a = ranked[0]?.[0];
+                const b = ranked[1]?.[0];
+                if (!a || !b) return null;
+                this.state.phase = 'finals';
+                this.state.finals = { a, b, aWins: 0, bWins: 0 };
+                return [a, b];
+            }
+            this._buildSwissPairs();
+        }
+        return this.pairs.shift() || null;
+    }
+    recordResult(a, b, choice) {
+        if (this.state.phase === 'finals') {
+            const f = this.state.finals;
+            if (choice === 'A') f.aWins++; else if (choice === 'B') f.bWins++; else { f.aWins += 0.5; f.bWins += 0.5; }
+            return;
+        }
+        if (choice === 'A') this.scores[a] += 1;
+        else if (choice === 'B') this.scores[b] += 1;
+        else { this.scores[a] += 0.5; this.scores[b] += 0.5; }
+    }
+    getWinner() {
+        if (this.state.phase === 'finals' && this.state.finals) {
+            const { a, b, aWins, bWins } = this.state.finals;
+            if (aWins > bWins) return a;
+            if (bWins > aWins) return b;
+            // tie-breaker: prefer preset suggestion, else base mapping, else lexical
+            const baseMap = (window.multiFontPresets?.[currentRolesPresetKey]?.fonts) || {};
+            if (baseMap[this.role] === a) return a;
+            if (baseMap[this.role] === b) return b;
+            return [a, b].sort()[0];
+        }
+        // If finals never reached, pick highest score
+        const ranked = Object.entries(this.scores).sort((x,y) => y[1] - x[1]);
+        return ranked[0]?.[0] || null;
+    }
+}
+
+// Curated/hueristic slice selection per role
+const roleSliceHints = {
+    comments: [/\/\//, /\/*|\*\//],
+    strings: [/['"`].+['"`]/],
+    keywords: [/\b(function|const|let|return|if|else|for|while|switch|case)\b/],
+    function: [/\bfunction\b|=>/],
+    base: [/./],
+    ghost: [/<<ghost:begin>>/]
+};
+
+async function setRoleSliceInPanels(role) {
+    // Load full code instead of slicing
+    const code = await loadCode(currentLanguage);
+    const lang = mapLanguageForHLJS(currentLanguage);
+    const codeA = document.getElementById('codeA');
+    const codeB = document.getElementById('codeB');
     
-    // This is a very basic syntax highlighter
-    // First escape HTML
-    let highlighted = code
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
+    // Apply full code with syntax highlighting
+    setCodeWithHighlight(codeA, code, lang);
+    setCodeWithHighlight(codeB, code, lang);
     
-    // Keywords
-    const keywords = {
-        javascript: ['function', 'const', 'let', 'var', 'if', 'else', 'while', 'for', 'return', 'class', 'import', 'export', 'default', 'new'],
-        python: ['def', 'class', 'if', 'elif', 'else', 'for', 'while', 'return', 'import', 'from', 'as', 'in', 'and', 'or', 'not'],
-        java: ['public', 'private', 'class', 'static', 'void', 'int', 'if', 'else', 'for', 'while', 'return', 'new', 'import', 'package'],
-        rust: ['fn', 'pub', 'struct', 'impl', 'use', 'let', 'mut', 'if', 'else', 'for', 'while', 'return', 'self', 'Self'],
-        go: ['func', 'package', 'import', 'var', 'const', 'type', 'struct', 'interface', 'if', 'else', 'for', 'range', 'return', 'defer', 'go', 'chan', 'make']
-    };
+    // Apply role-based visual highlighting
+    highlightRoleElements(codeA, role);
+    highlightRoleElements(codeB, role);
+}
+
+function highlightRoleElements(codeElement, role) {
+    // Clear any existing role highlighting
+    clearRoleHighlighting(codeElement);
     
-    const languageKeywords = keywords[language] || keywords.javascript;
+    // Get the CSS selectors for this role
+    const selectors = roleToHLJS[role];
+    if (!selectors || !Array.isArray(selectors)) return;
     
-    // Store tokens to prevent overlapping replacements
-    const tokens = [];
-    let tempCode = highlighted;
+    console.log('[DEBUG] Adding role highlighting to element:', codeElement.id, 'for role:', role);
+    // Add the focus class to the container
+    codeElement.classList.add('role-focus-active');
     
-    // First pass: identify and replace with placeholders
-    // Comments (do these first as they can contain strings/keywords)
-    tempCode = tempCode.replace(/(\/\/[^\n]*)/g, (match) => {
-        tokens.push(`<span class="comment">${match}</span>`);
-        return `__TOKEN_${tokens.length - 1}__`;
-    });
-    tempCode = tempCode.replace(/(#[^\n]*)/g, (match) => {
-        tokens.push(`<span class="comment">${match}</span>`);
-        return `__TOKEN_${tokens.length - 1}__`;
-    });
-    tempCode = tempCode.replace(/(\/\*[\s\S]*?\*\/)/g, (match) => {
-        tokens.push(`<span class="comment">${match}</span>`);
-        return `__TOKEN_${tokens.length - 1}__`;
-    });
-    
-    // Strings (do these before keywords as they can contain keyword text)
-    tempCode = tempCode.replace(/(["'])([^"']*)\1/g, (match) => {
-        tokens.push(`<span class="string">${match}</span>`);
-        return `__TOKEN_${tokens.length - 1}__`;
-    });
-    
-    // Keywords
-    languageKeywords.forEach(keyword => {
-        const regex = new RegExp(`\\b(${keyword})\\b`, 'g');
-        tempCode = tempCode.replace(regex, (match) => {
-            tokens.push(`<span class="keyword">${match}</span>`);
-            return `__TOKEN_${tokens.length - 1}__`;
+    // Find and mark target elements
+    selectors.forEach(selector => {
+        const elements = codeElement.querySelectorAll(selector);
+        elements.forEach(el => {
+            el.classList.add('role-highlight-target');
         });
     });
-    
-    // Numbers
-    tempCode = tempCode.replace(/\b(\d+)\b/g, (match) => {
-        tokens.push(`<span class="number">${match}</span>`);
-        return `__TOKEN_${tokens.length - 1}__`;
+}
+
+function clearRoleHighlighting(codeElement) {
+    console.log('[DEBUG] Clearing role highlighting from element:', codeElement.id);
+    codeElement.classList.remove('role-focus-active');
+    const targets = codeElement.querySelectorAll('.role-highlight-target');
+    targets.forEach(el => {
+        el.classList.remove('role-highlight-target');
     });
-    
-    // Replace tokens back
-    tokens.forEach((token, index) => {
-        tempCode = tempCode.replace(`__TOKEN_${index}__`, token);
+}
+
+function stripSyntaxHighlighting(element) {
+    // Remove all hljs- classes and convert highlighted elements to plain text
+    const highlightedElements = element.querySelectorAll('[class*="hljs-"]');
+    highlightedElements.forEach(el => {
+        // Remove all hljs classes
+        const classes = Array.from(el.classList);
+        classes.forEach(cls => {
+            if (cls.startsWith('hljs-')) {
+                el.classList.remove(cls);
+            }
+        });
+        // If no classes left, unwrap the element
+        if (el.classList.length === 0) {
+            const parent = el.parentNode;
+            while (el.firstChild) {
+                parent.insertBefore(el.firstChild, el);
+            }
+            parent.removeChild(el);
+        }
     });
-    
-    return tempCode;
+}
+
+function extractSliceByRole(code, role, context = 3, maxLines = 40) {
+    const lines = code.split(/\r?\n/);
+    // Ghost: prefer markers if present
+    if (role === 'ghost') {
+        let beginIdx = -1, endIdx = -1;
+        for (let i = 0; i < lines.length; i++) {
+            if (beginIdx === -1 && lines[i].includes('<<ghost:begin>>')) beginIdx = i;
+            if (lines[i].includes('<<ghost:end>>')) { endIdx = i; break; }
+        }
+        if (beginIdx !== -1) {
+            const start = Math.max(0, beginIdx - context);
+            const end = Math.min(lines.length - 1, (endIdx !== -1 ? endIdx : beginIdx) + context);
+            return lines.slice(start, end + 1).join('\n');
+        }
+    }
+    const patterns = roleSliceHints[role] || roleSliceHints.base;
+    const idx = lines.findIndex(ln => patterns.some(rx => rx.test(ln)));
+    if (idx === -1) {
+        return lines.slice(0, Math.min(maxLines, lines.length)).join('\n');
+    }
+    const start = Math.max(0, idx - context);
+    // extend end until we hit a blank line or reach max
+    let end = start;
+    let count = 0;
+    for (let i = start; i < lines.length && count < maxLines; i++, count++) {
+        end = i;
+        if (/^\s*$/.test(lines[i]) && i > idx) break;
+    }
+    return lines.slice(start, end + 1).join('\n');
+}
+
+// Preload faces for embedded fonts for smoother role compare
+async function preloadFontsForRolePair(role, aName, bName) {
+    const names = [aName, bName];
+    const dbByName = Object.fromEntries((window.fontDatabase || []).map(f => [f.name, f]));
+    const attempts = [];
+    const preloadCombos = (name) => {
+        const entry = dbByName[name];
+        if (!entry || entry.source !== 'embedded') return;
+        // Baseline
+        attempts.push(window.ensureEmbeddedFace(name, 400, 'normal', 'normal'));
+        if (role === 'keywords') attempts.push(window.ensureEmbeddedFace(name, 600, 'normal', 'normal'));
+        if (role === 'ghost' || role === 'comments') attempts.push(window.ensureEmbeddedFace(name, 400, 'italic', 'normal'));
+        if (role === 'ghost') attempts.push(window.ensureEmbeddedFace(name, 300, 'italic', 'normal'));
+    };
+    names.forEach(preloadCombos);
+    try { await Promise.allSettled(attempts); } catch {}
 }
 
 // Show next comparison
@@ -2212,6 +2532,30 @@ function showNextComparison() {
     
     const { optionA, optionB, stage, pair, similarity } = comparison;
     
+    // Initialize grid visibility based on stage configuration
+    initializeGridForStage(stage);
+    // Role stages: set focused slice and apply panel-scoped role fonts
+    window.__IN_ROLE_VIEW = window.__IN_ROLE_VIEW || false;
+    if (comparison.roleTest) {
+        const r = comparison.roleTest;
+        if (r.role !== 'base') {
+            setRoleSliceInPanels(r.role).then(() => {
+                preloadFontsForRolePair(r.role, r.aFont, r.bFont).then(() => {
+                    applyRoleCompareStyles(r.role, r.aFont, r.bFont);
+                });
+            });
+        } else {
+            clearRoleCompareStyles();
+        }
+        window.__IN_ROLE_VIEW = true;
+    } else {
+        if (window.__IN_ROLE_VIEW) {
+            clearRoleCompareStyles();
+            updateCode();
+            window.__IN_ROLE_VIEW = false;
+        }
+    }
+    
     // Check if we have the required properties
     if (!optionA || !optionB) {
         console.error('[ERROR] Invalid comparison object - missing optionA or optionB:', comparison);
@@ -2221,6 +2565,21 @@ function showNextComparison() {
     
     // Hide font family selector if it was showing
     document.getElementById('fontFamilySelector').classList.add('hidden');
+    
+    // Show/hide skip button for skippable stages
+    const skipBtn = document.getElementById('btnSkipStage');
+    const currentStage = getStage(stage);
+    if (currentStage && currentStage.skippable) {
+        skipBtn.style.display = 'block';
+    } else {
+        skipBtn.style.display = 'none';
+    }
+    
+    // Legacy role skip button (keep hidden now that we use the new skip button)
+    const oldSkipBtn = document.getElementById('skipRoleBtn');
+    if (oldSkipBtn) {
+        oldSkipBtn.classList.add('hidden');
+    }
     
     // Hide description section during A/B tests
     document.querySelector('.description-section').classList.add('hidden');
@@ -2236,22 +2595,33 @@ function showNextComparison() {
         fontFamily: 'Font Style',
         colorScheme: 'Color Scheme',
         font: 'Specific Font',
+        roleKeywords: 'Keywords Font',
+        roleStrings: 'Strings Font',
+        roleComments: 'Comments Font',
+        roleFunction: 'Functions Font',
+        roleGhost: 'AI Suggestions Font',
         size: 'Font Size',
         weight: 'Font Weight',
         lineHeight: 'Line Height',
-        fontStretch: 'Font Stretch',
+        fontWidth: 'Font Width',
         letterSpacing: 'Letter Spacing'
     };
     // Update status (similarity info moved to hidden summary)
-    const statusText = `Comparing: ${stageNames[stage]}`;
+    const stageObj = getStage(stage);
+    const statusText = `Comparing: ${stageObj?.name || stage}`;
     document.getElementById('status').textContent = statusText;
     
-    // Update comparison count
-    document.getElementById('comparisonCount').textContent = `Comparison ${comparisons.length + 1}`;
+    // Show stage description if available
+    if (stageObj?.description) {
+        // You could add a description element here if you want to display it
+    }
     
     // Apply styles and summaries (pass similarity info)
     applyStyles('codeA', 'panelA', optionA, 'summaryA', similarity);
     applyStyles('codeB', 'panelB', optionB, 'summaryB', similarity);
+    
+    // Update grid overlays (user-controlled via 'g' key)
+    updateGridOverlays(optionA, optionB);
 }
 
 // Show font family selector
@@ -2272,13 +2642,20 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
     const grid = document.getElementById('fontFamiliesGrid');
     grid.innerHTML = '';
     
-    const sampleCode = `function calculate(n) {
-    const result = n * 2;
-    return result; // => ${8}
-}`;
-    const ligatureText = '*fi->0;';
+    const sampleCode = (window.textSamples && window.textSamples.fontFamilyPreviewCode) || '';
+    const ligatureText = (window.textSamples && window.textSamples.ligatureSample) || '';
     
-    Object.entries(fontFamilies).forEach(([familyName, familyData]) => {
+    // Helper: pick default preview scheme (Monokai for dark; Catppuccin Latte for light)
+    function pickDefaultScheme() {
+        const list = (window.colorSchemeDatabase && window.colorSchemeDatabase[themeMode]) || [];
+        const want = themeMode === 'dark' ? 'Monokai' : 'Catppuccin Latte';
+        return list.find(s => s.name === want) || list[0] || { bg: themeMode==='dark' ? '#1a1a1a' : '#ffffff', fg: themeMode==='dark' ? '#e0e0e0' : '#333' };
+    }
+    const defaultScheme = pickDefaultScheme();
+    function tok(val){ if(!val) return {}; if(typeof val==='string') return {color:val}; return {color:val.color, bold:!!val.bold, italic:!!val.italic}; }
+    const tKeyword = tok(defaultScheme.keyword), tString = tok(defaultScheme.string), tComment = tok(defaultScheme.comment), tFunc = tok(defaultScheme.function);
+
+    Object.entries(fontFamilies).forEach(([familyName, familyData], idx) => {
         const option = document.createElement('div');
         option.className = 'font-family-option';
         option.onclick = (e) => {
@@ -2298,24 +2675,78 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
         previewContainer.style.overflow = 'hidden';
         previewContainer.style.backgroundColor = 'rgba(0,0,0,0.1)';
         
+        // Choose an available preview font from the family
+        function pickUsableCssString() {
+            const entries = (familyData.fonts || []).slice();
+            function primaryName(cssString) {
+                const m = cssString.match(/\"([^\"]+)\"/);
+                return m ? m[1] : null;
+            }
+            const score = (name) => {
+                const src = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+                if (src === 'google') return 3;
+                if (src === 'embedded') return (window.loadedEmbeddedFonts && window.loadedEmbeddedFonts.has(name)) ? 2 : 0;
+                if (src === 'system') return isFontAvailable(name) ? 1 : -1;
+                return 0;
+            };
+            // Pick highest score; if tie, keep existing order
+            let best = null, bestScore = -1;
+            for (const css of entries) {
+                const name = primaryName(css);
+                if (!name) continue;
+                const s = score(name);
+                if (s > bestScore) { best = css; bestScore = s; }
+            }
+            if (best) return best;
+            // Fallback: prefer any non-system font in the family (even if not loaded yet)
+            for (const css of entries) {
+                const name = primaryName(css);
+                if (!name) continue;
+                const src = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+                if (src !== 'system') return css;
+            }
+            // Last resort: the existing representative
+            return familyData.representative;
+        }
+        const previewCss = pickUsableCssString();
+
         // Create the main preview element
         const preview = document.createElement('pre');
         preview.className = 'font-family-preview';
-        preview.style.fontFamily = familyData.representative;
-        preview.style.fontSize = '13px';
+        preview.style.fontFamily = previewCss;
+        preview.style.fontSize = '12px';
         preview.style.lineHeight = '1.5';
         preview.style.flex = '1';
         preview.style.margin = '0';
         preview.style.padding = '12px';
-        preview.style.backgroundColor = 'transparent';
+        preview.style.backgroundColor = defaultScheme.bg || 'transparent';
         preview.style.border = 'none';
-        preview.textContent = sampleCode;
+        // Syntax-highlight the sample inline (highlight.js required)
+        const prevId = `fam-prev-${idx}`;
+        preview.id = prevId;
+        const marked = hljs.highlight(sampleCode, { language: 'javascript' }).value;
+        preview.classList.add('hljs','language-javascript');
+        preview.innerHTML = `<code class="hljs language-javascript">${marked}</code>`;
+        // Inject a scoped style so the preview uses the default scheme colors
+        const style = document.createElement('style');
+        const numberTok = tFunc; // use function color
+        const literalTok = tKeyword; // use keyword color
+        const paramsTok = { color: defaultScheme.fg || '#ccc' };
+        style.textContent = `#${prevId} { color:${defaultScheme.fg || '#ccc'}; }\n`+
+          `#${prevId} .hljs-keyword{ color:${tKeyword.color || defaultScheme.fg}; ${tKeyword.bold?'font-weight:600;':''}${tKeyword.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-string{ color:${tString.color || defaultScheme.fg}; ${tString.bold?'font-weight:600;':''}${tString.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-comment{ color:${tComment.color || defaultScheme.fg}; ${tComment.bold?'font-weight:600;':''}${tComment.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-function, #${prevId} .hljs-title{ color:${tFunc.color || defaultScheme.fg}; ${tFunc.bold?'font-weight:600;':''}${tFunc.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-number{ color:${numberTok.color || defaultScheme.fg}; ${numberTok.bold?'font-weight:600;':''}${numberTok.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-literal{ color:${literalTok.color || defaultScheme.fg}; ${literalTok.bold?'font-weight:600;':''}${literalTok.italic?'font-style:italic;':''} }\n`+
+          `#${prevId} .hljs-params{ color:${paramsTok.color}; }`;
+        document.head.appendChild(style);
         
         // Create draggable divider
         const divider = document.createElement('div');
         divider.className = 'preview-divider';
-        divider.style.width = '4px';
-        divider.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        divider.style.width = '2px';
+        divider.style.backgroundColor = 'rgba(127,127,127,0.3)'
         divider.style.cursor = 'col-resize';
         divider.style.flexShrink = '0';
         divider.style.position = 'relative';
@@ -2368,18 +2799,18 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
         // Create the ligature close-up preview
         const ligaturePreview = document.createElement('div');
         ligaturePreview.className = 'ligature-preview';
-        ligaturePreview.style.fontFamily = familyData.representative;
-        ligaturePreview.style.fontSize = '32px';
+        ligaturePreview.style.fontFamily = previewCss;
+        ligaturePreview.style.fontSize = '30px';
         ligaturePreview.style.lineHeight = '1.0';
-        ligaturePreview.style.textAlign = 'center';
-        ligaturePreview.style.padding = '12px';
+        ligaturePreview.style.padding = '0';
         ligaturePreview.style.backgroundColor = 'transparent';
         ligaturePreview.style.flexShrink = '0';
-        ligaturePreview.style.width = '100px';
+        ligaturePreview.style.width = '120px';
         ligaturePreview.style.display = 'flex';
         ligaturePreview.style.alignItems = 'center';
         ligaturePreview.style.justifyContent = 'center';
         ligaturePreview.style.whiteSpace = 'nowrap';
+        ligaturePreview.style.overflow = 'clip';
         ligaturePreview.textContent = ligatureText;
         
         previewContainer.appendChild(preview);
@@ -2397,7 +2828,7 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
     
     // Give fonts a moment to load and then refresh display
     setTimeout(() => {
-        const previews = document.querySelectorAll('.font-family-preview, .ligature-preview');
+        const previews = document.querySelectorAll('.font-family-preview');
         previews.forEach(preview => {
             // Force a reflow to ensure fonts are applied
             preview.style.display = 'none';
@@ -2426,36 +2857,98 @@ function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
     const code = document.getElementById(codeId);
     const panel = document.getElementById(panelId);
     const summary = summaryId ? document.getElementById(summaryId) : null;
-    
+    // Ensure embedded face is loaded when using variantsMatrix
+    try {
+        const m = (option.font || '').match(/\"([^\"]+)\"/);
+        const fam = m ? m[1] : null;
+        const weight = option.fontWeight || 400;
+        const style = 'normal';
+        const width = option.fontWidth || 'normal';
+        if (fam && typeof window.ensureEmbeddedFace === 'function') {
+            window.ensureEmbeddedFace(fam, weight, style, width);
+        }
+    } catch {}
+
     code.style.fontFamily = option.font;
     code.style.fontSize = option.fontSize + 'px';
     code.style.fontWeight = option.fontWeight;
+    code.style.fontStyle = option.fontStyle || 'normal';
     code.style.lineHeight = option.lineHeight;
-    code.style.fontStretch = option.fontStretch || 'normal';
+    code.style.fontStretch = option.fontWidth || 'normal';
     code.style.letterSpacing = (option.letterSpacing || 0) + 'px';
     
     if (option.colorScheme) {
         panel.style.backgroundColor = option.colorScheme.bg;
         code.style.color = option.colorScheme.fg;
-        
-        // Apply syntax highlighting colors
-        const keywords = code.querySelectorAll('.keyword');
-        const strings = code.querySelectorAll('.string');
-        const comments = code.querySelectorAll('.comment');
-        const numbers = code.querySelectorAll('.number');
-        
-        keywords.forEach(el => el.style.color = option.colorScheme.keyword);
-        strings.forEach(el => el.style.color = option.colorScheme.string);
-        comments.forEach(el => el.style.color = option.colorScheme.comment);
-        numbers.forEach(el => el.style.color = option.colorScheme.function);
+
+        // Normalize scheme tokens: allow string or object { color, italic, bold, style, weight }
+        function normToken(v) {
+            if (!v) return {};
+            if (typeof v === 'string') return { color: v };
+            const o = { color: v.color, background: v.background };
+            if (typeof v.weight === 'number') o.weight = v.weight;
+            if (typeof v.style === 'string') o.style = v.style;
+            if (typeof v.bold === 'boolean' && typeof o.weight === 'undefined') o.weight = v.bold ? 700 : 400;
+            if (typeof v.italic === 'boolean' && typeof o.style === 'undefined') o.style = v.italic ? 'italic' : 'normal';
+            return o;
+        }
+        const tok = {
+            keyword: normToken(option.colorScheme.keyword),
+            string: normToken(option.colorScheme.string),
+            comment: normToken(option.colorScheme.comment),
+            function: normToken(option.colorScheme.function)
+        };
+
+        // Helper to merge role + scheme style for a logical token
+        function mergeStyleFor(roleKey, schemeTok) {
+            const roleInfo = currentRoleMapping && currentRoleMapping[roleKey];
+            const roleWeight = roleInfo && typeof roleInfo === 'object' ? roleInfo.weight : undefined;
+            const roleStyle = roleInfo && typeof roleInfo === 'object' ? roleInfo.style : undefined;
+            const weight = (typeof roleWeight !== 'undefined') ? roleWeight
+                          : (typeof schemeTok.weight !== 'undefined' ? schemeTok.weight : undefined);
+            const style  = (typeof schemeTok.style !== 'undefined') ? schemeTok.style
+                          : (typeof roleStyle !== 'undefined' ? roleStyle : undefined);
+            return { weight, style };
+        }
+
+        // Apply colors and optional weight/style per token
+        const kws = code.querySelectorAll('.hljs-keyword, .hljs-operator');
+        const strs = code.querySelectorAll('.hljs-string, .hljs-attr');
+        const cms = code.querySelectorAll('.hljs-comment');
+        const fns = code.querySelectorAll('.hljs-function, .hljs-title');
+
+        kws.forEach(el => {
+            if (tok.keyword.color) el.style.color = tok.keyword.color;
+            const m = mergeStyleFor('keywords', tok.keyword);
+            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+        });
+        strs.forEach(el => {
+            if (tok.string.color) el.style.color = tok.string.color;
+            const m = mergeStyleFor('strings', tok.string);
+            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+        });
+        cms.forEach(el => {
+            if (tok.comment.color) el.style.color = tok.comment.color;
+            const m = mergeStyleFor('comments', tok.comment);
+            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+        });
+        fns.forEach(el => {
+            if (tok.function.color) el.style.color = tok.function.color;
+            const m = mergeStyleFor('function', tok.function);
+            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+        });
     }
     
     // Update summary if provided
     if (summary) {
         const fontName = option.font.split(',')[0].replace(/"/g, '');
         const themeName = option.colorScheme ? option.colorScheme.name : 'Unknown';
-        const stretchNote = (option.fontStretch && option.fontStretch !== 'normal') ? 
-            ` • ${option.fontStretch} (may not be visible)` : '';
+        const widthNote = (option.fontWidth && option.fontWidth !== 'normal') ? 
+            ` • ${option.fontWidth} (may not be visible)` : '';
         
         let similarityText = '';
         if (similarity && engine.stage === 'font') {
@@ -2464,20 +2957,126 @@ function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
             similarityText = `<br><em>Round ${similarity.round}: ${categoryText} (${scoreText}% similar)</em>`;
         }
         
+        // Add role tournament information if we're in a role stage
+        let roleStageInfo = '';
+        if (engine.stage && engine.stage.startsWith('role')) {
+            const stageToRole = {
+                roleKeywords: 'keywords', roleStrings: 'strings', roleComments: 'comments', 
+                roleFunction: 'function', roleGhost: 'ghost'
+            };
+            const currentRole = stageToRole[engine.stage];
+            if (currentRole) {
+                const roleDisplayName = currentRole.charAt(0).toUpperCase() + currentRole.slice(1);
+                roleStageInfo = `<br><em>🎯 Testing: ${roleDisplayName} Role</em>`;
+            }
+        }
+        
+        // Build multi-line roles info when multi-font mode is active
+        let rolesBlock = '';
+        if (multiFontMode && currentRoleMapping && Object.keys(currentRoleMapping).length) {
+            const roleOrder = Object.keys(roleToHLJS || {});
+            const lines = [];
+            roleOrder.forEach(role => {
+                const info = currentRoleMapping[role];
+                if (!info) return;
+                const stack = typeof info === 'string' ? info : info.stack;
+                const primary = (stack || '').split(',')[0].replace(/\"/g, '').trim();
+                if (!primary) return;
+                const w = (info && typeof info === 'object' && info.weight) ? `, ${info.weight}` : '';
+                const s = (info && typeof info === 'object' && info.style) ? `, ${info.style}` : '';
+                lines.push(`${getRoleLabel(role)}: ${primary}${w}${s}`);
+            });
+            if (lines.length) {
+                rolesBlock = `----- Roles ----<br>` + lines.join('<br>');
+            }
+        }
+
         summary.innerHTML = `
             <strong>${fontName}</strong><br>
-            ${option.fontSize}px • ${option.fontWeight}${stretchNote}<br>
+            ${option.fontSize}px • ${option.fontWeight}${widthNote}<br>
             ${option.letterSpacing || 0}px spacing • ${option.lineHeight} line height<br>
-            ${themeName}${similarityText}
+            ${themeName}${similarityText}${roleStageInfo}${rolesBlock ? `<br>${rolesBlock}` : ''}
         `;
     }
 }
 
 // Handle option selection
 function selectOption(choice) {
+    const prevFont = engine.winners && engine.winners.font;
     engine.submitChoice(choice);
     comparisons.push(choice);
+    // If a base font was just selected and icons-patched variants exist, prompt
+    if (engine.winners && engine.winners.font && engine.winners.font !== prevFont) {
+        maybePromptPatchedVariant(engine.winners.font);
+    }
     showNextComparison();
+}
+
+// Skip current role stage
+function skipRoleStage() {
+    if (engine.stage && engine.stage.startsWith('role')) {
+        // Mark the role as not set by skipping its tournament
+        engine.currentRoleTournament = null;
+        
+        // Advance to next stage
+        const stageIndex = getStageIndex(engine.stage);
+        if (stageIndex >= 0 && stageIndex < STAGES.length - 1) {
+            engine.stage = STAGES[stageIndex + 1].id;
+            engine.generateNextStage();
+            showNextComparison();
+        } else {
+            // If this was the last stage, complete the process
+            engine.complete = true;
+            showResults();
+        }
+    }
+}
+
+function skipCurrentStage() {
+    const currentStage = getStage(engine.stage);
+    
+    // Don't allow skipping fontFamily or non-skippable stages
+    if (!currentStage || !currentStage.skippable) {
+        return;
+    }
+    
+    // For role stages, use existing logic
+    if (engine.stage && engine.stage.startsWith('role')) {
+        skipRoleStage();
+        return;
+    }
+    
+    // For other stages, select current tournament leader or random
+    if (engine.currentTournament && engine.currentTournament.candidates) {
+        let winner;
+        if (engine.currentTournament.scores && engine.currentTournament.scores.length > 0) {
+            // Select the current leader
+            const bestScore = Math.max(...engine.currentTournament.scores);
+            const bestIndex = engine.currentTournament.scores.indexOf(bestScore);
+            winner = engine.currentTournament.candidates[bestIndex];
+        } else {
+            // Random selection if no comparisons yet
+            const randomIndex = Math.floor(Math.random() * engine.currentTournament.candidates.length);
+            winner = engine.currentTournament.candidates[randomIndex];
+        }
+        
+        // Set the winner and complete the stage
+        if (winner) {
+            engine.winners[engine.stage] = winner;
+        }
+    }
+    
+    // Advance to next stage
+    const stageIndex = getStageIndex(engine.stage);
+    if (stageIndex >= 0 && stageIndex < STAGES.length - 1) {
+        engine.stage = STAGES[stageIndex + 1].id;
+        engine.generateNextStage();
+        showNextComparison();
+    } else {
+        // If this was the last stage, complete the process
+        engine.complete = true;
+        showResults();
+    }
 }
 
 // Change language
@@ -2498,8 +3097,64 @@ function changeLanguage() {
         if (comparison && comparison.optionA) {
             applyStyles('codeA', 'panelA', comparison.optionA, null, comparison.similarity);
             applyStyles('codeB', 'panelB', comparison.optionB, null, comparison.similarity);
+            updateGridOverlays(comparison.optionA, comparison.optionB);
         }
     }, 100);
+}
+
+// Icons/Nerd Font prompt
+let iconsPromptedFor = new Set();
+function findPatchedVariants(baseName) {
+    const db = window.fontDatabase || [];
+    return db.filter(f => f.icons === true && f.patchedFrom === baseName).map(f => f.name);
+}
+function maybePromptPatchedVariant(cssFontString) {
+    const m = (cssFontString || '').match(/\"([^\"]+)\"/);
+    const baseName = m ? m[1] : null;
+    if (!baseName || iconsPromptedFor.has(baseName)) return;
+    const variants = findPatchedVariants(baseName);
+    if (!variants.length) return;
+    iconsPromptedFor.add(baseName);
+    const prevLang = currentLanguage;
+    // Switch to powerline sample for context
+    currentLanguage = 'powerline';
+    updateCode();
+    // Populate modal options
+    const list = variants.map(v => {
+        const available = (window.fontSourceByName[v] !== 'system') || isFontAvailable(v);
+        return `<div><label><input type="radio" name="patchedChoice" value="${v}" ${available ? 'checked' : ''}> ${v} ${available ? '' : '<span style="opacity:.7">(not installed)</span>'}</label></div>`;
+    }).join('');
+    const opts = document.getElementById('iconsOptions');
+    if (opts) opts.innerHTML = `<div style="margin-bottom:8px;">Base: <strong>${baseName}</strong></div>${list}`;
+    const modal = document.getElementById('iconsModal');
+    if (modal) modal.classList.remove('hidden');
+    // Wire actions
+    const keepBtn = document.getElementById('iconsKeepBaseBtn');
+    const useBtn = document.getElementById('iconsUsePatchedBtn');
+    const onClose = () => {
+        if (modal) modal.classList.add('hidden');
+        currentLanguage = prevLang;
+        updateCode();
+        keepBtn?.removeEventListener('click', onKeep);
+        useBtn?.removeEventListener('click', onUse);
+    };
+    const onKeep = () => { onClose(); };
+    const onUse = () => {
+        const sel = document.querySelector('input[name="patchedChoice"]:checked');
+        const chosen = sel ? sel.value : variants[0];
+        // Ensure multi-font mode and set roles
+        const toggle = document.getElementById('multiFontToggle');
+        if (toggle && !toggle.checked) { toggle.checked = true; }
+        multiFontMode = true;
+        const mapping = { ...(window.multiFontPresets?.[currentRolesPresetKey]?.fonts || {}) };
+        mapping.powerline = chosen;
+        mapping.nerdFont = chosen;
+        applyRoleFonts(mapping);
+        renderRolesSummary(mapping);
+        onClose();
+    };
+    keepBtn?.addEventListener('click', onKeep);
+    useBtn?.addEventListener('click', onUse);
 }
 
 // Show custom URL input dialog
@@ -2579,7 +3234,7 @@ function showResults() {
         size: rawResults.size || 16,
         weight: rawResults.weight || 400,
         lineHeight: rawResults.lineHeight || 1.5,
-        fontStretch: rawResults.fontStretch || 'normal',
+        fontWidth: rawResults.fontWidth || 'normal',
         letterSpacing: rawResults.letterSpacing || 0,
         colorScheme: rawResults.colorScheme || { bg: '#1a1a1a', fg: '#e0e0e0' }
     };
@@ -2621,8 +3276,8 @@ function showResults() {
                 <button class="re-compare-btn" onclick="recompareStage('lineHeight')">Re-compare</button>
             </div>
             <div class="setting-item">
-                <strong>Font Stretch:</strong> ${results.fontStretch || 'normal'}
-                <button class="re-compare-btn" onclick="recompareStage('fontStretch')">Re-compare</button>
+                <strong>Font Width:</strong> ${results.fontWidth || 'normal'}
+                <button class="re-compare-btn" onclick="recompareStage('fontWidth')">Re-compare</button>
             </div>
             <div class="setting-item">
                 <strong>Letter Spacing:</strong> ${results.letterSpacing || 0}px
@@ -2661,12 +3316,13 @@ function showResults() {
     // Apply final styles to result preview
     const resultCode = document.getElementById('resultCode');
     
-    // Load the current language code for results
+    // Load the current language code for results and highlight via highlight.js
     loadCode(currentLanguage).then(code => {
-        resultCode.innerHTML = highlightCode(code, currentLanguage);
+        const lang = mapLanguageForHLJS(currentLanguage);
+        setCodeWithHighlight(resultCode, code, lang);
     }).catch(error => {
         console.error('Failed to load code for results:', error);
-        resultCode.innerHTML = '<div class="error">Failed to load code</div>';
+        resultCode.textContent = 'Failed to load code';
     });
     // Extract just the primary font name, not the fallback stack
     const primaryFont = results.font.split(',')[0].replace(/['"]/g, '').trim();
@@ -2677,16 +3333,15 @@ function showResults() {
     resultCode.style.color = results.colorScheme.fg;
     resultCode.parentElement.style.backgroundColor = results.colorScheme.bg;
     
-    // Apply syntax colors
-    const keywords = resultCode.querySelectorAll('.keyword');
-    const strings = resultCode.querySelectorAll('.string');
-    const comments = resultCode.querySelectorAll('.comment');
-    const numbers = resultCode.querySelectorAll('.number');
-    
-    keywords.forEach(el => el.style.color = results.colorScheme.keyword);
-    strings.forEach(el => el.style.color = results.colorScheme.string);
-    comments.forEach(el => el.style.color = results.colorScheme.comment);
-    numbers.forEach(el => el.style.color = results.colorScheme.function);
+    // Apply syntax colors for highlight.js classes
+    const kws = resultCode.querySelectorAll('.hljs-keyword, .hljs-selector-tag, .hljs-meta, .hljs-title');
+    const strs = resultCode.querySelectorAll('.hljs-string, .hljs-attr');
+    const cms = resultCode.querySelectorAll('.hljs-comment');
+    const nums = resultCode.querySelectorAll('.hljs-number, .hljs-literal, .hljs-built_in, .hljs-type');
+    kws.forEach(el => el.style.color = results.colorScheme.keyword);
+    strs.forEach(el => el.style.color = results.colorScheme.string);
+    cms.forEach(el => el.style.color = results.colorScheme.comment);
+    nums.forEach(el => el.style.color = results.colorScheme.function);
 }
 
 // Configuration export templates
@@ -2697,7 +3352,7 @@ const configTemplates = {
     "editor.fontFamily": "${settings.font}",
     "editor.fontSize": ${settings.size},
     "editor.fontWeight": "${settings.weight}",
-    "editor.fontStretch": "${settings.fontStretch || 'normal'}",
+    "editor.fontWidth": "${settings.fontWidth || 'normal'}",
     "editor.letterSpacing": ${settings.letterSpacing || 0},
     "editor.lineHeight": ${settings.lineHeight},
     "workbench.colorTheme": "${getVSCodeTheme(settings.colorScheme)}"
@@ -3053,37 +3708,111 @@ function hexToDecimal(color, component) {
 
 // Settings serialization
 function exportSettings(settings) {
-    const compact = {
-        f: settings.fontFamily,
-        s: settings.font,
-        z: settings.size,
-        w: settings.weight,
-        l: settings.lineHeight,
-        st: settings.fontStretch || 'normal',
-        sp: settings.letterSpacing || 0,
-        c: settings.colorScheme.name,
-        t: themeMode
-    };
-    return btoa(JSON.stringify(compact));
+    const primaryFontName = (settings.font || '').split(',')[0].replace(/["']/g, '').trim();
+    const fontId = (window.fontIdByName && window.fontIdByName[primaryFontName]) || 0;
+    const schemeName = settings.colorScheme && settings.colorScheme.name;
+    const schemeId = (window.schemeIdByName && window.schemeIdByName[themeMode] && window.schemeIdByName[themeMode][schemeName]) || 0;
+    const size = settings.size|0;
+    const weightIdx = Math.round((settings.weight||400)/100);
+    const lh10 = Math.round((settings.lineHeight||1.5)*10);
+    const fwIdx = Math.max(0, (['ultra-condensed','extra-condensed','condensed','semi-condensed','normal','semi-expanded','expanded','extra-expanded','ultra-expanded']).indexOf(settings.fontWidth||'normal'));
+    const ls = Math.max(-128, Math.min(127, Math.round((settings.letterSpacing||0)*10)));
+    const rolesMap = (engine && engine.winners && engine.winners.roles) ? engine.winners.roles : {};
+    const normalizeRoleEntry = (v) => (typeof v === 'string') ? { font: v } : (v || {});
+    const roleEntries = Object.entries(rolesMap)
+        .filter(([k,v]) => v)
+        .map(([k,v]) => ({ key:k, entry: normalizeRoleEntry(v) }))
+        .map(({key,entry}) => ({
+            rid: (ROLE_ID_BY_KEY && typeof ROLE_ID_BY_KEY[key] !== 'undefined') ? ROLE_ID_BY_KEY[key] : 0,
+            fid: (window.fontIdByName && window.fontIdByName[entry.font]) || 0,
+            wi: Math.round(((entry.weight ?? 400))/100),
+            sf: (entry.style === 'italic') ? 1 : 0
+        }))
+        .filter(x => x.rid >= 0);
+
+    // Build binary payload
+    const header = [];
+    header.push(0x43, 0x50); // 'C','P'
+    header.push(0x01); // version
+    let flags = 0;
+    flags |= (themeMode === 'light') ? 0x01 : 0x00; // bit0 theme
+    flags |= (roleEntries.length ? 0x02 : 0x00);        // bit1 roles present
+    header.push(flags); // pad bits set later
+    const bytes = [];
+    const pushU16 = (n) => { bytes.push((n>>>8)&0xff, n&0xff); };
+    const pushI8 = (n) => { bytes.push(n & 0xff); };
+    const pushU8 = (n) => { bytes.push(n & 0xff); };
+    pushU16(fontId);
+    pushU8(size);
+    pushU8(weightIdx);
+    pushU8(lh10);
+    pushU8(fwIdx);
+    pushI8(ls+128);
+    pushU16(schemeId);
+    if (roleEntries.length) {
+        pushU8(roleEntries.length);
+        roleEntries.forEach(({rid,fid,wi,sf}) => { pushU8(rid); pushU16(fid); pushU8(wi); pushU8(sf); });
+    }
+    // Compute padding for 4-byte alignment
+    const payload = new Uint8Array(header.length + bytes.length);
+    for (let i=0;i<header.length;i++) payload[i]=header[i];
+    for (let i=0;i<bytes.length;i++) payload[header.length+i]=bytes[i];
+    let pad = (4 - (payload.length % 4)) % 4;
+    payload[3] = payload[3] | (pad << 6); // store pad in flags high bits
+    const padded = new Uint8Array(payload.length + pad);
+    padded.set(payload);
+    // Z85-encode
+    return z85Encode(padded);
 }
 
 function importSettings(encoded) {
-    try {
-        const compact = JSON.parse(atob(encoded));
-        return {
-            fontFamily: compact.f,
-            font: compact.s,
-            size: compact.z,
-            weight: compact.w,
-            lineHeight: compact.l,
-            fontStretch: compact.st || 'normal',
-            letterSpacing: compact.sp || 0,
-            colorSchemeName: compact.c,
-            themeMode: compact.t
-        };
-    } catch (e) {
-        throw new Error('Invalid settings string');
+    const bytes = z85Decode(encoded);
+    if (bytes[0] !== 0x43 || bytes[1] !== 0x50 || bytes[2] !== 0x01) throw new Error('Invalid header');
+    const flags = bytes[3];
+    const isLight = !!(flags & 0x01);
+    const hasRoles = !!(flags & 0x02);
+    const pad = (flags >> 6) & 0x03;
+    let off = 4;
+    const readU16 = () => { const v = (bytes[off]<<8) | bytes[off+1]; off+=2; return v; };
+    const readU8 = () => bytes[off++];
+    const fontId = readU16();
+    const size = readU8();
+    const weightIdx = readU8();
+    const lh10 = readU8();
+    const fwIdx = readU8();
+    const ls = (readU8() - 128) / 10;
+    const schemeId = readU16();
+    let rolesMapping = null;
+    if (hasRoles) {
+        const n = readU8();
+        rolesMapping = {};
+        for (let i=0;i<n;i++) {
+            const rid = readU8();
+            const fid = readU16();
+            const wi = readU8();
+            const sf = readU8();
+            const rname = (ROLE_KEY_BY_ID && ROLE_KEY_BY_ID[rid]) || `r${rid}`;
+            const fname = (window.fontNameById && window.fontNameById[fid]) || null;
+            rolesMapping[rname] = fname ? { font: fname, weight: wi*100, style: sf ? 'italic' : 'normal' } : null;
+        }
     }
+    const fontName = (window.fontNameById && window.fontNameById[fontId]) || '';
+    const fontCss = fontName ? `"${fontName}", "Redacted Script"` : settings.font;
+    const scheme = (window.schemeById && window.schemeById[isLight?'light':'dark'] && window.schemeById[isLight?'light':'dark'][schemeId]) || null;
+    return {
+        fontFamily: null,
+        font: fontCss,
+        size,
+        weight: weightIdx*100,
+        lineHeight: lh10/10,
+        fontWidth: (['ultra-condensed','extra-condensed','condensed','semi-condensed','normal','semi-expanded','expanded','extra-expanded','ultra-expanded'])[fwIdx] || 'normal',
+        letterSpacing: ls,
+        colorSchemeName: scheme ? scheme.name : null,
+        themeMode: isLight ? 'light' : 'dark',
+        multiFont: !!rolesMapping,
+        rolesPresetKey: null,
+        rolesMapping
+    };
 }
 
 // Copy settings to clipboard
@@ -3101,7 +3830,8 @@ function copySettings() {
     const fontInstructions = !fontAvailable && fontDownloadInfo ? 
         `/* ⚠️ Font '${fontName}' is not installed on your system */\n/* Download from: ${fontDownloadInfo.url} */\n/* ${fontDownloadInfo.instructions} */\n\n` : '';
     
-    const css = `/* Your optimized code display settings */
+    // Base settings CSS
+    let css = `/* Your optimized code display settings */
 ${fontInstructions}font-family: ${results.font};
 font-size: ${results.size}px;
 font-weight: ${results.weight};
@@ -3114,6 +3844,11 @@ color: ${results.colorScheme.fg};
 .string { color: ${results.colorScheme.string}; }
 .comment { color: ${results.colorScheme.comment}; }
 .function { color: ${results.colorScheme.function}; }`;
+
+    // Append multi-font role CSS if enabled
+    if (multiFontMode && currentRoleCss) {
+        css += `\n\n/* Multi-Font Roles (highlight.js selectors) */\n${currentRoleCss}`;
+    }
     
     // Create comprehensive export data
     const exportData = {
@@ -3121,6 +3856,11 @@ color: ${results.colorScheme.fg};
         css: css,
         timestamp: new Date().toISOString(),
         version: '1.0',
+        multiFont: !!multiFontMode,
+        roles: {
+            presetKey: currentRolesPresetKey || null,
+            mapping: currentRoleMapping || null
+        },
         fontInfo: {
             name: fontName,
             available: fontAvailable,
@@ -3149,6 +3889,20 @@ color: ${results.colorScheme.fg};
 
 // Generate README.txt content
 function generateReadme(fontName, fontInfo, results) {
+    // Optional roles block for multi-font mode
+    let rolesBlock = '';
+    if (engine && engine.winners && engine.winners.roles && Object.keys(engine.winners.roles).length) {
+        const roleOrder = Object.keys(roleToHLJS || {});
+        const lines = roleOrder
+            .map(r => {
+                const primary = engine.winners.roles[r];
+                return primary ? `${getRoleLabel(r)}: ${primary}` : null;
+            })
+            .filter(Boolean);
+        if (lines.length) {
+            rolesBlock = `\n----- Roles ----\n${lines.join('\n')}`;
+        }
+    }
     return `Code Phoropter - Font Configuration Package
 ============================================
 
@@ -3186,7 +3940,7 @@ INSTALLATION INSTRUCTIONS
    Font Weight: ${results.weight}
    Line Height: ${results.lineHeight}
    Background: ${results.colorScheme.bg}
-   Text Color: ${results.colorScheme.fg}
+   Text Color: ${results.colorScheme.fg}${rolesBlock}
 
 3. EDITOR CONFIGURATION
    
@@ -3245,7 +3999,7 @@ async function downloadFontPackage() {
     const zip = new JSZip();
     
     // Add configuration file
-    const css = `/* Your optimized code display settings */
+    let css = `/* Your optimized code display settings */
 /* Generated by Code Phoropter on ${new Date().toLocaleDateString()} */
 
 font-family: ${results.font};
@@ -3260,6 +4014,15 @@ color: ${results.colorScheme.fg};
 .string { color: ${results.colorScheme.string}; }
 .comment { color: ${results.colorScheme.comment}; }
 .function { color: ${results.colorScheme.function}; }
+
+/* Multi-Font Roles (optional) */
+/* Uncomment and adjust if using multiple fonts per syntax role */`;
+
+    if (multiFontMode && currentRoleCss) {
+        css += `\n${currentRoleCss}`;
+    }
+
+    css += `
 
 /* VS Code settings.json snippet */
 /*
@@ -3284,6 +4047,11 @@ color: ${results.colorScheme.fg};
         css: css,
         timestamp: new Date().toISOString(),
         version: '1.0',
+        multiFont: !!multiFontMode,
+        roles: {
+            presetKey: currentRolesPresetKey || null,
+            mapping: currentRoleMapping || null
+        },
         fontInfo: {
             name: fontName,
             downloadUrl: fontInfo?.downloadUrl || null,
@@ -3398,7 +4166,7 @@ function toggleThemeMode() {
     
     // Update color schemes in the current engine instead of resetting
     if (engine.candidates && engine.candidates.colorScheme) {
-        engine.candidates.colorScheme = [...colorSchemes[themeMode]];
+        engine.candidates.colorScheme = [...((window.colorSchemeDatabase || {})[themeMode] || [])];
     }
     
     // If we're currently in the colorScheme stage, regenerate pairs
@@ -3411,6 +4179,12 @@ function toggleThemeMode() {
     if (comparison && !comparison.showFontFamilySelector) {
         applyStyles('codeA', 'panelA', comparison.optionA, 'summaryA', comparison.similarity);
         applyStyles('codeB', 'panelB', comparison.optionB, 'summaryB', comparison.similarity);
+        updateGridOverlays(comparison.optionA, comparison.optionB);
+    }
+    // If the start font family selector is visible, re-render it to apply new default scheme
+    const selectorEl = document.getElementById('fontFamilySelector');
+    if (selectorEl && !selectorEl.classList.contains('hidden')) {
+        showFontFamilySelector(true);
     }
 }
 
@@ -3419,6 +4193,9 @@ document.addEventListener('keydown', function(e) {
     if (e.key === '?' || (e.shiftKey && e.key === '/')) {
         e.preventDefault();
         document.body.classList.add('show-summaries');
+    } else if (e.key === 'g' || e.key === 'G') {
+        e.preventDefault();
+        toggleGrid();
     }
 });
 
@@ -3464,14 +4241,17 @@ function recompareStage(stage) {
         case 'lineHeight':
             engine.candidates.lineHeight = [...lineHeights];
             break;
-        case 'fontStretch':
-            engine.candidates.fontStretch = [...fontStretches];
+        case 'fontWidth':
+            // Dynamically populate based on font support
+            const selectedFont = engine.currentResults?.fontFamily || 'Consolas';
+            const supportedWidths = detectFontWidthSupport(selectedFont);
+            engine.candidates.fontWidth = supportedWidths.length > 0 ? supportedWidths : [];
             break;
         case 'letterSpacing':
             engine.candidates.letterSpacing = [...letterSpacings];
             break;
         case 'colorScheme':
-            engine.candidates.colorScheme = [...colorSchemes[themeMode]];
+            engine.candidates.colorScheme = [...((window.colorSchemeDatabase || {})[themeMode] || [])];
             break;
     }
     
@@ -3694,9 +4474,15 @@ function importAndStart() {
             size: imported.size,
             weight: imported.weight,
             lineHeight: imported.lineHeight,
-            colorScheme: colorSchemes[imported.themeMode].find(c => c.name === imported.colorSchemeName) || colorSchemes[imported.themeMode][0]
+            colorScheme: (((window.colorSchemeDatabase || {})[imported.themeMode] || []).find(c => c.name === imported.colorSchemeName)) || (((window.colorSchemeDatabase || {})[imported.themeMode] || [null])[0])
         };
         engine.complete = true;
+
+        // Restore roles if present
+        if (imported.multiFont) {
+            engine.winners.roles = imported.rolesMapping || {};
+            try { applyRoleFonts(engine.winners.roles); } catch {}
+        }
         
         // Hide import section and show results
         document.getElementById('importSection').classList.add('hidden');
@@ -3719,6 +4505,76 @@ function showStartScreen() {
 }
 
 // Font similarity system - simplified approach for tournament enhancement
+// Font metrics compatibility checking
+const fontCompatibility = {
+    isWidthCompatible(font1, font2, tolerance = 0.02) {
+        const metrics1 = window.fontMetrics?.[font1];
+        const metrics2 = window.fontMetrics?.[font2];
+        
+        if (!metrics1 || !metrics2) {
+            console.log(`[DEBUG] Missing metrics for width comparison: ${font1}=${!!metrics1}, ${font2}=${!!metrics2}`);
+            return false;
+        }
+        
+        if (!metrics1.monospace || !metrics2.monospace) {
+            console.log(`[DEBUG] Non-monospace font detected: ${font1}=${metrics1.monospace}, ${font2}=${metrics2.monospace}`);
+            return false;
+        }
+        
+        const width1 = metrics1.avgCharWidth?.["16"];
+        const width2 = metrics2.avgCharWidth?.["16"];
+        
+        if (!width1 || !width2) {
+            console.log(`[DEBUG] Missing width data: ${font1}=${width1}, ${font2}=${width2}`);
+            return false;
+        }
+        
+        const diff = Math.abs(width1 - width2) / width1;
+        const compatible = diff <= tolerance;
+        
+        console.log(`[DEBUG] Width compatibility: ${font1} (${width1.toFixed(2)}px) vs ${font2} (${width2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
+        return compatible;
+    },
+    
+    isXHeightCompatible(font1, font2, tolerance = 0.15) {
+        const metrics1 = window.fontMetrics?.[font1];
+        const metrics2 = window.fontMetrics?.[font2];
+        
+        if (!metrics1 || !metrics2) return false;
+        
+        const xHeight1 = metrics1.xHeight?.["16"];
+        const xHeight2 = metrics2.xHeight?.["16"];
+        
+        if (!xHeight1 || !xHeight2) return true; // Allow if we can't measure
+        
+        const diff = Math.abs(xHeight1 - xHeight2) / xHeight1;
+        const compatible = diff <= tolerance;
+        
+        console.log(`[DEBUG] xHeight compatibility: ${font1} (${xHeight1.toFixed(2)}px) vs ${font2} (${xHeight2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
+        return compatible;
+    },
+    
+    isCompatible(font1, font2) {
+        return this.isWidthCompatible(font1, font2) && this.isXHeightCompatible(font1, font2);
+    },
+    
+    getCompatibleFonts(baseFont) {
+        if (!window.fontMetrics || !baseFont) return [];
+        
+        const compatible = [];
+        const db = window.fontDatabase || [];
+        
+        for (const font of db) {
+            if (font.name !== baseFont && this.isCompatible(baseFont, font.name)) {
+                compatible.push(font.name);
+            }
+        }
+        
+        console.log(`[DEBUG] Found ${compatible.length} fonts compatible with ${baseFont}: ${compatible.slice(0, 3).join(', ')}${compatible.length > 3 ? '...' : ''}`);
+        return compatible;
+    }
+};
+
 const fontSimilarity = {
     // Font characteristics database - simplified for practical implementation
     traits: {
@@ -3846,203 +4702,292 @@ const fontSimilarity = {
 
 // Helper function to get font download information
 function getFontDownloadInfo(fontName) {
-    const downloadLinks = {
-        // Google Fonts with direct TTF download links
-        'Fira Code': {
-            url: 'https://fonts.google.com/specimen/Fira+Code',
-            downloadUrl: 'https://fonts.google.com/download?family=Fira%20Code',
-            instructions: 'Download from Google Fonts and install locally',
-            type: 'free'
-        },
-        'JetBrains Mono': {
-            url: 'https://www.jetbrains.com/lp/mono/',
-            downloadUrl: 'https://download.jetbrains.com/fonts/JetBrainsMono-2.304.zip',
-            instructions: 'Download from JetBrains and install locally',
-            type: 'free'
-        },
-        'Source Code Pro': {
-            url: 'https://fonts.google.com/specimen/Source+Code+Pro',
-            downloadUrl: 'https://fonts.google.com/download?family=Source%20Code%20Pro',
-            instructions: 'Download from Google Fonts and install locally',
-            type: 'free'
-        },
-        'Cascadia Code': {
-            url: 'https://github.com/microsoft/cascadia-code/releases',
-            downloadUrl: 'https://github.com/microsoft/cascadia-code/releases/latest/download/CascadiaCode.zip',
-            instructions: 'Download from GitHub releases and install',
-            type: 'free'
-        },
-        'Cascadia Mono': {
-            url: 'https://github.com/microsoft/cascadia-code/releases',
-            downloadUrl: 'https://github.com/microsoft/cascadia-code/releases/latest/download/CascadiaCode.zip',
-            instructions: 'Download from GitHub releases and install (includes Cascadia Mono)',
-            type: 'free'
-        },
-        'Hack': {
-            url: 'https://github.com/source-foundry/Hack/releases',
-            downloadUrl: 'https://github.com/source-foundry/Hack/releases/download/v3.003/Hack-v3.003-ttf.zip',
-            instructions: 'Download from GitHub releases and install',
-            type: 'free'
-        },
-        'Iosevka': {
-            url: 'https://github.com/be5invis/Iosevka/releases',
-            downloadUrl: 'https://github.com/be5invis/Iosevka/releases/latest',
-            instructions: 'Download from GitHub releases and install (choose variant)',
-            type: 'free'
-        },
-        'Hasklig': {
-            url: 'https://github.com/i-tu/Hasklig/releases',
-            downloadUrl: 'https://github.com/i-tu/Hasklig/releases/latest',
-            instructions: 'Download from GitHub releases and install',
-            type: 'free'
-        },
-        'Victor Mono': {
-            url: 'https://rubjo.github.io/victor-mono/',
-            downloadUrl: 'https://fonts.google.com/download?family=Victor%20Mono',
-            instructions: 'Download from Google Fonts and install locally',
-            type: 'free'
-        },
-        'Geist Mono': {
-            url: 'https://fonts.google.com/specimen/Geist+Mono',
-            downloadUrl: 'https://fonts.google.com/download?family=Geist%20Mono',
-            instructions: 'Download from Google Fonts and install locally',
-            type: 'free'
-        },
-        'MonoLisa': {
-            url: 'https://www.monolisa.dev/',
-            instructions: 'Commercial font - purchase from official site',
-            type: 'commercial'
-        },
-        'Operator Mono': {
-            url: 'https://www.typography.com/fonts/operator/styles',
-            instructions: 'Commercial font - purchase from Hoefler&Co',
-            type: 'commercial'
-        },
-        'Dank Mono': {
-            url: 'https://dank.sh/',
-            instructions: 'Commercial font - purchase from official site',
-            type: 'commercial'
-        },
-        'Comic Code': {
-            url: 'https://tosche.net/fonts/comic-code',
-            instructions: 'Commercial font - purchase from Toshi Omagari',
-            type: 'commercial'
-        },
-        'Berkeley Mono': {
-            url: 'https://berkeleygraphics.com/typefaces/berkeley-mono/',
-            instructions: 'Commercial font - purchase from Berkeley Graphics',
-            type: 'commercial'
-        },
-        'PragmataPro': {
-            url: 'https://fsd.it/shop/fonts/pragmatapro/',
-            instructions: 'Commercial font - purchase from Fabrizio Schiavi Design',
-            type: 'commercial'
-        },
-        'Input Mono': {
-            url: 'https://input.djr.com/download/',
-            downloadUrl: 'https://input.djr.com/build/?family=InputMono&variant=InputMono-Regular&size=14&lineHeight=1.2&a=0&g=0&i=0&l=0&zero=0&asterisk=0&braces=0&preset=default&customize=please',
-            instructions: 'Free for personal use - download from DJR',
-            type: 'free'
-        },
-        'SF Mono': {
-            url: 'https://developer.apple.com/fonts/',
-            instructions: 'Available with Xcode or macOS Terminal',
-            type: 'system'
-        },
-        'Monaco': {
-            url: 'https://developer.apple.com/fonts/',
-            instructions: 'Pre-installed on macOS',
-            type: 'system'
-        },
-        'Consolas': {
-            url: 'https://docs.microsoft.com/en-us/typography/font-list/consolas',
-            instructions: 'Pre-installed on Windows Vista and later',
-            type: 'system'
-        },
-        'Aptos Mono': {
-            url: 'https://www.microsoft.com/en-us/microsoft-365/blog/2023/07/13/aptos-default-font/',
-            instructions: 'Pre-installed on Windows 11 and Microsoft 365',
-            type: 'system'
-        },
-        'Menlo': {
-            url: 'https://developer.apple.com/fonts/',
-            instructions: 'Pre-installed on macOS',
-            type: 'system'
-        },
-        'DejaVu Sans Mono': {
-            url: 'https://dejavu-fonts.github.io/',
-            downloadUrl: 'https://github.com/dejavu-fonts/dejavu-fonts/releases/latest/download/dejavu-fonts-ttf-2.37.zip',
-            instructions: 'Download from DejaVu Fonts project',
-            type: 'free'
-        },
-        'Liberation Mono': {
-            url: 'https://github.com/liberationfonts/liberation-fonts/releases',
-            downloadUrl: 'https://github.com/liberationfonts/liberation-fonts/releases/latest/download/liberation-fonts-ttf-2.1.5.tar.gz',
-            instructions: 'Download from GitHub releases',
-            type: 'free'
-        },
-        'Serious Shanns': {
-            url: 'https://kabeech.github.io/serious-shanns/',
-            instructions: 'Download from official site and install'
-        },
-        'Intel One Mono': {
-            url: 'https://github.com/intel/intel-one-mono/releases',
-            instructions: 'Download from GitHub releases and install'
-        },
-        'Geist Mono': {
-            url: 'https://vercel.com/font',
-            instructions: 'Download from Vercel and install'
-        },
-        'JuliaMono': {
-            url: 'https://juliamono.netlify.app/',
-            instructions: 'Download from official site and install'
-        },
-        'Monocraft': {
-            url: 'https://github.com/IdreesInc/Monocraft/releases',
-            instructions: 'Download from GitHub releases and install'
-        },
-        // Add more fonts from the CSV data
-        'IBM Plex Mono': {
-            url: 'https://fonts.google.com/specimen/IBM+Plex+Mono',
-            instructions: 'Download from Google Fonts and install locally'
-        },
-        'Roboto Mono': {
-            url: 'https://fonts.google.com/specimen/Roboto+Mono',
-            instructions: 'Download from Google Fonts and install locally'
-        },
-        'Ubuntu Mono': {
-            url: 'https://fonts.google.com/specimen/Ubuntu+Mono',
-            instructions: 'Download from Google Fonts and install locally'
-        },
-        'Space Mono': {
-            url: 'https://fonts.google.com/specimen/Space+Mono',
-            instructions: 'Download from Google Fonts and install locally'
-        },
-        'Inconsolata': {
-            url: 'https://fonts.google.com/specimen/Inconsolata',
-            instructions: 'Download from Google Fonts and install locally'
-        }
-    };
-    
-    // Check for exact match first
-    if (downloadLinks[fontName]) {
-        return downloadLinks[fontName];
+    const entry = (window.fontDatabase || []).find(f => (f.name || '').toLowerCase() === (fontName || '').toLowerCase());
+    if (entry) {
+        const ttf = entry.ttf || null;
+        const otf = entry.otf || null;
+        const woff2 = entry.woff2 || null;
+        const primary = ttf || otf || woff2 || null;
+        const homepage = entry.homepage || null;
+        const isSystem = entry.source === 'system';
+        const hasDownload = Boolean(primary);
+        return {
+            url: homepage || primary || `https://www.google.com/search?q=${encodeURIComponent(fontName + ' font download')}`,
+            downloadUrl: primary,
+            instructions: isSystem && !hasDownload
+                ? 'Install or purchase this font on your system'
+                : 'Download and install the font from the link',
+            type: isSystem && !hasDownload ? 'system' : 'free',
+            ttf, otf, woff2
+        };
     }
-    
-    // Check for partial matches
-    for (const [key, value] of Object.entries(downloadLinks)) {
-        if (fontName.toLowerCase().includes(key.toLowerCase()) || 
-            key.toLowerCase().includes(fontName.toLowerCase())) {
-            return value;
-        }
-    }
-    
-    // Default fallback for unknown fonts
     return {
         url: `https://www.google.com/search?q=${encodeURIComponent(fontName + ' font download')}`,
         instructions: 'Search for this font online'
     };
 }
 
-// Start the app
-init();
+// Dynamic About Page Table Generation
+function generateAboutPageTables() {
+    const fontTableContainer = document.getElementById('fontTableBody');
+    const darkSchemesContainer = document.getElementById('darkSchemesTableBody');
+    const lightSchemesContainer = document.getElementById('lightSchemesTableBody');
+    if (!fontTableContainer || !darkSchemesContainer || !lightSchemesContainer) return;
+
+    const build = (installedNames) => {
+        // Inject Google Fonts CSS so samples can render GF families
+        try {
+            injectGoogleFontsFromDatabase();
+            injectCriticalAboutFonts();
+        } catch {}
+        generateFontTable(fontTableContainer, installedNames);
+        generateColorSchemeTable('dark', darkSchemesContainer);
+        generateColorSchemeTable('light', lightSchemesContainer);
+    };
+
+    // Try to use FontDetective if available
+    if (typeof FontDetective !== 'undefined' && FontDetective.all) {
+        try {
+            FontDetective.all((detected) => {
+                const names = new Set(detected.map(f => f.name));
+                build(names);
+            });
+        } catch {
+            build(new Set());
+        }
+    } else {
+        build(new Set());
+    }
+}
+
+function generateFontTable(container, installedNames) {
+    const sourceLabels = { google: 'Google Fonts', embedded: 'Embedded', system: 'System' };
+    const sampleText = 'if(l==1||O[0]){$file+=~l*10}';
+    const fonts = (window.fontDatabase || []).slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
+    let html = '';
+    fonts.forEach(font => {
+        const ligatureIcon = font.ligatures ? '✓' : '✗';
+        const description = font.description || buildTypographicDescription(font);
+        const nameCell = font.homepage ? `<a href="${font.homepage}" target="_blank" rel="noopener noreferrer">${font.name}</a>` : font.name;
+        let sampleCell = '';
+        if (font.source === 'system') {
+            const available = installedNames && installedNames.has(font.name);
+            sampleCell = available
+                ? `<span class="sample-code" style="font-family:'${font.name}', 'Redacted Script'">${sampleText}</span>`
+                : 'System font not available';
+        } else {
+            sampleCell = `<span class="sample-code" style="font-family:'${font.name}', 'Redacted Script'">${sampleText}</span>`;
+        }
+        html += `<tr>
+            <td>${nameCell}</td>
+            <td><span class="font-source ${font.source}">${sourceLabels[font.source] || font.source}</span></td>
+            <td>${ligatureIcon}</td>
+            <td>${description}</td>
+            <td>${sampleCell}</td>
+        </tr>`;
+    });
+    const totalFonts = fonts.length;
+    html += `<tr>
+        <td><strong>Total: ${totalFonts} fonts</strong></td>
+        <td colspan="4">Includes system, embedded, and Google fonts</td>
+    </tr>`;
+    container.innerHTML = html;
+}
+
+// Build a typographic-focused description from heuristics
+function buildTypographicDescription(font) {
+    const parts = [];
+    const cat = (font.category || font.family || '').toLowerCase();
+    if (cat.includes('serif')) parts.push('monospaced serif');
+    else if (cat.includes('slab')) parts.push('slab‑serif mono');
+    else if (cat.includes('retro')) parts.push('retro/terminal mono');
+    else if (cat.includes('compact')) parts.push('condensed mono');
+    else if (cat.includes('playful')) parts.push('playful, handwriting‑inspired mono');
+    else parts.push('monospaced sans‑serif');
+
+    if (font.ligatures) parts.push('programming ligatures');
+    if (font.axes && (font.axes.widths || font.axes.weights || font.axes.styles)) parts.push('multiple styles');
+
+    // Name-based nuance
+    const n = (font.name || '').toLowerCase();
+    if (n.includes('space mono')) parts.push('geometric shapes, wide counters');
+    if (n.includes('iosevka')) parts.push('narrow proportions');
+    if (n.includes('vt323') || n.includes('3270') || n.includes('terminus')) parts.push('pixel/CRT aesthetics');
+
+    return parts.join(' • ');
+}
+
+function generateColorSchemeTable(mode, container) {
+    const schemes = ((window.colorSchemeDatabase || {})[mode] || []).slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
+    let html = '';
+    const sampleCode = `const API_URL = "https://api.io"; // prod\nlet items = [{id: 1, active: true}];\nasync function getData(limit = 10) {}`;
+    const getToken = (val) => {
+        if (!val) return {};
+        if (typeof val === 'string') return { color: val };
+        return { color: val.color, bold: !!val.bold, italic: !!val.italic };
+    };
+    schemes.forEach((scheme, idx) => {
+        const homepageLink = scheme.homepage ? `<a href="${scheme.homepage}" target="_blank">${scheme.author}</a>` : (scheme.author || '');
+        const id = `scheme-${mode}-${idx}`;
+        // Build highlighted HTML once (constructing the HTML in the table) — highlight.js required
+        const highlighted = hljs.highlight(sampleCode, { language: 'javascript' }).value;
+        const keyword = getToken(scheme.keyword);
+        const string = getToken(scheme.string);
+        const comment = getToken(scheme.comment);
+        const fn = getToken(scheme.function);
+        const fg = scheme.fg || '#ccd';
+        const bg = scheme.bg || (mode === 'dark' ? '#111' : '#fff');
+        // Scoped CSS so it won't leak
+        const weight = (tok) => tok.bold ? 'font-weight:600;' : '';
+        const italic = (tok) => tok.italic ? 'font-style:italic;' : '';
+        // Derive additional tokens from existing scheme fields
+        const numberTok = fn; // use function color for numbers
+        const literalTok = keyword; // use keyword color for literals (true/false/null)
+        const paramsTok = { color: fg };
+        const styleBlock = `
+<style>
+  #${id} { background:${bg}; color:${fg}; }
+  #${id} .hljs-keyword { color:${keyword.color || fg}; ${weight(keyword)}${italic(keyword)} }
+  #${id} .hljs-string { color:${string.color || fg}; ${weight(string)}${italic(string)} }
+  #${id} .hljs-comment { color:${comment.color || fg}; ${weight(comment)}${italic(comment)} }
+  #${id} .hljs-function, #${id} .hljs-title { color:${fn.color || fg}; ${weight(fn)}${italic(fn)} }
+  #${id} .hljs-number { color:${numberTok.color || fg}; ${weight(numberTok)}${italic(numberTok)} }
+  #${id} .hljs-literal { color:${literalTok.color || fg}; ${weight(literalTok)}${italic(literalTok)} }
+  #${id} .hljs-params { color:${paramsTok.color}; }
+</style>`;
+        const sampleCell = `${styleBlock}<pre class="scheme-sample"><code id="${id}" class="hljs language-javascript">${highlighted}</code></pre>`;
+        html += `<tr>
+            <td>${scheme.name}</td>
+            <td>${homepageLink}</td>
+            <td>${scheme.description || ''}</td>
+            <td>${sampleCell}</td>
+        </tr>`;
+    });
+    container.innerHTML = html;
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    initDevConfig();
+    if (document.getElementById('app')) {
+        // Main app page
+        init();
+    } else {
+        // About page: load databases, then render tables
+        loadDatabases()
+            .then(() => {
+                // Load embedded fonts so samples render in their typefaces
+                try { loadCustomFonts(); } catch {}
+                generateAboutPageTables();
+            })
+            .catch(e => console.warn('[About] Failed to load databases:', e));
+    }
+});
+
+
+// ID maps for compact settings encoding
+function buildIdMaps() {
+    try {
+        // Helper for 16-bit stable id from name (used if explicit id missing)
+        const crc16 = (str) => {
+            let h = 0xffff;
+            for (let i=0;i<str.length;i++) {
+                h ^= str.charCodeAt(i) & 0xff;
+                for (let j=0;j<8;j++) {
+                    const tmp = h & 1; h >>= 1; if (tmp) h ^= 0xA001;
+                }
+            }
+            return h & 0xffff;
+        };
+
+        // Fonts
+        const fonts = (window.fontDatabase || []).slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
+        window.fontIdByName = {};
+        window.fontNameById = {};
+        const used = new Set();
+        fonts.forEach((f) => {
+            let id = typeof f.id === 'number' ? (f.id & 0xffff) : crc16(f.name || '');
+            while (used.has(id)) id = (id + 1) & 0xffff; // resolve rare collisions
+            used.add(id);
+            window.fontIdByName[f.name] = id;
+            window.fontNameById[id] = f.name;
+        });
+
+        // Schemes (dark/light)
+        const dark = ((window.colorSchemeDatabase || {}).dark || []).slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
+        const light = ((window.colorSchemeDatabase || {}).light || []).slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
+        window.schemeIdByName = { dark: {}, light: {} };
+        window.schemeById = { dark: {}, light: {} };
+        const usedDark = new Set();
+        const usedLight = new Set();
+        dark.forEach((s) => {
+            let id = typeof s.id === 'number' ? (s.id & 0xffff) : crc16(s.name || '');
+            while (usedDark.has(id)) id = (id + 1) & 0xffff;
+            usedDark.add(id);
+            window.schemeIdByName.dark[s.name] = id;
+            window.schemeById.dark[id] = s;
+        });
+        light.forEach((s) => {
+            let id = typeof s.id === 'number' ? (s.id & 0xffff) : crc16(s.name || '');
+            while (usedLight.has(id)) id = (id + 1) & 0xffff;
+            usedLight.add(id);
+            window.schemeIdByName.light[s.name] = id;
+            window.schemeById.light[id] = s;
+        });
+    } catch {}
+}
+
+// Z85 encoding/decoding (ZeroMQ)
+const Z85_CHARS = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.-:+=^!/*?&<>()[]{}@%$#";
+const Z85_ENC = Z85_CHARS.split('');
+const Z85_DEC = (() => { const m = {}; Z85_ENC.forEach((c,i)=>m[c]=i); return m; })();
+function z85Encode(bytes) {
+    if ((bytes.length % 4) !== 0) throw new Error('Z85 requires length multiple of 4');
+    let out = '';
+    for (let i=0;i<bytes.length;i+=4) {
+        const value = (bytes[i]*0x1000000) + (bytes[i+1]*0x10000) + (bytes[i+2]*0x100) + bytes[i+3];
+        let div = value >>> 0;
+        const c5 = div % 85; div = (div / 85) >>> 0;
+        const c4 = div % 85; div = (div / 85) >>> 0;
+        const c3 = div % 85; div = (div / 85) >>> 0;
+        const c2 = div % 85; div = (div / 85) >>> 0;
+        const c1 = div % 85;
+        out += Z85_ENC[c1] + Z85_ENC[c2] + Z85_ENC[c3] + Z85_ENC[c4] + Z85_ENC[c5];
+    }
+    return out;
+}
+function z85Decode(str) {
+    if ((str.length % 5) !== 0) throw new Error('Invalid Z85 length');
+    const out = new Uint8Array((str.length / 5) * 4);
+    let j = 0;
+    for (let i=0;i<str.length;i+=5) {
+        let value = 0;
+        for (let k=0;k<5;k++) { value = value * 85 + (Z85_DEC[str[i+k]] ?? 0); }
+        out[j+0] = (value >>> 24) & 0xff;
+        out[j+1] = (value >>> 16) & 0xff;
+        out[j+2] = (value >>> 8) & 0xff;
+        out[j+3] = value & 0xff;
+        j += 4;
+    }
+    return out;
+}
+
+
+// Immutable role ID maps sourced from font-roles.js
+let ROLE_ID_BY_KEY = {};
+let ROLE_KEY_BY_ID = {};
+function buildRoleMaps() {
+    ROLE_ID_BY_KEY = {};
+    ROLE_KEY_BY_ID = {};
+    try {
+        if (typeof fontRoles === 'object') {
+            Object.entries(fontRoles).forEach(([key, meta]) => {
+                if (meta && typeof meta.id === 'number') {
+                    const id = meta.id & 0xffff;
+                    ROLE_ID_BY_KEY[key] = id;
+                    ROLE_KEY_BY_ID[id] = key;
+                }
+            })
+        }
+    } catch {}
+}

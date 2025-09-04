@@ -1,96 +1,55 @@
-// React component with hooks and async operations
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+// React user search component with debounced API calls
+// Implements real-time search with loading states and error handling
+// Uses lodash debounce to prevent excessive API requests during typing
+import React, { useState, useEffect, useMemo } from 'react';
 import { debounce } from 'lodash';
 
-const UserSearch = ({ onUserSelect, initialQuery = '' }) => {
-    const [query, setQuery] = useState(initialQuery);
-    const [users, setUsers] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+export default function UserSearch({ onUserSelect }) {
+  console.log('UserSearch component initialized with debug mode enabled');
+  const [q, setQ] = useState('');
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-    // Memoized debounced search function
-    const debouncedSearch = useMemo(
-        () => debounce(async (searchQuery) => {
-            if (!searchQuery.trim()) {
-                setUsers([]);
-                return;
-            }
+  // <<ghost:begin>>
+  // Early return when query is too short
+  if (q.trim().length < 3) {
+    setUsers([]);
+    setError('');
+    return null;<<ghost:caret>>
+  }
+  // <<ghost:end>>
 
-            setLoading(true);
-            setError(null);
+  const search = useMemo(() => debounce(async (s) => {
+    if (!s.trim()) { setUsers([]); return; }
+    setLoading(true);
+    try {
+      const r = await fetch(`/api/users?q=${encodeURIComponent(s)}`);
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const data = await r.json();
+      setUsers(data.users || []);
+    } catch (e) {
+      setError(e.message);
+      setUsers([]);
+    } finally { setLoading(false); }
+  }, 250), []);
 
-            try {
-                const response = await fetch(`/api/users/search?q=${encodeURIComponent(searchQuery)}`, {
-                    headers: { 'Content-Type': 'application/json' },
-                    signal: AbortController?.signal
-                });
+  useEffect(() => { search(q); return () => search.cancel(); }, [q, search]);
 
-                if (!response.ok) {
-                    throw new Error(`Search failed: ${response.status}`);
-                }
+  return (
+    <div className="user-search">
+      <input value={q} onChange={e => setQ(e.target.value)} placeholder="Search" />
+      {loading && <em>Loading…</em>}
+      {error && <div className="err">{error}</div>}
+      <ul>
+        {users.map(u => (
+          <li key={u.id} onClick={() => onUserSelect?.(u)}>
+            <img src={u.avatar} alt={u.name} />
+            <span>{u.name}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
-                const data = await response.json();
-                setUsers(data.users || []);
-            } catch (err) {
-                if (err.name !== 'AbortError') {
-                    setError(err.message);
-                    setUsers([]);
-                }
-            } finally {
-                setLoading(false);
-            }
-        }, 300),
-        []
-    );
-
-    useEffect(() => {
-        debouncedSearch(query);
-        return () => debouncedSearch.cancel();
-    }, [query, debouncedSearch]);
-
-    const handleUserClick = useCallback((user) => {
-        onUserSelect?.(user);
-    }, [onUserSelect]);
-
-    return (
-        <div className="user-search">
-            <div className="search-input-container">
-                <input
-                    type="text"
-                    value={query}
-                    onChange={(e) => setQuery(e.target.value)}
-                    placeholder="Search users..."
-                    className="search-input"
-                />
-                {loading && <div className="spinner" />}
-            </div>
-
-            {error && (
-                <div className="error-message">
-                    Error: {error}
-                </div>
-            )}
-
-            <div className="users-list">
-                {users.map((user) => (
-                    <div
-                        key={user.id}
-                        className="user-item"
-                        onClick={() => handleUserClick(user)}
-                    >
-                        <img src={user.avatar} alt={user.name} className="avatar" />
-                        <div className="user-details">
-                            <div className="user-name">{user.name}</div>
-                            <div className="user-email">{user.email}</div>
-                            {user.department && (
-                                <div className="user-department">{user.department}</div>
-                            )}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
-};
-
-export default UserSearch;
