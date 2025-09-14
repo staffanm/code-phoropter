@@ -1,0 +1,11 @@
+{
+  "name": "code-phoropter",
+  "version": "1.0.0",
+  "description": "Font comparison tool for code editors",
+  "scripts": {
+    "install-deps": "npm install"
+  },
+  "devDependencies": {
+    "puppeteer": "^21.0.0"
+  }
+}
