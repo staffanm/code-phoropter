@@ -1,6 +1,3 @@
-// React user search component with debounced API calls
-// Implements real-time search with loading states and error handling
-// Uses lodash debounce to prevent excessive API requests during typing
 import React, { useState, useEffect, useMemo } from 'react';
 import { debounce } from 'lodash';
 
@@ -11,15 +8,13 @@ export default function UserSearch({ onUserSelect }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // <<ghost:begin>>
-  // Early return when query is too short
-  if (q.trim().length < 3) {
+  // Early return when query is too short<<ghost:caret>>
+  <<ghost:begin>>if (q.trim().length < 3) {
     setUsers([]);
     setError('');
-    return null;<<ghost:caret>>
+    return null;
   }
   // <<ghost:end>>
-
   const search = useMemo(() => debounce(async (s) => {
     if (!s.trim()) { setUsers([]); return; }
     setLoading(true);

@@ -376,8 +376,7 @@ async function loadDatabases() {
         window.fontMetrics = metrics || {};
         console.log(`[DEBUG] Loaded font metrics for ${Object.keys(window.fontMetrics).length} fonts`);
         
-        // Load fonts after database is ready
-        await loadAllFonts();
+        // Fonts will be loaded later in the init sequence
         
         return true;
     } catch (e) {
@@ -575,47 +574,28 @@ function generateFontFamilies() {
     // Normalize legacy DB: map family->category and assign categories
     const families = {};
 
-    // Canonical categories
+    // New canonical categories
     const categoryDescriptions = {
-        'Sans':    'Monospaced sans-serif faces with clean, contemporary forms.',
-        'Serif':   'Monospaced faces with true serifs (e.g., Courier variants).',
-        'Slab':    'Monospaced slab serifs with blocky terminals.',
-        'Playful': 'Handwriting/comic-inspired monos with expressive forms.',
-        'Compact': 'Condensed/narrow metrics for dense code displays.',
-        'Retro':   'Retro terminal or pixel-emulation aesthetics.'
+        'Typewriter Classics':    'Fonts rooted in the typewriter/early-computing tradition.',
+        'Neutral Workhorses':     'No-frills monospace fonts designed for utility.',
+        'Humanist Readables':     'Humanist influence for softer, more readable text.',
+        'Geometric Moderns':      'Systematic, engineered shapes with geometric rigor.',
+        'Expressive Experimentals': 'Distinctive fonts with quirks and character.',
+        'Technical Specialists':  'Fonts optimized around a specific coding use-case.'
     };
 
-    // Heuristic category assignment from legacy names and known fonts
-    function inferCategory(font) {
-        const n = (font.name || '').toLowerCase();
-        const legacy = (font.family || '').toLowerCase();
-        // Specific well-known mappings
-        if (n.includes('slab')) return 'Slab';
-        if (/(courier|courier\s*prime)/.test(n)) return 'Serif';
-        if (/(comic|hand|handjet)/.test(n)) return 'Playful';
-        if (/(3270|vt323|terminus|tty|pixel)/.test(n)) return 'Retro';
-        if (/(iosevka|agave|m\+|m plus|input|condensed|semi\s*condensed)/.test(n)) return 'Compact';
-        // Corrections
-        if (n.includes('space mono')) return 'Sans';
-        // Legacy family hints
-        if (/retro|terminal/.test(legacy)) return 'Retro';
-        if (/compact|scientific/.test(legacy)) return 'Compact';
-        if (/distinctive|playful/.test(legacy)) return 'Playful';
-        // Default
-        return 'Sans';
-    }
 
     // Representative selection priority: google > embedded > system
     const sourceRank = { google: 2, embedded: 1, system: 0 };
 
     // Preferred representatives per category (used as fallback only)
     const preferredRepresentatives = {
-        'Sans': ['JetBrains Mono', 'Fira Code', 'Source Code Pro', 'IBM Plex Mono'],
-        'Serif': ['Courier Prime', 'Courier New'],
-        'Slab': ['Iosevka Slab', 'Roboto Slab'],
-        'Playful': ['Comic Mono', 'Sometype Mono'],
-        'Compact': ['Iosevka', 'Agave'],
-        'Retro': ['3270', 'VT323', 'Terminus']
+        'Typewriter Classics': ['Courier Prime', 'IBM Plex Mono Serif', 'Courier New'],
+        'Neutral Workhorses': ['DejaVu Sans Mono', 'Consolas', 'Inconsolata'],
+        'Humanist Readables': ['Source Code Pro', 'Ubuntu Mono', 'Droid Sans Mono'],
+        'Geometric Moderns': ['Fira Code', 'JetBrains Mono', 'Space Mono', 'Roboto Mono'],
+        'Expressive Experimentals': ['Iosevka', 'Dank Mono', 'Victor Mono', 'Cascadia Code'],
+        'Technical Specialists': ['Proggy', 'Monofur', 'PragmataPro', '3270', 'VT323']
     };
 
     // Quick lookup for source by name using the database
@@ -624,8 +604,7 @@ function generateFontFamilies() {
 
     (window.fontDatabase || []).forEach(font => {
         if (font.name === 'M+ 1m') return; // exclude non-monospace
-        // Normalize category in-place for downstream lookups
-        font.category = font.category || inferCategory(font);
+        // All fonts in the database now have categories assigned
         const category = font.category;
         if (!families[category]) {
             families[category] = {
@@ -782,7 +761,7 @@ const codeSampleUrls = {
     html: './samples/index.html',
     yaml: './samples/config.yml',
     json: './samples/config.json',
-    markdown: './README.md',
+    markdown: './samples/markdown.md',
     legal: './samples/gdpr.txt',
     powerline: './samples/powerline.txt',
     self: './app.js',
@@ -1759,7 +1738,6 @@ class ComparisonEngine {
         }
         
         const result = { optionA, optionB, stage: this.stage, pair, similarity: similarityInfo };
-        console.log(`[DEBUG] Returning comparison:`, result);
         return result;
     }
     
@@ -1997,6 +1975,11 @@ function init() {
             selectOption('B');
         } else if (e.key === 's' || e.key === 'S') {
             selectOption('equal');
+        } else if (e.key === 'w' || e.key === 'W') {
+            const skipBtn = document.getElementById('btnSkipStage');
+            if (skipBtn && skipBtn.style.display !== 'none') {
+                skipCurrentStage();
+            }
         }
     });
 }
@@ -2163,7 +2146,6 @@ function initializeGridForStage(stage) {
     const stageObj = getStage(stage);
     if (stageObj && typeof stageObj.showGrid === 'boolean') {
         gridVisible = stageObj.showGrid;
-        console.log(`[DEBUG] Initialized grid for stage '${stage}': ${gridVisible ? 'ON' : 'OFF'} (default from stage config)`);
     }
 }
 
@@ -2245,11 +2227,11 @@ function setCodeWithHighlight(el, code, lang) {
     // Reset any prior highlight.js state before re-highlighting
     el.removeAttribute('data-highlighted');
     el.textContent = code;
+    // Process ghost markers before highlighting, so markers aren't broken by DOM changes
+    try { processGhostMarkers(el); } catch (e) { devLog('Ghost processing failed', e); }
     if (window.hljs && typeof hljs.highlightElement === 'function') {
         try { hljs.highlightElement(el); } catch {}
     }
-    // Process ghost markers after highlighting, to wrap DOM safely
-    try { processGhostMarkers(el); } catch (e) { devLog('Ghost processing failed', e); }
 }
 
 // Wrap ghost sections and caret markers in code blocks
@@ -2307,24 +2289,29 @@ function processGhostMarkers(codeEl) {
                 i = 0;
                 continue;
             }
-            if (nextEnd === 0 && startBoundary) {
-                // Remove end marker then wrap range
-                removeMarkerAt(node, 0, MARK_END);
-                const range = document.createRange();
-                range.setStart(startBoundary.node, startBoundary.offset);
-                range.setEnd(node, 0);
-                const span = document.createElement('span');
-                span.className = 'ghost-text';
-                span.setAttribute('aria-label', 'Ghost suggestion');
-                try { range.surroundContents(span); } catch (e) {
-                    // Fallback: wrap by cloning contents
-                    const contents = range.extractContents();
-                    span.appendChild(contents);
-                    range.insertNode(span);
+            if (nextEnd === 0) {
+                if (startBoundary) {
+                    // Remove end marker then wrap range
+                    removeMarkerAt(node, 0, MARK_END);
+                    const range = document.createRange();
+                    range.setStart(startBoundary.node, startBoundary.offset);
+                    range.setEnd(node, 0);
+                    const span = document.createElement('span');
+                    span.className = 'ghost-text';
+                    span.setAttribute('aria-label', 'Ghost suggestion');
+                    try { range.surroundContents(span); } catch (e) {
+                        // Fallback: wrap by cloning contents
+                        const contents = range.extractContents();
+                        span.appendChild(contents);
+                        range.insertNode(span);
+                    }
+                    // Strip syntax highlighting classes from ghost text
+                    stripSyntaxHighlighting(span);
+                    startBoundary = null;
+                } else {
+                    // Orphaned end marker - just remove it
+                    removeMarkerAt(node, 0, MARK_END);
                 }
-                // Strip syntax highlighting classes from ghost text
-                stripSyntaxHighlighting(span);
-                startBoundary = null;
                 i = 0;
                 continue;
             }
@@ -2552,7 +2539,6 @@ async function preloadFontsForRolePair(role, aName, bName) {
 // Show next comparison
 function showNextComparison() {
     const comparison = engine.getNextComparison();
-    console.log('[DEBUG] showNextComparison got:', comparison);
     
     if (!comparison) {
         showResults();
@@ -4187,17 +4173,18 @@ Use the config.css settings in this package.`);
 // Toggle theme mode
 function toggleThemeMode() {
     const toggle = document.getElementById('themeToggle');
-    const label = document.getElementById('toggleLabel');
 
     if (toggle.checked) {
-        themeMode = 'light';
-        label.textContent = 'Light Mode';
-        document.body.classList.add('light-theme');
-    } else {
+        // Dark mode is ON (toggle checked = dark mode active)
         themeMode = 'dark';
-        label.textContent = 'Dark Mode';
         document.body.classList.remove('light-theme');
+    } else {
+        // Dark mode is OFF (toggle unchecked = light mode active)
+        themeMode = 'light';
+        document.body.classList.add('light-theme');
     }
+
+    // Label always stays "Dark Mode" - it describes what the toggle controls
 
     // Update color schemes in the current engine instead of resetting
     if (engine.candidates && engine.candidates.colorScheme) {
@@ -4260,8 +4247,52 @@ function updateSliderPosition(percentage) {
         const dividerLeft = panelLeft + (sliderPosition / 100) * panelWidth;
         divider.style.left = `${dividerLeft}px`;
 
-        // Clip panel B to show only the left portion up to the divider
-        panelB.style.clipPath = `inset(0 ${100 - sliderPosition}% 0 0)`;
+        // Clip panel B to show only the right portion from the divider
+        panelB.style.clipPath = `inset(0 0 0 ${sliderPosition}%)`;
+    }
+}
+
+// Initialize scroll synchronization between panels
+function initScrollSync() {
+    const codeA = document.getElementById('codeA');
+    const codeB = document.getElementById('codeB');
+
+    if (!codeA || !codeB) return;
+
+    let isScrollingSynced = false; // Flag to prevent infinite loops
+
+    function syncScroll(sourceElement, targetElement) {
+        if (isScrollingSynced) return; // Prevent recursive calls
+
+        isScrollingSynced = true;
+
+        // Get the scrollable parent (the <pre> element)
+        const sourceScrollable = sourceElement.closest('pre');
+        const targetScrollable = targetElement.closest('pre');
+
+        if (sourceScrollable && targetScrollable) {
+            targetScrollable.scrollTop = sourceScrollable.scrollTop;
+            targetScrollable.scrollLeft = sourceScrollable.scrollLeft;
+        }
+
+        // Reset flag after a short delay to allow for smooth scrolling
+        setTimeout(() => {
+            isScrollingSynced = false;
+        }, 10);
+    }
+
+    // Add scroll listeners to the pre elements containing the code
+    const preA = codeA.closest('pre');
+    const preB = codeB.closest('pre');
+
+    if (preA && preB) {
+        preA.addEventListener('scroll', () => {
+            syncScroll(codeA, codeB);
+        });
+
+        preB.addEventListener('scroll', () => {
+            syncScroll(codeB, codeA);
+        });
     }
 }
 
@@ -4321,7 +4352,7 @@ function initSliderDivider() {
         // Update clipping with optimized clip-path (using requestAnimationFrame for smooth updates)
         requestAnimationFrame(() => {
             const panelB = document.getElementById('panelB');
-            panelB.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+            panelB.style.clipPath = `inset(0 0 0 ${percentage}%)`;
         });
 
         e.preventDefault();
@@ -4345,6 +4376,18 @@ document.addEventListener('keydown', function(e) {
     } else if (e.key === 'g' || e.key === 'G') {
         e.preventDefault();
         toggleGrid();
+    } else if (e.key === 'm' || e.key === 'M') {
+        e.preventDefault();
+        const toggle = document.getElementById('themeToggle');
+        if (toggle) {
+            toggle.click();
+        }
+    } else if (e.key === 'c' || e.key === 'C') {
+        e.preventDefault();
+        const toggle = document.getElementById('sliderCompareToggle');
+        if (toggle) {
+            toggle.click();
+        }
     }
 });
 
@@ -5089,6 +5132,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Main app page
         init();
         initSliderDivider();
+        initScrollSync();
     } else {
         // About or Font Showcase page: load databases, then render content
         loadDatabases()

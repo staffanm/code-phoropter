@@ -24,6 +24,34 @@
       "id": 4
     },
     {
+      "name": "Maple Dark",
+      "author": "subframe7536",
+      "description": "Dark theme focused on smoothing coding flow with round, soft colors",
+      "homepage": "https://github.com/subframe7536/vscode-theme-maple",
+      "bg": "#1e1e1f",
+      "fg": "#cbd5e1",
+      "keyword": {
+        "color": "#d2ccff"
+      },
+      "string": {
+        "color": "#a4dfae"
+      },
+      "comment": {
+        "color": "#999999",
+        "italic": true
+      },
+      "function": {
+        "color": "#8fc7ff"
+      },
+      "variable": {
+        "color": "#eecfa0"
+      },
+      "constant": {
+        "color": "#f0c0a8"
+      },
+      "id": 28
+    },
+    {
       "name": "Monokai",
       "author": "Wimer Hazenberg",
       "description": "Classic warm colors with vibrant accents",
@@ -369,6 +397,34 @@
       "comment": "#6a737d",
       "function": "#6f42c1",
       "id": 6
+    },
+    {
+      "name": "Maple Light",
+      "author": "subframe7536",
+      "description": "Light theme focused on smoothing coding flow with muted, eye-friendly colors",
+      "homepage": "https://github.com/subframe7536/vscode-theme-maple",
+      "bg": "#fffffe",
+      "fg": "#475569",
+      "keyword": {
+        "color": "#726293"
+      },
+      "string": {
+        "color": "#478f14"
+      },
+      "comment": {
+        "color": "#808080",
+        "italic": true
+      },
+      "function": {
+        "color": "#0585a8"
+      },
+      "variable": {
+        "color": "#aa830e"
+      },
+      "constant": {
+        "color": "#c37522"
+      },
+      "id": 29
     },
     {
       "name": "Solarized Light",

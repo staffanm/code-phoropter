@@ -1,4 +1,3 @@
-// Minimal Spring Boot demo (<=60 lines)
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -18,16 +17,13 @@ public class Application {
 @RequestMapping("/api")
 class ApiController {
     private final UserService users = new UserService();
-
     // Health endpoint
     @GetMapping("/health")
     public Map<String, Object> health() {
         return Map.of("status", "ok", "time", Instant.now().toString());
     }
-
-    // <<ghost:begin>>
-    // Suggest enabling a simple cache for read-mostly traffic
-    // TODO: users.enableCache(java.time.Duration.ofSeconds(10)); <<ghost:caret>>
+    // Suggest enabling a simple cache for read-mostly traffic<<ghost:caret>>
+    <<ghost:begin>>// TODO: users.enableCache(java.time.Duration.ofSeconds(10)); 
     // <<ghost:end>>
 
     @GetMapping("/users/{id}")

@@ -238,19 +238,28 @@
                 
                 log(`Generated CSS for ${generatedCount} font faces`, 'success');
                 log(`CSS size: ${css.length} characters`, 'info');
-                
-                // Create download
-                const blob = new Blob([css], { type: 'text/css' });
-                const url = URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'embedded-fonts.css';
-                a.click();
-                URL.revokeObjectURL(url);
-                
-                log('✓ embedded-fonts.css file downloaded', 'success');
-                log('Place this file in your project root and include it before app.js', 'info');
-                
+
+                // Display CSS in results window
+                const resultsTextarea = document.getElementById('resultsOutput');
+                resultsTextarea.value = css;
+
+                // Copy CSS to clipboard
+                try {
+                    navigator.clipboard.writeText(css);
+                    log('✓ CSS copied to clipboard', 'success');
+                } catch (error) {
+                    // Fallback for older browsers
+                    const tempTextarea = document.createElement('textarea');
+                    tempTextarea.value = css;
+                    document.body.appendChild(tempTextarea);
+                    tempTextarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempTextarea);
+                    log('✓ CSS copied to clipboard (fallback method)', 'success');
+                }
+
+                log('Place this CSS in your project and include it before app.js', 'info');
+
                 btn.textContent = '✓ CSS Generated';
                 
             } catch (error) {
@@ -426,13 +435,29 @@
             }
             
             // Output results
+            const resultsJson = JSON.stringify(fontMetrics, null, 2);
             const resultsTextarea = document.getElementById('resultsOutput');
-            resultsTextarea.value = JSON.stringify(fontMetrics, null, 2);
-            
+            resultsTextarea.value = resultsJson;
+
+            // Copy results to clipboard
+            try {
+                navigator.clipboard.writeText(resultsJson);
+                log('✓ Metrics JSON copied to clipboard', 'success');
+            } catch (error) {
+                // Fallback for older browsers
+                const tempTextarea = document.createElement('textarea');
+                tempTextarea.value = resultsJson;
+                document.body.appendChild(tempTextarea);
+                tempTextarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempTextarea);
+                log('✓ Metrics JSON copied to clipboard (fallback method)', 'success');
+            }
+
             document.getElementById('copyBtn').disabled = false;
             btn.textContent = '✓ Extraction Complete';
             document.title = 'Font Metrics Extractor - Complete';
-            
+
             log(`\nExtraction complete! ${Object.keys(fontMetrics).length} fonts processed.`, 'success');
             
             // Show summary of results

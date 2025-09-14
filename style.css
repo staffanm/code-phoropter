@@ -654,8 +654,8 @@ h1 {
 }
 
 .description-section {
-    padding: 20px;
-    margin: 10px auto;
+    padding: 10px 20px;
+    margin: 5px auto;
     background: var(--bg-secondary);
     border-radius: 8px;
     border: 1px solid var(--border-color);
@@ -1001,7 +1001,7 @@ body.show-summaries .panel-summary {
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1198,7 +1198,7 @@ body.show-summaries .panel-summary {
 /* Font family selector */
 .font-family-selector {
     flex: 1;
-    padding: 30px;
+    padding: 15px 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1237,7 +1237,7 @@ body.show-summaries .panel-summary {
     background: var(--bg-secondary);
     border: 2px solid var(--border-color);
     border-radius: 8px;
-    padding: 20px;
+    padding: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
     position: relative;
@@ -1245,7 +1245,6 @@ body.show-summaries .panel-summary {
 
 .font-family-option:hover {
     border-color: var(--border-hover);
-    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
 }
 
@@ -1272,7 +1271,7 @@ body.show-summaries .panel-summary {
 
 .font-family-preview {
     background: var(--preview-bg);
-    padding: 15px;
+    padding: 10px;
     border-radius: 4px;
     font-size: 16px !important;
     line-height: 1.5 !important;

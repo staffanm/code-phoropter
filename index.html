@@ -61,7 +61,7 @@
                         <span class="key-hint">[S]</span> No Preference
                     </button>
                     <button class="floating-choice-btn skip-stage" id="btnSkipStage" onclick="skipCurrentStage()" style="display: none;">
-                        <span class="key-hint">[Tab]</span> Skip Stage
+                        <span class="key-hint">[W]</span> Skip Stage
                     </button>
                 </div>
                 <button class="floating-choice-btn" id="btnB" onclick="selectOption('B')">
@@ -103,17 +103,17 @@
             <a href="about.html" class="about-link">About</a>
             <div class="theme-toggle">
                 <label class="toggle-switch">
-                    <input type="checkbox" id="themeToggle" onchange="toggleThemeMode()">
+                    <span class="toggle-label" id="toggleLabel">Dark <u>M</u>ode</span>
+                    <input type="checkbox" id="themeToggle" onchange="toggleThemeMode()" checked>
                     <span class="toggle-slider"></span>
-                    <span class="toggle-label" id="toggleLabel">Dark Mode</span>
                 </label>
             </div>
 
             <div class="slider-compare-toggle">
                 <label class="toggle-switch">
+                    <span class="toggle-label">Slider <u>C</u>ompare</span>
                     <input type="checkbox" id="sliderCompareToggle" onchange="toggleSliderCompare()">
                     <span class="toggle-slider"></span>
-                    <span class="toggle-label">Slider Compare</span>
                 </label>
             </div>
             
@@ -127,7 +127,7 @@
                 <option value="css">CSS (Normalize)</option>
                 <option value="html">HTML (Boilerplate)</option>
                 <option value="json">JSON (VS Code)</option>
-                <option value="markdown">Markdown (README)</option>
+                <option value="markdown">Markdown (Unicode Scripts)</option>
                 <option value="legal">Legal (GDPR)</option>
                 <option value="powerline">Powerline & Nerd Fonts</option>
                 <option value="custom">📁 My Own Code...</option>

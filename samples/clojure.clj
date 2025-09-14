@@ -1,4 +1,4 @@
-;; Minimal Clojure Ring-style sample (<=60 lines)
+;; Minimal Clojure Ring-style sample
 (ns demo.core)
 
 (defn now [] (java.time.Instant/now))

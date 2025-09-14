@@ -1,2909 +1,5325 @@
 {
   "3270": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Aptos Mono": {
-    "avgCharWidth": {
-      "12": 7.201171875,
-      "14": 8.4013671875,
-      "16": 9.6015625
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 10,
-      "16": 11
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Consolas": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "SF Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Monaco": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Menlo": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Courier New": {
-    "avgCharWidth": {
-      "12": 7.201171875,
-      "14": 8.4013671875,
-      "16": 9.6015625
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 6,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 8,
-      "16": 9
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Lucida Console": {
-    "avgCharWidth": {
-      "12": 7.23046875,
-      "14": 8.435546875,
-      "16": 9.640625
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": false,
-    "source": "system"
-  },
-  "Andale Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "DejaVu Sans Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Droid Sans Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "MonoLisa": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Operator Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Dank Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Berkeley Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Comic Code": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "PragmataPro": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Input Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "APL385 Unicode": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Fira Code": {
-    "avgCharWidth": {
-      "12": 7.384613037109375,
-      "14": 8.615371704101562,
-      "16": 9.846145629882812
-    },
-    "xHeight": {
-      "12": 7,
-      "14": 8,
-      "16": 9
-    },
-    "capHeight": {
-      "12": 9,
-      "14": 10,
-      "16": 12
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "JetBrains Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Victor Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Recursive": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Cascadia Code": {
-    "avgCharWidth": {
-      "12": 7.03125,
-      "14": 8.203125,
-      "16": 9.375
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 10,
-      "16": 11
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Iosevka": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Iosevka Slab": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Hasklig": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "JuliaMono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Fantasque Sans Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Commit Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Sudo": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Liga Menlo": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Source Code Pro": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "IBM Plex Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Roboto Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Red Hat Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "DM Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "M Plus Code": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Geist Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Martian Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Intel One Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Agave": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Ubuntu Mono": {
-    "avgCharWidth": {
-      "12": 6.7199859619140625,
-      "14": 7.839996337890625,
-      "16": 8.959991455078125
-    },
-    "xHeight": {
-      "12": 7,
-      "14": 8,
-      "16": 9
-    },
-    "capHeight": {
-      "12": 9,
-      "14": 10,
-      "16": 11
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Inconsolata": {
-    "avgCharWidth": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 11
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Anonymous Pro": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Oxygen Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "PT Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Overpass Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Cousine": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Fira Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Liberation Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Go Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Terminus": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Hermit": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Mononoki": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Office Code Pro": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Envy Code R": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "VT323": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Major Mono Display": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Press Start 2P": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Proggy Clean": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monocraft": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Hack": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "APL2741": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Hack Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Fira Code Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "system"
-  },
-  "Inconsolata Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Cascadia Mono": {
-    "avgCharWidth": {
-      "12": 7.03125,
-      "14": 8.203125,
-      "16": 9.375
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 8
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 10,
-      "16": 11
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Meslo LG": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Space Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Courier Prime": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Sometype Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Spline Sans Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "B612 Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Noto Sans Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Share Tech Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Nova Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Cutive Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Nanum Gothic Coding": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Lekton": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "google"
-  },
-  "Comic Mono": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Serious Shanns": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
+      "12": {
+        "normal": 6.4799957275390625
+      },
+      "14": {
+        "normal": 7.55999755859375
+      },
+      "16": {
+        "normal": 8.639999389648438
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "3270"
   },
   "0xProto Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "0xProto Nerd Font"
   },
   "3270 Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 6.4799957275390625
+      },
+      "14": {
+        "normal": 7.55999755859375
+      },
+      "16": {
+        "normal": 8.639999389648438
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "3270 Nerd Font"
+  },
+  "APL2741": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "APL2741"
+  },
+  "APL385 Unicode": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "APL385 Unicode"
   },
   "AdwaitaMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "AdwaitaMono Nerd Font"
+  },
+  "Agave": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Agave"
   },
   "Agave Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Agave Nerd Font"
+  },
+  "Andale Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Anonymous Pro": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.55078125
+      },
+      "14": {
+        "normal": 7.642578125
+      },
+      "16": {
+        "normal": 8.734375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Anonymous Pro"
   },
   "AnonymousPro Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 6.55078125
+      },
+      "14": {
+        "normal": 7.642578125
+      },
+      "16": {
+        "normal": 8.734375
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "AnonymousPro Nerd Font"
   },
-  "BigBlueTerminal Nerd Font": {
+  "Aptos Mono": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
-  },
-  "BitstreamVeraSansMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "CascadiaCode Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "CascadiaMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Cousine Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "D2Coding Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "DaddyTimeMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "DejaVuSansMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "EnvyCodeR Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "FantasqueSansMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "FiraCode Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Go-Mono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Gohu Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "HeavyData Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "IBMPlexMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "IntelOneMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Iosevka Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "IosevkaTerm Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "IosevkaTermSlab Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "JetBrainsMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Lekton Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Liberation Mono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Lilex Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "MPlus Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "MartianMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Meslo Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monofur Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monoid Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Mononoki Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Noto Sans Mono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "ProFont Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "ProggyClean Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Recursive Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "RobotoMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "ShareTechMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "SourceCodePro Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "SpaceMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Terminus Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "UbuntuMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "UbuntuSans Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "VictorMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "ZedMono Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "iA-Writer Nerd Font": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
+    "source": "system",
+    "fontName": "Aptos Mono"
   },
   "AtkinsonHyperlegibleMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.5839996337890625
+      },
+      "14": {
+        "normal": 8.847991943359375
+      },
+      "16": {
+        "normal": 10.11199951171875
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "AtkinsonHyperlegibleMono Nerd Font"
   },
   "AurulentSansMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "AurulentSansMono Nerd Font"
+  },
+  "B612 Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.79998779296875
+      },
+      "14": {
+        "normal": 9.099990844726562
+      },
+      "16": {
+        "normal": 10.399993896484375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "B612 Mono"
+  },
+  "Berkeley Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "BigBlueTerminal Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9.333328247070312
+      },
+      "16": {
+        "normal": 10.666656494140625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "BigBlueTerminal Nerd Font"
+  },
+  "BitstreamVeraSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "BitstreamVeraSansMono Nerd Font"
+  },
+  "Cascadia Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.03125
+      },
+      "14": {
+        "normal": 8.203125
+      },
+      "16": {
+        "normal": 9.375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Cascadia Code"
+  },
+  "CascadiaCode Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.03125
+      },
+      "14": {
+        "normal": 8.203125
+      },
+      "16": {
+        "normal": 9.375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "CascadiaCode Nerd Font"
+  },
+  "CascadiaMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.03125
+      },
+      "14": {
+        "normal": 8.203125
+      },
+      "16": {
+        "normal": 9.375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "CascadiaMono Nerd Font"
   },
   "CodeNewRoman Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 6.59765625
+      },
+      "14": {
+        "normal": 7.697265625
+      },
+      "16": {
+        "normal": 8.796875
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": false,
+    "source": "embedded",
+    "fontName": "CodeNewRoman Nerd Font"
+  },
+  "Comic Code": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Comic Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.5390625
+      },
+      "14": {
+        "normal": 7.62890625
+      },
+      "16": {
+        "normal": 8.71875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Comic Mono"
   },
   "ComicShannsMono Nerd Font": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Commit Mono": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Commit Mono"
   },
   "CommitMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "CommitMono Nerd Font"
+  },
+  "Consolas": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.59765625
+      },
+      "14": {
+        "normal": 7.697265625
+      },
+      "16": {
+        "normal": 8.796875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "Consolas"
+  },
+  "Courier New": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "Courier New"
+  },
+  "Courier Prime": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1953125
+      },
+      "14": {
+        "normal": 8.39453125
+      },
+      "16": {
+        "normal": 9.59375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Courier Prime"
+  },
+  "Cousine": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Cousine"
+  },
+  "Cousine Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Cousine Nerd Font"
+  },
+  "Cutive Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.265625
+      },
+      "14": {
+        "normal": 8.4765625
+      },
+      "16": {
+        "normal": 9.6875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 6
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Cutive Mono"
+  },
+  "D2Coding Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "D2Coding Nerd Font"
+  },
+  "DM Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "DM Mono"
+  },
+  "DaddyTimeMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.055999755859375
+      },
+      "14": {
+        "normal": 8.23199462890625
+      },
+      "16": {
+        "normal": 9.407989501953125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "DaddyTimeMono Nerd Font"
+  },
+  "Dank Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "DejaVu Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "DejaVu Sans Mono"
+  },
+  "DejaVuSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "DejaVuSansMono Nerd Font"
   },
   "DepartureMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.6363525390625
+      },
+      "14": {
+        "normal": 8.909088134765625
+      },
+      "16": {
+        "normal": 10.181808471679688
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "DepartureMono Nerd Font"
+  },
+  "Droid Sans Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
   },
   "DroidSansMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "DroidSansMono Nerd Font"
+  },
+  "Envy Code R": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.4453125
+      },
+      "14": {
+        "normal": 7.51953125
+      },
+      "16": {
+        "normal": 8.59375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Envy Code R"
+  },
+  "EnvyCodeR Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.4453125
+      },
+      "14": {
+        "normal": 7.51953125
+      },
+      "16": {
+        "normal": 8.59375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "EnvyCodeR Nerd Font"
+  },
+  "Fantasque Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.2109375
+      },
+      "14": {
+        "normal": 7.24609375
+      },
+      "16": {
+        "normal": 8.28125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Fantasque Sans Mono"
+  },
+  "FantasqueSansMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.2109375
+      },
+      "14": {
+        "normal": 7.24609375
+      },
+      "16": {
+        "normal": 8.28125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "FantasqueSansMono Nerd Font"
+  },
+  "Fira Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Fira Code"
+  },
+  "Fira Code Nerd Font": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Fira Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Fira Mono"
+  },
+  "FiraCode Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.384613037109375
+      },
+      "14": {
+        "normal": 8.615371704101562
+      },
+      "16": {
+        "normal": 9.846145629882812
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "FiraCode Nerd Font"
   },
   "FiraMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "FiraMono Nerd Font"
+  },
+  "Geist Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Geist Mono"
   },
   "GeistMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "GeistMono Nerd Font"
+  },
+  "Go Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Go Mono"
+  },
+  "Go-Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Go-Mono Nerd Font"
+  },
+  "Gohu Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.544921875
+      },
+      "14": {
+        "normal": 7.6357421875
+      },
+      "16": {
+        "normal": 8.7265625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Gohu Nerd Font"
+  },
+  "Google Sans Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Google Sans Code"
+  },
+  "Hack": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Hack"
+  },
+  "Hack Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Hack Nerd Font"
+  },
+  "Hasklig": {
+    "error": "Font not loaded - measurements would use fallback font"
   },
   "Hasklig Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Hasklig Nerd Font"
+  },
+  "Hermit": {
+    "error": "Font not loaded - measurements would use fallback font"
   },
   "Hermit Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.415985107421875
+      },
+      "14": {
+        "normal": 8.651992797851562
+      },
+      "16": {
+        "normal": 9.887985229492188
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Hermit Nerd Font"
   },
-  "Overpass Nerd Font": {
+  "IBM Plex Mono": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "google",
+    "fontName": "IBM Plex Mono"
   },
-  "Serious Shanns Nerd Font": {
+  "IBMPlexMono Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "IBMPlexMono Nerd Font"
+  },
+  "Inconsolata": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Inconsolata"
+  },
+  "Inconsolata Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Inconsolata Nerd Font"
+  },
+  "Input Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Intel One Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.3679962158203125
+      },
+      "14": {
+        "normal": 8.595993041992188
+      },
+      "16": {
+        "normal": 9.823989868164062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Intel One Mono"
+  },
+  "IntelOneMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.3679962158203125
+      },
+      "14": {
+        "normal": 8.595993041992188
+      },
+      "16": {
+        "normal": 9.823989868164062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "IntelOneMono Nerd Font"
+  },
+  "Iosevka": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Iosevka"
+  },
+  "Iosevka Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Iosevka Nerd Font"
+  },
+  "Iosevka Slab": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Iosevka Slab"
+  },
+  "IosevkaTerm Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "IosevkaTerm Nerd Font"
+  },
+  "IosevkaTermSlab Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "IosevkaTermSlab Nerd Font"
+  },
+  "JetBrains Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "JetBrainsMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "JetBrainsMono Nerd Font"
+  },
+  "JuliaMono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Lekton": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.025985054347826
+      },
+      "14": {
+        "normal": 7.030315896739131
+      },
+      "16": {
+        "normal": 8.034646739130435
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Lekton"
+  },
+  "Lekton Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.025985054347826
+      },
+      "14": {
+        "normal": 7.030315896739131
+      },
+      "16": {
+        "normal": 8.034646739130435
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Lekton Nerd Font"
+  },
+  "Liberation Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Liberation Mono"
+  },
+  "Liberation Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Liberation Mono Nerd Font"
+  },
+  "Lilex Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Lilex Nerd Font"
+  },
+  "Lucida Console": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.23046875
+      },
+      "14": {
+        "normal": 8.435546875
+      },
+      "16": {
+        "normal": 9.640625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "Lucida Console"
+  },
+  "M Plus Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "M Plus Code"
+  },
+  "MPlus Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "MPlus Nerd Font"
+  },
+  "Major Mono Display": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8.879989624023438
+      },
+      "14": {
+        "normal": 10.3599853515625
+      },
+      "16": {
+        "normal": 11.839996337890625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Major Mono Display"
+  },
+  "Maple Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "MapleMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "MapleMono Nerd Font"
+  },
+  "Martian Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8.399993896484375
+      },
+      "14": {
+        "normal": 9.79998779296875
+      },
+      "16": {
+        "normal": 11.199996284816576
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 12
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Martian Mono"
+  },
+  "MartianMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8.399993896484375
+      },
+      "14": {
+        "normal": 9.79998779296875
+      },
+      "16": {
+        "normal": 11.199996284816576
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 12
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "MartianMono Nerd Font"
+  },
+  "Menlo": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "Menlo"
+  },
+  "Meslo LG": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Meslo LG"
+  },
+  "Meslo Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Meslo Nerd Font"
+  },
+  "Monaco": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "Monaco"
   },
   "Monaspace Argon": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 6,
+        "semi-wide": 6,
+        "wide": 6
+      },
+      "14": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "16": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
-  },
-  "Monaspace Krypton": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monaspace Neon": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monaspace Radon": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
-  },
-  "Monaspace Xenon": {
-    "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
-    },
-    "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
-    },
-    "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
-    },
-    "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Argon"
   },
   "Monaspace Argon Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "14": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "16": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Argon Nerd Font"
+  },
+  "Monaspace Krypton": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.429552824600883,
+        "semi-wide": 7.429552824600883,
+        "wide": 7.429552824600883
+      },
+      "14": {
+        "normal": 8.66781881581182,
+        "semi-wide": 8.66781881581182,
+        "wide": 8.66781881581182
+      },
+      "16": {
+        "normal": 9.906084807022758,
+        "semi-wide": 9.906084807022758,
+        "wide": 9.906084807022758
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6,
+        "semi-wide": 6,
+        "wide": 6
+      },
+      "14": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "16": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monaspace Krypton"
   },
   "Monaspace Krypton Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.429552824600883,
+        "semi-wide": 7.429552824600883,
+        "wide": 7.429552824600883
+      },
+      "14": {
+        "normal": 8.66781881581182,
+        "semi-wide": 8.66781881581182,
+        "wide": 8.66781881581182
+      },
+      "16": {
+        "normal": 9.906084807022758,
+        "semi-wide": 9.906084807022758,
+        "wide": 9.906084807022758
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "14": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "16": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Krypton Nerd Font"
+  },
+  "Monaspace Neon": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6,
+        "semi-wide": 6,
+        "wide": 6
+      },
+      "14": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "16": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monaspace Neon"
   },
   "Monaspace Neon Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "14": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "16": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Neon Nerd Font"
+  },
+  "Monaspace Radon": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "14": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "16": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monaspace Radon"
   },
   "Monaspace Radon Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "14": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "16": {
+        "normal": 10,
+        "semi-wide": 10,
+        "wide": 10
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 10,
+        "semi-wide": 10,
+        "wide": 10
+      },
+      "14": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      },
+      "16": {
+        "normal": 13,
+        "semi-wide": 13,
+        "wide": 13
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Radon Nerd Font"
+  },
+  "Monaspace Xenon": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6,
+        "semi-wide": 6,
+        "wide": 6
+      },
+      "14": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "16": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monaspace Xenon"
   },
   "Monaspace Xenon Nerd Font": {
     "avgCharWidth": {
-      "12": 6.59765625,
-      "14": 7.697265625,
-      "16": 8.796875
+      "12": {
+        "normal": 7.4399871826171875,
+        "semi-wide": 7.4399871826171875,
+        "wide": 7.4399871826171875
+      },
+      "14": {
+        "normal": 8.67999267578125,
+        "semi-wide": 8.67999267578125,
+        "wide": 8.67999267578125
+      },
+      "16": {
+        "normal": 9.919998168945312,
+        "semi-wide": 9.919998168945312,
+        "wide": 9.919998168945312
+      }
     },
     "xHeight": {
-      "12": 6,
-      "14": 7,
-      "16": 7
+      "12": {
+        "normal": 7,
+        "semi-wide": 7,
+        "wide": 7
+      },
+      "14": {
+        "normal": 8,
+        "semi-wide": 8,
+        "wide": 8
+      },
+      "16": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      }
     },
     "capHeight": {
-      "12": 8,
-      "14": 9,
-      "16": 10
+      "12": {
+        "normal": 9,
+        "semi-wide": 9,
+        "wide": 9
+      },
+      "14": {
+        "normal": 11,
+        "semi-wide": 11,
+        "wide": 11
+      },
+      "16": {
+        "normal": 12,
+        "semi-wide": 12,
+        "wide": 12
+      }
     },
     "monospace": true,
-    "source": "embedded"
+    "source": "embedded",
+    "fontName": "Monaspace Xenon Nerd Font"
+  },
+  "MonoLisa": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Monocraft": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Monofur Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monofur Nerd Font"
+  },
+  "Monoid Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9.333328247070312
+      },
+      "16": {
+        "normal": 10.666656494140625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 11
+      },
+      "14": {
+        "normal": 13
+      },
+      "16": {
+        "normal": 15
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monoid Nerd Font"
+  },
+  "Mononoki": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.73828125
+      },
+      "14": {
+        "normal": 7.861328125
+      },
+      "16": {
+        "normal": 8.984375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Mononoki"
+  },
+  "Mononoki Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.73828125
+      },
+      "14": {
+        "normal": 7.861328125
+      },
+      "16": {
+        "normal": 8.984375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Mononoki Nerd Font"
+  },
+  "Nanum Gothic Coding": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Nanum Gothic Coding"
+  },
+  "Noto Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Noto Sans Mono"
+  },
+  "Noto Sans Mono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Noto Sans Mono Nerd Font"
+  },
+  "Nova Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.73828125
+      },
+      "14": {
+        "normal": 7.861328125
+      },
+      "16": {
+        "normal": 8.984375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Nova Mono"
+  },
+  "Operator Mono": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Overpass Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.391998291015625
+      },
+      "14": {
+        "normal": 8.623992919921875
+      },
+      "16": {
+        "normal": 9.855987548828125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Overpass Mono"
+  },
+  "Overpass Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.391998291015625
+      },
+      "14": {
+        "normal": 8.623992919921875
+      },
+      "16": {
+        "normal": 9.855987548828125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Overpass Nerd Font"
+  },
+  "Oxygen Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Oxygen Mono"
+  },
+  "PT Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "PT Mono"
+  },
+  "PragmataPro": {
+    "error": "Font not loaded - measurements would use fallback font"
+  },
+  "Press Start 2P": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 12
+      },
+      "14": {
+        "normal": 14
+      },
+      "16": {
+        "normal": 16
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 12
+      },
+      "14": {
+        "normal": 15
+      },
+      "16": {
+        "normal": 16
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Press Start 2P"
+  },
+  "Proggy Vector": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1953125
+      },
+      "14": {
+        "normal": 8.39453125
+      },
+      "16": {
+        "normal": 9.59375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Proggy Vector"
+  },
+  "ProFont Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9.333328247070312
+      },
+      "16": {
+        "normal": 10.666656494140625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "ProFont Nerd Font"
+  },
+  "Recursive": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.845212190047555
+      },
+      "14": {
+        "normal": 7.986080667246943
+      },
+      "16": {
+        "normal": 9.12694781759511
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": false,
+    "source": "google",
+    "fontName": "Recursive"
+  },
+  "Recursive Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Recursive Nerd Font"
+  },
+  "Red Hat Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Red Hat Mono"
+  },
+  "Roboto Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Roboto Mono"
+  },
+  "RobotoMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "RobotoMono Nerd Font"
+  },
+  "SF Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.41796875
+      },
+      "14": {
+        "normal": 8.654296875
+      },
+      "16": {
+        "normal": 9.890625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "system",
+    "fontName": "SF Mono"
+  },
+  "Serious Shanns": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.57598876953125
+      },
+      "14": {
+        "normal": 7.6719970703125
+      },
+      "16": {
+        "normal": 8.767990112304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Serious Shanns"
+  },
+  "Serious Shanns Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.57598876953125
+      },
+      "14": {
+        "normal": 7.6719970703125
+      },
+      "16": {
+        "normal": 8.767990112304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Serious Shanns Nerd Font"
+  },
+  "Share Tech Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.4799957275390625
+      },
+      "14": {
+        "normal": 7.55999755859375
+      },
+      "16": {
+        "normal": 8.639999389648438
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Share Tech Mono"
+  },
+  "ShareTechMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.4799957275390625
+      },
+      "14": {
+        "normal": 7.55999755859375
+      },
+      "16": {
+        "normal": 8.639999389648438
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "ShareTechMono Nerd Font"
+  },
+  "Sometype Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.959991455078125
+      },
+      "14": {
+        "normal": 8.1199951171875
+      },
+      "16": {
+        "normal": 9.279998779296875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Sometype Mono"
+  },
+  "Source Code Pro": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Source Code Pro"
+  },
+  "SourceCodePro Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "SourceCodePro Nerd Font"
+  },
+  "Space Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.343994140625
+      },
+      "14": {
+        "normal": 8.5679931640625
+      },
+      "16": {
+        "normal": 9.7919921875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Space Mono"
+  },
+  "SpaceMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.343994140625
+      },
+      "14": {
+        "normal": 8.5679931640625
+      },
+      "16": {
+        "normal": 9.7919921875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "SpaceMono Nerd Font"
+  },
+  "Spline Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Spline Sans Mono"
+  },
+  "Sudo": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.4615325927734375
+      },
+      "14": {
+        "normal": 7.5384521484375
+      },
+      "16": {
+        "normal": 8.615371704101562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Sudo"
+  },
+  "Terminus": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Terminus"
+  },
+  "Terminus Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Terminus Nerd Font"
+  },
+  "Ubuntu Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Ubuntu Mono"
+  },
+  "UbuntuMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "UbuntuMono Nerd Font"
+  },
+  "UbuntuSans Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.7199859619140625
+      },
+      "14": {
+        "normal": 7.839996337890625
+      },
+      "16": {
+        "normal": 8.959991455078125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "UbuntuSans Nerd Font"
+  },
+  "VT323": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 4.79998779296875
+      },
+      "14": {
+        "normal": 5.5999908447265625
+      },
+      "16": {
+        "normal": 6.399993896484375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "VT323"
+  },
+  "Victor Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 12
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Victor Mono"
+  },
+  "VictorMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.545440673828125
+      },
+      "14": {
+        "normal": 7.6363525390625
+      },
+      "16": {
+        "normal": 8.727264404296875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "VictorMono Nerd Font"
+  },
+  "ZedMono Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "ZedMono Nerd Font"
+  },
+  "iA-Writer Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.234953507133152
+      },
+      "14": {
+        "normal": 8.44077665909477
+      },
+      "16": {
+        "normal": 9.646599811056387
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "iA-Writer Nerd Font"
   }
 }

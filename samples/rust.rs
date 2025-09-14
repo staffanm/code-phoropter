@@ -1,4 +1,3 @@
-// Minimal Rust sample (<=60 lines)
 use std::time::Duration;
 
 #[derive(Debug)]
