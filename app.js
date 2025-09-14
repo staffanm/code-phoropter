@@ -29,7 +29,33 @@ function devLog(...args) {
         try { console.log(...args); } catch {}
     }
 }
-    
+
+// Update loading progress display
+function updateLoadingProgress(loaded, total) {
+    const progressFill = document.getElementById('loadingProgressFill');
+    const progressText = document.getElementById('loadingProgressText');
+
+    if (progressFill && progressText) {
+        const percentage = total > 0 ? (loaded / total) * 100 : 0;
+        progressFill.style.width = `${percentage}%`;
+        progressText.textContent = `${loaded} / ${total} fonts loaded`;
+    }
+}
+
+// Hide loading screen and show main app
+function hideLoadingScreen() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    const app = document.getElementById('app');
+
+    if (loadingScreen && app) {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+            app.classList.remove('hidden');
+        }, 500);
+    }
+}
+
 
 // Unified WebFont Loader for all fonts (Google + Embedded)
 function loadAllFonts() {
@@ -59,6 +85,9 @@ function loadAllFonts() {
         const loadedFamilies = new Set();
         window.loadedEmbeddedFonts = window.loadedEmbeddedFonts || new Set();
         
+        // Initialize progress display
+        updateLoadingProgress(0, totalFonts);
+
         const config = {
             fontactive: function(familyName, fvd) {
                 if (!loadedFamilies.has(familyName)) {
@@ -66,6 +95,7 @@ function loadAllFonts() {
                     loadedCount++;
                     window.loadedEmbeddedFonts.add(familyName); // Track loaded fonts
                     devLog(`✓ ${familyName} loaded (${loadedCount}/${totalFonts})`);
+                    updateLoadingProgress(loadedCount, totalFonts);
                 }
             },
             fontinactive: function(familyName, fvd) {
@@ -74,11 +104,13 @@ function loadAllFonts() {
             active: function() {
                 const elapsed = Date.now() - startTime;
                 devLog(`✓ All fonts loaded after ${elapsed}ms`);
+                hideLoadingScreen();
                 resolve();
             },
             inactive: function() {
                 const elapsed = Date.now() - startTime;
                 devLog(`⚠️ Some fonts failed to load after ${elapsed}ms`);
+                hideLoadingScreen();
                 resolve(); // Continue with partial success
             }
         };
@@ -884,6 +916,9 @@ function getStageIndex(id) {
 
 // Theme mode state (dark|light). Default to dark until UI toggle changes it.
 let themeMode = 'dark';
+// Slider compare mode state
+let sliderCompareMode = false;
+let sliderPosition = 50; // percentage (50 = center)
 // Current language selection for code samples
 let currentLanguage = 'javascript';
 
@@ -4153,7 +4188,7 @@ Use the config.css settings in this package.`);
 function toggleThemeMode() {
     const toggle = document.getElementById('themeToggle');
     const label = document.getElementById('toggleLabel');
-    
+
     if (toggle.checked) {
         themeMode = 'light';
         label.textContent = 'Light Mode';
@@ -4163,12 +4198,12 @@ function toggleThemeMode() {
         label.textContent = 'Dark Mode';
         document.body.classList.remove('light-theme');
     }
-    
+
     // Update color schemes in the current engine instead of resetting
     if (engine.candidates && engine.candidates.colorScheme) {
         engine.candidates.colorScheme = [...((window.colorSchemeDatabase || {})[themeMode] || [])];
     }
-    
+
     // If we're currently in the colorScheme stage, regenerate pairs
     if (engine.stage === 'colorScheme') {
         engine.generateNextStage();
@@ -4185,6 +4220,120 @@ function toggleThemeMode() {
     const selectorEl = document.getElementById('fontFamilySelector');
     if (selectorEl && !selectorEl.classList.contains('hidden')) {
         showFontFamilySelector(true);
+    }
+}
+
+// Toggle slider compare mode
+function toggleSliderCompare() {
+    const toggle = document.getElementById('sliderCompareToggle');
+    const container = document.getElementById('comparisonContainer');
+    const divider = document.getElementById('sliderDivider');
+
+    sliderCompareMode = toggle.checked;
+
+    if (sliderCompareMode) {
+        container.classList.add('slider-compare-mode');
+        divider.style.display = 'block';
+        updateSliderPosition(sliderPosition);
+    } else {
+        container.classList.remove('slider-compare-mode');
+        divider.style.display = 'none';
+        // Reset panel B clipping
+        const panelB = document.getElementById('panelB');
+        panelB.style.clipPath = '';
+    }
+}
+
+// Update slider divider position and panel clipping
+function updateSliderPosition(percentage) {
+    sliderPosition = Math.max(5, Math.min(95, percentage)); // Enforce 5%-95% limits
+
+    const container = document.getElementById('comparisonContainer');
+    const divider = document.getElementById('sliderDivider');
+    const panelB = document.getElementById('panelB');
+
+    if (sliderCompareMode) {
+        // Position divider within the centered panel area
+        const containerRect = container.getBoundingClientRect();
+        const panelWidth = (containerRect.width / 2) - 10; // 50% width minus padding
+        const panelLeft = containerRect.width * 0.25 + 5; // Center panel position
+        const dividerLeft = panelLeft + (sliderPosition / 100) * panelWidth;
+        divider.style.left = `${dividerLeft}px`;
+
+        // Clip panel B to show only the left portion up to the divider
+        panelB.style.clipPath = `inset(0 ${100 - sliderPosition}% 0 0)`;
+    }
+}
+
+// Initialize slider divider drag functionality
+function initSliderDivider() {
+    const divider = document.getElementById('sliderDivider');
+    const container = document.getElementById('comparisonContainer');
+    let isDragging = false;
+    let dragOffset = 0;
+
+    // Mouse events
+    divider.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', endDrag);
+
+    // Touch events
+    divider.addEventListener('touchstart', startDrag, { passive: false });
+    document.addEventListener('touchmove', drag, { passive: false });
+    document.addEventListener('touchend', endDrag);
+
+    // Double-click to reset to center
+    divider.addEventListener('dblclick', function(e) {
+        e.preventDefault();
+        updateSliderPosition(50);
+    });
+
+    function startDrag(e) {
+        if (!sliderCompareMode) return;
+
+        isDragging = true;
+        const rect = container.getBoundingClientRect();
+        const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+        const currentPos = ((sliderPosition / 100) * rect.width) + rect.left;
+        dragOffset = clientX - currentPos;
+
+        e.preventDefault();
+        document.body.style.cursor = 'ew-resize';
+        divider.classList.add('dragging');
+    }
+
+    function drag(e) {
+        if (!isDragging || !sliderCompareMode) return;
+
+        const rect = container.getBoundingClientRect();
+        const clientX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+        // Calculate position within the centered panel area
+        const panelWidth = (rect.width / 2) - 10; // 50% width minus padding
+        const panelLeft = rect.left + (rect.width * 0.25) + 5; // Center panel position
+        const relativeX = clientX - dragOffset - panelLeft;
+        const percentage = Math.max(5, Math.min(95, (relativeX / panelWidth) * 100));
+
+        // Update position and clipping immediately without going through updateSliderPosition
+        sliderPosition = percentage;
+        const dividerLeft = panelLeft - rect.left + (percentage / 100) * panelWidth;
+        divider.style.left = `${dividerLeft}px`;
+
+        // Update clipping with optimized clip-path (using requestAnimationFrame for smooth updates)
+        requestAnimationFrame(() => {
+            const panelB = document.getElementById('panelB');
+            panelB.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+        });
+
+        e.preventDefault();
+    }
+
+    function endDrag(e) {
+        if (!isDragging) return;
+
+        isDragging = false;
+        document.body.style.cursor = '';
+        divider.classList.remove('dragging');
+        e.preventDefault();
     }
 }
 
@@ -4728,6 +4877,73 @@ function getFontDownloadInfo(fontName) {
 }
 
 // Dynamic About Page Table Generation
+// Generate font showcase page
+function generateFontShowcase() {
+    const fontGrid = document.getElementById('fontGrid');
+    const loadingMessage = document.getElementById('fontLoadingMessage');
+    const progressElement = document.getElementById('fontLoadingProgress');
+
+    if (!fontGrid) return;
+
+    const build = (installedNames) => {
+        try {
+            injectGoogleFontsFromDatabase();
+            injectCriticalAboutFonts();
+        } catch {}
+
+        if (loadingMessage) loadingMessage.style.display = 'none';
+        fontGrid.style.display = 'grid';
+        generateFontGrid(fontGrid, installedNames);
+    };
+
+    // Try to use FontDetective if available
+    if (typeof FontDetective !== 'undefined' && FontDetective.all) {
+        try {
+            FontDetective.all((detected) => {
+                const names = new Set(detected.map(f => f.name));
+                build(names);
+            });
+        } catch {
+            build(new Set());
+        }
+    } else {
+        build(new Set());
+    }
+}
+
+function generateFontGrid(container, installedNames) {
+    const sampleText = `async function processData(items: Item[]) {
+  const results = await Promise.all(items.map(item =>
+    fetch(\`/api/\${item.id}\`).then(res => res.json())));
+  return results.filter(r => r.status === 'OK');
+}`;
+
+    const fonts = (window.fontDatabase || [])
+        .filter(font => !font.patchedFrom) // Filter out nerd fonts/patched fonts
+        .slice()
+        .sort((a,b) => (a.name||'').localeCompare(b.name||''));
+    let html = '';
+
+    fonts.forEach(font => {
+        let isAvailable = true;
+
+        if (font.source === 'system') {
+            isAvailable = installedNames && installedNames.has(font.name);
+        }
+
+        if (isAvailable) {
+            html += `
+                <div class="font-showcase-item">
+                    <h3 class="font-name">${font.name}</h3>
+                    <pre class="font-sample" style="font-family: '${font.name}', 'Redacted Script', monospace;">${sampleText}</pre>
+                </div>
+            `;
+        }
+    });
+
+    container.innerHTML = html;
+}
+
 function generateAboutPageTables() {
     const fontTableContainer = document.getElementById('fontTableBody');
     const darkSchemesContainer = document.getElementById('darkSchemesTableBody');
@@ -4872,15 +5088,22 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('app')) {
         // Main app page
         init();
+        initSliderDivider();
     } else {
-        // About page: load databases, then render tables
+        // About or Font Showcase page: load databases, then render content
         loadDatabases()
             .then(() => {
                 // Load embedded fonts so samples render in their typefaces
                 try { loadCustomFonts(); } catch {}
-                generateAboutPageTables();
+
+                // Determine if this is the font showcase page
+                if (document.getElementById('fontGrid')) {
+                    generateFontShowcase();
+                } else {
+                    generateAboutPageTables();
+                }
             })
-            .catch(e => console.warn('[About] Failed to load databases:', e));
+            .catch(e => console.warn('[Page] Failed to load databases:', e));
     }
 });
 

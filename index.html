@@ -9,7 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
+    <!-- Loading screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="phoropter-logo-2.png" alt="Phoropter" class="loading-logo">
+            <h2>Code Phoropter</h2>
+            <p class="loading-text">Loading fonts...</p>
+            <div class="loading-progress">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="loadingProgressFill"></div>
+                </div>
+                <div class="progress-text" id="loadingProgressText">0 / 0 fonts loaded</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="app" class="hidden">
         <div class="header">
             <div class="title-with-logo">
                 <img src="phoropter-logo-2.png" alt="Phoropter" class="logo">
@@ -25,31 +40,39 @@
         </div>
 
 
-        <div class="comparison-container">
+        <div class="comparison-container" id="comparisonContainer">
             <div class="code-panel" id="panelA">
                 <div class="panel-label">Option A</div>
                 <div class="panel-summary" id="summaryA"></div>
                 <pre><code id="codeA"></code></pre>
-                <button class="floating-choice-btn" id="btnA" onclick="selectOption('A')">
-                    <span class="key-hint">[A]</span> Prefer A
-                </button>
-            </div>
-            <!-- Neutral buttons centered between panels -->
-            <div class="center-buttons">
-                <button class="floating-choice-btn neutral" id="btnEqual" onclick="selectOption('equal')">
-                    <span class="key-hint">[S]</span> No Preference
-                </button>
-                <button class="floating-choice-btn skip-stage" id="btnSkipStage" onclick="skipCurrentStage()" style="display: none;">
-                    <span class="key-hint">[Tab]</span> Skip Stage
-                </button>
             </div>
             <div class="code-panel" id="panelB">
                 <div class="panel-label">Option B</div>
                 <div class="panel-summary" id="summaryB"></div>
                 <pre><code id="codeB"></code></pre>
+            </div>
+            <!-- Unified button container -->
+            <div class="button-container" id="buttonContainer">
+                <button class="floating-choice-btn" id="btnA" onclick="selectOption('A')">
+                    <span class="key-hint">[A]</span> Prefer A
+                </button>
+                <div class="center-buttons">
+                    <button class="floating-choice-btn neutral" id="btnEqual" onclick="selectOption('equal')">
+                        <span class="key-hint">[S]</span> No Preference
+                    </button>
+                    <button class="floating-choice-btn skip-stage" id="btnSkipStage" onclick="skipCurrentStage()" style="display: none;">
+                        <span class="key-hint">[Tab]</span> Skip Stage
+                    </button>
+                </div>
                 <button class="floating-choice-btn" id="btnB" onclick="selectOption('B')">
                     <span class="key-hint">[D]</span> Prefer B
                 </button>
+            </div>
+            <!-- Draggable divider for slider compare mode -->
+            <div class="slider-divider" id="sliderDivider" style="display: none;">
+                <div class="divider-handle">
+                    <div class="divider-grip"></div>
+                </div>
             </div>
         </div>
 
@@ -83,6 +106,14 @@
                     <input type="checkbox" id="themeToggle" onchange="toggleThemeMode()">
                     <span class="toggle-slider"></span>
                     <span class="toggle-label" id="toggleLabel">Dark Mode</span>
+                </label>
+            </div>
+
+            <div class="slider-compare-toggle">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="sliderCompareToggle" onchange="toggleSliderCompare()">
+                    <span class="toggle-slider"></span>
+                    <span class="toggle-label">Slider Compare</span>
                 </label>
             </div>
             
@@ -138,6 +169,8 @@
 
     <!-- Font Detective library for reliable font detection (local copy) -->
     <script src="vendor/font-detective.js"></script>
+    <!-- WebFont Loader for loading Google Fonts and embedded fonts -->
+    <script src="vendor/webfont.js"></script>
     <!-- JSZip library for creating zip files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
     <!-- Databases are JSON; app.js fetches them -->
