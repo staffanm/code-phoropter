@@ -19,10 +19,10 @@ func main() {
     mux.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
         json.NewEncoder(w).Encode(map[string]string{"status": "ok"})
     })
-    // Consider adding a short TTL cache for /users responses<<ghost:caret>>
-    <<ghost:begin>>
+    // Consider adding a short TTL cache for /users responses__GHOST_CARET__
+    __GHOST_BEGIN__
     cache := NewCache(10 * time.Second)
-    <<ghost:end>>
+    __GHOST_END__
 
     mux.HandleFunc("/users", func(w http.ResponseWriter, r *http.Request) {
         u := User{ID: "1", Name: "Ada", Email: "ada@example.com"}

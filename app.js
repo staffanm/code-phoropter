@@ -58,162 +58,176 @@ function hideLoadingScreen() {
 
 
 // Unified WebFont Loader for all fonts (Google + Embedded)
-function loadAllFonts() {
+// Track which fonts are loaded to avoid duplicate loading
+window.loadedFonts = window.loadedFonts || new Set();
+window.pendingFontLoads = window.pendingFontLoads || new Map();
+
+// Load a specific font on-demand
+function loadFont(fontName) {
     if (typeof WebFont === 'undefined') {
         console.error('WebFont Loader is required but not loaded. Please include vendor/webfont.js');
         return Promise.reject(new Error('WebFont Loader not available'));
     }
-    
-    const db = window.fontDatabase || [];
-    const googleFonts = db.filter(f => f.source === 'google').map(f => f.name);
-    const embeddedFonts = db.filter(f => f.source === 'embedded').map(f => f.name);
-    
-    console.log(`[DEBUG] Loading fonts via unified WebFont Loader: ${googleFonts.length} Google + ${embeddedFonts.length} embedded`);
-    console.log(`[DEBUG] Sample embedded fonts:`, embeddedFonts.slice(0, 5));
-    
-    return new Promise((resolve) => {
-        const startTime = Date.now();
-        let loadedCount = 0;
-        const totalFonts = googleFonts.length + embeddedFonts.length;
-        
-        if (totalFonts === 0) {
-            devLog('No fonts to load via WebFont Loader');
-            resolve();
-            return;
-        }
-        
-        const loadedFamilies = new Set();
-        window.loadedEmbeddedFonts = window.loadedEmbeddedFonts || new Set();
-        
-        // Initialize progress display
-        updateLoadingProgress(0, totalFonts);
 
+    // Check if already loaded
+    if (window.loadedFonts.has(fontName)) {
+        return Promise.resolve();
+    }
+
+    // Check if already loading
+    if (window.pendingFontLoads.has(fontName)) {
+        return window.pendingFontLoads.get(fontName);
+    }
+
+    const db = window.fontDatabase || [];
+    const fontData = db.find(f => f.name === fontName);
+
+    if (!fontData) {
+        console.warn(`Font not found in database: ${fontName}`);
+        return Promise.reject(new Error(`Font not found: ${fontName}`));
+    }
+
+    const promise = new Promise((resolve, reject) => {
         const config = {
             fontactive: function(familyName, fvd) {
-                if (!loadedFamilies.has(familyName)) {
-                    loadedFamilies.add(familyName);
-                    loadedCount++;
-                    window.loadedEmbeddedFonts.add(familyName); // Track loaded fonts
-                    devLog(`✓ ${familyName} loaded (${loadedCount}/${totalFonts})`);
-                    updateLoadingProgress(loadedCount, totalFonts);
-                }
-            },
-            fontinactive: function(familyName, fvd) {
-                console.log(`[DEBUG] ✗ ${familyName} failed to load (${fvd}) - check embedded-fonts.css`);
-            },
-            active: function() {
-                const elapsed = Date.now() - startTime;
-                devLog(`✓ All fonts loaded after ${elapsed}ms`);
-                hideLoadingScreen();
+                console.log(`✓ Font loaded: ${familyName}`);
+                window.loadedFonts.add(familyName);
                 resolve();
             },
-            inactive: function() {
-                const elapsed = Date.now() - startTime;
-                devLog(`⚠️ Some fonts failed to load after ${elapsed}ms`);
-                hideLoadingScreen();
-                resolve(); // Continue with partial success
-            }
+            fontinactive: function(familyName, fvd) {
+                console.log(`✗ Font failed to load: ${familyName} (${fvd})`);
+                reject(new Error(`Font failed to load: ${familyName}`));
+            },
+            active: resolve,
+            inactive: () => reject(new Error(`Font loading timeout: ${fontName}`))
         };
-        
-        // Add Google Fonts
-        if (googleFonts.length > 0) {
-            config.google = {
-                families: googleFonts.map(name => name + ':400,700')
-            };
-        }
-        
-        // Add embedded fonts via pregenerated CSS file
-        if (embeddedFonts.length > 0) {
-            console.log(`[DEBUG] Loading ${embeddedFonts.length} embedded fonts via embedded-fonts.css`);
-            
-            // Test if CSS file exists
-            fetch('embedded-fonts.css', {method: 'HEAD'}).then(response => {
-                console.log(`[DEBUG] embedded-fonts.css status: ${response.status}`);
-            }).catch(err => {
-                console.error(`[DEBUG] embedded-fonts.css not found:`, err);
-            });
-            
-            // Build FVDs for embedded fonts based on their axes (min/max weights + width variants)
-            const embeddedFamilies = embeddedFonts.map(fontName => {
-                const fontData = db.find(f => f.name === fontName);
-                if (!fontData || !fontData.axes) {
-                    // No axes = single variant, no FVD needed
-                    return fontName;
+
+        if (fontData.source === 'google') {
+            // Check if font has custom Google Fonts URL with axis specifications
+            if (fontData.googleFontsUrl) {
+                config.custom = {
+                    families: [fontName],
+                    urls: [fontData.googleFontsUrl]
+                };
+
+                // Apply general axis settings if defined
+                if (fontData.axes && typeof fontData.axes === 'object') {
+                    const axisSettings = [];
+                    for (const [axis, value] of Object.entries(fontData.axes)) {
+                        if (typeof value === 'number') {
+                            axisSettings.push(`"${axis}" ${value}`);
+                        }
+                    }
+
+                    if (axisSettings.length > 0) {
+                        const styleEl = document.createElement('style');
+                        styleEl.textContent = `
+                            [style*="${fontName}"] {
+                                font-variation-settings: ${axisSettings.join(', ')};
+                            }
+                        `;
+                        document.head.appendChild(styleEl);
+                    }
                 }
-                
-                const axes = fontData.axes;
-                const weights = axes.weights || [400];
-                const styles = axes.styles || ['normal'];
-                const widths = axes.widths || ['normal'];
-                
-                // Use only min/max weights for efficiency
-                const minWeight = Math.min(...weights);
-                const maxWeight = Math.max(...weights);
-                const testWeights = minWeight === maxWeight ? [minWeight] : [minWeight, maxWeight];
-                
-                // Build FVD combinations with width variants
+            } else {
+                config.google = {
+                    families: [fontName + ':400,700']
+                };
+            }
+        } else if (fontData.source === 'embedded') {
+            // Build FVDs for embedded fonts based on their axes
+            if (fontData.axes) {
+                const weights = fontData.axes.wght || [400];
+                const styles = fontData.axes.ital ? ['normal', 'italic'] : ['normal'];
+                const widths = fontData.axes.wdth || ['normal'];
+
                 const fvds = [];
-                testWeights.forEach(weight => {
+                weights.forEach(weight => {
                     styles.forEach(style => {
                         widths.forEach(width => {
                             const styleCode = getStyleCode(style);
-                            const weightCode = Math.floor(weight / 100).toString(); // 200->2, 800->8
+                            const weightCode = Math.floor(weight / 100).toString();
                             const widthCode = getWidthCode(width);
-                            
-                            // Only add width code if there are multiple widths
                             const fvd = widths.length > 1 ? styleCode + weightCode + widthCode : styleCode + weightCode;
                             fvds.push(fvd);
                         });
                     });
                 });
-                
-                return fontName + ':' + fvds.join(',');
-            });
-            
-            function getStyleCode(style) {
-                switch (style) {
-                    case 'italic': return 'i';
-                    case 'oblique': return 'o';
-                    case 'normal': return 'n';
-                    default: return 'n';
-                }
+
+                config.custom = {
+                    families: [fontName + ':' + fvds.join(',')],
+                    urls: ['embedded-fonts.css']
+                };
+            } else {
+                // No axes = single variant, no FVD needed
+                config.custom = {
+                    families: [fontName],
+                    urls: ['embedded-fonts.css']
+                };
             }
-            
-            function getWidthCode(width) {
-                switch (width) {
-                    case 'ultra-condensed': return 'a';
-                    case 'extra-condensed': return 'b';
-                    case 'condensed': return 'c';
-                    case 'semi-condensed': return 'd';
-                    case 'normal': return 'n';
-                    case 'semi-expanded': return 'e';
-                    case 'expanded': return 'f';
-                    case 'extra-expanded': return 'g';
-                    case 'ultra-expanded': return 'h';
-                    case 'semi-wide': return 'e'; // Monaspace semi-wide maps to semi-expanded
-                    case 'wide': return 'f'; // Monaspace wide maps to expanded
-                    default: return 'n';
-                }
-            }
-            
-            config.custom = {
-                families: embeddedFamilies,
-                urls: ['embedded-fonts.css']
-            };
-            console.log(`[DEBUG] Embedded families with FVDs:`, embeddedFamilies);
-            console.log(`[DEBUG] WebFont config.custom:`, config.custom);
-        } else {
-            console.log(`[DEBUG] No embedded fonts found, skipping custom CSS`);
         }
-        
-        // 15 second timeout
-        setTimeout(() => {
-            devLog(`⚠️ Font loading timed out after 15s`);
-            resolve();
-        }, 15000);
-        
+
         WebFont.load(config);
     });
+
+    // Store promise to avoid duplicate requests
+    window.pendingFontLoads.set(fontName, promise);
+
+    // Clean up pending loads when done
+    promise.finally(() => {
+        window.pendingFontLoads.delete(fontName);
+    });
+
+    return promise;
+}
+
+// Helper functions for FVD generation
+function getStyleCode(style) {
+    switch (style) {
+        case 'italic': return 'i';
+        case 'oblique': return 'o';
+        case 'normal': return 'n';
+        default: return 'n';
+    }
+}
+
+function getWidthCode(width) {
+    switch (width) {
+        case 'ultra-condensed': return 'a';
+        case 'extra-condensed': return 'b';
+        case 'condensed': return 'c';
+        case 'semi-condensed': return 'd';
+        case 'normal': return 'n';
+        case 'semi-expanded': return 'e';
+        case 'expanded': return 'f';
+        case 'extra-expanded': return 'g';
+        case 'ultra-expanded': return 'h';
+        case 'semi-wide': return 'e'; // Monaspace semi-wide maps to semi-expanded
+        case 'wide': return 'f'; // Monaspace wide maps to expanded
+        default: return 'n';
+    }
+}
+
+// Load multiple fonts in batch (for pages that need many fonts)
+function loadFontsBatch(fontNames) {
+    if (Array.isArray(fontNames)) {
+        return Promise.all(fontNames.map(name => loadFont(name)));
+    }
+    return loadFont(fontNames);
+}
+
+// Legacy function for pages that need ALL fonts (about.html, font-metrics-extractor.html)
+function loadAllFonts() {
+    if (typeof WebFont === 'undefined') {
+        console.error('WebFont Loader is required but not loaded. Please include vendor/webfont.js');
+        return Promise.reject(new Error('WebFont Loader not available'));
+    }
+
+    const db = window.fontDatabase || [];
+    const allFontNames = db.map(f => f.name);
+
+    console.log(`[DEBUG] Loading ALL fonts via batch loader: ${allFontNames.length} fonts`);
+    return loadFontsBatch(allFontNames);
 }
 
 // Generate CSS @font-face declarations for embedded fonts (for unified WebFont Loader)
@@ -1375,8 +1389,21 @@ class ComparisonEngine {
                         if (!m) return false;
                         const name = m[1];
                         const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+
                         // Exclude icon-patched fonts from base font tournament
                         if (window.fontIconsByName && window.fontIconsByName[name]) return false;
+
+                        // Exclude Nerd Font variants if we have the original base font
+                        const fontData = (window.fontDatabase || []).find(f => f.name === name);
+                        if (fontData && fontData.patchedFrom) {
+                            // Check if we have the original font in our database
+                            const hasOriginal = (window.fontDatabase || []).some(f => f.name === fontData.patchedFrom);
+                            if (hasOriginal) {
+                                console.log(`[DEBUG] Excluding ${name} because we have original: ${fontData.patchedFrom}`);
+                                return false;
+                            }
+                        }
+
                         if (source !== 'system') return true; // embeddable (google/embedded) always allowed
                         return isFontAvailable(name); // system only if detected locally
                     });
@@ -1386,7 +1413,17 @@ class ComparisonEngine {
                         if (!m) return false;
                         const name = m[1];
                         const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
+
+                        // Exclude icon-patched fonts from fallback as well
                         if (window.fontIconsByName && window.fontIconsByName[name]) return false;
+
+                        // Exclude Nerd Font variants if we have the original base font (fallback path)
+                        const fontData = (window.fontDatabase || []).find(f => f.name === name);
+                        if (fontData && fontData.patchedFrom) {
+                            const hasOriginal = (window.fontDatabase || []).some(f => f.name === fontData.patchedFrom);
+                            if (hasOriginal) return false;
+                        }
+
                         return source !== 'system';
                     });
                     // Remove embedded fonts that failed to load (broken URLs/CORS)
@@ -1893,9 +1930,16 @@ function init() {
         buildIdMaps();
         buildRoleMaps();
         engine = new ComparisonEngine();
-        loadFonts();
-        updateCode();
-        showStartScreen();
+
+        // Load representative fonts first, then show start screen
+        loadFonts().then(() => {
+            updateCode();
+            showStartScreen();
+        }).catch(err => {
+            console.error('Font loading failed, showing start screen anyway:', err);
+            updateCode();
+            showStartScreen();
+        });
     }).catch(err => {
         console.warn('[DEV] Failed to load JSON databases, attempting fallback globals:', err);
         fontFamiliesOriginal = generateFontFamilies();
@@ -1925,9 +1969,16 @@ function init() {
         });
         engine = new ComparisonEngine();
         buildIdMaps();
-        loadFonts();
-        updateCode();
-        showStartScreen();
+
+        // Load representative fonts first, then show start screen
+        loadFonts().then(() => {
+            updateCode();
+            showStartScreen();
+        }).catch(err => {
+            console.error('Font loading failed, showing start screen anyway:', err);
+            updateCode();
+            showStartScreen();
+        });
     });
     // Warn if highlight.js not present
     if (!(window.hljs && typeof hljs.highlightElement === 'function')) {
@@ -1984,26 +2035,43 @@ function init() {
     });
 }
 
-// Load all fonts - dynamically loads Google Fonts and custom fonts
+// Load initial fonts - only loads representative fonts for front page
 function loadFonts() {
-    // Use unified WebFont Loader for all fonts
-    loadAllFonts().then(() => {
-        devLog('All fonts loaded via unified WebFont Loader');
-    }).catch(err => {
-        console.error('Font loading failed:', err);
-    });
-    
-    // Use original font families initially (before detection) 
+    // Extract representative font names from each category
+    const representatives = Object.values(fontFamiliesOriginal)
+        .map(family => family.representative)
+        .filter(Boolean)
+        .map(cssName => {
+            // Extract font name from CSS declaration like '"Fira Code", "Redacted Script"'
+            const match = cssName.match(/\"([^\"]+)\"/);
+            return match ? match[1] : null;
+        })
+        .filter(Boolean);
+
+    console.log(`Loading representative fonts for front page: ${representatives.join(', ')}`);
+
+    // Use original font families initially (before detection)
     fontFamilies = fontFamiliesOriginal;
     fonts = Object.values(fontFamilies).flatMap(family => family.fonts);
-    
-    console.log(`Using all fonts: ${fonts.length} fonts from database`);
-    
+
+    console.log(`Font database contains: ${fonts.length} total fonts`);
+
     // Load Material Icons for potential UI enhancements
     const iconsLink = document.createElement('link');
     iconsLink.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
     iconsLink.rel = 'stylesheet';
     document.head.appendChild(iconsLink);
+
+    // Load only representative fonts initially and return the promise
+    return Promise.all(representatives.map(fontName => loadFont(fontName)))
+        .then(() => {
+            devLog(`✓ Representative fonts loaded: ${representatives.length} fonts`);
+            hideLoadingScreen();
+        })
+        .catch(err => {
+            console.error('Representative font loading failed:', err);
+            hideLoadingScreen(); // Continue even if some fonts fail
+        });
 }
 
 // Ensure critical fallback fonts for About samples are present
@@ -2227,19 +2295,19 @@ function setCodeWithHighlight(el, code, lang) {
     // Reset any prior highlight.js state before re-highlighting
     el.removeAttribute('data-highlighted');
     el.textContent = code;
-    // Process ghost markers before highlighting, so markers aren't broken by DOM changes
-    try { processGhostMarkers(el); } catch (e) { devLog('Ghost processing failed', e); }
     if (window.hljs && typeof hljs.highlightElement === 'function') {
         try { hljs.highlightElement(el); } catch {}
     }
+    // Process ghost markers after highlighting, now that DOM is structured
+    try { processGhostMarkers(el); } catch (e) { devLog('Ghost processing failed', e); }
 }
 
 // Wrap ghost sections and caret markers in code blocks
 function processGhostMarkers(codeEl) {
     if (!codeEl || !codeEl.textContent) return;
-    const MARK_BEGIN = '<<ghost:begin>>';
-    const MARK_END = '<<ghost:end>>';
-    const MARK_CARET = '<<ghost:caret>>';
+    const MARK_BEGIN = '__GHOST_BEGIN__';
+    const MARK_END = '__GHOST_END__';
+    const MARK_CARET = '__GHOST_CARET__';
     // Quick check
     const fullText = codeEl.textContent;
     if (!fullText.includes(MARK_BEGIN) && !fullText.includes(MARK_CARET)) return;
@@ -2416,7 +2484,7 @@ const roleSliceHints = {
     keywords: [/\b(function|const|let|return|if|else|for|while|switch|case)\b/],
     function: [/\bfunction\b|=>/],
     base: [/./],
-    ghost: [/<<ghost:begin>>/]
+    ghost: [/__GHOST_BEGIN__/]
 };
 
 async function setRoleSliceInPanels(role) {
@@ -2493,8 +2561,8 @@ function extractSliceByRole(code, role, context = 3, maxLines = 40) {
     if (role === 'ghost') {
         let beginIdx = -1, endIdx = -1;
         for (let i = 0; i < lines.length; i++) {
-            if (beginIdx === -1 && lines[i].includes('<<ghost:begin>>')) beginIdx = i;
-            if (lines[i].includes('<<ghost:end>>')) { endIdx = i; break; }
+            if (beginIdx === -1 && lines[i].includes('__GHOST_BEGIN__')) beginIdx = i;
+            if (lines[i].includes('__GHOST_END__')) { endIdx = i; break; }
         }
         if (beginIdx !== -1) {
             const start = Math.max(0, beginIdx - context);
@@ -2685,7 +2753,7 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
                 hasDragged = false;
                 return;
             }
-            selectFontFamily(familyName);
+            selectFontFamily(familyName, familyData.representative);
         };
         
         // Create container for side-by-side previews (unified window)
@@ -2705,8 +2773,9 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
             }
             const score = (name) => {
                 const src = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
-                if (src === 'google') return 3;
-                if (src === 'embedded') return (window.loadedEmbeddedFonts && window.loadedEmbeddedFonts.has(name)) ? 2 : 0;
+                const isLoaded = window.loadedFonts && window.loadedFonts.has(name);
+                if (src === 'google') return isLoaded ? 3 : 0;
+                if (src === 'embedded') return isLoaded ? 2 : 0;
                 if (src === 'system') return isFontAvailable(name) ? 1 : -1;
                 return 0;
             };
@@ -2860,17 +2929,49 @@ function showFontFamilySelector(keepDescriptionVisible = false) {
 }
 
 // Handle font family selection
-function selectFontFamily(familyName) {
-    // Hide import section and font family selector since user made choice
-    document.getElementById('importSection').classList.add('hidden');
-    document.getElementById('fontFamilySelector').classList.add('hidden');
-    
-    // Enable controls now that tournament has started
-    document.getElementById('languageSelect').disabled = false;
-    document.getElementById('resetBtn').disabled = false;
-    
-    engine.selectFontFamily(familyName);
-    showNextComparison();
+function selectFontFamily(categoryName, representativeFont = null) {
+    // Extract font name from CSS family name for loading
+    const fontCss = representativeFont || categoryName;
+    const fontNameMatch = fontCss.match(/\"([^\"]+)\"/);
+    const fontName = fontNameMatch ? fontNameMatch[1] : fontCss;
+
+    // Show loading indicator for this font
+    const loadingIndicator = document.createElement('div');
+    loadingIndicator.className = 'font-loading-indicator';
+    loadingIndicator.textContent = `Loading ${fontName}...`;
+    loadingIndicator.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); color: white; padding: 20px; border-radius: 8px; z-index: 1000;';
+    document.body.appendChild(loadingIndicator);
+
+    // Load the selected font before proceeding
+    loadFont(fontName)
+        .then(() => {
+            // Font loaded successfully, continue with selection
+            document.body.removeChild(loadingIndicator);
+
+            // Hide import section and font family selector since user made choice
+            document.getElementById('importSection').classList.add('hidden');
+            document.getElementById('fontFamilySelector').classList.add('hidden');
+
+            // Enable controls now that tournament has started
+            document.getElementById('languageSelect').disabled = false;
+            document.getElementById('resetBtn').disabled = false;
+
+            engine.selectFontFamily(categoryName);
+            showNextComparison();
+        })
+        .catch(err => {
+            console.warn(`Failed to load font ${fontName}, continuing anyway:`, err);
+            document.body.removeChild(loadingIndicator);
+
+            // Continue even if font loading failed
+            document.getElementById('importSection').classList.add('hidden');
+            document.getElementById('fontFamilySelector').classList.add('hidden');
+            document.getElementById('languageSelect').disabled = false;
+            document.getElementById('resetBtn').disabled = false;
+
+            engine.selectFontFamily(categoryName);
+            showNextComparison();
+        });
 }
 
 // Apply styles to a code panel
@@ -2878,15 +2979,35 @@ function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
     const code = document.getElementById(codeId);
     const panel = document.getElementById(panelId);
     const summary = summaryId ? document.getElementById(summaryId) : null;
-    // Ensure embedded face is loaded when using variantsMatrix
+
+    // Extract font name and ensure it's loaded
+    const fontNameMatch = (option.font || '').match(/\"([^\"]+)\"/);
+    const fontName = fontNameMatch ? fontNameMatch[1] : null;
+
+    if (fontName && !window.loadedFonts.has(fontName)) {
+        // Add subtle loading indicator on panel
+        panel.style.filter = 'blur(1px)';
+        panel.style.transition = 'filter 0.3s ease';
+
+        // Load font asynchronously
+        loadFont(fontName)
+            .then(() => {
+                // Remove blur effect when font is loaded
+                panel.style.filter = 'none';
+            })
+            .catch(err => {
+                console.warn(`Failed to load font ${fontName} for panel:`, err);
+                panel.style.filter = 'none'; // Remove blur even if loading failed
+            });
+    }
+
+    // Ensure embedded face is loaded when using variantsMatrix (legacy support)
     try {
-        const m = (option.font || '').match(/\"([^\"]+)\"/);
-        const fam = m ? m[1] : null;
         const weight = option.fontWeight || 400;
         const style = 'normal';
         const width = option.fontWidth || 'normal';
-        if (fam && typeof window.ensureEmbeddedFace === 'function') {
-            window.ensureEmbeddedFace(fam, weight, style, width);
+        if (fontName && typeof window.ensureEmbeddedFace === 'function') {
+            window.ensureEmbeddedFace(fontName, weight, style, width);
         }
     } catch {}
 
@@ -5137,8 +5258,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // About or Font Showcase page: load databases, then render content
         loadDatabases()
             .then(() => {
-                // Load embedded fonts so samples render in their typefaces
-                try { loadCustomFonts(); } catch {}
+                // For font showcase, just load the embedded-fonts.css and Google Fonts CSS
+                // Don't use individual font loading as it's too aggressive for 150+ fonts
+                try {
+                    // Load embedded fonts CSS
+                    const embeddedLink = document.createElement('link');
+                    embeddedLink.href = 'embedded-fonts.css';
+                    embeddedLink.rel = 'stylesheet';
+                    embeddedLink.type = 'text/css';
+                    document.head.appendChild(embeddedLink);
+                    console.log('Loaded embedded-fonts.css');
+                } catch (e) {
+                    console.warn('Failed to load embedded-fonts.css:', e);
+                }
+
+                // Load Google Fonts via database injection (already called below)
+                console.log('Font showcase: Using CSS-based font loading instead of WebFont Loader');
 
                 // Determine if this is the font showcase page
                 if (document.getElementById('fontGrid')) {

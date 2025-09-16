@@ -4695,7 +4695,7 @@
     "ttf": null,
     "otf": null,
     "woff2": null,
-    "category": "Technical Specialists",
+    "category": "Expressive Experimentals",
     "id": 123
   },
   {
@@ -4759,12 +4759,17 @@
     "id": 124
   },
   {
-    "name": "Recursive",
+    "name": "Recursive Mono Linear",
     "source": "google",
     "ligatures": true,
-    "description": "A modern monospaced sans‑serif with clean shapes, with programming ligatures.",
-    "css": "\"Recursive\"",
+    "description": "Recursive with MONO=1, CASL=0 for a clean, linear monospace design.",
+    "css": "\"Recursive\", monospace",
     "homepage": "https://www.recursive.design/",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@0,0,1,0,300..1000",
+    "axes": {
+      "MONO": 1,
+      "CASL": 0
+    },
     "ttf": null,
     "otf": null,
     "woff2": null,
@@ -4772,13 +4777,31 @@
     "id": 128
   },
   {
-    "name": "Recursive Nerd Font",
+    "name": "Recursive Mono Casual",
+    "source": "google",
+    "ligatures": true,
+    "description": "Recursive with MONO=1, CASL=1 for a casual monospace design with friendly curves.",
+    "css": "\"Recursive\", monospace",
+    "homepage": "https://www.recursive.design/",
+    "googleFontsUrl": "https://fonts.googleapis.com/css2?family=Recursive:CASL,CRSV,MONO,slnt,wght@1,0,1,0,300..1000",
+    "axes": {
+      "MONO": 1,
+      "CASL": 1
+    },
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Expressive Experimentals",
+    "id": 155
+  },
+  {
+    "name": "Recursive Mono Linear Nerd Font",
     "source": "embedded",
     "ligatures": true,
     "icons": true,
-    "patchedFrom": "Recursive",
-    "description": "A retro, terminal‑inspired monospaced design, with programming ligatures and multiple weights/styles.",
-    "css": "\"Recursive Nerd Font\"",
+    "patchedFrom": "Recursive Mono Linear",
+    "description": "Recursive Linear with Nerd Font icons - clean, linear monospace design with programming ligatures.",
+    "css": "\"Recursive Mono Linear Nerd Font\"",
     "homepage": "https://www.nerdfonts.com/",
     "axes": {
       "weights": [
@@ -4795,7 +4818,7 @@
     "variantsMatrix": {
       "prefer": "ttf",
       "files": {
-        "ttf": "fonts/Recursive.NF/RecMonoCasualNerdFont{weight|map}{style|map}.ttf"
+        "ttf": "fonts/Recursive Mono Linear.NF/RecMonoLinearNerdFont{weight|map}{style|map}.ttf"
       },
       "maps": {
         "width": {
@@ -4819,6 +4842,55 @@
     },
     "category": "Geometric Moderns",
     "id": 129
+  },
+  {
+    "name": "Recursive Mono Casual Nerd Font",
+    "source": "embedded",
+    "ligatures": true,
+    "icons": true,
+    "patchedFrom": "Recursive Mono Casual",
+    "description": "Recursive Casual with Nerd Font icons - friendly, casual monospace design with programming ligatures.",
+    "css": "\"Recursive Mono Casual Nerd Font\"",
+    "homepage": "https://www.nerdfonts.com/",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Recursive Mono Casual.NF/RecMonoCasualNerdFont{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "-Regular",
+          "700": "-Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "-Italic",
+          "oblique": "-Oblique"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "-Regular"
+      }
+    },
+    "category": "Expressive Experimentals",
+    "id": 156
   },
   {
     "name": "Red Hat Mono",

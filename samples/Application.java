@@ -22,9 +22,9 @@ class ApiController {
     public Map<String, Object> health() {
         return Map.of("status", "ok", "time", Instant.now().toString());
     }
-    // Suggest enabling a simple cache for read-mostly traffic<<ghost:caret>>
-    <<ghost:begin>>// TODO: users.enableCache(java.time.Duration.ofSeconds(10)); 
-    // <<ghost:end>>
+    // Suggest enabling a simple cache for read-mostly traffic__GHOST_CARET__
+    __GHOST_BEGIN__// TODO: users.enableCache(java.time.Duration.ofSeconds(10));
+    // __GHOST_END__
 
     @GetMapping("/users/{id}")
     public Map<String, Object> user(@PathVariable String id) {

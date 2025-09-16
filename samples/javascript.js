@@ -8,13 +8,13 @@ export default function UserSearch({ onUserSelect }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  // Early return when query is too short<<ghost:caret>>
-  <<ghost:begin>>if (q.trim().length < 3) {
+  // Early return when query is too short__GHOST_CARET__
+  __GHOST_BEGIN__if (q.trim().length < 3) {
     setUsers([]);
     setError('');
     return null;
   }
-  // <<ghost:end>>
+  // __GHOST_END__
   const search = useMemo(() => debounce(async (s) => {
     if (!s.trim()) { setUsers([]); return; }
     setLoading(true);

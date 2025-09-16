@@ -1997,7 +1997,42 @@
     "fontName": "Hack Nerd Font"
   },
   "Hasklig": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Hasklig"
   },
   "Hasklig Nerd Font": {
     "avgCharWidth": {
@@ -2038,7 +2073,42 @@
     "fontName": "Hasklig Nerd Font"
   },
   "Hermit": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.415985107421875
+      },
+      "14": {
+        "normal": 8.651992797851562
+      },
+      "16": {
+        "normal": 9.887985229492188
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Hermit"
   },
   "Hermit Nerd Font": {
     "avgCharWidth": {
@@ -2500,7 +2570,42 @@
     "fontName": "IosevkaTermSlab Nerd Font"
   },
   "JetBrains Mono": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "JetBrains Mono"
   },
   "JetBrainsMono Nerd Font": {
     "avgCharWidth": {
@@ -2541,7 +2646,42 @@
     "fontName": "JetBrainsMono Nerd Font"
   },
   "JuliaMono": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "JuliaMono"
   },
   "Lekton": {
     "avgCharWidth": {
@@ -2886,7 +3026,42 @@
     "fontName": "Major Mono Display"
   },
   "Maple Mono": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Maple Mono"
   },
   "MapleMono Nerd Font": {
     "avgCharWidth": {
@@ -3718,7 +3893,42 @@
     "error": "Font not loaded - measurements would use fallback font"
   },
   "Monocraft": {
-    "error": "Font not loaded - measurements would use fallback font"
+    "avgCharWidth": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9.333328247070312
+      },
+      "16": {
+        "normal": 10.666656494140625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monocraft"
   },
   "Monofur Nerd Font": {
     "avgCharWidth": {
@@ -4296,45 +4506,13 @@
     "source": "embedded",
     "fontName": "ProFont Nerd Font"
   },
-  "Recursive": {
-    "avgCharWidth": {
-      "12": {
-        "normal": 6.845212190047555
-      },
-      "14": {
-        "normal": 7.986080667246943
-      },
-      "16": {
-        "normal": 9.12694781759511
-      }
-    },
-    "xHeight": {
-      "12": {
-        "normal": 7
-      },
-      "14": {
-        "normal": 8
-      },
-      "16": {
-        "normal": 9
-      }
-    },
-    "capHeight": {
-      "12": {
-        "normal": 9
-      },
-      "14": {
-        "normal": 10
-      },
-      "16": {
-        "normal": 12
-      }
-    },
-    "monospace": false,
-    "source": "google",
-    "fontName": "Recursive"
+  "Recursive Mono Linear": {
+    "error": "Font failed to load: Recursive Mono Linear"
   },
-  "Recursive Nerd Font": {
+  "Recursive Mono Casual": {
+    "error": "Font failed to load: Recursive Mono Casual"
+  },
+  "Recursive Mono Linear Nerd Font": {
     "avgCharWidth": {
       "12": {
         "normal": 7.1999969482421875
@@ -4370,7 +4548,45 @@
     },
     "monospace": true,
     "source": "embedded",
-    "fontName": "Recursive Nerd Font"
+    "fontName": "Recursive Mono Linear Nerd Font"
+  },
+  "Recursive Mono Casual Nerd Font": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1999969482421875
+      },
+      "14": {
+        "normal": 8.399993896484375
+      },
+      "16": {
+        "normal": 9.599990844726562
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Recursive Mono Casual Nerd Font"
   },
   "Red Hat Mono": {
     "avgCharWidth": {

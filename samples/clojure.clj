@@ -8,10 +8,10 @@
    :headers {"content-type" "application/json"}
    :body body})
 
-;; <<ghost:begin>>
+;; __GHOST_BEGIN__
 ;; Suggest middleware for simple in-memory caching
-;; (wrap-with-cache {:ttl-ms 10000}) ;; TODO <<ghost:caret>>
-;; <<ghost:end>>
+;; (wrap-with-cache {:ttl-ms 10000}) ;; TODO __GHOST_CARET__
+;; __GHOST_END__
 
 (defn handler [req]
   (case (:uri req)

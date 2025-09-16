@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Metrics Extractor</title>
+    <link rel="icon" type="image/png" href="phoropter-icon-2.png">
+    <link rel="shortcut icon" type="image/png" href="phoropter-icon-2.png">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -95,6 +97,8 @@
     </style>
 </head>
 <body>
+    <!-- Remove app element to prevent main app initialization conflicts -->
+
     <div class="header">
         <h1>Font Metrics Extractor</h1>
         <p>Extract character width and height metrics for monospace fonts</p>
@@ -348,20 +352,22 @@
             btn.textContent = 'Loading...';
 
             try {
-                // Use app.js initialization to load fonts properly
+                // Load databases first
                 log('Loading databases...', 'info');
                 await loadDatabases();
                 fontDatabase = window.fontDatabase || [];
                 log(`Database loaded: ${fontDatabase.length} fonts`, 'info');
-                
-                log(`✓ Loaded ${fontDatabase.length} fonts from database`, 'success');
+
+                // Don't load all fonts upfront - let individual extraction handle loading
+                // This avoids overwhelming the browser and allows better error handling per font
+                log('✓ Font database ready for individual font loading during extraction', 'success');
+
                 log(`✓ Font loading infrastructure initialized`, 'success');
-                log(`✓ All fonts loaded via unified WebFont Loader`, 'success');
-                
+
                 document.getElementById('extractBtn').disabled = false;
                 document.getElementById('generateCssBtn').disabled = false;
                 btn.textContent = `✓ ${fontDatabase.length} Fonts Loaded`;
-                
+
                 updateSummary();
             } catch (error) {
                 log(`✗ Failed to load font database: ${error.message}`, 'warning');
@@ -411,24 +417,43 @@
                 try {
                     const metrics = await extractFontMetrics(font);
                     fontMetrics[font.name] = metrics;
-                    
+
                     const status = metrics.monospace ? '✓' : '✗';
                     const warning = metrics.monospace ? '' : ' (NOT MONOSPACE!)';
                     const normalWidth = metrics.avgCharWidth["16"]?.normal;
                     const widthStr = normalWidth ? `${normalWidth.toFixed(2)}px` : 'N/A';
-                    
+
                     // Show width variants if available
                     const variants = Object.keys(metrics.avgCharWidth["16"] || {});
                     const variantInfo = variants.length > 1 ? ` [variants: ${variants.join(', ')}]` : '';
-                    
-                    log(`${status} ${font.name} - avgWidth: ${widthStr}${variantInfo}${warning}`, 
+
+                    log(`${status} ${font.name} - avgWidth: ${widthStr}${variantInfo}${warning}`,
                         metrics.monospace ? 'success' : 'warning');
-                        
+
                 } catch (error) {
                     log(`✗ ${font.name} - Error: ${error.message}`, 'warning');
                     fontMetrics[font.name] = { error: error.message };
                 }
-                
+
+                // Memory cleanup after each font to prevent resource exhaustion
+                if (window.gc) {
+                    window.gc(); // Force garbage collection if available
+                }
+
+                // Clean up any lingering font loading promises/resources
+                try {
+                    // Clear any pending font loads
+                    window.loadedFonts?.clear?.();
+                    window.pendingFontLoads?.clear?.();
+
+                    // Give browser time to clean up between fonts
+                    if (i % 10 === 9) { // Every 10 fonts
+                        await new Promise(resolve => setTimeout(resolve, 100));
+                    }
+                } catch (e) {
+                    // Ignore cleanup errors
+                }
+
                 // Update progress
                 const progress = ((i + 1) / fontDatabase.length * 100).toFixed(1);
                 document.title = `Font Metrics Extractor - ${progress}%`;
@@ -662,13 +687,15 @@
                                 const testSize = 16;
                                 
                                 // Get baseline width with normal weight/style
-                                ctx.font = `${testSize}px "${fontInfo.name}", monospace`;
+                                const baseFontSpec = `${testSize}px "${fontInfo.name}", monospace`;
+                                ctx.font = baseFontSpec;
                                 if (fontVariationSettings) {
                                     ctx.fontVariationSettings = fontVariationSettings;
                                 } else {
                                     ctx.fontVariationSettings = '';
                                 }
                                 const baseWidth = ctx.measureText(TEST_STRINGS.mixed).width / TEST_STRINGS.mixed.length;
+                                const actualBaseFont = ctx.font;
                                 let hasWidthVariation = false;
                                 
                                 for (const styleVar of styleVariations.slice(1)) { // Skip first (normal/normal)
@@ -680,13 +707,19 @@
                                     } else {
                                         ctx.fontVariationSettings = '';
                                     }
-                                    
+
                                     const styleWidth = ctx.measureText(TEST_STRINGS.mixed).width / TEST_STRINGS.mixed.length;
                                     const widthDiff = Math.abs(styleWidth - baseWidth);
-                                    
+
                                     if (widthDiff > 0.1) {
                                         hasWidthVariation = true;
-                                        log(`⚠️  ${fontInfo.name} width varies with ${styleVar.weight}/${styleVar.style}: ${baseWidth.toFixed(2)}px → ${styleWidth.toFixed(2)}px (Δ${widthDiff.toFixed(2)}px)`, 'warning');
+                                        log(`⚠️  ${fontInfo.name} width varies: normal/normal ${baseWidth.toFixed(2)}px vs ${styleVar.weight}/${styleVar.style} ${styleWidth.toFixed(2)}px (Δ${widthDiff.toFixed(2)}px)`, 'warning');
+                                        log(`   Font spec requested: "${fontSpec}"`, 'info');
+
+                                        // Request actual rendered font detection from the parent frame
+                                        if (window.checkActualFont) {
+                                            window.checkActualFont(fontSpec, styleVar.weight, styleVar.style, fontInfo.name);
+                                        }
                                     }
                                 }
                                 
@@ -703,53 +736,72 @@
         }
 
         async function loadFont(fontInfo) {
-            // Simple font loading implementation
+            // Use the proper font loading from app.js (expects font name, not fontInfo object)
+            const fontName = fontInfo.name || fontInfo;
+
+            // Don't recursively call our own loadFont function
+            if (typeof window.loadFont === 'function' && window.loadFont !== loadFont) {
+                // Use the app.js loadFont function if available
+                return window.loadFont(fontName);
+            }
+
+            // Fallback: Basic WebFont loading implementation
+            if (typeof WebFont === 'undefined') {
+                return Promise.reject(new Error('WebFont Loader not available'));
+            }
+
+            const fontData = window.fontDatabase?.find(f => f.name === fontName);
+            if (!fontData) {
+                return Promise.reject(new Error(`Font not found: ${fontName}`));
+            }
+
             return new Promise((resolve, reject) => {
-                const timeout = setTimeout(() => {
-                    reject(new Error(`Font loading timeout for ${fontInfo.name}`));
-                }, 3000);
-                
-                const clearTimeoutAndResolve = () => {
-                    clearTimeout(timeout);
-                    resolve();
+                const config = {
+                    fontactive: () => resolve(),
+                    fontinactive: () => reject(new Error(`Font failed to load: ${fontName}`)),
+                    active: resolve,
+                    inactive: () => reject(new Error(`Font loading timeout: ${fontName}`))
                 };
-                
-                // For system fonts, assume they're available
-                if (fontInfo.source === 'system') {
-                    setTimeout(clearTimeoutAndResolve, 50);
+
+                if (fontData.source === 'google') {
+                    config.google = {
+                        families: [fontName + ':400,700']
+                    };
+                } else if (fontData.source === 'embedded') {
+                    // Load all available variants explicitly
+                    config.custom = {
+                        families: [fontName + ':n4,n7,i4,i7'], // normal 400, normal 700, italic 400, italic 700
+                        urls: ['embedded-fonts.css']
+                    };
+
+                    // Override callbacks to wait for specific variants to be available
+                    const originalResolve = resolve;
+                    config.fontactive = () => {
+                        // Don't resolve immediately - wait for all variants
+                    };
+                    config.active = () => {
+                        // Wait for document.fonts.ready and verify variants are loaded
+                        document.fonts.ready.then(() => {
+                            setTimeout(() => {
+                                // Check if bold and italic variants are actually available
+                                const testBold = document.fonts.check(`bold 16px "${fontName}"`);
+                                const testItalic = document.fonts.check(`italic 16px "${fontName}"`);
+                                const testNormal = document.fonts.check(`16px "${fontName}"`);
+
+                                console.log(`Font variant check for ${fontName}: normal=${testNormal}, bold=${testBold}, italic=${testItalic}`);
+
+                                // Wait a bit more for font faces to be fully ready
+                                setTimeout(originalResolve, 500);
+                            }, 200);
+                        });
+                    };
+                } else {
+                    // System fonts - just resolve quickly
+                    setTimeout(resolve, 50);
                     return;
                 }
 
-                // For Google Fonts, they're loaded via CSS by app.js - just wait for them to be ready
-                if (fontInfo.source === 'google') {
-                    // Google fonts are loaded via CSS links, wait for document.fonts.ready
-                    document.fonts.ready.then(() => {
-                        setTimeout(clearTimeoutAndResolve, 500); // Extra time for CSS fonts to fully load
-                    });
-                } else if (fontInfo.files) {
-                    // For embedded/downloadable fonts, load via FontFace API
-                    const fontUrl = fontInfo.files.woff2 || fontInfo.files.ttf || fontInfo.files.otf;
-                    if (fontUrl) {
-                        try {
-                            const fontFace = new FontFace(fontInfo.name, `url(${fontUrl})`);
-                            fontFace.load().then((loadedFont) => {
-                                document.fonts.add(loadedFont);
-                                // Wait a bit for the font to be ready
-                                setTimeout(clearTimeoutAndResolve, 100);
-                            }).catch((error) => {
-                                clearTimeout(timeout);
-                                reject(new Error(`Failed to load font file: ${error.message}`));
-                            });
-                        } catch (error) {
-                            clearTimeout(timeout);
-                            reject(new Error(`Error creating FontFace: ${error.message}`));
-                        }
-                    } else {
-                        clearTimeoutAndResolve(); // No files available, proceed anyway
-                    }
-                } else {
-                    clearTimeoutAndResolve(); // No files available, proceed anyway
-                }
+                WebFont.load(config);
             });
         }
 
