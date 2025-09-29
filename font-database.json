@@ -5721,5 +5721,51 @@
     },
     "category": "Humanist Readables",
     "id": 65
+  },
+  {
+    "name": "Computer Modern Typewriter",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "The classic monospaced typewriter font from Donald Knuth's Computer Modern family.",
+    "css": "\"Computer Modern Typewriter\"",
+    "homepage": "https://github.com/stevenpetryk/computer-modern",
+    "axes": {
+      "weights": [
+        200,
+        500,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "ttf": "fonts/Computer Modern/cmu-typewriter-text-{weight|map}-{style|map}.ttf",
+        "woff2": "fonts/Computer Modern/cmu-typewriter-text-{weight|map}-{style|map}.woff2"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "200": "200",
+          "500": "500",
+          "700": "700"
+        },
+        "style": {
+          "normal": "roman",
+          "italic": "italic"
+        }
+      },
+      "cleanup": true
+    },
+    "category": "Typewriter Classics",
+    "id": 66
   }
 ]

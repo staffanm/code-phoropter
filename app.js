@@ -30,18 +30,6 @@ function devLog(...args) {
     }
 }
 
-// Update loading progress display
-function updateLoadingProgress(loaded, total) {
-    const progressFill = document.getElementById('loadingProgressFill');
-    const progressText = document.getElementById('loadingProgressText');
-
-    if (progressFill && progressText) {
-        const percentage = total > 0 ? (loaded / total) * 100 : 0;
-        progressFill.style.width = `${percentage}%`;
-        progressText.textContent = `${loaded} / ${total} fonts loaded`;
-    }
-}
-
 // Hide loading screen and show main app
 function hideLoadingScreen() {
     const loadingScreen = document.getElementById('loadingScreen');
@@ -206,28 +194,6 @@ function getWidthCode(width) {
         case 'wide': return 'f'; // Monaspace wide maps to expanded
         default: return 'n';
     }
-}
-
-// Load multiple fonts in batch (for pages that need many fonts)
-function loadFontsBatch(fontNames) {
-    if (Array.isArray(fontNames)) {
-        return Promise.all(fontNames.map(name => loadFont(name)));
-    }
-    return loadFont(fontNames);
-}
-
-// Legacy function for pages that need ALL fonts (about.html, font-metrics-extractor.html)
-function loadAllFonts() {
-    if (typeof WebFont === 'undefined') {
-        console.error('WebFont Loader is required but not loaded. Please include vendor/webfont.js');
-        return Promise.reject(new Error('WebFont Loader not available'));
-    }
-
-    const db = window.fontDatabase || [];
-    const allFontNames = db.map(f => f.name);
-
-    console.log(`[DEBUG] Loading ALL fonts via batch loader: ${allFontNames.length} fonts`);
-    return loadFontsBatch(allFontNames);
 }
 
 // Generate CSS @font-face declarations for embedded fonts (for unified WebFont Loader)
@@ -421,6 +387,73 @@ function isFontAvailable(fontName) {
     return isAvailable;
 }
 
+function extractFontNameFromCss(cssString) {
+    if (!cssString || typeof cssString !== 'string') return null;
+    const match = cssString.match(/"([^\"]+)"/);
+    return match ? match[1] : null;
+}
+
+function partitionFontCandidates(cssStrings, options = {}) {
+    const {
+        allowIcons = false,
+        allowPatchedVariants = false,
+        allowUninstalledSystem = false,
+        requireEmbeddedReady = false
+    } = options;
+
+    const database = window.fontDatabase || [];
+    const metas = [];
+
+    cssStrings.forEach(cssString => {
+        const name = extractFontNameFromCss(cssString);
+        if (!name) return;
+
+        const entry = database.find(f => f.name === name) || null;
+        const source = (window.fontSourceByName && window.fontSourceByName[name]) || entry?.source || 'embedded';
+        const patchedFrom = entry?.patchedFrom || null;
+        const hasOriginal = !!(patchedFrom && database.some(f => f.name === patchedFrom));
+        const isIcon = !!(window.fontIconsByName && window.fontIconsByName[name]);
+        const isSystem = source === 'system';
+        const isSystemAvailable = !isSystem || isFontAvailable(name);
+
+        let isEmbeddedReady = true;
+        if (requireEmbeddedReady && source === 'embedded') {
+            const loadedSet = window.loadedEmbeddedFonts;
+            if (loadedSet && typeof loadedSet.has === 'function') {
+                isEmbeddedReady = loadedSet.has(name);
+            }
+        }
+
+        metas.push({
+            css: cssString,
+            name,
+            source,
+            patchedFrom,
+            hasOriginal,
+            isIcon,
+            isSystem,
+            isSystemAvailable,
+            isEmbeddedReady
+        });
+    });
+
+    const usable = metas.filter(meta => {
+        if (!allowIcons && meta.isIcon) return false;
+        if (!allowPatchedVariants && meta.patchedFrom && meta.hasOriginal) return false;
+        if (requireEmbeddedReady && meta.source === 'embedded' && !meta.isEmbeddedReady) return false;
+        return true;
+    });
+
+    const available = usable.filter(meta => {
+        if (!allowUninstalledSystem && meta.isSystem && !meta.isSystemAvailable) return false;
+        return true;
+    });
+
+    const webOnly = usable.filter(meta => meta.source !== 'system');
+
+    return { usable, available, webOnly };
+}
+
 // Detect font-width support for a given font
 function detectFontWidthSupport(fontName) {
     const testString = 'MMMMMMMMMM';
@@ -507,70 +540,33 @@ function detectSystemFonts() {
 
 // Filter font families to only include available fonts
 function filterFontFamilies() {
-    const availableSystemFonts = detectSystemFonts();
-    
-    // Create a filtered version of fontFamilies
+    detectSystemFonts();
+
     const filteredFamilies = {};
-    
-    // Fonts that are loaded via web (non-system) are considered available
-    const webFonts = new Set(
-        (window.fontDatabase || []).filter(f => f.source !== 'system').map(f => f.name)
-    );
-    
+
     Object.entries(fontFamiliesOriginal).forEach(([category, data]) => {
+        const partition = partitionFontCandidates(data.fonts);
+
         if (category === 'System Fonts' || category === 'System & Classics') {
-            // For system fonts category, only include detected fonts
-            const availableFontsInCategory = data.fonts.filter(fontString => {
-                // Extract the primary font name from the font string
-                const match = fontString.match(/"([^"]+)"/);
-                if (match) {
-                    const fontName = match[1];
-                    return detectedFonts.has(fontName);
-                }
-                return false;
-            });
-            
-            if (availableFontsInCategory.length > 0) {
+            const systemOnly = partition.available.filter(meta => meta.isSystem);
+            if (systemOnly.length > 0) {
                 filteredFamilies[category] = {
                     ...data,
-                    fonts: availableFontsInCategory,
-                    description: `${data.description} (${availableFontsInCategory.length}/${data.fonts.length} available)`
+                    fonts: systemOnly.map(meta => meta.css),
+                    description: `${data.description} (${systemOnly.length}/${data.fonts.length} available)`
                 };
             } else {
                 console.log('No system fonts detected - category will be hidden');
             }
-        } else {
-            // For other categories, check each font
-            const availableFontsInCategory = data.fonts.filter(fontString => {
-                // Extract the primary font name
-                const match = fontString.match(/"([^"]+)"/);
-                if (match) {
-                    const fontName = match[1];
-                    
-                    // Check if it's a web font (always available)
-                    if (webFonts.has(fontName)) {
-                        return true;
-                    }
-                    
-                    // Check if it's locally installed
-                    if (detectedFonts.has(fontName)) {
-                        return true;
-                    }
-                    
-                    // Font is not available
-                    return false;
-                }
-                // Keep entries without quotes (shouldn't happen)
-                return true;
-            });
-            
-            if (availableFontsInCategory.length > 0) {
-                filteredFamilies[category] = {
-                    ...data,
-                    fonts: availableFontsInCategory,
-                    description: `${data.description} (${availableFontsInCategory.length}/${data.fonts.length} available)`
-                };
-            }
+            return;
+        }
+
+        if (partition.available.length > 0) {
+            filteredFamilies[category] = {
+                ...data,
+                fonts: partition.available.map(meta => meta.css),
+                description: `${data.description} (${partition.available.length}/${data.fonts.length} available)`
+            };
         }
     });
     
@@ -897,6 +893,14 @@ const STAGES = [
     }
 ];
 
+const ROLE_STAGE_TO_KEY = {
+    roleKeywords: 'keywords',
+    roleStrings: 'strings',
+    roleComments: 'comments',
+    roleFunction: 'function',
+    roleGhost: 'ghost'
+};
+
 // Helper function to get stage by ID
 function getStage(id) {
     return STAGES.find(stage => stage.id === id);
@@ -905,6 +909,48 @@ function getStage(id) {
 // Helper function to get stage index
 function getStageIndex(id) {
     return STAGES.findIndex(stage => stage.id === id);
+}
+
+function stageToRoleKey(stageId) {
+    return ROLE_STAGE_TO_KEY[stageId] || null;
+}
+
+function formatStageWinner(stageId, winner) {
+    if (winner == null) return 'none';
+    if (typeof winner === 'string') {
+        const fontName = extractFontNameFromCss(winner);
+        return fontName ? `"${fontName}"` : winner;
+    }
+    if (typeof winner === 'number') {
+        return `${winner}`;
+    }
+    if (typeof winner === 'object') {
+        if (winner.name) return `"${winner.name}"`;
+        if (winner.font) {
+            const fontName = extractFontNameFromCss(winner.font);
+            return fontName ? `"${fontName}"` : String(winner.font);
+        }
+        if (winner.label) return `"${winner.label}"`;
+        try {
+            return JSON.stringify(winner);
+        } catch {
+            return '[object]';
+        }
+    }
+    return String(winner);
+}
+
+function logStageOutcome(stageId, winner, comparisons, { reason = 'completed' } = {}) {
+    if (!stageId) return;
+    const stageMeta = getStage(stageId);
+    const label = stageMeta ? stageMeta.name : stageId;
+    const winnerLabel = formatStageWinner(stageId, winner);
+    let comparisonsText = 'comparisons n/a';
+    if (typeof comparisons === 'number' && Number.isFinite(comparisons)) {
+        comparisonsText = `${comparisons} comparison${comparisons === 1 ? '' : 's'}`;
+    }
+    const prefix = reason === 'skipped' ? '[STAGE] Skipped' : '[STAGE] Completed';
+    console.log(`${prefix} ${label} → ${winnerLabel} (${comparisonsText})`);
 }
 
 // Theme mode state (dark|light). Default to dark until UI toggle changes it.
@@ -1336,7 +1382,7 @@ class ComparisonEngine {
         this.fontRound = 0; // Track which round we're in for similarity-based pairing
         this.reset();
     }
-    
+
     reset() {
         this.stage = 'fontFamily';
         this.fontRound = 0; // Reset font round counter
@@ -1361,6 +1407,44 @@ class ComparisonEngine {
         this.winners.roles = this.winners.roles || {};
         this.generateNextStage();
     }
+
+    prepareFontCandidates(familyName = this.winners.fontFamily) {
+        if (!familyName) return;
+        const family = fontFamilies[familyName];
+        if (!family || !Array.isArray(family.fonts)) return;
+
+        const partition = partitionFontCandidates(family.fonts, { requireEmbeddedReady: true });
+        const preferred = partition.available.length > 0 ? partition.available : partition.webOnly;
+        const fallback = preferred.length > 0 ? preferred : partition.usable;
+        this.candidates.font = fallback.map(meta => meta.css);
+
+        devLog(`[DEBUG] Prepared fonts for family '${familyName}': ${this.candidates.font.length} candidates`);
+    }
+
+    disqualifyFont(cssString) {
+        if (!cssString) return;
+
+        const stripFrom = (arr) => {
+            if (!Array.isArray(arr)) return;
+            for (let i = arr.length - 1; i >= 0; i--) {
+                const entry = arr[i];
+                if (entry === cssString) {
+                    arr.splice(i, 1);
+                } else if (Array.isArray(entry) && (entry[0] === cssString || entry[1] === cssString)) {
+                    arr.splice(i, 1);
+                }
+            }
+        };
+
+        stripFrom(this.candidates.font);
+        stripFrom(this.currentPairs);
+        if (Array.isArray(this.nextRound)) {
+            this.nextRound = this.nextRound.filter(item => item !== cssString);
+        }
+        if (this.winners.font === cssString) {
+            this.winners.font = null;
+        }
+    }
     
     generateNextStage() {
         const stageIndex = getStageIndex(this.stage);
@@ -1379,74 +1463,10 @@ class ComparisonEngine {
                 this.winners[this.stage] = this.candidates[this.stage][0];
                 this.stage = STAGES[stageIndex + 1].id;
                 
-                // Special handling: when font family is chosen, populate fonts from that family
                 if (this.stage === 'font' && this.winners.fontFamily) {
-                    // Start from all fonts in the chosen family
-                    const allFonts = [...fontFamilies[this.winners.fontFamily].fonts]; // CSS strings
-                    // Filter: include all web fonts; include system fonts only if actually installed
-                    const filtered = allFonts.filter(cssString => {
-                        const m = cssString.match(/"([^\"]+)"/);
-                        if (!m) return false;
-                        const name = m[1];
-                        const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
-
-                        // Exclude icon-patched fonts from base font tournament
-                        if (window.fontIconsByName && window.fontIconsByName[name]) return false;
-
-                        // Exclude Nerd Font variants if we have the original base font
-                        const fontData = (window.fontDatabase || []).find(f => f.name === name);
-                        if (fontData && fontData.patchedFrom) {
-                            // Check if we have the original font in our database
-                            const hasOriginal = (window.fontDatabase || []).some(f => f.name === fontData.patchedFrom);
-                            if (hasOriginal) {
-                                console.log(`[DEBUG] Excluding ${name} because we have original: ${fontData.patchedFrom}`);
-                                return false;
-                            }
-                        }
-
-                        if (source !== 'system') return true; // embeddable (google/embedded) always allowed
-                        return isFontAvailable(name); // system only if detected locally
-                    });
-                    // Fallback: if everything filtered out (e.g., FontDetective not ready), keep only web fonts
-                    this.candidates.font = filtered.length > 0 ? filtered : allFonts.filter(cssString => {
-                        const m = cssString.match(/"([^\"]+)"/);
-                        if (!m) return false;
-                        const name = m[1];
-                        const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
-
-                        // Exclude icon-patched fonts from fallback as well
-                        if (window.fontIconsByName && window.fontIconsByName[name]) return false;
-
-                        // Exclude Nerd Font variants if we have the original base font (fallback path)
-                        const fontData = (window.fontDatabase || []).find(f => f.name === name);
-                        if (fontData && fontData.patchedFrom) {
-                            const hasOriginal = (window.fontDatabase || []).some(f => f.name === fontData.patchedFrom);
-                            if (hasOriginal) return false;
-                        }
-
-                        return source !== 'system';
-                    });
-                    // Remove embedded fonts that failed to load (broken URLs/CORS)
-                    if (Array.isArray(this.candidates.font) && this.candidates.font.length) {
-                        const before = this.candidates.font.length;
-                        this.candidates.font = this.candidates.font.filter(cssString => {
-                            const m = cssString.match(/\"([^\"]+)\"/);
-                            if (!m) return false;
-                            const name = m[1];
-                            const source = (window.fontSourceByName && window.fontSourceByName[name]) || 'embedded';
-                            if (source === 'embedded') {
-                                return !!(window.loadedEmbeddedFonts && window.loadedEmbeddedFonts.has(name));
-                            }
-                            return true;
-                        });
-                        const after = this.candidates.font.length;
-                        if (after < before) {
-                            devLog(`[DEBUG] Filtered out ${before - after} failed embedded fonts`);
-                        }
-                    }
-                    devLog(`[DEBUG] Populated fonts for family '${this.winners.fontFamily}': ${this.candidates.font.length} candidates`);
+                    this.prepareFontCandidates(this.winners.fontFamily);
                 }
-                
+
                 this.generateNextStage();
             } else {
                 this.winners[this.stage] = this.candidates[this.stage][0];
@@ -1535,11 +1555,8 @@ class ComparisonEngine {
 
         // Role stages integration (handle before generic pairing/round logic)
         const isRoleStage = this.stage && this.stage.startsWith('role');
-        const stageToRole = (st) => ({
-            roleKeywords: 'keywords', roleStrings: 'strings', roleComments: 'comments', roleFunction: 'function', roleGhost: 'ghost'
-        })[st];
         if (isRoleStage) {
-            const roleKey = stageToRole(this.stage);
+            const roleKey = stageToRoleKey(this.stage);
             if (!this.currentRoleTournament || this._roleKey !== roleKey) {
                 const cands = getRoleCandidates(roleKey).slice(0, 8);
                 this.currentRoleTournament = new RoleTournament(roleKey, cands);
@@ -1553,6 +1570,9 @@ class ComparisonEngine {
                     this.winners.roles[roleKey] = winner;
                     try { applyRoleFonts(this.winners.roles); } catch {}
                 }
+                const stageId = this.stage;
+                const comparisons = this.stageComparisons?.[stageId];
+                logStageOutcome(stageId, winner || null, comparisons, { reason: 'completed' });
                 this.currentRoleTournament = null;
                 // Advance stage
                 const idx = getStageIndex(this.stage);
@@ -1639,26 +1659,28 @@ class ComparisonEngine {
                 // If we have a winner AND have made minimum comparisons, move to next stage
                 if (hasWinner && hasMinComparisons) {
                     const stageIndex = getStageIndex(this.stage);
-                    
+                    const stageId = this.stage;
+                    const winnerValue = this.nextRound && this.nextRound.length > 0 ? this.nextRound[0] : null;
+                    logStageOutcome(stageId, winnerValue, comparisons, { reason: 'completed' });
                     if (stageIndex < STAGES.length - 1) {
-                        this.winners[this.stage] = this.nextRound[0];
+                        this.winners[stageId] = winnerValue;
                         this.stage = STAGES[stageIndex + 1].id;
                         
                         // Special handling: when font family is chosen, populate fonts from that family
                         if (this.stage === 'font' && this.winners.fontFamily) {
-                            this.candidates.font = [...fontFamilies[this.winners.fontFamily].fonts];
+                            this.prepareFontCandidates(this.winners.fontFamily);
                         }
                         
                         this.nextRound = null; // Reset for next stage
                         this.generateNextStage();
                         return this.getNextComparison();
                     } else {
-                        this.winners[this.stage] = this.nextRound[0];
+                        this.winners[stageId] = winnerValue;
                         
                         // If in recompare mode, restore other settings and complete
                         if (this.recompareMode) {
                             Object.assign(this.winners, this.recompareResults);
-                            this.winners[this.recompareStage] = this.nextRound[0];
+                            this.winners[this.recompareStage] = winnerValue;
                             this.recompareMode = false;
                         }
                         
@@ -1793,8 +1815,8 @@ class ComparisonEngine {
     selectFontFamily(familyName) {
         this.winners.fontFamily = familyName;
         this.fontFamilySelectionMode = false;
-        this.candidates.font = [...fontFamilies[familyName].fonts];
         this.stage = 'font';
+        this.prepareFontCandidates(familyName);
         this.generateNextStage();
     }
     
@@ -2074,6 +2096,79 @@ function loadFonts() {
         });
 }
 
+// Inject Google Fonts CSS for all fonts marked as "google" source
+function injectGoogleFontsFromDatabase() {
+    try {
+        if (document.getElementById('gf-database-style')) return;
+
+        const db = window.fontDatabase || [];
+        const googleFonts = db.filter(f => f.source === 'google');
+
+        if (googleFonts.length === 0) return;
+
+        // Handle fonts with custom Google Fonts URLs first
+        const customUrlFonts = googleFonts.filter(f => f.googleFontsUrl);
+        customUrlFonts.forEach((font, index) => {
+            const existingLink = document.getElementById(`gf-custom-${index}`);
+            if (!existingLink) {
+                const link = document.createElement('link');
+                link.id = `gf-custom-${index}`;
+                link.href = font.googleFontsUrl;
+                link.rel = 'stylesheet';
+                document.head.appendChild(link);
+            }
+        });
+
+        // Handle remaining fonts with standard Google Fonts API
+        const standardFonts = googleFonts.filter(f => !f.googleFontsUrl);
+        if (standardFonts.length === 0) {
+            console.log(`[Font Loading] Injected ${customUrlFonts.length} custom Google Fonts`);
+            return;
+        }
+
+        // Build Google Fonts URL with all standard font families
+        const families = standardFonts.map(font => {
+            // Convert font name to Google Fonts format (spaces become +)
+            const family = font.name.replace(/\s/g, '+');
+
+            // Add weight and style specifications if available
+            let spec = family;
+            if (font.axes && (font.axes.weights || font.axes.styles)) {
+                const weights = font.axes.weights || [400];
+                const styles = font.axes.styles || ['normal'];
+
+                // Create weight:style combinations
+                const variants = [];
+                styles.forEach(style => {
+                    weights.forEach(weight => {
+                        if (style === 'italic') {
+                            variants.push(`1,${weight}`);
+                        } else {
+                            variants.push(`0,${weight}`);
+                        }
+                    });
+                });
+
+                if (variants.length > 0) {
+                    spec = `${family}:ital,wght@${variants.join(';')}`;
+                }
+            }
+
+            return spec;
+        }).join('&family=');
+
+        const link = document.createElement('link');
+        link.id = 'gf-database-style';
+        link.href = `https://fonts.googleapis.com/css2?family=${families}&display=swap`;
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+
+        console.log(`[Font Loading] Injected Google Fonts CSS for ${standardFonts.length} standard + ${customUrlFonts.length} custom fonts`);
+    } catch (e) {
+        console.warn('[Font Loading] Failed to inject Google Fonts:', e);
+    }
+}
+
 // Ensure critical fallback fonts for About samples are present
 function injectCriticalAboutFonts() {
     try {
@@ -2194,7 +2289,7 @@ function updateGridOverlays(optionA, optionB, forceVisible = null) {
         const baseFont = engine.winners?.font || (engine.winners?.fontFamily ? fontFamilies[engine.winners.fontFamily].representative : fonts[0]);
         const baseFontSize = optionA.fontSize || 16;
         
-        console.log(`[DEBUG] Showing grid overlays with base font: ${baseFont} at ${baseFontSize}px`);
+        // console.log(`[DEBUG] Showing grid overlays with base font: ${baseFont} at ${baseFontSize}px`);
         createGridOverlay('panelA', baseFont, baseFontSize);
         createGridOverlay('panelB', baseFont, baseFontSize);
     } else {
@@ -2620,7 +2715,33 @@ function showNextComparison() {
     }
     
     const { optionA, optionB, stage, pair, similarity } = comparison;
-    
+
+    if (stage === 'font') {
+        const unavailable = [];
+        const checkOption = (opt) => {
+            if (!opt || !opt.font) return;
+            const fontName = extractFontNameFromCss(opt.font);
+            if (!fontName) return;
+            const source = (window.fontSourceByName && window.fontSourceByName[fontName]) || 'embedded';
+            if (source === 'system' && !isFontAvailable(fontName)) {
+                unavailable.push({ css: opt.font, name: fontName });
+            }
+        };
+        checkOption(optionA);
+        checkOption(optionB);
+
+        if (unavailable.length > 0) {
+            unavailable.forEach(({ css, name }) => {
+                console.log(`[INFO] Removing unavailable system font from comparisons: ${name}`);
+                if (engine && typeof engine.disqualifyFont === 'function') {
+                    engine.disqualifyFont(css);
+                }
+            });
+            requestAnimationFrame(() => showNextComparison());
+            return;
+        }
+    }
+
     // Initialize grid visibility based on stage configuration
     initializeGridForStage(stage);
     // Role stages: set focused slice and apply panel-scoped role fonts
@@ -3102,11 +3223,7 @@ function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
         // Add role tournament information if we're in a role stage
         let roleStageInfo = '';
         if (engine.stage && engine.stage.startsWith('role')) {
-            const stageToRole = {
-                roleKeywords: 'keywords', roleStrings: 'strings', roleComments: 'comments', 
-                roleFunction: 'function', roleGhost: 'ghost'
-            };
-            const currentRole = stageToRole[engine.stage];
+            const currentRole = stageToRoleKey(engine.stage);
             if (currentRole) {
                 const roleDisplayName = currentRole.charAt(0).toUpperCase() + currentRole.slice(1);
                 roleStageInfo = `<br><em>🎯 Testing: ${roleDisplayName} Role</em>`;
@@ -3157,11 +3274,18 @@ function selectOption(choice) {
 // Skip current role stage
 function skipRoleStage() {
     if (engine.stage && engine.stage.startsWith('role')) {
+        const stageId = engine.stage;
+        const roleKey = stageToRoleKey(stageId);
+        const comparisons = engine.stageComparisons?.[stageId] || 0;
+        const winnerValue = roleKey && engine.winners && engine.winners.roles ? engine.winners.roles[roleKey] : null;
+
         // Mark the role as not set by skipping its tournament
         engine.currentRoleTournament = null;
-        
+
+        logStageOutcome(stageId, winnerValue || null, comparisons, { reason: 'skipped' });
+
         // Advance to next stage
-        const stageIndex = getStageIndex(engine.stage);
+        const stageIndex = getStageIndex(stageId);
         if (stageIndex >= 0 && stageIndex < STAGES.length - 1) {
             engine.stage = STAGES[stageIndex + 1].id;
             engine.generateNextStage();
@@ -3207,9 +3331,21 @@ function skipCurrentStage() {
             engine.winners[engine.stage] = winner;
         }
     }
+    const stageId = engine.stage;
+    if (!engine.winners) engine.winners = {};
+    let winnerValue = engine.winners[stageId];
+    if (!winnerValue) {
+        const candidates = engine.candidates && engine.candidates[stageId];
+        if (Array.isArray(candidates) && candidates.length > 0) {
+            winnerValue = candidates[0];
+            engine.winners[stageId] = winnerValue;
+        }
+    }
+    const comparisons = engine.stageComparisons?.[stageId] || 0;
+    logStageOutcome(stageId, winnerValue || null, comparisons, { reason: 'skipped' });
     
     // Advance to next stage
-    const stageIndex = getStageIndex(engine.stage);
+    const stageIndex = getStageIndex(stageId);
     if (stageIndex >= 0 && stageIndex < STAGES.length - 1) {
         engine.stage = STAGES[stageIndex + 1].id;
         engine.generateNextStage();
@@ -4542,7 +4678,7 @@ function recompareStage(stage) {
             break;
         case 'font':
             if (currentResults.fontFamily) {
-                engine.candidates.font = [...fontFamilies[currentResults.fontFamily].fonts];
+                engine.prepareFontCandidates(currentResults.fontFamily);
             }
             break;
         case 'size':
@@ -4820,6 +4956,28 @@ function showStartScreen() {
 // Font similarity system - simplified approach for tournament enhancement
 // Font metrics compatibility checking
 const fontCompatibility = {
+    _resolveMetric(value) {
+        if (value == null) return null;
+        if (typeof value === 'number') {
+            return Number.isFinite(value) ? value : null;
+        }
+        if (typeof value === 'string') {
+            const parsed = parseFloat(value);
+            return Number.isFinite(parsed) ? parsed : null;
+        }
+        if (typeof value === 'object') {
+            if (value.normal != null) {
+                const normal = this._resolveMetric(value.normal);
+                if (normal != null) return normal;
+            }
+            for (const nested of Object.values(value)) {
+                const resolved = this._resolveMetric(nested);
+                if (resolved != null) return resolved;
+            }
+        }
+        return null;
+    },
+
     isWidthCompatible(font1, font2, tolerance = 0.02) {
         const metrics1 = window.fontMetrics?.[font1];
         const metrics2 = window.fontMetrics?.[font2];
@@ -4834,8 +4992,8 @@ const fontCompatibility = {
             return false;
         }
         
-        const width1 = metrics1.avgCharWidth?.["16"];
-        const width2 = metrics2.avgCharWidth?.["16"];
+        const width1 = this._resolveMetric(metrics1.avgCharWidth?.["16"]);
+        const width2 = this._resolveMetric(metrics2.avgCharWidth?.["16"]);
         
         if (!width1 || !width2) {
             console.log(`[DEBUG] Missing width data: ${font1}=${width1}, ${font2}=${width2}`);
@@ -4855,8 +5013,8 @@ const fontCompatibility = {
         
         if (!metrics1 || !metrics2) return false;
         
-        const xHeight1 = metrics1.xHeight?.["16"];
-        const xHeight2 = metrics2.xHeight?.["16"];
+        const xHeight1 = this._resolveMetric(metrics1.xHeight?.["16"]);
+        const xHeight2 = this._resolveMetric(metrics2.xHeight?.["16"]);
         
         if (!xHeight1 || !xHeight2) return true; // Allow if we can't measure
         
@@ -5049,6 +5207,33 @@ function generateFontShowcase() {
 
     if (!fontGrid) return;
 
+    // Fallback font data for testing if database fails to load
+    if (!window.fontDatabase || window.fontDatabase.length === 0) {
+        window.fontDatabase = [
+            {
+                name: "Computer Modern Typewriter",
+                source: "embedded",
+                axes: { weights: [200, 500, 700], styles: ["normal", "italic"], widths: ["normal"] }
+            },
+            {
+                name: "Iosevka",
+                source: "embedded",
+                axes: { weights: [100, 200, 300, 400, 500, 600, 700, 800, 900], styles: ["normal", "italic", "oblique"], widths: ["normal", "expanded"] }
+            },
+            {
+                name: "Cascadia Code",
+                source: "embedded",
+                axes: { weights: [200, 300, 400, 600, 700], styles: ["normal"], widths: ["normal"] }
+            },
+            {
+                name: "Fira Code",
+                source: "embedded",
+                axes: { weights: [300, 400, 500, 600, 700], styles: ["normal"], widths: ["normal"] }
+            }
+        ];
+        console.log('[DEBUG] Using fallback font database for showcase');
+    }
+
     const build = (installedNames) => {
         try {
             injectGoogleFontsFromDatabase();
@@ -5088,7 +5273,7 @@ function generateFontGrid(container, installedNames) {
         .sort((a,b) => (a.name||'').localeCompare(b.name||''));
     let html = '';
 
-    fonts.forEach(font => {
+    fonts.forEach((font, index) => {
         let isAvailable = true;
 
         if (font.source === 'system') {
@@ -5096,16 +5281,161 @@ function generateFontGrid(container, installedNames) {
         }
 
         if (isAvailable) {
+            const fontId = `font-${index}`;
+            const axes = font.axes || {};
+            const weights = axes.weights || [400];
+            const styles = axes.styles || ['normal'];
+            const widths = axes.widths || ['normal'];
+
+            // Generate axis controls HTML
+            let controlsHtml = '';
+
+            // Weight slider (if multiple weights)
+            if (weights.length > 1) {
+                const defaultWeightIndex = weights.includes(400) ? weights.indexOf(400) : 0;
+                const defaultWeight = weights[defaultWeightIndex];
+                controlsHtml += `
+                    <div class="axis-control">
+                        <span class="axis-label">Weight</span>
+                        <div class="axis-control-content">
+                            <div class="axis-value">${defaultWeight}</div>
+                            <input type="range" id="${fontId}-weight" class="axis-slider"
+                                   min="0" max="${weights.length - 1}" value="${defaultWeightIndex}" step="1"
+                                   data-font-id="${fontId}" data-axis="weight" data-weight-options='${JSON.stringify(weights)}'
+                                   data-choice-count="${weights.length}">
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Width slider (if multiple widths)
+            if (widths.length > 1) {
+                const defaultWidthIndex = widths.includes('normal') ? widths.indexOf('normal') : 0;
+                const defaultWidth = widths[defaultWidthIndex];
+                controlsHtml += `
+                    <div class="axis-control">
+                        <span class="axis-label">Width</span>
+                        <div class="axis-control-content">
+                            <div class="axis-value">${defaultWidth}</div>
+                            <input type="range" id="${fontId}-width" class="axis-slider"
+                                   min="0" max="${widths.length - 1}" value="${defaultWidthIndex}" step="1"
+                                   data-font-id="${fontId}" data-axis="width" data-width-options='${JSON.stringify(widths)}'
+                                   data-choice-count="${widths.length}">
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Style slider (if multiple styles) - always use slider for consistency
+            if (styles.length > 1) {
+                const styleOrder = ['normal', 'italic', 'oblique'].filter(s => styles.includes(s));
+                controlsHtml += `
+                    <div class="axis-control axis-control-style">
+                        <span class="axis-label">Style</span>
+                        <div class="axis-control-content">
+                            <div class="axis-value">${styleOrder[0]}</div>
+                            <input type="range" id="${fontId}-style" class="axis-slider axis-slider-style"
+                                   min="0" max="${styleOrder.length - 1}" value="0" step="1"
+                                   data-font-id="${fontId}" data-axis="style" data-style-options='${JSON.stringify(styleOrder)}'
+                                   data-choice-count="${styleOrder.length}">
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Default font style
+            const defaultWeight = weights.includes(400) ? 400 : weights[0];
+            const defaultStyle = styles[0];
+            const defaultWidth = widths.includes('normal') ? 'normal' : widths[0];
+            const defaultWidthPercent = { 'condensed': 75, 'semi-condensed': 87.5, 'normal': 100, 'semi-wide': 112.5, 'wide': 125, 'expanded': 150 }[defaultWidth] || 100;
+
+            // Generate homepage link if available
+            const homepageLink = font.homepage ? `<a href="${font.homepage}" target="_blank" rel="noopener noreferrer" class="font-homepage-link" title="Visit ${font.name} homepage">↗</a>` : '';
+
             html += `
-                <div class="font-showcase-item">
-                    <h3 class="font-name">${font.name}</h3>
-                    <pre class="font-sample" style="font-family: '${font.name}', 'Redacted Script', monospace;">${sampleText}</pre>
+                <div class="font-showcase-item" data-font-index="${index}">
+                    <div class="font-header">
+                        <h3 class="font-name">${font.name}${homepageLink}</h3>
+                        ${controlsHtml ? `<div class="font-controls">${controlsHtml}</div>` : ''}
+                    </div>
+                    <pre class="font-sample" id="${fontId}-sample"
+                         style="font-family: '${font.name}', 'Redacted Script', monospace; font-weight: ${defaultWeight}; font-style: ${defaultStyle}; font-stretch: ${defaultWidthPercent}%;">${sampleText}</pre>
                 </div>
             `;
         }
     });
 
     container.innerHTML = html;
+
+    // Add event listeners for axis controls
+    setupAxisControls();
+}
+
+// Setup event listeners for font axis controls
+function setupAxisControls() {
+    // Weight sliders
+    document.querySelectorAll('.axis-slider[data-axis="weight"]').forEach(slider => {
+        slider.addEventListener('input', function() {
+            const fontId = this.dataset.fontId;
+            const weightOptions = JSON.parse(this.dataset.weightOptions);
+            const weightIndex = parseInt(this.value);
+            const weight = weightOptions[weightIndex];
+            const sample = document.getElementById(`${fontId}-sample`);
+            const valueDisplay = this.parentElement.querySelector('.axis-value');
+
+            if (sample) {
+                sample.style.fontWeight = weight;
+            }
+            if (valueDisplay) {
+                valueDisplay.textContent = weight;
+            }
+        });
+    });
+
+    // Width sliders
+    document.querySelectorAll('.axis-slider[data-axis="width"]').forEach(slider => {
+        slider.addEventListener('input', function() {
+            const fontId = this.dataset.fontId;
+            const widthOptions = JSON.parse(this.dataset.widthOptions);
+            const widthIndex = parseInt(this.value);
+            const widthName = widthOptions[widthIndex];
+            const sample = document.getElementById(`${fontId}-sample`);
+            const valueDisplay = this.parentElement.querySelector('.axis-value');
+
+            // Map width names to CSS font-stretch values
+            const widthMap = {
+                'condensed': 75, 'semi-condensed': 87.5, 'normal': 100,
+                'semi-wide': 112.5, 'wide': 125, 'expanded': 150
+            };
+            const widthPercent = widthMap[widthName] || 100;
+
+            if (sample) {
+                sample.style.fontStretch = `${widthPercent}%`;
+            }
+            if (valueDisplay) {
+                valueDisplay.textContent = widthName;
+            }
+        });
+    });
+
+    // Style sliders (all style variations)
+    document.querySelectorAll('.axis-slider[data-axis="style"]').forEach(slider => {
+        slider.addEventListener('input', function() {
+            const fontId = this.dataset.fontId;
+            const styleOptions = JSON.parse(this.dataset.styleOptions);
+            const styleIndex = parseInt(this.value);
+            const style = styleOptions[styleIndex];
+            const sample = document.getElementById(`${fontId}-sample`);
+            const valueDisplay = this.parentElement.querySelector('.axis-value');
+
+            if (sample) {
+                sample.style.fontStyle = style;
+            }
+            if (valueDisplay) {
+                valueDisplay.textContent = style;
+            }
+        });
+    });
 }
 
 function generateAboutPageTables() {
@@ -5276,13 +5606,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Font showcase: Using CSS-based font loading instead of WebFont Loader');
 
                 // Determine if this is the font showcase page
-                if (document.getElementById('fontGrid')) {
+                if (document.getElementById('fontLoadingMessage')) {
                     generateFontShowcase();
                 } else {
                     generateAboutPageTables();
                 }
             })
-            .catch(e => console.warn('[Page] Failed to load databases:', e));
+            .catch(e => {
+                console.warn('[Page] Failed to load databases:', e);
+                // Still try to generate showcase with fallback data
+                if (document.getElementById('fontLoadingMessage')) {
+                    generateFontShowcase();
+                } else {
+                    generateAboutPageTables();
+                }
+            });
     }
 });
 

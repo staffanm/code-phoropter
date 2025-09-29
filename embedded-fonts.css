@@ -22,6 +22,25 @@
     src: url("fonts/3270/3270-Regular.woff") format("woff");
     font-weight: 400;
     font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "3270";
+    src: url("fonts/3270/3270SemiCondensed-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-condensed;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "3270";
+    src: url("fonts/3270/3270Condensed-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: condensed;
     font-display: swap;
 }
 
@@ -131,6 +150,22 @@
 
 @font-face {
     font-family: "AtkinsonHyperlegibleMono Nerd Font";
+    src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AtkinsonHyperlegibleMono Nerd Font";
+    src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AtkinsonHyperlegibleMono Nerd Font";
     src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -179,6 +214,30 @@
 
 @font-face {
     font-family: "CascadiaCode Nerd Font";
+    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaCode Nerd Font";
+    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaCode Nerd Font";
+    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaCode Nerd Font";
     src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -189,6 +248,30 @@
     font-family: "CascadiaMono Nerd Font";
     src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaMono Nerd Font";
+    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaMono Nerd Font";
+    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "CascadiaMono Nerd Font";
+    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -259,6 +342,14 @@
 
 @font-face {
     font-family: "Commit Mono";
+    src: url("fonts/Commit%20Mono/CommitMono-400-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Commit Mono";
     src: url("fonts/Commit%20Mono/CommitMono-700-Regular.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -267,8 +358,8 @@
 
 @font-face {
     font-family: "Commit Mono";
-    src: url("fonts/Commit%20Mono/CommitMono-400-Italic.otf") format("opentype");
-    font-weight: 400;
+    src: url("fonts/Commit%20Mono/CommitMono-700-Italic.otf") format("opentype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -339,6 +430,14 @@
 
 @font-face {
     font-family: "DejaVu Sans Mono";
+    src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMono-Oblique-webfont.woff") format("woff");
+    font-weight: 400;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DejaVu Sans Mono";
     src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMono-Bold-webfont.woff") format("woff");
     font-weight: 700;
     font-style: normal;
@@ -347,8 +446,8 @@
 
 @font-face {
     font-family: "DejaVu Sans Mono";
-    src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMono-Oblique-webfont.woff") format("woff");
-    font-weight: 400;
+    src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMono-BoldOblique-webfont.woff") format("woff");
+    font-weight: 700;
     font-style: oblique;
     font-display: swap;
 }
@@ -403,6 +502,14 @@
 
 @font-face {
     font-family: "Envy Code R";
+    src: url("fonts/Envy%20Code%20R/Envy%20Code%20R%20Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Envy Code R";
     src: url("fonts/Envy%20Code%20R/Envy%20Code%20R%20Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -411,8 +518,8 @@
 
 @font-face {
     font-family: "Envy Code R";
-    src: url("fonts/Envy%20Code%20R/Envy%20Code%20R%20Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Envy%20Code%20R/Envy%20Code%20R%20Bold%20Italic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -451,6 +558,14 @@
 
 @font-face {
     font-family: "Fantasque Sans Mono";
+    src: url("fonts/Fantasque%20Sans%20Mono/FantasqueSansMono-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fantasque Sans Mono";
     src: url("fonts/Fantasque%20Sans%20Mono/FantasqueSansMono-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
@@ -459,8 +574,8 @@
 
 @font-face {
     font-family: "Fantasque Sans Mono";
-    src: url("fonts/Fantasque%20Sans%20Mono/FantasqueSansMono-Italic.woff2") format("woff2");
-    font-weight: 400;
+    src: url("fonts/Fantasque%20Sans%20Mono/FantasqueSansMono-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -491,6 +606,30 @@
 
 @font-face {
     font-family: "FiraCode Nerd Font";
+    src: url("fonts/FiraCode.NF/FiraCodeNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("fonts/FiraCode.NF/FiraCodeNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
+    src: url("fonts/FiraCode.NF/FiraCodeNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraCode Nerd Font";
     src: url("fonts/FiraCode.NF/FiraCodeNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -507,6 +646,14 @@
 
 @font-face {
     font-family: "FiraMono Nerd Font";
+    src: url("fonts/FiraMono.NF/FiraMonoNerdFont-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraMono Nerd Font";
     src: url("fonts/FiraMono.NF/FiraMonoNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -517,6 +664,62 @@
     font-family: "GeistMono Nerd Font";
     src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Thin.otf") format("opentype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-UltraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "GeistMono Nerd Font";
+    src: url("fonts/GeistMono.NF/GeistMonoNerdFont-Black.otf") format("opentype");
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -547,6 +750,14 @@
 
 @font-face {
     font-family: "Go Mono";
+    src: url("fonts/Go%20Mono/Go-Mono-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Go Mono";
     src: url("fonts/Go%20Mono/Go-Mono-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -555,8 +766,8 @@
 
 @font-face {
     font-family: "Go Mono";
-    src: url("fonts/Go%20Mono/Go-Mono-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Go%20Mono/Go-Mono-Bold-Italic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -595,6 +806,14 @@
 
 @font-face {
     font-family: "Hack";
+    src: url("fonts/Hack/Hack-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hack";
     src: url("fonts/Hack/Hack-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
@@ -603,8 +822,8 @@
 
 @font-face {
     font-family: "Hack";
-    src: url("fonts/Hack/Hack-Italic.woff2") format("woff2");
-    font-weight: 400;
+    src: url("fonts/Hack/Hack-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -643,6 +862,94 @@
 
 @font-face {
     font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-ExtraLightIt.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-LightIt.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-RegularIt.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-MediumIt.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-Semibold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-SemiboldIt.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig/Hasklig-BoldIt.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig";
     src: url("fonts/Hasklig/Hasklig-Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
@@ -651,8 +958,8 @@
 
 @font-face {
     font-family: "Hasklig";
-    src: url("fonts/Hasklig/Hasklig-ExtraLightIt.otf") format("opentype");
-    font-weight: 200;
+    src: url("fonts/Hasklig/Hasklig-BlackIt.otf") format("opentype");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -667,6 +974,94 @@
 
 @font-face {
     font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-ExtraLightItalic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-MediumItalic.otf") format("opentype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-SemiBoldItalic.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-BoldItalic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hasklig Nerd Font";
     src: url("fonts/Hasklig.NF/HasklugNerdFont-Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
@@ -675,8 +1070,8 @@
 
 @font-face {
     font-family: "Hasklig Nerd Font";
-    src: url("fonts/Hasklig.NF/HasklugNerdFont-ExtraLightItalic.otf") format("opentype");
-    font-weight: 200;
+    src: url("fonts/Hasklig.NF/HasklugNerdFont-BlackItalic.otf") format("opentype");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -699,6 +1094,30 @@
 
 @font-face {
     font-family: "Hermit";
+    src: url("fonts/Hermit/Hermit-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hermit";
+    src: url("fonts/Hermit/Hermit-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hermit";
+    src: url("fonts/Hermit/Hermit-RegularItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hermit";
     src: url("fonts/Hermit/Hermit-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
@@ -707,8 +1126,8 @@
 
 @font-face {
     font-family: "Hermit";
-    src: url("fonts/Hermit/Hermit-LightItalic.woff2") format("woff2");
-    font-weight: 300;
+    src: url("fonts/Hermit/Hermit-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -717,6 +1136,14 @@
     font-family: "Hermit Nerd Font";
     src: url("fonts/Hermit.NF/HurmitNerdFont-Light.otf") format("opentype");
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Hermit Nerd Font";
+    src: url("fonts/Hermit.NF/HurmitNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
@@ -733,6 +1160,46 @@
     font-family: "IBMPlexMono Nerd Font";
     src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBMPlexMono Nerd Font";
+    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBMPlexMono Nerd Font";
+    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBMPlexMono Nerd Font";
+    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBMPlexMono Nerd Font";
+    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IBMPlexMono Nerd Font";
+    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -771,6 +1238,22 @@
 
 @font-face {
     font-family: "IntelOneMono Nerd Font";
+    src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IntelOneMono Nerd Font";
+    src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IntelOneMono Nerd Font";
     src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -782,14 +1265,7 @@
     src: url("fonts/Iosevka/Iosevka-Thin.woff2") format("woff2");
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka";
-    src: url("fonts/Iosevka/Iosevka-Heavy.woff2") format("woff2");
-    font-weight: 900;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -798,6 +1274,313 @@
     src: url("fonts/Iosevka/Iosevka-ThinItalic.woff2") format("woff2");
     font-weight: 100;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedThin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedThinItalic.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Extended.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-Heavy.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-HeavyItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedHeavy.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka";
+    src: url("fonts/Iosevka/Iosevka-ExtendedHeavyItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -805,6 +1588,62 @@
     font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Nerd Font";
+    src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -822,14 +1661,7 @@
     src: url("fonts/Iosevka%20Slab/IosevkaSlab-Thin.woff2") format("woff2");
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Slab";
-    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Heavy.woff2") format("woff2");
-    font-weight: 900;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -838,6 +1670,313 @@
     src: url("fonts/Iosevka%20Slab/IosevkaSlab-ThinItalic.woff2") format("woff2");
     font-weight: 100;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedThin.woff2") format("woff2");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedThinItalic.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Extended.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-Heavy.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-HeavyItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedHeavy.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Iosevka Slab";
+    src: url("fonts/Iosevka%20Slab/IosevkaSlab-ExtendedHeavyItalic.woff2") format("woff2");
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -845,6 +1984,62 @@
     font-family: "IosevkaTerm Nerd Font";
     src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTerm Nerd Font";
+    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
     font-style: normal;
     font-display: swap;
 }
@@ -861,6 +2056,30 @@
     font-family: "IosevkaTermSlab Nerd Font";
     src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTermSlab Nerd Font";
+    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTermSlab Nerd Font";
+    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "IosevkaTermSlab Nerd Font";
+    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -891,6 +2110,110 @@
 
 @font-face {
     font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-ThinItalic.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-ExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-RegularItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
     src: url("fonts/JetBrains%20Mono/JetBrainsMono-ExtraBold.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
@@ -899,8 +2222,8 @@
 
 @font-face {
     font-family: "JetBrains Mono";
-    src: url("fonts/JetBrains%20Mono/JetBrainsMono-ThinItalic.woff2") format("woff2");
-    font-weight: 100;
+    src: url("fonts/JetBrains%20Mono/JetBrainsMono-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -909,6 +2232,54 @@
     font-family: "JetBrainsMono Nerd Font";
     src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JetBrainsMono Nerd Font";
+    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -939,6 +2310,94 @@
 
 @font-face {
     font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-RegularItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
+    src: url("fonts/Julia%20Mono/JuliaMono-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JuliaMono";
     src: url("fonts/Julia%20Mono/JuliaMono-Black.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
@@ -947,8 +2406,8 @@
 
 @font-face {
     font-family: "JuliaMono";
-    src: url("fonts/Julia%20Mono/JuliaMono-LightItalic.woff2") format("woff2");
-    font-weight: 300;
+    src: url("fonts/Julia%20Mono/JuliaMono-BlackItalic.woff2") format("woff2");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -979,6 +2438,14 @@
 
 @font-face {
     font-family: "Liberation Mono";
+    src: url("fonts/Liberation%20Mono/LiberationMono-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Mono";
     src: url("fonts/Liberation%20Mono/LiberationMono-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -987,8 +2454,8 @@
 
 @font-face {
     font-family: "Liberation Mono";
-    src: url("fonts/Liberation%20Mono/LiberationMono-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Liberation%20Mono/LiberationMono-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1003,6 +2470,14 @@
 
 @font-face {
     font-family: "Liberation Mono Nerd Font";
+    src: url("fonts/Liberation%20Mono.NF/LiterationMonoNerdFont-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Liberation Mono Nerd Font";
     src: url("fonts/Liberation%20Mono.NF/LiterationMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1011,8 +2486,8 @@
 
 @font-face {
     font-family: "Liberation Mono Nerd Font";
-    src: url("fonts/Liberation%20Mono.NF/LiterationMonoNerdFont-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Liberation%20Mono.NF/LiterationMonoNerdFont-Bold-Italic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1021,6 +2496,30 @@
     font-family: "Lilex Nerd Font";
     src: url("fonts/Lilex.NF/LilexNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lilex Nerd Font";
+    src: url("fonts/Lilex.NF/LilexNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lilex Nerd Font";
+    src: url("fonts/Lilex.NF/LilexNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Lilex Nerd Font";
+    src: url("fonts/Lilex.NF/LilexNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -1038,6 +2537,106 @@
     src: url("fonts/MPlus%20Code/MplusCodeLatin50-Thin.otf") format("opentype");
     font-weight: 100;
     font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-Thin.otf") format("opentype");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin50-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-ExtraLight.otf") format("opentype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin50-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin50-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin50-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-Medium.otf") format("opentype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin50-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1046,6 +2645,16 @@
     src: url("fonts/MPlus%20Code/MplusCodeLatin50-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "M Plus Code";
+    src: url("fonts/MPlus%20Code/MplusCodeLatin60-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1054,6 +2663,106 @@
     src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
     font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1062,6 +2771,16 @@
     src: url("fonts/MPlus.NF/M+CodeLat50NerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MPlus Nerd Font";
+    src: url("fonts/MPlus.NF/M+CodeLat60NerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1083,6 +2802,126 @@
 
 @font-face {
     font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-ThinItalic.ttf.woff2") format("woff2");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-ExtraLight.ttf.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-ExtraLightItalic.ttf.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-Light.ttf.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-LightItalic.ttf.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-Regular.ttf.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-RegularItalic.ttf.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-Medium.ttf.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-MediumItalic.ttf.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-SemiBold.ttf.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-SemiBoldItalic.ttf.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-Bold.ttf.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-BoldItalic.ttf.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-ExtraBold.ttf.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
+    src: url("fonts/Maple%20Mono/MapleMono-ExtraBoldItalic.ttf.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Maple Mono";
     src: url("fonts/Maple%20Mono/MapleMono-ExtraBold.ttf.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
@@ -1091,8 +2930,8 @@
 
 @font-face {
     font-family: "Maple Mono";
-    src: url("fonts/Maple%20Mono/MapleMono-ThinItalic.ttf.woff2") format("woff2");
-    font-weight: 100;
+    src: url("fonts/Maple%20Mono/MapleMono-ExtraBoldItalic.ttf.woff2") format("woff2");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -1107,6 +2946,126 @@
 
 @font-face {
     font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ThinItalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-RegularItalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MapleMono Nerd Font";
     src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraBold.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
@@ -1115,8 +3074,8 @@
 
 @font-face {
     font-family: "MapleMono Nerd Font";
-    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ThinItalic.ttf") format("truetype");
-    font-weight: 100;
+    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-ExtraBoldItalic.ttf") format("truetype");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -1125,6 +3084,14 @@
     font-family: "MartianMono Nerd Font";
     src: url("fonts/MartianMono.NF/MartianMonoNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MartianMono Nerd Font";
+    src: url("fonts/MartianMono.NF/MartianMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -1147,6 +3114,14 @@
 
 @font-face {
     font-family: "Meslo LG";
+    src: url("fonts/Meslo%20LG/MesloLGS-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Meslo LG";
     src: url("fonts/Meslo%20LG/MesloLGS-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1155,8 +3130,8 @@
 
 @font-face {
     font-family: "Meslo LG";
-    src: url("fonts/Meslo%20LG/MesloLGS-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Meslo%20LG/MesloLGS-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1171,6 +3146,14 @@
 
 @font-face {
     font-family: "Meslo Nerd Font";
+    src: url("fonts/Meslo%20LG.NF/MesloLGSNerdFont-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Meslo Nerd Font";
     src: url("fonts/Meslo%20LG.NF/MesloLGSNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1179,8 +3162,8 @@
 
 @font-face {
     font-family: "Meslo Nerd Font";
-    src: url("fonts/Meslo%20LG.NF/MesloLGSNerdFont-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Meslo%20LG.NF/MesloLGSNerdFont-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1196,6 +3179,94 @@
 @font-face {
     font-family: "Monaspace Argon";
     src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon";
+    src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
     font-display: swap;
@@ -1204,7 +3275,7 @@
 @font-face {
     font-family: "Monaspace Argon";
     src: url("fonts/Monaspace%20Argon/Monaspace%20Argon%20Var.woff2") format("woff2");
-    font-weight: 200;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -1214,14 +3285,7 @@
     src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Argon Nerd Font";
-    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -1230,6 +3294,367 @@
     src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-ExtraLightItalic.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Wide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Argon Nerd Font";
+    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-WideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1238,6 +3663,94 @@
     src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton";
+    src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -1252,7 +3765,7 @@
 @font-face {
     font-family: "Monaspace Krypton";
     src: url("fonts/Monaspace%20Krypton/Monaspace%20Krypton%20Var.woff2") format("woff2");
-    font-weight: 200;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -1262,14 +3775,7 @@
     src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Krypton Nerd Font";
-    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -1278,6 +3784,367 @@
     src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-ExtraLightItalic.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Wide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Krypton Nerd Font";
+    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-WideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1286,6 +4153,94 @@
     src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon";
+    src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -1300,7 +4255,7 @@
 @font-face {
     font-family: "Monaspace Neon";
     src: url("fonts/Monaspace%20Neon/Monaspace%20Neon%20Var.woff2") format("woff2");
-    font-weight: 200;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -1310,14 +4265,7 @@
     src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Neon Nerd Font";
-    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -1326,6 +4274,367 @@
     src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-ExtraLightItalic.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Wide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Neon Nerd Font";
+    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-WideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1334,6 +4643,94 @@
     src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon";
+    src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -1348,7 +4745,7 @@
 @font-face {
     font-family: "Monaspace Radon";
     src: url("fonts/Monaspace%20Radon/Monaspace%20Radon%20Var.woff2") format("woff2");
-    font-weight: 200;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -1358,14 +4755,7 @@
     src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Radon Nerd Font";
-    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -1374,6 +4764,367 @@
     src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-ExtraLightItalic.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Wide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Radon Nerd Font";
+    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-WideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1382,6 +5133,94 @@
     src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon";
+    src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -1396,7 +5235,7 @@
 @font-face {
     font-family: "Monaspace Xenon";
     src: url("fonts/Monaspace%20Xenon/Monaspace%20Xenon%20Var.woff2") format("woff2");
-    font-weight: 200;
+    font-weight: 800;
     font-style: italic;
     font-display: swap;
 }
@@ -1406,14 +5245,7 @@
     src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Xenon Nerd Font";
-    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-ExtraBold.woff2") format("woff2");
-    font-weight: 800;
-    font-style: normal;
+    font-stretch: normal;
     font-display: swap;
 }
 
@@ -1422,6 +5254,367 @@
     src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-ExtraLightItalic.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideExtraLight.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideExtraLightItalic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-LightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideLight.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideLightItalic.woff2") format("woff2");
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Wide.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-MediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideMedium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideMediumItalic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideSemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideSemiBoldItalic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-BoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideBoldItalic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-ExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: semi-expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: expanded;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monaspace Xenon Nerd Font";
+    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-WideExtraBoldItalic.woff2") format("woff2");
+    font-weight: 800;
+    font-style: italic;
+    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -1443,6 +5636,78 @@
 
 @font-face {
     font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-ExtraLight-Italic.otf") format("opentype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-Light-Italic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-SemiBold-Italic.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-Bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
+    src: url("fonts/Monocraft/Monocraft-Bold-Italic.otf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Monocraft";
     src: url("fonts/Monocraft/Monocraft-Black.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
@@ -1451,8 +5716,8 @@
 
 @font-face {
     font-family: "Monocraft";
-    src: url("fonts/Monocraft/Monocraft-ExtraLight-Italic.otf") format("opentype");
-    font-weight: 200;
+    src: url("fonts/Monocraft/Monocraft-Black-Italic.otf") format("opentype");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -1499,6 +5764,14 @@
 
 @font-face {
     font-family: "Mononoki";
+    src: url("fonts/Mononoki/mononoki-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mononoki";
     src: url("fonts/Mononoki/mononoki-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -1507,8 +5780,8 @@
 
 @font-face {
     font-family: "Mononoki";
-    src: url("fonts/Mononoki/mononoki-Italic.otf") format("opentype");
-    font-weight: 400;
+    src: url("fonts/Mononoki/mononoki-BoldItalic.otf") format("opentype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1539,6 +5812,62 @@
 
 @font-face {
     font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
+    src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Noto Sans Mono Nerd Font";
     src: url("fonts/Noto%20Sans%20Mono.NF/NotoSansMNerdFont-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
@@ -1555,6 +5884,46 @@
 
 @font-face {
     font-family: "Overpass Nerd Font";
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-Light.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Overpass Nerd Font";
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Overpass Nerd Font";
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Overpass Nerd Font";
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Overpass Nerd Font";
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-SemiBold.otf") format("opentype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Overpass Nerd Font";
     src: url("fonts/Overpass.NF/OverpassMNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -1563,8 +5932,8 @@
 
 @font-face {
     font-family: "Overpass Nerd Font";
-    src: url("fonts/Overpass.NF/OverpassMNerdFont-Light.otf") format("opentype");
-    font-weight: 300;
+    src: url("fonts/Overpass.NF/OverpassMNerdFont-Bold.otf") format("opentype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1627,6 +5996,38 @@
 
 @font-face {
     font-family: "RobotoMono Nerd Font";
+    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoMono Nerd Font";
+    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoMono Nerd Font";
+    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoMono Nerd Font";
+    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoMono Nerd Font";
     src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1643,6 +6044,30 @@
 
 @font-face {
     font-family: "Serious Shanns";
+    src: url("fonts/Serious%20Shanns/SeriousShanns-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns";
+    src: url("fonts/Serious%20Shanns/SeriousShanns-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns";
+    src: url("fonts/Serious%20Shanns/SeriousShanns-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns";
     src: url("fonts/Serious%20Shanns/SeriousShanns-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -1651,8 +6076,8 @@
 
 @font-face {
     font-family: "Serious Shanns";
-    src: url("fonts/Serious%20Shanns/SeriousShanns-LightItalic.otf") format("opentype");
-    font-weight: 300;
+    src: url("fonts/Serious%20Shanns/SeriousShanns-BoldItalic.otf") format("opentype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1667,6 +6092,30 @@
 
 @font-face {
     font-family: "Serious Shanns Nerd Font";
+    src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-LightItalic.otf") format("opentype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns Nerd Font";
+    src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-Regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns Nerd Font";
+    src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-Italic.otf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Serious Shanns Nerd Font";
     src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
@@ -1675,8 +6124,8 @@
 
 @font-face {
     font-family: "Serious Shanns Nerd Font";
-    src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-LightItalic.otf") format("opentype");
-    font-weight: 300;
+    src: url("fonts/Serious%20Shanns.NF/SeriousShannsNerdFont-BoldItalic.otf") format("opentype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1699,6 +6148,94 @@
 
 @font-face {
     font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-ExtraLightItalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-LightItalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-MediumItalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-SemiBoldItalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "SourceCodePro Nerd Font";
     src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-Black.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
@@ -1707,8 +6244,8 @@
 
 @font-face {
     font-family: "SourceCodePro Nerd Font";
-    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-ExtraLightItalic.ttf") format("truetype");
-    font-weight: 200;
+    src: url("fonts/SourceCodePro.NF/SauceCodeProNerdFont-BlackItalic.ttf") format("truetype");
+    font-weight: 900;
     font-style: italic;
     font-display: swap;
 }
@@ -1755,6 +6292,14 @@
 
 @font-face {
     font-family: "Terminus";
+    src: url("fonts/Terminus/TerminusTTFWindows-Italic-4.49.3.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Terminus";
     src: url("fonts/Terminus/TerminusTTFWindows-Bold-4.49.3.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1763,8 +6308,8 @@
 
 @font-face {
     font-family: "Terminus";
-    src: url("fonts/Terminus/TerminusTTFWindows-Italic-4.49.3.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/Terminus/TerminusTTFWindows-Bold-Italic-4.49.3.ttf") format("truetype");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }
@@ -1811,6 +6356,22 @@
 
 @font-face {
     font-family: "UbuntuSans Nerd Font";
+    src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "UbuntuSans Nerd Font";
+    src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "UbuntuSans Nerd Font";
     src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1821,6 +6382,46 @@
     font-family: "VictorMono Nerd Font";
     src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VictorMono Nerd Font";
+    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VictorMono Nerd Font";
+    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VictorMono Nerd Font";
+    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VictorMono Nerd Font";
+    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "VictorMono Nerd Font";
+    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-SemiBold.ttf") format("truetype");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -1843,6 +6444,30 @@
 
 @font-face {
     font-family: "ZedMono Nerd Font";
+    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ZedMono Nerd Font";
+    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ZedMono Nerd Font";
+    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "ZedMono Nerd Font";
     src: url("fonts/ZedMono.NF/ZedMonoNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
@@ -1859,6 +6484,14 @@
 
 @font-face {
     font-family: "iA-Writer Nerd Font";
+    src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iA-Writer Nerd Font";
     src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -1867,8 +6500,56 @@
 
 @font-face {
     font-family: "iA-Writer Nerd Font";
-    src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Italic.ttf") format("truetype");
-    font-weight: 400;
+    src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Bold-Italic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-200-roman.woff2") format("woff2");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-200-italic.woff2") format("woff2");
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-500-roman.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-500-italic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-700-roman.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Computer Modern Typewriter";
+    src: url("fonts/Computer%20Modern/cmu-typewriter-text-700-italic.woff2") format("woff2");
+    font-weight: 700;
     font-style: italic;
     font-display: swap;
 }

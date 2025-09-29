@@ -208,30 +208,50 @@
                     
                     // Handle variant fonts with variantsMatrix
                     if (font.variantsMatrix && font.variantsMatrix.files) {
-                        // Use only min/max weights for efficiency (same as FVD logic)
+                        // Use ALL weights for complete font coverage
                         const weights = font.axes?.weights || [400];
-                        const minWeight = Math.min(...weights);
-                        const maxWeight = Math.max(...weights);
-                        
+
                         // Determine actual supported style (oblique vs italic)
                         const supportedStyles = font.axes?.styles || ['normal'];
                         const nonNormalStyle = supportedStyles.find(s => s !== 'normal') || 'italic';
-                        
-                        const variants = [
-                            { weight: minWeight, style: 'normal', width: 'normal' },
-                            ...(minWeight !== maxWeight ? [{ weight: maxWeight, style: 'normal', width: 'normal' }] : []),
-                            ...(supportedStyles.length > 1 ? [{ weight: minWeight, style: nonNormalStyle, width: 'normal' }] : [])
-                        ];
-                        
+
+                        // Generate variants for all weights, styles, and widths
+                        const variants = [];
+                        const supportedWidths = font.axes?.widths || ['normal'];
+
+                        weights.forEach(weight => {
+                            supportedWidths.forEach(width => {
+                                variants.push({ weight: weight, style: 'normal', width: width });
+                                if (supportedStyles.length > 1) {
+                                    variants.push({ weight: weight, style: nonNormalStyle, width: width });
+                                }
+                            });
+                        });
+
                         variants.forEach(({ weight, style, width }) => {
                             const resolved = resolveVariantUrl(font, weight, style, width);
                             if (resolved) {
                                 const srcUrl = /^https?:\/\//i.test(resolved.url) ? resolved.url : encodeURI(resolved.url);
+
+                                // Map width names to CSS font-stretch values
+                                const widthToCssStretch = {
+                                    'condensed': 'condensed',
+                                    'semi-condensed': 'semi-condensed',
+                                    'normal': 'normal',
+                                    'semi-wide': 'semi-expanded',
+                                    'wide': 'expanded',
+                                    'expanded': 'expanded'
+                                };
+                                const cssStretch = widthToCssStretch[width] || 'normal';
+
                                 css += `@font-face {\n`;
                                 css += `    font-family: "${font.name}";\n`;
                                 css += `    src: url("${srcUrl}") format("${resolved.format}");\n`;
                                 css += `    font-weight: ${weight};\n`;
                                 css += `    font-style: ${style};\n`;
+                                if (width !== 'normal' || supportedWidths.length > 1) {
+                                    css += `    font-stretch: ${cssStretch};\n`;
+                                }
                                 css += `    font-display: swap;\n`;
                                 css += `}\n\n`;
                                 generatedCount++;
