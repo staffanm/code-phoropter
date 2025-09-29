@@ -766,6 +766,9 @@ const codeSampleUrls = {
     rust: './samples/rust.rs',
     go: './samples/go.go',
     java: './samples/Application.java',
+    cpp: './samples/cpp.cpp',
+    csharp: './samples/csharp.cs',
+    php: './samples/php.php',
     clojure: './samples/clojure.clj',
     css: './samples/styles.css',
     html: './samples/index.html',
@@ -812,46 +815,6 @@ const STAGES = [
         showGrid: true  // Show grid to assess readability with colors
     },
     {
-        id: 'roleKeywords',
-        name: 'Keywords Font',
-        description: 'Customize how language keywords (if, for, function, etc.) appear in your code.',
-        skippable: true,
-        minComparisons: 1,
-        showGrid: true  // Show grid to verify alignment with role fonts
-    },
-    {
-        id: 'roleStrings',
-        name: 'Strings Font',
-        description: 'Optimize the appearance of string literals and text content in your code.',
-        skippable: true,
-        minComparisons: 1,
-        showGrid: true  // Show grid to verify alignment with role fonts
-    },
-    {
-        id: 'roleComments',
-        name: 'Comments Font',
-        description: 'Fine-tune how comments appear - often benefits from lighter weight or italic styling.',
-        skippable: true,
-        minComparisons: 1,
-        showGrid: true  // Show grid to verify alignment with role fonts
-    },
-    {
-        id: 'roleFunction',
-        name: 'Functions Font',
-        description: 'Customize the appearance of function names and method calls.',
-        skippable: true,
-        minComparisons: 1,
-        showGrid: true  // Show grid to verify alignment with role fonts
-    },
-    {
-        id: 'roleGhost',
-        name: 'AI Suggestions Font',
-        description: 'Configure how AI suggestions and ghost text appear in your editor.',
-        skippable: true,
-        minComparisons: 1,
-        showGrid: true  // Show grid to verify alignment with role fonts
-    },
-    {
         id: 'size',
         name: 'Font Size',
         description: 'Find the optimal font size for comfortable reading and reduced eye strain.',
@@ -890,15 +853,182 @@ const STAGES = [
         skippable: true,
         minComparisons: 3,
         showGrid: true  // Show grid to assess character spacing
+    },
+    {
+        id: 'roleComments',
+        name: 'Comments Weight/Style',
+        description: 'Choose the weight and style for comments - often benefits from lighter or italic styling.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleStrings',
+        name: 'Strings Weight/Style',
+        description: 'Choose the weight and style for string literals.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleLiterals',
+        name: 'Literals Weight/Style',
+        description: 'Choose the weight and style for numeric and other literals.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleKeywords',
+        name: 'Keywords Weight/Style',
+        description: 'Choose the weight and style for language keywords (if, while, return, class).',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleFunction',
+        name: 'Function Names Weight/Style',
+        description: 'Choose the weight and style for function and method names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleVariable',
+        name: 'Variable Names Weight/Style',
+        description: 'Choose the weight and style for variable names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleType',
+        name: 'Type/Class Names Weight/Style',
+        description: 'Choose the weight and style for type and class names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleOperator',
+        name: 'Operators Weight/Style',
+        description: 'Choose the weight and style for arithmetic and logical operators.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleGhost',
+        name: 'AI Suggestions Weight/Style',
+        description: 'Choose the weight and style for AI suggestions and ghost text.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true
+    },
+    {
+        id: 'roleFontComments',
+        name: 'Comments Font',
+        description: 'Choose a unique font for comments.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontStrings',
+        name: 'Strings Font',
+        description: 'Choose a unique font for string literals.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontLiterals',
+        name: 'Literals Font',
+        description: 'Choose a unique font for numeric and other literals.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontKeywords',
+        name: 'Keywords Font',
+        description: 'Choose a unique font for language keywords.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontFunction',
+        name: 'Function Names Font',
+        description: 'Choose a unique font for function and method names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontVariable',
+        name: 'Variable Names Font',
+        description: 'Choose a unique font for variable names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontType',
+        name: 'Type/Class Names Font',
+        description: 'Choose a unique font for type and class names.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontOperator',
+        name: 'Operators Font',
+        description: 'Choose a unique font for operators.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
+    },
+    {
+        id: 'roleFontGhost',
+        name: 'AI Suggestions Font',
+        description: 'Choose a unique font for AI suggestions.',
+        skippable: true,
+        minComparisons: 1,
+        showGrid: true,
+        requiresUniqueRoleFonts: true
     }
 ];
 
 const ROLE_STAGE_TO_KEY = {
-    roleKeywords: 'keywords',
-    roleStrings: 'strings',
     roleComments: 'comments',
+    roleStrings: 'strings',
+    roleLiterals: 'literals',
+    roleKeywords: 'keywords',
     roleFunction: 'function',
-    roleGhost: 'ghost'
+    roleVariable: 'variable',
+    roleType: 'type',
+    roleOperator: 'operator',
+    roleGhost: 'ghost',
+    // Font stages
+    roleFontComments: 'comments',
+    roleFontStrings: 'strings',
+    roleFontLiterals: 'literals',
+    roleFontKeywords: 'keywords',
+    roleFontFunction: 'function',
+    roleFontVariable: 'variable',
+    roleFontType: 'type',
+    roleFontOperator: 'operator',
+    roleFontGhost: 'ghost'
 };
 
 // Helper function to get stage by ID
@@ -926,6 +1056,16 @@ function formatStageWinner(stageId, winner) {
     }
     if (typeof winner === 'object') {
         if (winner.name) return `"${winner.name}"`;
+
+        // For role candidates (have font, weight, style properties)
+        if (winner.font && (winner.weight || winner.style)) {
+            const fontName = winner.font;
+            const parts = [fontName];
+            if (winner.weight) parts.push(winner.weight);
+            if (winner.style && winner.style !== 'normal') parts.push(winner.style);
+            return `"${parts.join(' • ')}"`;
+        }
+
         if (winner.font) {
             const fontName = extractFontNameFromCss(winner.font);
             return fontName ? `"${fontName}"` : String(winner.font);
@@ -938,6 +1078,20 @@ function formatStageWinner(stageId, winner) {
         }
     }
     return String(winner);
+}
+
+function getNextValidStageIndex(currentIndex) {
+    // Skip stages that require uniqueRoleFonts toggle if it's disabled
+    let nextIndex = currentIndex + 1;
+    while (nextIndex < STAGES.length) {
+        const stage = STAGES[nextIndex];
+        if (stage.requiresUniqueRoleFonts && !uniqueRoleFontsEnabled) {
+            nextIndex++;
+            continue;
+        }
+        return nextIndex;
+    }
+    return nextIndex; // Return past end if no valid stage found
 }
 
 function logStageOutcome(stageId, winner, comparisons, { reason = 'completed' } = {}) {
@@ -958,6 +1112,8 @@ let themeMode = 'dark';
 // Slider compare mode state
 let sliderCompareMode = false;
 let sliderPosition = 50; // percentage (50 = center)
+// Unique role fonts toggle - enables font selection stages for roles
+let uniqueRoleFontsEnabled = false;
 // Current language selection for code samples
 let currentLanguage = 'javascript';
 
@@ -970,25 +1126,28 @@ let currentRoleMapping = {}; // resolved role -> css font stack
 
 // Map selected roles to highlight.js selectors (subset that applies to code preview)
 const roleToHLJS = {
-    comments: ['.hljs-comment'],
-    strings: ['.hljs-string'],
-    keywords: ['.hljs-keyword', '.hljs-operator'],
-    function: ['.hljs-function', '.hljs-title'],
-    // Optional mappings for better coverage
-    documentation: ['.hljs-meta', '.hljs-doctag'],
-    errors: ['.hljs-error'],
+    comments: ['.hljs-comment', '.hljs-doctag', '.hljs-meta .hljs-string'],
+    strings: ['.hljs-string', '.hljs-template-variable'],
+    literals: ['.hljs-number', '.hljs-literal', '.hljs-regexp', '.hljs-symbol'],
+    keywords: ['.hljs-keyword', '.hljs-built_in', '.hljs-selector-tag'],
+    function: ['.hljs-function .hljs-title', '.hljs-title.function'],
+    variable: ['.hljs-variable', '.hljs-name', '.hljs-attr', '.hljs-attribute'],
+    type: ['.hljs-type', '.hljs-class .hljs-title', '.hljs-title.class', '.hljs-params'],
+    operator: ['.hljs-operator', '.hljs-punctuation'],
     ghost: ['.ghost-text', '.copilot'], // AI suggestions overlay classes if present
-    // We intentionally do not map 'base' to avoid overriding A/B font base per panel.
 };
 
 // Short labels for compact display
 const roleLabels = {
-    comments: 'Cmnt',
-    strings: 'Str',
-    keywords: 'Keyw',
-    documentation: 'Doc',
-    errors: 'Err',
-    ghost: 'Ghst'
+    comments: 'Comment',
+    strings: 'String',
+    literals: 'Literal',
+    keywords: 'Keyword',
+    function: 'Function',
+    variable: 'Variable',
+    type: 'Type/Class',
+    operator: 'Operator',
+    ghost: 'Ghost'
 };
 
 function getRoleLabel(role) {
@@ -999,12 +1158,16 @@ function getRoleLabel(role) {
 let roleCompare = null; // { role, a, b, candidates: [], index }
 let roleTournament = null; // tournament engine per-role
 
-function getRoleCandidates(role) {
+function getRoleCandidates(role, stageId) {
     const baseFont = engine && engine.winners && engine.winners.font;
     const baseFontName = baseFont ? baseFont.split(',')[0].replace(/"/g, '') : 'monospace';
-    
-    console.log(`[DEBUG] getRoleCandidates for role: ${role}, base font: ${baseFontName}`);
-    
+
+    // For role* stages (weight/style only), return only base font variations
+    // For roleFont* stages, return compatible alternative fonts
+    const isWeightStyleStage = stageId && stageId.startsWith('role') && !stageId.startsWith('roleFont');
+
+    console.log(`[DEBUG] getRoleCandidates for role: ${role}, stage: ${stageId}, base font: ${baseFontName}, isWeightStyleStage: ${isWeightStyleStage}`);
+
     const candidates = [
         // Base font variations (always compatible with itself)
         { type: 'weight', font: baseFontName, weight: 400, style: 'normal', label: 'Base weight (400)' },
@@ -1012,7 +1175,7 @@ function getRoleCandidates(role) {
         { type: 'weight', font: baseFontName, weight: 700, style: 'normal', label: 'Bold (700)' },
         { type: 'style', font: baseFontName, weight: 400, style: 'italic', label: 'Italic' },
     ];
-    
+
     // Add role-specific variations
     if (role === 'comments') {
         candidates.push(
@@ -1020,36 +1183,42 @@ function getRoleCandidates(role) {
             { type: 'weight', font: baseFontName, weight: 300, style: 'normal', label: 'Light' }
         );
     }
-    
-    // Find width-compatible fonts from database
+
+    // For weight/style stages, only return base font variations
+    if (isWeightStyleStage) {
+        console.log(`[DEBUG] Weight/style stage - returning ${candidates.length} base font variations`);
+        return candidates;
+    }
+
+    // For roleFont* stages, add compatible alternative fonts
     const db = window.fontDatabase || [];
     let compatibleCount = 0;
     let rejectedCount = 0;
     let metricsAvailable = !!window.fontMetrics && Object.keys(window.fontMetrics).length > 0;
-    
+
     if (metricsAvailable) {
         console.log(`[DEBUG] Font metrics available for compatibility checking`);
-        
+
         // Get compatible fonts using metrics
         const compatibleFonts = fontCompatibility.getCompatibleFonts(baseFontName);
-        
+
         // Add compatible alternatives (limit to prevent too many comparisons)
         compatibleFonts.slice(0, 4).forEach(fontName => {
-            candidates.push({ 
-                type: 'alternative', 
-                font: fontName, 
-                weight: 400, 
-                style: 'normal', 
-                label: fontName 
+            candidates.push({
+                type: 'alternative',
+                font: fontName,
+                weight: 400,
+                style: 'normal',
+                label: fontName
             });
             compatibleCount++;
         });
-        
+
         rejectedCount = db.length - compatibleFonts.length - 1; // -1 for base font
-        
+
     } else {
         console.log(`[DEBUG] No font metrics available, using legacy font selection`);
-        
+
         // Fallback to legacy behavior when no metrics are available
         const rec = [];
         if (window.fontSuitabilityMatrix) {
@@ -1060,14 +1229,14 @@ function getRoleCandidates(role) {
         }
         const nonSystem = db.filter(f => f.source !== 'system').map(f => f.name);
         const fontPool = Array.from(new Set([...rec, ...nonSystem]));
-        
+
         // Add limited alternatives (no metrics checking)
         fontPool.slice(0, 3).forEach(fontName => {
             if (fontName !== baseFontName) {
-                candidates.push({ 
-                    type: 'font', 
-                    font: fontName, 
-                    weight: 400, 
+                candidates.push({
+                    type: 'font',
+                    font: fontName,
+                    weight: 400,
                     style: 'normal', 
                     label: fontName 
                 });
@@ -1140,13 +1309,29 @@ function roleCompareNext() {
     nextRoleComparePair();
 }
 
-function applyRoleCompareStyles(role, aFontName, bFontName) {
+function applyRoleCompareStyles(role, aFontName, bFontName, aWeight, aStyle, bWeight, bStyle) {
+    console.log('[DEBUG] applyRoleCompareStyles called:', { role, aFontName, bFontName, aWeight, aStyle, bWeight, bStyle });
     const selectors = roleToHLJS[role] || [];
     const aStack = resolveFontCssStack(aFontName);
     const bStack = resolveFontCssStack(bFontName);
+    console.log('[DEBUG] Font stacks:', { aStack, bStack });
     const scopedA = selectors.map(sel => `#panelA ${sel}`).join(', ');
     const scopedB = selectors.map(sel => `#panelB ${sel}`).join(', ');
-    const css = `${scopedA} { font-family: ${aStack}; }\n${scopedB} { font-family: ${bStack}; }`;
+
+    // Build CSS with font-family, font-weight, and font-style
+    let cssA = `${scopedA} { font-family: ${aStack};`;
+    if (aWeight) cssA += ` font-weight: ${aWeight};`;
+    if (aStyle && aStyle !== 'normal') cssA += ` font-style: ${aStyle};`;
+    cssA += ' }';
+
+    let cssB = `${scopedB} { font-family: ${bStack};`;
+    if (bWeight) cssB += ` font-weight: ${bWeight};`;
+    if (bStyle && bStyle !== 'normal') cssB += ` font-style: ${bStyle};`;
+    cssB += ' }';
+
+    const css = `${cssA}\n${cssB}`;
+    console.log('[DEBUG] Generated CSS:', css);
+
     let el = document.getElementById('role-compare-style');
     if (!el) {
         el = document.createElement('style');
@@ -1459,9 +1644,10 @@ class ComparisonEngine {
         }
 
         if (stageIndex === -1 || this.candidates[this.stage].length <= 1) {
-            if (stageIndex < STAGES.length - 1) {
+            const nextIndex = getNextValidStageIndex(stageIndex);
+            if (nextIndex < STAGES.length) {
                 this.winners[this.stage] = this.candidates[this.stage][0];
-                this.stage = STAGES[stageIndex + 1].id;
+                this.stage = STAGES[nextIndex].id;
                 
                 if (this.stage === 'font' && this.winners.fontFamily) {
                     this.prepareFontCandidates(this.winners.fontFamily);
@@ -1558,7 +1744,7 @@ class ComparisonEngine {
         if (isRoleStage) {
             const roleKey = stageToRoleKey(this.stage);
             if (!this.currentRoleTournament || this._roleKey !== roleKey) {
-                const cands = getRoleCandidates(roleKey).slice(0, 8);
+                const cands = getRoleCandidates(roleKey, this.stage).slice(0, 8);
                 this.currentRoleTournament = new RoleTournament(roleKey, cands);
                 this._roleKey = roleKey;
             }
@@ -1576,8 +1762,9 @@ class ComparisonEngine {
                 this.currentRoleTournament = null;
                 // Advance stage
                 const idx = getStageIndex(this.stage);
-                if (idx >= 0 && idx < STAGES.length - 1) {
-                    this.stage = STAGES[idx + 1].id;
+                const nextIndex = getNextValidStageIndex(idx);
+                if (idx >= 0 && nextIndex < STAGES.length) {
+                    this.stage = STAGES[nextIndex].id;
                     this.generateNextStage();
                     return this.getNextComparison();
                 }
@@ -1594,35 +1781,34 @@ class ComparisonEngine {
                 letterSpacing: this.winners.letterSpacing || 0,
                 colorScheme: this.winners.colorScheme || getDefaultScheme(themeMode)
             };
+            console.log('[DEBUG] Role stage baseOption colorScheme:', baseOption.colorScheme?.name);
             const optionA = { ...baseOption };
             const optionB = { ...baseOption };
-            // Apply candidate settings to options
+            console.log('[DEBUG] After spread - optionA colorScheme:', optionA.colorScheme?.name, 'optionB colorScheme:', optionB.colorScheme?.name);
+
+            // Get candidate info
             const candA = pair[0];
             const candB = pair[1];
-            
-            if (candA && typeof candA === 'object') {
-                try { optionA.font = resolveFontCssStack(candA.font); } catch { optionA.font = `"${candA.font}", "Redacted Script"`; }
-                optionA.fontWeight = candA.weight || optionA.fontWeight;
-                optionA.fontStyle = candA.style || 'normal';
-            }
-            
-            if (candB && typeof candB === 'object') {
-                try { optionB.font = resolveFontCssStack(candB.font); } catch { optionB.font = `"${candB.font}", "Redacted Script"`; }
-                optionB.fontWeight = candB.weight || optionB.fontWeight;
-                optionB.fontStyle = candB.style || 'normal';
-            }
-            
-            return { 
-                optionA, 
-                optionB, 
-                stage: this.stage, 
-                roleTest: { 
-                    role: roleKey, 
-                    aFont: candA?.font || candA, 
+
+            // For role stages, DO NOT modify optionA/optionB
+            // The role fonts will be applied via CSS in applyRoleCompareStyles
+            // Only pass the candidate info to roleTest
+
+            return {
+                optionA,
+                optionB,
+                stage: this.stage,
+                roleTest: {
+                    role: roleKey,
+                    aFont: candA?.font || candA,
                     bFont: candB?.font || candB,
+                    aWeight: candA?.weight,
+                    aStyle: candA?.style,
+                    bWeight: candB?.weight,
+                    bStyle: candB?.style,
                     aCandidate: candA,
                     bCandidate: candB
-                } 
+                }
             };
         }
         
@@ -1662,9 +1848,10 @@ class ComparisonEngine {
                     const stageId = this.stage;
                     const winnerValue = this.nextRound && this.nextRound.length > 0 ? this.nextRound[0] : null;
                     logStageOutcome(stageId, winnerValue, comparisons, { reason: 'completed' });
-                    if (stageIndex < STAGES.length - 1) {
+                    const nextIndex = getNextValidStageIndex(stageIndex);
+                    if (nextIndex < STAGES.length) {
                         this.winners[stageId] = winnerValue;
-                        this.stage = STAGES[stageIndex + 1].id;
+                        this.stage = STAGES[nextIndex].id;
                         
                         // Special handling: when font family is chosen, populate fonts from that family
                         if (this.stage === 'font' && this.winners.fontFamily) {
@@ -2215,15 +2402,10 @@ async function loadCode(language) {
         }
         
         const code = await response.text();
-        
-        // Truncate very long files by characters (legacy behavior)
-        const maxLength = 2000;
-        const truncatedCode = code.length > maxLength ? 
-            code.substring(0, maxLength) + '\n\n// ... (truncated for display)' : 
-            code;
-            
-        codeCache.set(language, truncatedCode);
-        return truncatedCode;
+
+        // No truncation - display full file
+        codeCache.set(language, code);
+        return code;
         
     } catch (error) {
         console.warn(`Failed to load code from ${url}:`, error);
@@ -2368,6 +2550,9 @@ function mapLanguageForHLJS(language) {
         case 'rust': return 'rust';
         case 'go': return 'go';
         case 'java': return 'java';
+        case 'cpp': return 'cpp';
+        case 'csharp': return 'csharp';
+        case 'php': return 'php';
         case 'clojure': return 'clojure';
         case 'css': return 'css';
         case 'html': return 'xml';
@@ -2689,6 +2874,8 @@ async function preloadFontsForRolePair(role, aName, bName) {
     const preloadCombos = (name) => {
         const entry = dbByName[name];
         if (!entry || entry.source !== 'embedded') return;
+        // Check if ensureEmbeddedFace is available
+        if (typeof window.ensureEmbeddedFace !== 'function') return;
         // Baseline
         attempts.push(window.ensureEmbeddedFace(name, 400, 'normal', 'normal'));
         if (role === 'keywords') attempts.push(window.ensureEmbeddedFace(name, 600, 'normal', 'normal'));
@@ -2702,18 +2889,45 @@ async function preloadFontsForRolePair(role, aName, bName) {
 // Show next comparison
 function showNextComparison() {
     const comparison = engine.getNextComparison();
-    
+
     if (!comparison) {
+        // If in recompare mode, restore full results and return to results screen
+        if (engine.recompareMode) {
+            const recompareStage = engine.recompareStage;
+            const recompareResults = engine.recompareResults;
+
+            // Merge the recompared stage winner back into full results
+            engine.winners = { ...recompareResults, [recompareStage]: engine.winners[recompareStage] };
+
+            // Clear recompare mode
+            engine.recompareMode = false;
+            engine.recompareStage = null;
+            engine.recompareResults = null;
+            engine.complete = true;
+        }
+
         showResults();
         return;
     }
-    
+
     // Handle font family selector
     if (comparison.showFontFamilySelector) {
         showFontFamilySelector();
         return;
     }
-    
+
+    // Clear any animation classes and focus from previous comparison
+    const panelA = document.getElementById('panelA');
+    const panelB = document.getElementById('panelB');
+    if (panelA) {
+        panelA.classList.remove('winner', 'loser');
+        panelA.blur();
+    }
+    if (panelB) {
+        panelB.classList.remove('winner', 'loser');
+        panelB.blur();
+    }
+
     const { optionA, optionB, stage, pair, similarity } = comparison;
 
     if (stage === 'font') {
@@ -2746,25 +2960,25 @@ function showNextComparison() {
     initializeGridForStage(stage);
     // Role stages: set focused slice and apply panel-scoped role fonts
     window.__IN_ROLE_VIEW = window.__IN_ROLE_VIEW || false;
-    if (comparison.roleTest) {
-        const r = comparison.roleTest;
-        if (r.role !== 'base') {
-            setRoleSliceInPanels(r.role).then(() => {
-                preloadFontsForRolePair(r.role, r.aFont, r.bFont).then(() => {
-                    applyRoleCompareStyles(r.role, r.aFont, r.bFont);
-                });
-            });
+    const roleSetupPromise = (async () => {
+        if (comparison.roleTest) {
+            const r = comparison.roleTest;
+            if (r.role !== 'base') {
+                await setRoleSliceInPanels(r.role);
+                await preloadFontsForRolePair(r.role, r.aFont, r.bFont);
+                applyRoleCompareStyles(r.role, r.aFont, r.bFont, r.aWeight, r.aStyle, r.bWeight, r.bStyle);
+            } else {
+                clearRoleCompareStyles();
+            }
+            window.__IN_ROLE_VIEW = true;
         } else {
-            clearRoleCompareStyles();
+            if (window.__IN_ROLE_VIEW) {
+                clearRoleCompareStyles();
+                await updateCode();
+                window.__IN_ROLE_VIEW = false;
+            }
         }
-        window.__IN_ROLE_VIEW = true;
-    } else {
-        if (window.__IN_ROLE_VIEW) {
-            clearRoleCompareStyles();
-            updateCode();
-            window.__IN_ROLE_VIEW = false;
-        }
-    }
+    })();
     
     // Check if we have the required properties
     if (!optionA || !optionB) {
@@ -2820,18 +3034,37 @@ function showNextComparison() {
     const stageObj = getStage(stage);
     const statusText = `Comparing: ${stageObj?.name || stage}`;
     document.getElementById('status').textContent = statusText;
-    
+
+    // Show stage notification for first comparison in each stage
+    showStageNotification(stageObj?.name, stageObj?.description);
+
     // Show stage description if available
     if (stageObj?.description) {
         // You could add a description element here if you want to display it
     }
     
-    // Apply styles and summaries (pass similarity info)
-    applyStyles('codeA', 'panelA', optionA, 'summaryA', similarity);
-    applyStyles('codeB', 'panelB', optionB, 'summaryB', similarity);
-    
-    // Update grid overlays (user-controlled via 'g' key)
-    updateGridOverlays(optionA, optionB);
+    // Apply styles and summaries (pass similarity info and role info)
+    // Wait for role setup to complete before applying styles
+    const roleInfoA = comparison.roleTest ? {
+        role: comparison.roleTest.role,
+        font: comparison.roleTest.aFont,
+        weight: comparison.roleTest.aWeight,
+        style: comparison.roleTest.aStyle
+    } : null;
+    const roleInfoB = comparison.roleTest ? {
+        role: comparison.roleTest.role,
+        font: comparison.roleTest.bFont,
+        weight: comparison.roleTest.bWeight,
+        style: comparison.roleTest.bStyle
+    } : null;
+
+    roleSetupPromise.then(() => {
+        applyStyles('codeA', 'panelA', optionA, 'summaryA', similarity, roleInfoA);
+        applyStyles('codeB', 'panelB', optionB, 'summaryB', similarity, roleInfoB);
+
+        // Update grid overlays (user-controlled via 'g' key)
+        updateGridOverlays(optionA, optionB);
+    });
 }
 
 // Show font family selector
@@ -3096,7 +3329,7 @@ function selectFontFamily(categoryName, representativeFont = null) {
 }
 
 // Apply styles to a code panel
-function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
+function applyStyles(codeId, panelId, option, summaryId, similarity = null, roleInfo = null) {
     const code = document.getElementById(codeId);
     const panel = document.getElementById(panelId);
     const summary = summaryId ? document.getElementById(summaryId) : null;
@@ -3180,95 +3413,173 @@ function applyStyles(codeId, panelId, option, summaryId, similarity = null) {
         const cms = code.querySelectorAll('.hljs-comment');
         const fns = code.querySelectorAll('.hljs-function, .hljs-title');
 
+        // During role stages, skip applying weight/style inline for the role being tested
+        // since applyRoleCompareStyles handles it via CSS
+        const isRoleStage = roleInfo && roleInfo.role;
+        const testingRole = roleInfo?.role;
+
         kws.forEach(el => {
             if (tok.keyword.color) el.style.color = tok.keyword.color;
-            const m = mergeStyleFor('keywords', tok.keyword);
-            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
-            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            if (!isRoleStage || testingRole !== 'keywords') {
+                const m = mergeStyleFor('keywords', tok.keyword);
+                if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+                if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            }
         });
         strs.forEach(el => {
             if (tok.string.color) el.style.color = tok.string.color;
-            const m = mergeStyleFor('strings', tok.string);
-            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
-            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            if (!isRoleStage || testingRole !== 'strings') {
+                const m = mergeStyleFor('strings', tok.string);
+                if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+                if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            }
         });
         cms.forEach(el => {
             if (tok.comment.color) el.style.color = tok.comment.color;
-            const m = mergeStyleFor('comments', tok.comment);
-            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
-            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            if (!isRoleStage || testingRole !== 'comments') {
+                const m = mergeStyleFor('comments', tok.comment);
+                if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+                if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            }
         });
         fns.forEach(el => {
             if (tok.function.color) el.style.color = tok.function.color;
-            const m = mergeStyleFor('function', tok.function);
-            if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
-            if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            if (!isRoleStage || testingRole !== 'function') {
+                const m = mergeStyleFor('function', tok.function);
+                if (typeof m.weight !== 'undefined') el.style.fontWeight = String(m.weight);
+                if (typeof m.style  !== 'undefined') el.style.fontStyle  = m.style;
+            }
         });
     }
     
     // Update summary if provided
     if (summary) {
-        const fontName = option.font.split(',')[0].replace(/"/g, '');
+        const baseFontName = option.font.split(',')[0].replace(/"/g, '');
         const themeName = option.colorScheme ? option.colorScheme.name : 'Unknown';
-        const widthNote = (option.fontWidth && option.fontWidth !== 'normal') ? 
+        const widthNote = (option.fontWidth && option.fontWidth !== 'normal') ?
             ` • ${option.fontWidth} (may not be visible)` : '';
-        
+
         let similarityText = '';
         if (similarity && engine.stage === 'font') {
             const categoryText = similarity.category.replace('-', ' ');
             const scoreText = Math.round(similarity.score);
             similarityText = `<br><em>Round ${similarity.round}: ${categoryText} (${scoreText}% similar)</em>`;
         }
-        
-        // Add role tournament information if we're in a role stage
-        let roleStageInfo = '';
-        if (engine.stage && engine.stage.startsWith('role')) {
-            const currentRole = stageToRoleKey(engine.stage);
-            if (currentRole) {
-                const roleDisplayName = currentRole.charAt(0).toUpperCase() + currentRole.slice(1);
-                roleStageInfo = `<br><em>🎯 Testing: ${roleDisplayName} Role</em>`;
-            }
-        }
-        
-        // Build multi-line roles info when multi-font mode is active
-        let rolesBlock = '';
-        if (multiFontMode && currentRoleMapping && Object.keys(currentRoleMapping).length) {
-            const roleOrder = Object.keys(roleToHLJS || {});
-            const lines = [];
-            roleOrder.forEach(role => {
-                const info = currentRoleMapping[role];
-                if (!info) return;
-                const stack = typeof info === 'string' ? info : info.stack;
-                const primary = (stack || '').split(',')[0].replace(/\"/g, '').trim();
-                if (!primary) return;
-                const w = (info && typeof info === 'object' && info.weight) ? `, ${info.weight}` : '';
-                const s = (info && typeof info === 'object' && info.style) ? `, ${info.style}` : '';
-                lines.push(`${getRoleLabel(role)}: ${primary}${w}${s}`);
-            });
-            if (lines.length) {
-                rolesBlock = `----- Roles ----<br>` + lines.join('<br>');
-            }
-        }
 
-        summary.innerHTML = `
-            <strong>${fontName}</strong><br>
-            ${option.fontSize}px • ${option.fontWeight}${widthNote}<br>
-            ${option.letterSpacing || 0}px spacing • ${option.lineHeight} line height<br>
-            ${themeName}${similarityText}${roleStageInfo}${rolesBlock ? `<br>${rolesBlock}` : ''}
-        `;
+        // Build summary differently for role stages vs normal stages
+        if (roleInfo && roleInfo.font) {
+            // Role stage: Show base font, then role-specific comparison
+            const roleName = stageToRoleKey(engine.stage);
+            const roleDisplayName = roleName ? (roleName.charAt(0).toUpperCase() + roleName.slice(1)) : 'Role';
+
+            // Build role comparison line
+            const roleFontParts = [roleInfo.font];
+            if (roleInfo.weight) roleFontParts.push(roleInfo.weight);
+            if (roleInfo.style && roleInfo.style !== 'normal') {
+                roleFontParts.push(roleInfo.style.charAt(0).toUpperCase() + roleInfo.style.slice(1));
+            }
+            const roleComparison = roleFontParts.join(' • ');
+
+            summary.innerHTML = `
+                <strong>${baseFontName}</strong><br>
+                ${option.fontSize}px • ${option.fontWeight}${widthNote}<br>
+                ${option.letterSpacing || 0}px spacing • ${option.lineHeight} line height<br>
+                ${themeName}<br>
+                <strong>${roleDisplayName}: ${roleComparison}</strong>
+            `;
+        } else {
+            // Normal stage or multi-font mode
+            let rolesBlock = '';
+            if (multiFontMode && currentRoleMapping && Object.keys(currentRoleMapping).length) {
+                const roleOrder = Object.keys(roleToHLJS || {});
+                const lines = [];
+                roleOrder.forEach(role => {
+                    const info = currentRoleMapping[role];
+                    if (!info) return;
+                    const stack = typeof info === 'string' ? info : info.stack;
+                    const primary = (stack || '').split(',')[0].replace(/\"/g, '').trim();
+                    if (!primary) return;
+                    const w = (info && typeof info === 'object' && info.weight) ? `, ${info.weight}` : '';
+                    const s = (info && typeof info === 'object' && info.style) ? `, ${info.style}` : '';
+                    const roleLabel = getRoleLabel(role);
+                    lines.push(`${roleLabel}: ${primary}${w}${s}`);
+                });
+                if (lines.length) {
+                    rolesBlock = `----- Roles ----<br>` + lines.join('<br>');
+                }
+            }
+
+            summary.innerHTML = `
+                <strong>${baseFontName}</strong><br>
+                ${option.fontSize}px • ${option.fontWeight}${widthNote}<br>
+                ${option.letterSpacing || 0}px spacing • ${option.lineHeight} line height<br>
+                ${themeName}${similarityText}${rolesBlock ? `<br>${rolesBlock}` : ''}
+            `;
+        }
     }
+}
+
+// Show stage transition notification
+let currentNotifiedStage = null;
+function showStageNotification(stageName, stageDescription) {
+    // Don't show notification for font family selection
+    if (!stageName || stageName === 'fontFamily') return;
+
+    // Only show once per stage
+    if (currentNotifiedStage === stageName) return;
+    currentNotifiedStage = stageName;
+
+    const notification = document.getElementById('stageNotification');
+
+    // Build notification HTML with description if available
+    let html = `<div class="stage-notification-title">Now comparing: ${stageName}</div>`;
+    if (stageDescription) {
+        html += `<div class="stage-notification-description">${stageDescription}</div>`;
+    }
+    notification.innerHTML = html;
+
+    notification.style.animation = 'stage-notify 5s ease-out';
+
+    // Reset animation
+    notification.addEventListener('animationend', () => {
+        notification.style.animation = '';
+    }, { once: true });
 }
 
 // Handle option selection
 function selectOption(choice) {
-    const prevFont = engine.winners && engine.winners.font;
-    engine.submitChoice(choice);
-    comparisons.push(choice);
-    // If a base font was just selected and icons-patched variants exist, prompt
-    if (engine.winners && engine.winners.font && engine.winners.font !== prevFont) {
-        maybePromptPatchedVariant(engine.winners.font);
+    // Trigger selection animations
+    const panelA = document.getElementById('panelA');
+    const panelB = document.getElementById('panelB');
+
+    // Remove any existing animation classes
+    panelA.classList.remove('winner', 'loser');
+    panelB.classList.remove('winner', 'loser');
+
+    // Apply animation classes based on choice
+    if (choice === 'A') {
+        panelA.classList.add('winner');
+        panelB.classList.add('loser');
+    } else if (choice === 'B') {
+        panelB.classList.add('winner');
+        panelA.classList.add('loser');
+    } else if (choice === 'equal') {
+        // Both are "losers" for no preference
+        panelA.classList.add('loser');
+        panelB.classList.add('loser');
     }
-    showNextComparison();
+
+    // Wait for animation to complete before proceeding
+    setTimeout(() => {
+        const prevFont = engine.winners && engine.winners.font;
+        engine.submitChoice(choice);
+        comparisons.push(choice);
+        // If a base font was just selected and icons-patched variants exist, prompt
+        if (engine.winners && engine.winners.font && engine.winners.font !== prevFont) {
+            maybePromptPatchedVariant(engine.winners.font);
+        }
+        showNextComparison();
+    }, 400); // Animation duration
 }
 
 // Skip current role stage
@@ -3501,6 +3812,59 @@ function resetTest() {
 }
 
 // Show results
+function generateRolesSection(rawResults) {
+    const roles = rawResults.roles || {};
+    const baseFont = rawResults.font ? rawResults.font.split(',')[0].replace(/['"]/g, '').trim() : 'Unknown';
+
+    if (!roles || Object.keys(roles).length === 0) {
+        return ''; // No roles configured
+    }
+
+    const roleLabelsDisplay = {
+        comments: 'Comments',
+        strings: 'Strings',
+        literals: 'Literals',
+        keywords: 'Keywords',
+        function: 'Functions',
+        variable: 'Variables',
+        type: 'Types/Classes',
+        operator: 'Operators',
+        ghost: 'AI Suggestions'
+    };
+
+    let html = '<div class="roles-section"><h4>Role Styles</h4>';
+
+    for (const [roleKey, roleData] of Object.entries(roles)) {
+        if (!roleData) continue;
+
+        const label = roleLabelsDisplay[roleKey] || roleKey;
+        const font = roleData.font ? roleData.font.replace(/['"]/g, '').trim() : baseFont;
+        const weight = roleData.weight || 400;
+        const style = roleData.style || 'normal';
+
+        // Only show font if different from base (normalize both for comparison)
+        const normalizedFont = font.replace(/['"]/g, '').trim();
+        const normalizedBase = baseFont.replace(/['"]/g, '').trim();
+        const fontDifferent = normalizedFont !== normalizedBase;
+
+        const parts = [];
+        if (fontDifferent) parts.push(font);
+        parts.push(weight);
+        if (style !== 'normal') parts.push(style.charAt(0).toUpperCase() + style.slice(1));
+
+        const roleDetails = parts.join(' • ');
+
+        html += `
+            <div class="setting-item role-item">
+                <strong>${label}:</strong> ${roleDetails}
+            </div>
+        `;
+    }
+
+    html += '</div>';
+    return html;
+}
+
 function showResults() {
     const rawResults = engine.winners;
     console.log('Raw engine results:', rawResults);
@@ -3525,48 +3889,70 @@ function showResults() {
     
     const details = document.getElementById('resultDetails');
     const familyName = results.fontFamily || 'Unknown';
-    const familyDescription = results.fontFamily && fontFamilies[results.fontFamily] ? fontFamilies[results.fontFamily].description : '';
     details.innerHTML = `
-        <div class="results-section">
-            <h3>Your Optimal Settings</h3>
-            <div class="setting-item">
-                <strong>Theme Mode:</strong> ${themeMode === 'dark' ? 'Dark' : 'Light'}
+        <div class="results-layout">
+            <div class="results-columns">
+                <div class="results-settings">
+                    <h3>Your Optimal Settings</h3>
+                    <div class="setting-item">
+                        <strong>Font Style:</strong> ${familyName}
+                        <button class="re-compare-btn" onclick="recompareStage('fontFamily')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Font:</strong> ${results.font ? results.font.split(',')[0].replace(/['"]/g, '').trim() : 'Not selected'}
+                        <button class="re-compare-btn" onclick="recompareStage('font')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Font Size:</strong> ${results.size || 'Not selected'}px
+                        <button class="re-compare-btn" onclick="recompareStage('size')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Font Weight:</strong> ${results.weight || 'Not selected'}
+                        <button class="re-compare-btn" onclick="recompareStage('weight')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Line Height:</strong> ${results.lineHeight || 'Not selected'}
+                        <button class="re-compare-btn" onclick="recompareStage('lineHeight')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Font Width:</strong> ${results.fontWidth || 'normal'}
+                        <button class="re-compare-btn" onclick="recompareStage('fontWidth')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Letter Spacing:</strong> ${results.letterSpacing || 0}px
+                        <button class="re-compare-btn" onclick="recompareStage('letterSpacing')">Re-compare</button>
+                    </div>
+                    <div class="setting-item">
+                        <strong>Color Scheme:</strong> ${results.colorScheme ? results.colorScheme.name : 'Unknown'}
+                        <button class="re-compare-btn" onclick="recompareStage('colorScheme')">Re-compare</button>
+                    </div>
+                    ${generateRolesSection(rawResults)}
+                    <p><strong>Total Comparisons:</strong> ${comparisons.length}</p>
+                </div>
+
+                <div class="results-preview-container" id="resultsPreviewContainer">
+                    <div class="result-preview-header">
+                        <h3>Preview with your settings:</h3>
+                        <select id="resultLanguageSelect" onchange="changeResultLanguage()">
+                            <option value="javascript">JavaScript (React)</option>
+                            <option value="python">Python (Async)</option>
+                            <option value="rust">Rust (Cache)</option>
+                            <option value="go">Go (Web Service)</option>
+                            <option value="java">Java (Spring Boot)</option>
+                            <option value="cpp">C++ (LRU Cache)</option>
+                            <option value="csharp">C# (Web API)</option>
+                            <option value="php">PHP (Auth Service)</option>
+                            <option value="clojure">Clojure (Ring)</option>
+                            <option value="css">CSS (Normalize)</option>
+                            <option value="html">HTML (Boilerplate)</option>
+                            <option value="json">JSON (VS Code)</option>
+                            <option value="markdown">Markdown (Unicode Scripts)</option>
+                        </select>
+                    </div>
+                    <pre><code id="resultCode"></code></pre>
+                </div>
             </div>
-            <div class="setting-item">
-                <strong>Font Style:</strong> ${familyName}
-                <button class="re-compare-btn" onclick="recompareStage('fontFamily')">Re-compare</button>
-            </div>
-            ${familyDescription ? `<p class="family-description">${familyDescription}</p>` : ''}
-            <div class="setting-item">
-                <strong>Font:</strong> ${results.font ? results.font.split(',')[0].replace(/['"]/g, '').trim() : 'Not selected'}
-                <button class="re-compare-btn" onclick="recompareStage('font')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Font Size:</strong> ${results.size || 'Not selected'}px
-                <button class="re-compare-btn" onclick="recompareStage('size')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Font Weight:</strong> ${results.weight || 'Not selected'}
-                <button class="re-compare-btn" onclick="recompareStage('weight')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Line Height:</strong> ${results.lineHeight || 'Not selected'}
-                <button class="re-compare-btn" onclick="recompareStage('lineHeight')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Font Width:</strong> ${results.fontWidth || 'normal'}
-                <button class="re-compare-btn" onclick="recompareStage('fontWidth')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Letter Spacing:</strong> ${results.letterSpacing || 0}px
-                <button class="re-compare-btn" onclick="recompareStage('letterSpacing')">Re-compare</button>
-            </div>
-            <div class="setting-item">
-                <strong>Color Scheme:</strong> ${results.colorScheme ? results.colorScheme.name : 'Unknown'}
-                <button class="re-compare-btn" onclick="recompareStage('colorScheme')">Re-compare</button>
-            </div>
-            <p><strong>Total Comparisons:</strong> ${comparisons.length}</p>
-            
+
             <div class="export-section">
                 <h4>Export Settings</h4>
                 <div class="compact-export">
@@ -3574,7 +3960,7 @@ function showResults() {
                     <input type="text" id="settingsString" value="${exportSettings(results)}" readonly onclick="this.select()">
                     <button onclick="copyToClipboard('settingsString')">Copy</button>
                 </div>
-                
+
                 <div class="export-buttons">
                     <button onclick="downloadConfig('vscode')">VS Code</button>
                     <button onclick="downloadConfig('vim')">Vim</button>
@@ -3590,36 +3976,113 @@ function showResults() {
             </div>
         </div>
     `;
-    
-    // Apply final styles to result preview
+
+    // Wait for DOM to update, then apply preview styling
+    setTimeout(() => {
+        const resultCode = document.getElementById('resultCode');
+        if (!resultCode) {
+            console.error('resultCode element not found');
+            return;
+        }
+
+        // Load the current language code for results and highlight via highlight.js
+        loadCode(currentLanguage).then(code => {
+            const lang = mapLanguageForHLJS(currentLanguage);
+            setCodeWithHighlight(resultCode, code, lang);
+
+            // Apply styling AFTER code is loaded and highlighted
+            const primaryFont = results.font.split(',')[0].replace(/['"]/g, '').trim();
+            resultCode.style.fontFamily = results.font;
+            resultCode.style.fontSize = results.size + 'px';
+            resultCode.style.fontWeight = results.weight;
+            resultCode.style.lineHeight = results.lineHeight;
+            resultCode.style.color = results.colorScheme.fg;
+            resultCode.parentElement.style.backgroundColor = results.colorScheme.bg;
+
+            // Apply full role-based styling to result preview
+            applyResultPreviewStyling(resultCode, results);
+        }).catch(error => {
+            console.error('Failed to load code for results:', error);
+            resultCode.textContent = 'Failed to load code';
+        });
+    }, 0);
+
+    // Set the language selector to match current language
+    const resultLangSelect = document.getElementById('resultLanguageSelect');
+    if (resultLangSelect) {
+        resultLangSelect.value = currentLanguage;
+    }
+}
+
+// Apply full role-based styling to result preview
+function applyResultPreviewStyling(codeElement, results) {
+    const scheme = results.colorScheme;
+    const roles = results.roles || {};
+
+    // Apply syntax colors and role fonts (use global roleToHLJS mapping)
+    // Note: We use the global roleToHLJS defined earlier in the file
+
+    // Apply styling for each role
+    for (const [roleKey, selectors] of Object.entries(roleToHLJS)) {
+        const elements = codeElement.querySelectorAll(selectors.join(', '));
+        const roleData = roles[roleKey];
+        const colorKey = roleKey === 'function' ? 'function' : roleKey.replace(/s$/, ''); // keywords -> keyword
+
+        elements.forEach(el => {
+            // Apply color
+            if (scheme[colorKey]) {
+                el.style.color = scheme[colorKey];
+            }
+
+            // Apply role font/weight/style if available
+            if (roleData) {
+                if (roleData.font) {
+                    const stack = resolveFontCssStack(roleData.font);
+                    el.style.fontFamily = stack;
+                }
+                if (roleData.weight) {
+                    el.style.fontWeight = roleData.weight;
+                }
+                if (roleData.style) {
+                    el.style.fontStyle = roleData.style;
+                }
+            }
+        });
+    }
+
+    // Handle numbers/literals
+    const nums = codeElement.querySelectorAll('.hljs-number, .hljs-literal, .hljs-built_in, .hljs-type');
+    nums.forEach(el => {
+        if (scheme.function) el.style.color = scheme.function;
+    });
+}
+
+// Change language in result preview
+function changeResultLanguage() {
+    const select = document.getElementById('resultLanguageSelect');
+    const newLanguage = select.value;
     const resultCode = document.getElementById('resultCode');
-    
-    // Load the current language code for results and highlight via highlight.js
-    loadCode(currentLanguage).then(code => {
-        const lang = mapLanguageForHLJS(currentLanguage);
+
+    loadCode(newLanguage).then(code => {
+        const lang = mapLanguageForHLJS(newLanguage);
         setCodeWithHighlight(resultCode, code, lang);
+
+        // Reapply all styling
+        const results = engine.winners;
+        const primaryFont = results.font.split(',')[0].replace(/['"]/g, '').trim();
+        resultCode.style.fontFamily = results.font;
+        resultCode.style.fontSize = results.size + 'px';
+        resultCode.style.fontWeight = results.weight;
+        resultCode.style.lineHeight = results.lineHeight;
+        resultCode.style.color = results.colorScheme.fg;
+        resultCode.parentElement.style.backgroundColor = results.colorScheme.bg;
+
+        // Apply full role-based styling
+        applyResultPreviewStyling(resultCode, results);
     }).catch(error => {
-        console.error('Failed to load code for results:', error);
+        console.error('Failed to load code for result preview:', error);
         resultCode.textContent = 'Failed to load code';
     });
-    // Extract just the primary font name, not the fallback stack
-    const primaryFont = results.font.split(',')[0].replace(/['"]/g, '').trim();
-    resultCode.style.fontFamily = results.font;
-    resultCode.style.fontSize = results.size + 'px';
-    resultCode.style.fontWeight = results.weight;
-    resultCode.style.lineHeight = results.lineHeight;
-    resultCode.style.color = results.colorScheme.fg;
-    resultCode.parentElement.style.backgroundColor = results.colorScheme.bg;
-    
-    // Apply syntax colors for highlight.js classes
-    const kws = resultCode.querySelectorAll('.hljs-keyword, .hljs-selector-tag, .hljs-meta, .hljs-title');
-    const strs = resultCode.querySelectorAll('.hljs-string, .hljs-attr');
-    const cms = resultCode.querySelectorAll('.hljs-comment');
-    const nums = resultCode.querySelectorAll('.hljs-number, .hljs-literal, .hljs-built_in, .hljs-type');
-    kws.forEach(el => el.style.color = results.colorScheme.keyword);
-    strs.forEach(el => el.style.color = results.colorScheme.string);
-    cms.forEach(el => el.style.color = results.colorScheme.comment);
-    nums.forEach(el => el.style.color = results.colorScheme.function);
 }
 
 // Configuration export templates
@@ -4467,6 +4930,13 @@ function toggleThemeMode() {
     }
 }
 
+// Toggle unique role fonts mode
+function toggleUniqueRoleFonts() {
+    const toggle = document.getElementById('uniqueRoleFontsToggle');
+    uniqueRoleFontsEnabled = toggle.checked;
+    console.log(`[DEBUG] Unique Role Fonts toggle: ${uniqueRoleFontsEnabled ? 'enabled' : 'disabled'}`);
+}
+
 // Toggle slider compare mode
 function toggleSliderCompare() {
     const toggle = document.getElementById('sliderCompareToggle');
@@ -4627,6 +5097,11 @@ function initSliderDivider() {
 
 // Handle '?' key for showing/hiding property summaries
 document.addEventListener('keydown', function(e) {
+    // Don't intercept keyboard shortcuts with Ctrl/Cmd modifiers
+    if (e.ctrlKey || e.metaKey) {
+        return;
+    }
+
     if (e.key === '?' || (e.shiftKey && e.key === '/')) {
         e.preventDefault();
         document.body.classList.add('show-summaries');
@@ -4642,6 +5117,12 @@ document.addEventListener('keydown', function(e) {
     } else if (e.key === 'c' || e.key === 'C') {
         e.preventDefault();
         const toggle = document.getElementById('sliderCompareToggle');
+        if (toggle) {
+            toggle.click();
+        }
+    } else if (e.key === 'f' || e.key === 'F') {
+        e.preventDefault();
+        const toggle = document.getElementById('uniqueRoleFontsToggle');
         if (toggle) {
             toggle.click();
         }
@@ -4942,6 +5423,103 @@ function importAndStart() {
     }
 }
 
+// Generate random settings respecting current mode and available fonts
+function feelingLucky() {
+    try {
+        // Helper to pick random element from array
+        const randomPick = (arr) => arr[Math.floor(Math.random() * arr.length)];
+
+        // Get available fonts (excluding unavailable system fonts)
+        const db = window.fontDatabase || [];
+        const iconFonts = window.fontIconsByName || {};
+        const availableFonts = db
+            .filter(f => {
+                if (!f.name) return false;
+                // Exclude icon fonts
+                if (iconFonts[f.name]) return false;
+                // Exclude unavailable system fonts
+                if (f.source === 'system' && !isFontAvailable(f.name)) return false;
+                return true;
+            })
+            .map(f => f.name);
+
+        if (availableFonts.length === 0) {
+            alert('No fonts available. Please wait for fonts to load.');
+            return;
+        }
+
+        // Pick random font
+        const randomFont = randomPick(availableFonts);
+
+        // Get color schemes for current theme mode
+        const schemes = (window.colorSchemeDatabase || {})[themeMode] || [];
+        const randomScheme = schemes.length > 0 ? randomPick(schemes) : { name: 'Default', bg: '#1a1a1a', fg: '#e0e0e0' };
+
+        // Random size (14-20px)
+        const sizes = [14, 15, 16, 17, 18, 19, 20];
+        const randomSize = randomPick(sizes);
+
+        // Random weight
+        const weights = [300, 400, 500, 600, 700];
+        const randomWeight = randomPick(weights);
+
+        // Random line height (1.3-1.8)
+        const lineHeights = [1.3, 1.4, 1.5, 1.6, 1.7, 1.8];
+        const randomLineHeight = randomPick(lineHeights);
+
+        // Random letter spacing (-0.5 to 1)
+        const letterSpacings = [-0.5, -0.25, 0, 0.25, 0.5, 0.75, 1];
+        const randomLetterSpacing = randomPick(letterSpacings);
+
+        // Font width (normal, condensed, expanded)
+        const widths = ['normal', 'condensed', 'expanded'];
+        const randomWidth = randomPick(widths);
+
+        // Generate random role settings
+        const roles = {};
+        const roleKeys = ['comments', 'strings', 'literals', 'keywords', 'function', 'variable', 'type', 'operator', 'ghost'];
+        const roleWeights = [300, 400, 600, 700];
+        const roleStyles = ['normal', 'italic'];
+
+        for (const roleKey of roleKeys) {
+            const useUniqueFont = uniqueRoleFontsEnabled && Math.random() > 0.5;
+            roles[roleKey] = {
+                font: useUniqueFont ? randomPick(availableFonts) : randomFont,
+                weight: randomPick(roleWeights),
+                style: randomPick(roleStyles)
+            };
+        }
+
+        // Create engine with random settings
+        engine = new ComparisonEngine();
+        engine.winners = {
+            font: randomFont,
+            size: randomSize,
+            weight: randomWeight,
+            lineHeight: randomLineHeight,
+            letterSpacing: randomLetterSpacing,
+            fontWidth: randomWidth,
+            colorScheme: randomScheme,
+            roles: roles
+        };
+        engine.complete = true;
+
+        // Apply role fonts
+        try { applyRoleFonts(roles); } catch {}
+
+        // Hide start screen and show results
+        document.getElementById('fontFamilySelector').classList.add('hidden');
+        document.getElementById('importSection').classList.add('hidden');
+        showResults();
+
+        console.log('[LUCKY] Generated random settings:', engine.winners);
+
+    } catch (e) {
+        console.error('Error in feelingLucky:', e);
+        alert('Failed to generate random settings: ' + e.message);
+    }
+}
+
 // Show initial start screen with import option
 function showStartScreen() {
     document.querySelector('.description-section').classList.remove('hidden');
@@ -5002,8 +5580,8 @@ const fontCompatibility = {
         
         const diff = Math.abs(width1 - width2) / width1;
         const compatible = diff <= tolerance;
-        
-        console.log(`[DEBUG] Width compatibility: ${font1} (${width1.toFixed(2)}px) vs ${font2} (${width2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
+
+        // console.log(`[DEBUG] Width compatibility: ${font1} (${width1.toFixed(2)}px) vs ${font2} (${width2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
         return compatible;
     },
     
@@ -5020,8 +5598,8 @@ const fontCompatibility = {
         
         const diff = Math.abs(xHeight1 - xHeight2) / xHeight1;
         const compatible = diff <= tolerance;
-        
-        console.log(`[DEBUG] xHeight compatibility: ${font1} (${xHeight1.toFixed(2)}px) vs ${font2} (${xHeight2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
+
+        // console.log(`[DEBUG] xHeight compatibility: ${font1} (${xHeight1.toFixed(2)}px) vs ${font2} (${xHeight2.toFixed(2)}px) = ${(diff*100).toFixed(1)}% diff → ${compatible ? 'COMPATIBLE' : 'REJECTED'}`);
         return compatible;
     },
     

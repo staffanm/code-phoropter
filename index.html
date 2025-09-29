@@ -34,6 +34,9 @@
         </div>
 
 
+        <!-- Stage transition notification -->
+        <div class="stage-notification" id="stageNotification"></div>
+
         <div class="comparison-container" id="comparisonContainer">
             <div class="code-panel" id="panelA">
                 <div class="panel-label">Option A</div>
@@ -88,6 +91,11 @@
                     <button onclick="importAndStart()">Import & Start</button>
                 </div>
             </div>
+
+            <div class="lucky-section">
+                <button onclick="feelingLucky()" class="lucky-button">I'm Feeling Lucky</button>
+                <p class="lucky-description">Generate random settings based on your installed fonts</p>
+            </div>
         </div>
 
 
@@ -104,19 +112,30 @@
             </div>
 
             <div class="slider-compare-toggle">
-                <label class="toggle-switch">
+                <label class="toggle-switch" title="Compare options side-by-side with a draggable slider divider instead of switching between full views">
                     <span class="toggle-label">Slider <u>C</u>ompare</span>
                     <input type="checkbox" id="sliderCompareToggle" onchange="toggleSliderCompare()">
                     <span class="toggle-slider"></span>
                 </label>
             </div>
-            
+
+            <div class="unique-role-fonts-toggle">
+                <label class="toggle-switch" title="Enable additional stages to choose unique fonts for keywords, strings, comments, etc. By default, only weight and style can be customized per role.">
+                    <span class="toggle-label">Unique Role <u>F</u>onts</span>
+                    <input type="checkbox" id="uniqueRoleFontsToggle" onchange="toggleUniqueRoleFonts()">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
             <select id="languageSelect" onchange="changeLanguage()" disabled>
                 <option value="javascript">JavaScript (React)</option>
                 <option value="python">Python (Async)</option>
                 <option value="rust">Rust (Cache)</option>
                 <option value="go">Go (Web Service)</option>
                 <option value="java">Java (Spring Boot)</option>
+                <option value="cpp">C++ (LRU Cache)</option>
+                <option value="csharp">C# (Web API)</option>
+                <option value="php">PHP (Auth Service)</option>
                 <option value="clojure">Clojure (Ring)</option>
                 <option value="css">CSS (Normalize)</option>
                 <option value="html">HTML (Boilerplate)</option>
@@ -135,10 +154,6 @@
         <div id="results" class="results hidden">
             <h2>Your Ideal Code Display Settings</h2>
             <div class="result-details" id="resultDetails"></div>
-            <div class="result-preview">
-                <h3>Preview with your settings:</h3>
-                <pre><code id="resultCode"></code></pre>
-            </div>
             <div class="result-actions">
                 <button onclick="copySettings()">Copy CSS Settings</button>
                 <button onclick="downloadFontPackage()">Download Font Package</button>

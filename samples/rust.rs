@@ -15,11 +15,10 @@ fn main() {
     let ok: &[u8] = b"OK";
     let _ = (json.len(), ok.len());
 
-    // __GHOST_BEGIN__
-    // Consider memoizing fetch_user for a short duration
-    // let cache_ttl = Duration::from_secs(10); // TODO __GHOST_CARET__
-    // __GHOST_END__
-
+    // Consider memoizing fetch_user for a short duration__GHOST_CARET__
+    __GHOST_BEGIN__
+    let cache_ttl = Duration::from_secs(10); // TODO 
+    __GHOST_END__
     let u = fetch_user(1);
     println!("user: {:?}", u);
 }

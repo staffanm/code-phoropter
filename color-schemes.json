@@ -21,7 +21,21 @@
       "function": {
         "color": "#89b4fa"
       },
-      "id": 4
+      "id": 4,
+      "literal": {
+        "color": "#cba6f7"
+      },
+      "variable": "#cdd6f4",
+      "type": {
+        "color": "#89b4fa"
+      },
+      "operator": {
+        "color": "#cba6f7"
+      },
+      "ghost": {
+        "color": "#6c7086",
+        "italic": true
+      }
     },
     {
       "name": "Maple Dark",
@@ -49,7 +63,20 @@
       "constant": {
         "color": "#f0c0a8"
       },
-      "id": 28
+      "id": 28,
+      "literal": {
+        "color": "#d2ccff"
+      },
+      "type": {
+        "color": "#8fc7ff"
+      },
+      "operator": {
+        "color": "#d2ccff"
+      },
+      "ghost": {
+        "color": "#999999",
+        "italic": true
+      }
     },
     {
       "name": "Monokai",
@@ -62,7 +89,12 @@
       "string": "#e6db74",
       "comment": "#75715e",
       "function": "#66d9ef",
-      "id": 13
+      "id": 13,
+      "literal": "#f92672",
+      "variable": "#f8f8f2",
+      "type": "#66d9ef",
+      "operator": "#f92672",
+      "ghost": "#75715e"
     },
     {
       "name": "Dracula",
@@ -75,7 +107,12 @@
       "string": "#f1fa8c",
       "comment": "#6272a4",
       "function": "#50fa7b",
-      "id": 7
+      "id": 7,
+      "literal": "#ff79c6",
+      "variable": "#f8f8f2",
+      "type": "#50fa7b",
+      "operator": "#ff79c6",
+      "ghost": "#6272a4"
     },
     {
       "name": "One Dark",
@@ -87,7 +124,12 @@
       "string": "#98c379",
       "comment": "#5c6370",
       "function": "#61afef",
-      "id": 17
+      "id": 17,
+      "literal": "#c678dd",
+      "variable": "#abb2bf",
+      "type": "#61afef",
+      "operator": "#c678dd",
+      "ghost": "#5c6370"
     },
     {
       "name": "Solarized Dark",
@@ -100,7 +142,12 @@
       "string": "#2aa198",
       "comment": "#586e75",
       "function": "#268bd2",
-      "id": 22
+      "id": 22,
+      "literal": "#b58900",
+      "variable": "#839496",
+      "type": "#268bd2",
+      "operator": "#b58900",
+      "ghost": "#586e75"
     },
     {
       "name": "Tomorrow Night",
@@ -113,7 +160,12 @@
       "string": "#b5bd68",
       "comment": "#969896",
       "function": "#81a2be",
-      "id": 25
+      "id": 25,
+      "literal": "#b294bb",
+      "variable": "#c5c8c6",
+      "type": "#81a2be",
+      "operator": "#b294bb",
+      "ghost": "#969896"
     },
     {
       "name": "GitHub Dark",
@@ -126,7 +178,12 @@
       "string": "#a5d6ff",
       "comment": "#8b949e",
       "function": "#d2a8ff",
-      "id": 8
+      "id": 8,
+      "literal": "#ff7b72",
+      "variable": "#c9d1d9",
+      "type": "#d2a8ff",
+      "operator": "#ff7b72",
+      "ghost": "#8b949e"
     },
     {
       "name": "Nord",
@@ -139,7 +196,12 @@
       "string": "#a3be8c",
       "comment": "#616e88",
       "function": "#88c0d0",
-      "id": 16
+      "id": 16,
+      "literal": "#81a1c1",
+      "variable": "#d8dee9",
+      "type": "#88c0d0",
+      "operator": "#81a1c1",
+      "ghost": "#616e88"
     },
     {
       "name": "Gruvbox Dark",
@@ -152,7 +214,12 @@
       "string": "#b8bb26",
       "comment": "#928374",
       "function": "#83a598",
-      "id": 9
+      "id": 9,
+      "literal": "#fb4934",
+      "variable": "#ebdbb2",
+      "type": "#83a598",
+      "operator": "#fb4934",
+      "ghost": "#928374"
     },
     {
       "name": "Material Theme",
@@ -165,7 +232,12 @@
       "string": "#c3e88d",
       "comment": "#546e7a",
       "function": "#82aaff",
-      "id": 12
+      "id": 12,
+      "literal": "#c792ea",
+      "variable": "#eeffff",
+      "type": "#82aaff",
+      "operator": "#c792ea",
+      "ghost": "#546e7a"
     },
     {
       "name": "Atom One Dark",
@@ -177,7 +249,12 @@
       "string": "#98c379",
       "comment": "#5c6370",
       "function": "#61afef",
-      "id": 2
+      "id": 2,
+      "literal": "#c678dd",
+      "variable": "#abb2bf",
+      "type": "#61afef",
+      "operator": "#c678dd",
+      "ghost": "#5c6370"
     },
     {
       "name": "Palenight",
@@ -189,7 +266,12 @@
       "string": "#c3e88d",
       "comment": "#676e95",
       "function": "#82aaff",
-      "id": 18
+      "id": 18,
+      "literal": "#c792ea",
+      "variable": "#a6accd",
+      "type": "#82aaff",
+      "operator": "#c792ea",
+      "ghost": "#676e95"
     },
     {
       "name": "Synthwave 84",
@@ -202,7 +284,12 @@
       "string": "#ff8b39",
       "comment": "#495495",
       "function": "#36f9f6",
-      "id": 23
+      "id": 23,
+      "literal": "#fede5d",
+      "variable": "#ff7edb",
+      "type": "#36f9f6",
+      "operator": "#fede5d",
+      "ghost": "#495495"
     },
     {
       "name": "Tokyo Night",
@@ -215,7 +302,12 @@
       "string": "#9ece6a",
       "comment": "#565f89",
       "function": "#7aa2f7",
-      "id": 24
+      "id": 24,
+      "literal": "#bb9af7",
+      "variable": "#a9b1d6",
+      "type": "#7aa2f7",
+      "operator": "#bb9af7",
+      "ghost": "#565f89"
     },
     {
       "name": "Cobalt2",
@@ -228,7 +320,12 @@
       "string": "#0088ff",
       "comment": "#0088ff",
       "function": "#ff628c",
-      "id": 6
+      "id": 6,
+      "literal": "#ff9d00",
+      "variable": "#ffc600",
+      "type": "#ff628c",
+      "operator": "#ff9d00",
+      "ghost": "#0088ff"
     },
     {
       "name": "Night Owl",
@@ -241,7 +338,12 @@
       "string": "#ecc48d",
       "comment": "#637777",
       "function": "#82aaff",
-      "id": 15
+      "id": 15,
+      "literal": "#c792ea",
+      "variable": "#d6deeb",
+      "type": "#82aaff",
+      "operator": "#c792ea",
+      "ghost": "#637777"
     },
     {
       "name": "Shades of Purple",
@@ -254,7 +356,12 @@
       "string": "#a2ff00",
       "comment": "#b362ff",
       "function": "#80ffbb",
-      "id": 20
+      "id": 20,
+      "literal": "#ff9500",
+      "variable": "#a599e9",
+      "type": "#80ffbb",
+      "operator": "#ff9500",
+      "ghost": "#b362ff"
     },
     {
       "name": "Ayu Dark",
@@ -267,7 +374,12 @@
       "string": "#aad84c",
       "comment": "#5c6773",
       "function": "#59c2ff",
-      "id": 3
+      "id": 3,
+      "literal": "#ff8f40",
+      "variable": "#b3b1ad",
+      "type": "#59c2ff",
+      "operator": "#ff8f40",
+      "ghost": "#5c6773"
     },
     {
       "name": "Horizon",
@@ -280,7 +392,12 @@
       "string": "#fab795",
       "comment": "#6c6783",
       "function": "#25b2bc",
-      "id": 10
+      "id": 10,
+      "literal": "#e95678",
+      "variable": "#e0e0e0",
+      "type": "#25b2bc",
+      "operator": "#e95678",
+      "ghost": "#6c6783"
     },
     {
       "name": "City Lights",
@@ -293,7 +410,12 @@
       "string": "#92d192",
       "comment": "#41505e",
       "function": "#70c0ba",
-      "id": 5
+      "id": 5,
+      "literal": "#5ec4ff",
+      "variable": "#b7c5d3",
+      "type": "#70c0ba",
+      "operator": "#5ec4ff",
+      "ghost": "#41505e"
     },
     {
       "name": "Moonlight",
@@ -305,7 +427,12 @@
       "string": "#c3e88d",
       "comment": "#7a88cf",
       "function": "#82aaff",
-      "id": 14
+      "id": 14,
+      "literal": "#c099ff",
+      "variable": "#c8d3f5",
+      "type": "#82aaff",
+      "operator": "#c099ff",
+      "ghost": "#7a88cf"
     },
     {
       "name": "Panda",
@@ -318,7 +445,12 @@
       "string": "#19f9d8",
       "comment": "#676b79",
       "function": "#ffb86c",
-      "id": 19
+      "id": 19,
+      "literal": "#ff75b5",
+      "variable": "#e6e6e6",
+      "type": "#ffb86c",
+      "operator": "#ff75b5",
+      "ghost": "#676b79"
     },
     {
       "name": "Winter is Coming",
@@ -331,7 +463,12 @@
       "string": "#ecc48d",
       "comment": "#637777",
       "function": "#82aaff",
-      "id": 27
+      "id": 27,
+      "literal": "#c792ea",
+      "variable": "#d6deeb",
+      "type": "#82aaff",
+      "operator": "#c792ea",
+      "ghost": "#637777"
     },
     {
       "name": "Andromeda",
@@ -344,7 +481,12 @@
       "string": "#96e072",
       "comment": "#c74ded",
       "function": "#f39800",
-      "id": 1
+      "id": 1,
+      "literal": "#ee5d43",
+      "variable": "#d5ced9",
+      "type": "#f39800",
+      "operator": "#ee5d43",
+      "ghost": "#c74ded"
     },
     {
       "name": "Material Ocean",
@@ -357,7 +499,12 @@
       "string": "#c3e88d",
       "comment": "#464b5d",
       "function": "#82aaff",
-      "id": 11
+      "id": 11,
+      "literal": "#c792ea",
+      "variable": "#8f93a2",
+      "type": "#82aaff",
+      "operator": "#c792ea",
+      "ghost": "#464b5d"
     },
     {
       "name": "Slack Dark",
@@ -369,7 +516,12 @@
       "string": "#ecb22e",
       "comment": "#a0a0a0",
       "function": "#2eb67d",
-      "id": 21
+      "id": 21,
+      "literal": "#36c5f0",
+      "variable": "#ffffff",
+      "type": "#2eb67d",
+      "operator": "#36c5f0",
+      "ghost": "#a0a0a0"
     },
     {
       "name": "VS Code Default",
@@ -381,7 +533,12 @@
       "string": "#ce9178",
       "comment": "#6a9955",
       "function": "#dcdcaa",
-      "id": 26
+      "id": 26,
+      "literal": "#569cd6",
+      "variable": "#d4d4d4",
+      "type": "#dcdcaa",
+      "operator": "#569cd6",
+      "ghost": "#6a9955"
     }
   ],
   "light": [
@@ -396,7 +553,12 @@
       "string": "#032f62",
       "comment": "#6a737d",
       "function": "#6f42c1",
-      "id": 6
+      "id": 6,
+      "literal": "#d73a49",
+      "variable": "#24292f",
+      "type": "#6f42c1",
+      "operator": "#d73a49",
+      "ghost": "#6a737d"
     },
     {
       "name": "Maple Light",
@@ -424,7 +586,20 @@
       "constant": {
         "color": "#c37522"
       },
-      "id": 29
+      "id": 29,
+      "literal": {
+        "color": "#726293"
+      },
+      "type": {
+        "color": "#0585a8"
+      },
+      "operator": {
+        "color": "#726293"
+      },
+      "ghost": {
+        "color": "#808080",
+        "italic": true
+      }
     },
     {
       "name": "Solarized Light",
@@ -437,7 +612,12 @@
       "string": "#2aa198",
       "comment": "#93a1a1",
       "function": "#268bd2",
-      "id": 19
+      "id": 19,
+      "literal": "#b58900",
+      "variable": "#657b83",
+      "type": "#268bd2",
+      "operator": "#b58900",
+      "ghost": "#93a1a1"
     },
     {
       "name": "Atom One Light",
@@ -449,7 +629,12 @@
       "string": "#50a14f",
       "comment": "#a0a1a7",
       "function": "#4078f2",
-      "id": 1
+      "id": 1,
+      "literal": "#a626a4",
+      "variable": "#383a42",
+      "type": "#4078f2",
+      "operator": "#a626a4",
+      "ghost": "#a0a1a7"
     },
     {
       "name": "Tomorrow",
@@ -462,7 +647,12 @@
       "string": "#718c00",
       "comment": "#8e908c",
       "function": "#4271ae",
-      "id": 21
+      "id": 21,
+      "literal": "#8959a8",
+      "variable": "#4d4d4c",
+      "type": "#4271ae",
+      "operator": "#8959a8",
+      "ghost": "#8e908c"
     },
     {
       "name": "Material Light",
@@ -475,7 +665,12 @@
       "string": "#91b859",
       "comment": "#aabfc9",
       "function": "#39adb5",
-      "id": 11
+      "id": 11,
+      "literal": "#7c4dff",
+      "variable": "#90a4ae",
+      "type": "#39adb5",
+      "operator": "#7c4dff",
+      "ghost": "#aabfc9"
     },
     {
       "name": "Quiet Light",
@@ -487,7 +682,12 @@
       "string": "#c54633",
       "comment": "#aaaaaa",
       "function": "#7a3e9d",
-      "id": 16
+      "id": 16,
+      "literal": "#4b69c6",
+      "variable": "#333333",
+      "type": "#7a3e9d",
+      "operator": "#4b69c6",
+      "ghost": "#aaaaaa"
     },
     {
       "name": "Eclipse",
@@ -499,7 +699,12 @@
       "string": "#2a00ff",
       "comment": "#3f7f5f",
       "function": "#000000",
-      "id": 5
+      "id": 5,
+      "literal": "#7f0055",
+      "variable": "#000000",
+      "type": "#000000",
+      "operator": "#7f0055",
+      "ghost": "#3f7f5f"
     },
     {
       "name": "IntelliJ Light",
@@ -511,7 +716,12 @@
       "string": "#008000",
       "comment": "#808080",
       "function": "#000000",
-      "id": 9
+      "id": 9,
+      "literal": "#000080",
+      "variable": "#000000",
+      "type": "#000000",
+      "operator": "#000080",
+      "ghost": "#808080"
     },
     {
       "name": "VS Light",
@@ -523,7 +733,12 @@
       "string": "#a31515",
       "comment": "#008000",
       "function": "#2b91af",
-      "id": 23
+      "id": 23,
+      "literal": "#0000ff",
+      "variable": "#000000",
+      "type": "#2b91af",
+      "operator": "#0000ff",
+      "ghost": "#008000"
     },
     {
       "name": "XCode Light",
@@ -535,7 +750,12 @@
       "string": "#c41a16",
       "comment": "#177500",
       "function": "#3900a0",
-      "id": 25
+      "id": 25,
+      "literal": "#aa0d91",
+      "variable": "#000000",
+      "type": "#3900a0",
+      "operator": "#aa0d91",
+      "ghost": "#177500"
     },
     {
       "name": "Paper",
@@ -547,7 +767,12 @@
       "string": "#032f62",
       "comment": "#6a737d",
       "function": "#6f42c1",
-      "id": 15
+      "id": 15,
+      "literal": "#d73a49",
+      "variable": "#444444",
+      "type": "#6f42c1",
+      "operator": "#d73a49",
+      "ghost": "#6a737d"
     },
     {
       "name": "Gruvbox Light",
@@ -560,7 +785,12 @@
       "string": "#79740e",
       "comment": "#928374",
       "function": "#076678",
-      "id": 7
+      "id": 7,
+      "literal": "#9d0006",
+      "variable": "#3c3836",
+      "type": "#076678",
+      "operator": "#9d0006",
+      "ghost": "#928374"
     },
     {
       "name": "Spring",
@@ -572,7 +802,12 @@
       "string": "#b3660f",
       "comment": "#8faf4c",
       "function": "#5a8216",
-      "id": 20
+      "id": 20,
+      "literal": "#166d00",
+      "variable": "#2e5413",
+      "type": "#5a8216",
+      "operator": "#166d00",
+      "ghost": "#8faf4c"
     },
     {
       "name": "Slack Light",
@@ -584,7 +819,12 @@
       "string": "#856404",
       "comment": "#717274",
       "function": "#0d7377",
-      "id": 18
+      "id": 18,
+      "literal": "#1264a3",
+      "variable": "#1d1c1d",
+      "type": "#0d7377",
+      "operator": "#1264a3",
+      "ghost": "#717274"
     },
     {
       "name": "Ayu Light",
@@ -597,7 +837,12 @@
       "string": "#86b300",
       "comment": "#abb0b6",
       "function": "#4cbf99",
-      "id": 2
+      "id": 2,
+      "literal": "#fa8d3e",
+      "variable": "#5c6773",
+      "type": "#4cbf99",
+      "operator": "#fa8d3e",
+      "ghost": "#abb0b6"
     },
     {
       "name": "Winter is Coming Light",
@@ -610,7 +855,12 @@
       "string": "#448c27",
       "comment": "#90a3b8",
       "function": "#7c3aed",
-      "id": 24
+      "id": 24,
+      "literal": "#0b7ec8",
+      "variable": "#5f7e97",
+      "type": "#7c3aed",
+      "operator": "#0b7ec8",
+      "ghost": "#90a3b8"
     },
     {
       "name": "Nord Light",
@@ -623,7 +873,12 @@
       "string": "#a3be8c",
       "comment": "#8fbcbb",
       "function": "#88c0d0",
-      "id": 13
+      "id": 13,
+      "literal": "#5e81ac",
+      "variable": "#2e3440",
+      "type": "#88c0d0",
+      "operator": "#5e81ac",
+      "ghost": "#8fbcbb"
     },
     {
       "name": "One Light",
@@ -635,7 +890,12 @@
       "string": "#50a14f",
       "comment": "#a0a1a7",
       "function": "#4078f2",
-      "id": 14
+      "id": 14,
+      "literal": "#a626a4",
+      "variable": "#383a42",
+      "type": "#4078f2",
+      "operator": "#a626a4",
+      "ghost": "#a0a1a7"
     },
     {
       "name": "Serendipity Light",
@@ -647,7 +907,12 @@
       "string": "#22863a",
       "comment": "#6a737d",
       "function": "#6f42c1",
-      "id": 17
+      "id": 17,
+      "literal": "#d73a49",
+      "variable": "#4a4845",
+      "type": "#6f42c1",
+      "operator": "#d73a49",
+      "ghost": "#6a737d"
     },
     {
       "name": "Hopscotch",
@@ -660,7 +925,12 @@
       "string": "#8fc13e",
       "comment": "#989498",
       "function": "#149b93",
-      "id": 8
+      "id": 8,
+      "literal": "#dd464c",
+      "variable": "#433b3b",
+      "type": "#149b93",
+      "operator": "#dd464c",
+      "ghost": "#989498"
     },
     {
       "name": "Kuroir",
@@ -672,7 +942,12 @@
       "string": "#8fc13e",
       "comment": "#989498",
       "function": "#149b93",
-      "id": 10
+      "id": 10,
+      "literal": "#dd464c",
+      "variable": "#433b3b",
+      "type": "#149b93",
+      "operator": "#dd464c",
+      "ghost": "#989498"
     },
     {
       "name": "Monochrome Light",
@@ -684,7 +959,12 @@
       "string": "#000000",
       "comment": "#808080",
       "function": "#000000",
-      "id": 12
+      "id": 12,
+      "literal": "#000000",
+      "variable": "#000000",
+      "type": "#000000",
+      "operator": "#000000",
+      "ghost": "#808080"
     },
     {
       "name": "Twilight Light",
@@ -696,7 +976,12 @@
       "string": "#738a04",
       "comment": "#a8a8a8",
       "function": "#9b859d",
-      "id": 22
+      "id": 22,
+      "literal": "#794938",
+      "variable": "#464646",
+      "type": "#9b859d",
+      "operator": "#794938",
+      "ghost": "#a8a8a8"
     },
     {
       "name": "Dawn",
@@ -709,7 +994,12 @@
       "string": "#286983",
       "comment": "#9893a5",
       "function": "#907aa9",
-      "id": 4
+      "id": 4,
+      "literal": "#d7827e",
+      "variable": "#575279",
+      "type": "#907aa9",
+      "operator": "#d7827e",
+      "ghost": "#9893a5"
     },
     {
       "name": "Catppuccin Latte",
@@ -722,7 +1012,12 @@
       "string": "#40a02b",
       "comment": "#6c6f85",
       "function": "#8839ef",
-      "id": 3
+      "id": 3,
+      "literal": "#d20f39",
+      "variable": "#4c4f69",
+      "type": "#8839ef",
+      "operator": "#d20f39",
+      "ghost": "#6c6f85"
     }
   ]
 }
