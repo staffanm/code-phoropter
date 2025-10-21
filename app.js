@@ -267,8 +267,8 @@ function injectFontFaceCSS(fontData, options = {}) {
     return styleEl;
 }
 
-// Load full variants for a font (upgrades from preview mode if needed)
-function loadFullFontVariants(fontName) {
+// Load specific variants for a font (for progressive loading during stages)
+function loadFontVariants(fontName, options = {}) {
     const db = window.fontDatabase || [];
     const fontData = db.find(f => f.name === fontName);
 
@@ -276,8 +276,86 @@ function loadFullFontVariants(fontName) {
         return;
     }
 
-    devLog(`Loading full variants for ${fontName}`);
-    injectFontFaceCSS(fontData, { previewMode: false });
+    const previewMode = options.previewMode !== false; // Default to preview mode (use subsets)
+
+    // If specific variants requested, inject just those
+    if (options.includeVariants) {
+        devLog(`Loading specific variants for ${fontName}:`, options.includeVariants);
+        injectFontFaceCSS(fontData, { previewMode, includeVariants: options.includeVariants });
+    } else if (previewMode) {
+        // Preview mode: just Regular
+        devLog(`Loading preview (Regular only) for ${fontName}`);
+        injectFontFaceCSS(fontData, { previewMode: true });
+    } else {
+        // Full mode: all variants
+        devLog(`Loading all variants for ${fontName}`);
+        injectFontFaceCSS(fontData, { previewMode: false });
+    }
+}
+
+// Load full variants for a font (upgrades from preview mode if needed)
+function loadFullFontVariants(fontName) {
+    loadFontVariants(fontName, { previewMode: false });
+}
+
+// Ensure variants needed for a comparison are loaded (called before showing comparison)
+function ensureComparisonVariantsLoaded(comparison) {
+    if (!comparison || !comparison.optionA || !comparison.optionB) return;
+
+    // Extract font names from both options
+    const fontNameA = comparison.optionA.font ?
+        comparison.optionA.font.split(',')[0].replace(/["']/g, '').trim() : null;
+    const fontNameB = comparison.optionB.font ?
+        comparison.optionB.font.split(',')[0].replace(/["']/g, '').trim() : null;
+
+    const fonts = new Set([fontNameA, fontNameB].filter(Boolean));
+
+    // Determine which variants to load based on stage
+    const stage = comparison.stage;
+    const neededVariants = {};
+
+    if (stage === 'weight') {
+        // Weight stage: load all weights being compared
+        const weights = new Set([
+            comparison.optionA.fontWeight,
+            comparison.optionB.fontWeight
+        ].filter(Boolean));
+        neededVariants.weights = Array.from(weights);
+        neededVariants.styles = ['normal']; // Only normal style for weight comparison
+        devLog(`Weight stage: ensuring weights [${Array.from(weights).join(', ')}]`);
+    } else if (stage === 'fontWidth') {
+        // Width stage: load all widths being compared
+        const widths = new Set([
+            comparison.optionA.fontWidth || 'normal',
+            comparison.optionB.fontWidth || 'normal'
+        ]);
+        neededVariants.widths = Array.from(widths);
+        devLog(`Width stage: ensuring widths [${Array.from(widths).join(', ')}]`);
+    } else if (stage === 'fontStyle' || stage.startsWith('role')) {
+        // Style/role stages: may need italic/oblique
+        const styles = new Set([
+            comparison.optionA.fontStyle || 'normal',
+            comparison.optionB.fontStyle || 'normal'
+        ]);
+        const weights = new Set([
+            comparison.optionA.fontWeight || 400,
+            comparison.optionB.fontWeight || 400
+        ]);
+        neededVariants.styles = Array.from(styles);
+        neededVariants.weights = Array.from(weights);
+        devLog(`Style/role stage: ensuring styles [${Array.from(styles).join(', ')}] weights [${Array.from(weights).join(', ')}]`);
+    }
+
+    // Load variants for each font
+    fonts.forEach(fontName => {
+        if (Object.keys(neededVariants).length > 0) {
+            // Load specific variants (still using subsets)
+            loadFontVariants(fontName, {
+                previewMode: true, // Use subsets
+                includeVariants: neededVariants
+            });
+        }
+    });
 }
 
 // Load a specific font on-demand
@@ -1864,12 +1942,69 @@ class ComparisonEngine {
             this.winners.font = null;
         }
     }
-    
+
+    // Preload font variants needed for upcoming stage
+    preloadVariantsForStage() {
+        const fontName = this.winners.font ?
+            this.winners.font.split(',')[0].replace(/["']/g, '').trim() : null;
+
+        if (!fontName) return;
+
+        const stage = this.stage;
+        const variants = {};
+
+        if (stage === 'weight') {
+            // Load all available weights for the selected font
+            const db = window.fontDatabase || [];
+            const fontData = db.find(f => f.name === fontName);
+            if (fontData && fontData.axes && fontData.axes.weights) {
+                variants.weights = fontData.axes.weights;
+                variants.styles = ['normal']; // Only normal style for weight stage
+                devLog(`Preloading ${variants.weights.length} weights for ${fontName}`);
+            }
+        } else if (stage === 'fontWidth') {
+            // Load all available widths
+            const db = window.fontDatabase || [];
+            const fontData = db.find(f => f.name === fontName);
+            if (fontData && fontData.axes && fontData.axes.widths) {
+                variants.widths = fontData.axes.widths;
+                devLog(`Preloading ${variants.widths.length} widths for ${fontName}`);
+            }
+        } else if (stage === 'fontStyle' || stage.startsWith('role')) {
+            // Load common styles and weights for role stages
+            const db = window.fontDatabase || [];
+            const fontData = db.find(f => f.name === fontName);
+            if (fontData && fontData.axes) {
+                variants.styles = fontData.axes.styles || ['normal'];
+                // For roles, load common weights (Regular, Bold)
+                if (fontData.axes.weights) {
+                    const commonWeights = fontData.axes.weights.filter(w => [300, 400, 600, 700].includes(w));
+                    if (commonWeights.length > 0) {
+                        variants.weights = commonWeights;
+                    }
+                }
+                devLog(`Preloading ${variants.styles?.length || 0} styles and ${variants.weights?.length || 0} weights for ${fontName}`);
+            }
+        }
+
+        // Load the variants if we identified any
+        if (Object.keys(variants).length > 0) {
+            loadFontVariants(fontName, {
+                previewMode: true, // Still use subsets
+                includeVariants: variants
+            });
+        }
+    }
+
     generateNextStage() {
         const stageIndex = getStageIndex(this.stage);
-        
+
         devLog(`[DEBUG] generateNextStage: stage=${this.stage}, candidates=${this.candidates[this.stage]?.length}, stageIndex=${stageIndex}`);
-        
+
+        // Proactively load variants needed for this stage
+        // This ensures weights/styles/widths are available before user sees them
+        this.preloadVariantsForStage();
+
         // Role stages are handled by the role tournament path in getNextComparison.
         // Avoid touching generic candidates for role* stages (no candidate arrays exist).
         if (this.stage && this.stage.startsWith('role')) {
@@ -3220,7 +3355,11 @@ function showNextComparison() {
         showResults();
         return;
     }
-    
+
+    // Ensure required font variants are loaded for this comparison
+    // This progressively loads weights/widths/styles as needed for each stage
+    ensureComparisonVariantsLoaded(comparison);
+
     // Hide font family selector if it was showing
     document.getElementById('fontFamilySelector').classList.add('hidden');
     
