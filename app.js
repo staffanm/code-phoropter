@@ -52,9 +52,11 @@ window.pendingFontLoads = window.pendingFontLoads || new Map();
 window.injectedFontStyles = window.injectedFontStyles || new Map(); // Track injected styles
 
 // Resolve variant URL from variantsMatrix template
-function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'normal') {
+function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'normal', options = {}) {
     const vm = entry.variantsMatrix;
     if (!vm || !vm.files || !vm.maps) return null;
+
+    const useSubset = options.useSubset || false;
 
     const maps = vm.maps || {};
     const m = (axis, v) => (maps[axis] && (maps[axis][String(v)] ?? maps[axis][v])) ?? '';
@@ -90,7 +92,18 @@ function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'norma
     for (const fmt of order) {
         const tpl = vm.files[fmt];
         if (!tpl) continue;
-        const url = fill(tpl);
+        let url = fill(tpl);
+
+        // If useSubset is true, try to use .subset version
+        if (useSubset) {
+            // Insert .subset before file extension
+            // e.g., "font.woff2" -> "font.subset.woff2"
+            const parts = url.split('.');
+            const ext = parts.pop();
+            const subsetUrl = parts.join('.') + '.subset.' + ext;
+            url = subsetUrl;
+        }
+
         const format = (fmt === 'ttf') ? 'truetype' : (fmt === 'otf') ? 'opentype' : fmt;
         return { url, format };
     }
@@ -138,7 +151,10 @@ function generateFontFaceCSS(fontData, options = {}) {
             styles.forEach(style => {
                 widths.forEach(width => {
                     // Resolve the font file URL using variantsMatrix
-                    const resolved = resolveVariantUrl(fontData, weight, style, width);
+                    // In preview mode, use subset files if available
+                    const resolved = resolveVariantUrl(fontData, weight, style, width, {
+                        useSubset: previewMode
+                    });
                     if (!resolved) return;
 
                     const { url, format } = resolved;
@@ -184,8 +200,15 @@ function generateFontFaceCSS(fontData, options = {}) {
 
         // Use the first available format
         for (const { key, format } of formats) {
-            const url = fontData[key];
+            let url = fontData[key];
             if (url) {
+                // In preview mode, try to use subset version
+                if (previewMode) {
+                    const parts = url.split('.');
+                    const ext = parts.pop();
+                    url = parts.join('.') + '.subset.' + ext;
+                }
+
                 css += `@font-face {\n`;
                 css += `    font-family: "${fontData.name}";\n`;
                 css += `    src: url("${url}") format("${format}");\n`;
