@@ -98,19 +98,40 @@ function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'norma
 }
 
 // Generate @font-face CSS for a specific embedded font
-function generateFontFaceCSS(fontData) {
+function generateFontFaceCSS(fontData, options = {}) {
     if (!fontData || fontData.source !== 'embedded') {
         return '';
     }
 
-    let css = `/* Generated @font-face for ${fontData.name} */\n`;
+    // Preview mode: only load minimal variants (Regular only by default)
+    // Full mode: load all variants
+    const previewMode = options.previewMode !== false; // Default to preview mode
+    const includeVariants = options.includeVariants || {}; // Specific variants to include
+
+    let css = `/* Generated @font-face for ${fontData.name}${previewMode ? ' (preview mode)' : ''} */\n`;
 
     // Check if font uses variantsMatrix (new format) or direct URLs (old format)
     if (fontData.variantsMatrix) {
         // New format: use variantsMatrix template system
-        const weights = fontData.axes?.weights || [400];
-        const styles = fontData.axes?.styles || ['normal'];
-        const widths = fontData.axes?.widths || ['normal'];
+        let weights = fontData.axes?.weights || [400];
+        let styles = fontData.axes?.styles || ['normal'];
+        let widths = fontData.axes?.widths || ['normal'];
+
+        // In preview mode, only load Regular weight, normal style, normal width
+        if (previewMode) {
+            // Find the closest to 400 weight (Regular)
+            const regularWeight = weights.includes(400) ? 400 :
+                                 weights.includes(500) ? 500 :
+                                 weights[Math.floor(weights.length / 2)]; // Middle weight if no 400/500
+
+            weights = includeVariants.weights || [regularWeight];
+            styles = includeVariants.styles || ['normal'];
+            widths = includeVariants.widths || [widths[0]]; // First width (usually 'normal')
+
+            devLog(`Preview mode: Loading only ${weights.length}x${styles.length}x${widths.length} = ${weights.length * styles.length * widths.length} variant(s) for ${fontData.name}`);
+        } else {
+            devLog(`Full mode: Loading ${weights.length}x${styles.length}x${widths.length} = ${weights.length * styles.length * widths.length} variants for ${fontData.name}`);
+        }
 
         // Generate @font-face rules for each variant
         weights.forEach(weight => {
@@ -181,29 +202,59 @@ function generateFontFaceCSS(fontData) {
 }
 
 // Inject @font-face CSS for a specific font
-function injectFontFaceCSS(fontData) {
+function injectFontFaceCSS(fontData, options = {}) {
     const fontName = fontData.name;
+    const previewMode = options.previewMode !== false; // Default to preview mode
 
     // Check if already injected
-    if (window.injectedFontStyles.has(fontName)) {
-        return window.injectedFontStyles.get(fontName);
+    const existing = window.injectedFontStyles.get(fontName);
+    if (existing) {
+        // If we already injected in full mode, we're done
+        if (existing.dataset.fullMode === 'true') {
+            return existing;
+        }
+        // If we want full mode but only have preview, upgrade
+        if (!previewMode && existing.dataset.fullMode !== 'true') {
+            devLog(`Upgrading ${fontName} from preview to full mode`);
+            // Remove old preview style
+            existing.remove();
+            window.injectedFontStyles.delete(fontName);
+            // Will re-inject below in full mode
+        } else {
+            // Preview mode and already have preview (or full), we're good
+            return existing;
+        }
     }
 
     // Generate CSS
-    const css = generateFontFaceCSS(fontData);
+    const css = generateFontFaceCSS(fontData, options);
 
     // Create and inject style element
     const styleEl = document.createElement('style');
     styleEl.setAttribute('data-font', fontName);
+    styleEl.setAttribute('data-full-mode', previewMode ? 'false' : 'true');
     styleEl.textContent = css;
     document.head.appendChild(styleEl);
 
     // Track that we've injected this font's styles
     window.injectedFontStyles.set(fontName, styleEl);
 
-    devLog(`✓ Injected @font-face CSS for ${fontName}`);
+    devLog(`✓ Injected @font-face CSS for ${fontName} (${previewMode ? 'preview' : 'full'} mode)`);
 
     return styleEl;
+}
+
+// Load full variants for a font (upgrades from preview mode if needed)
+function loadFullFontVariants(fontName) {
+    const db = window.fontDatabase || [];
+    const fontData = db.find(f => f.name === fontName);
+
+    if (!fontData || fontData.source !== 'embedded') {
+        return;
+    }
+
+    devLog(`Loading full variants for ${fontName}`);
+    injectFontFaceCSS(fontData, { previewMode: false });
 }
 
 // Load a specific font on-demand
@@ -4028,7 +4079,7 @@ function generateRolesSection(rawResults) {
 function showResults() {
     const rawResults = engine.winners;
     console.log('Raw engine results:', rawResults);
-    
+
     // Normalize the results to expected format
     const results = {
         fontFamily: rawResults.fontFamily,
@@ -4040,7 +4091,22 @@ function showResults() {
         letterSpacing: rawResults.letterSpacing || 0,
         colorScheme: rawResults.colorScheme || { bg: '#1a1a1a', fg: '#e0e0e0' }
     };
-    
+
+    // Load full font variants now that user has finalized their choice
+    const finalFontName = results.font ? results.font.split(',')[0].replace(/["']/g, '').trim() : null;
+    if (finalFontName) {
+        loadFullFontVariants(finalFontName);
+
+        // Also load full variants for multi-font roles if enabled
+        if (multiFontMode && currentRoleMapping) {
+            Object.values(currentRoleMapping).forEach(roleFont => {
+                if (roleFont && roleFont !== finalFontName) {
+                    loadFullFontVariants(roleFont);
+                }
+            });
+        }
+    }
+
     document.getElementById('progressFill').style.width = '100%';
     document.getElementById('status').textContent = 'Complete!';
     
@@ -4719,9 +4785,20 @@ function importSettings(encoded) {
 // Copy settings to clipboard
 function copySettings() {
     const results = engine.winners;
-    
+
     // Check if the winning font is available locally
     const fontName = results.font.replace(/["']/g, '').split(',')[0].trim();
+
+    // Ensure full variants are loaded before export
+    loadFullFontVariants(fontName);
+    if (multiFontMode && currentRoleMapping) {
+        Object.values(currentRoleMapping).forEach(roleFont => {
+            if (roleFont && roleFont !== fontName) {
+                loadFullFontVariants(roleFont);
+            }
+        });
+    }
+
     const fontAvailable = isFontAvailable(fontName);
     
     // Get download info for the font if needed
@@ -4889,6 +4966,17 @@ Happy coding with your optimized font settings!
 async function downloadFontPackage() {
     const results = engine.winners;
     const fontName = results.font.replace(/["']/g, '').split(',')[0].trim();
+
+    // Ensure full variants are loaded before download
+    loadFullFontVariants(fontName);
+    if (multiFontMode && currentRoleMapping) {
+        Object.values(currentRoleMapping).forEach(roleFont => {
+            if (roleFont && roleFont !== fontName) {
+                loadFullFontVariants(roleFont);
+            }
+        });
+    }
+
     const fontInfo = getFontDownloadInfo(fontName);
     
     if (!fontInfo) {
