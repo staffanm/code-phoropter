@@ -49,6 +49,162 @@ function hideLoadingScreen() {
 // Track which fonts are loaded to avoid duplicate loading
 window.loadedFonts = window.loadedFonts || new Set();
 window.pendingFontLoads = window.pendingFontLoads || new Map();
+window.injectedFontStyles = window.injectedFontStyles || new Map(); // Track injected styles
+
+// Resolve variant URL from variantsMatrix template
+function resolveVariantUrl(entry, weight = 400, style = 'normal', width = 'normal') {
+    const vm = entry.variantsMatrix;
+    if (!vm || !vm.files || !vm.maps) return null;
+
+    const maps = vm.maps || {};
+    const m = (axis, v) => (maps[axis] && (maps[axis][String(v)] ?? maps[axis][v])) ?? '';
+
+    let weightPart = m('weight', weight);
+    const stylePart = m('style', style);
+    const widthPart = m('width', width);
+
+    const rules = vm.rules || {};
+    if (rules.regularOnlyOnBase && String(weight) === '400') {
+        const regName = rules.regularName || weightPart || '';
+        if (style !== 'normal' || width !== 'normal') {
+            weightPart = '';
+        } else {
+            weightPart = regName;
+        }
+    }
+
+    const values = {
+        '{weight|map}': weightPart,
+        '{style|map}': stylePart,
+        '{width|map}': widthPart,
+        '{suffix|map}': (maps.suffix && (maps.suffix[`${weight}:${style}`] || '')) || ''
+    };
+
+    function fill(tpl) {
+        let out = tpl;
+        Object.entries(values).forEach(([k, v]) => { out = out.replaceAll(k, v); });
+        return out.replace(/\/{2,}/g, '/').replace(/--+/g, '-').replace(/-\./g, '.').replace(/\/-/g, '/');
+    }
+
+    const order = [vm.prefer, ...Object.keys(vm.files).filter(k => k !== vm.prefer)];
+    for (const fmt of order) {
+        const tpl = vm.files[fmt];
+        if (!tpl) continue;
+        const url = fill(tpl);
+        const format = (fmt === 'ttf') ? 'truetype' : (fmt === 'otf') ? 'opentype' : fmt;
+        return { url, format };
+    }
+    return null;
+}
+
+// Generate @font-face CSS for a specific embedded font
+function generateFontFaceCSS(fontData) {
+    if (!fontData || fontData.source !== 'embedded') {
+        return '';
+    }
+
+    let css = `/* Generated @font-face for ${fontData.name} */\n`;
+
+    // Check if font uses variantsMatrix (new format) or direct URLs (old format)
+    if (fontData.variantsMatrix) {
+        // New format: use variantsMatrix template system
+        const weights = fontData.axes?.weights || [400];
+        const styles = fontData.axes?.styles || ['normal'];
+        const widths = fontData.axes?.widths || ['normal'];
+
+        // Generate @font-face rules for each variant
+        weights.forEach(weight => {
+            styles.forEach(style => {
+                widths.forEach(width => {
+                    // Resolve the font file URL using variantsMatrix
+                    const resolved = resolveVariantUrl(fontData, weight, style, width);
+                    if (!resolved) return;
+
+                    const { url, format } = resolved;
+
+                    // Convert width to CSS font-stretch value
+                    const stretchMap = {
+                        'ultra-condensed': 'ultra-condensed',
+                        'extra-condensed': 'extra-condensed',
+                        'condensed': 'condensed',
+                        'semi-condensed': 'semi-condensed',
+                        'normal': 'normal',
+                        'semi-expanded': 'semi-expanded',
+                        'expanded': 'expanded',
+                        'extra-expanded': 'extra-expanded',
+                        'ultra-expanded': 'ultra-expanded'
+                    };
+                    const fontStretch = stretchMap[width] || 'normal';
+
+                    css += `@font-face {\n`;
+                    css += `    font-family: "${fontData.name}";\n`;
+                    css += `    src: url("${url}") format("${format}");\n`;
+                    css += `    font-weight: ${weight};\n`;
+                    css += `    font-style: ${style};\n`;
+                    if (fontStretch !== 'normal') {
+                        css += `    font-stretch: ${fontStretch};\n`;
+                    }
+                    css += `    font-display: swap;\n`;
+                    css += `}\n\n`;
+                });
+            });
+        });
+    } else {
+        // Old format: direct ttf/woff2/otf URLs
+        const formats = [
+            { key: 'woff2', format: 'woff2' },
+            { key: 'woff', format: 'woff' },
+            { key: 'ttf', format: 'truetype' },
+            { key: 'otf', format: 'opentype' }
+        ];
+
+        const weight = fontData.axes?.weights?.[0] || 400;
+        const style = fontData.axes?.styles?.[0] || 'normal';
+
+        // Use the first available format
+        for (const { key, format } of formats) {
+            const url = fontData[key];
+            if (url) {
+                css += `@font-face {\n`;
+                css += `    font-family: "${fontData.name}";\n`;
+                css += `    src: url("${url}") format("${format}");\n`;
+                css += `    font-weight: ${weight};\n`;
+                css += `    font-style: ${style};\n`;
+                css += `    font-display: swap;\n`;
+                css += `}\n\n`;
+                break; // Only use one format (the preferred one)
+            }
+        }
+    }
+
+    return css;
+}
+
+// Inject @font-face CSS for a specific font
+function injectFontFaceCSS(fontData) {
+    const fontName = fontData.name;
+
+    // Check if already injected
+    if (window.injectedFontStyles.has(fontName)) {
+        return window.injectedFontStyles.get(fontName);
+    }
+
+    // Generate CSS
+    const css = generateFontFaceCSS(fontData);
+
+    // Create and inject style element
+    const styleEl = document.createElement('style');
+    styleEl.setAttribute('data-font', fontName);
+    styleEl.textContent = css;
+    document.head.appendChild(styleEl);
+
+    // Track that we've injected this font's styles
+    window.injectedFontStyles.set(fontName, styleEl);
+
+    devLog(`✓ Injected @font-face CSS for ${fontName}`);
+
+    return styleEl;
+}
 
 // Load a specific font on-demand
 function loadFont(fontName) {
@@ -123,11 +279,15 @@ function loadFont(fontName) {
                 };
             }
         } else if (fontData.source === 'embedded') {
+            // Inject dynamic @font-face CSS for this specific font only
+            injectFontFaceCSS(fontData);
+
             // Build FVDs for embedded fonts based on their axes
+            // Note: We use axes.weights/styles/widths (not wght/ital/wdth)
             if (fontData.axes) {
-                const weights = fontData.axes.wght || [400];
-                const styles = fontData.axes.ital ? ['normal', 'italic'] : ['normal'];
-                const widths = fontData.axes.wdth || ['normal'];
+                const weights = fontData.axes.weights || [400];
+                const styles = fontData.axes.styles || ['normal'];
+                const widths = fontData.axes.widths || ['normal'];
 
                 const fvds = [];
                 weights.forEach(weight => {
@@ -143,14 +303,14 @@ function loadFont(fontName) {
                 });
 
                 config.custom = {
-                    families: [fontName + ':' + fvds.join(',')],
-                    urls: ['embedded-fonts.css']
+                    families: [fontName + ':' + fvds.join(',')]
+                    // No urls needed - CSS already injected above
                 };
             } else {
                 // No axes = single variant, no FVD needed
                 config.custom = {
-                    families: [fontName],
-                    urls: ['embedded-fonts.css']
+                    families: [fontName]
+                    // No urls needed - CSS already injected above
                 };
             }
         }
