@@ -1,3 +1,5 @@
 fonts/
 node_modules/
 .venv/
+dist/
+font_validation_report.json

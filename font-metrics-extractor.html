@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Font Metrics Extractor</title>
-    <link rel="icon" type="image/png" href="phoropter-icon-2.png">
-    <link rel="shortcut icon" type="image/png" href="phoropter-icon-2.png">
+    <link rel="icon" type="image/png" href="/phoropter-icon-2.png">
+    <link rel="shortcut icon" type="image/png" href="/phoropter-icon-2.png">
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -128,18 +128,15 @@
         <textarea id="resultsOutput" placeholder="Font metrics JSON will appear here..."></textarea>
     </div>
 
-    <!-- Include app.js and dependencies for font loading infrastructure -->
-    <script src="font-roles.js"></script>
-    <script src="text-samples.js"></script>
-    <script>
+    <!-- Dev tool. Open it through the Vite dev server (npm run dev), or run npm run fonts:generate. -->
+    <script type="module">
+        import { data } from '/src/data.ts';
+        import { dev } from '/src/dev.ts';
+        import { loadFont as loadAppFont, loadedFonts } from '/src/fonts/loader.ts';
+
         // Enable verbose logging for debugging
-        window.DEV_VERBOSE_LOGS = true;
-    </script>
-    <script src="app.js"></script>
-    <!-- WebFont Loader for proper font loading events -->
-    <script src="vendor/webfont.js"></script>
-    
-    <script>
+        dev.verboseLogs = true;
+
         let fontDatabase = [];
         let fontMetrics = {};
         let currentIndex = 0;
@@ -282,7 +279,7 @@
                     log('✓ CSS copied to clipboard (fallback method)', 'success');
                 }
 
-                log('Place this CSS in your project and include it before app.js', 'info');
+                log('Save this CSS as public/embedded-fonts.css', 'info');
 
                 btn.textContent = '✓ CSS Generated';
                 
@@ -374,8 +371,9 @@
             try {
                 // Load databases first
                 log('Loading databases...', 'info');
-                await loadDatabases();
-                fontDatabase = window.fontDatabase || [];
+                fontDatabase = data.fontDatabase;
+                // scripts/extract-metrics.js reads the database from the page
+                window.fontDatabase = fontDatabase;
                 log(`Database loaded: ${fontDatabase.length} fonts`, 'info');
 
                 // Don't load all fonts upfront - let individual extraction handle loading
@@ -463,8 +461,7 @@
                 // Clean up any lingering font loading promises/resources
                 try {
                     // Clear any pending font loads
-                    window.loadedFonts?.clear?.();
-                    window.pendingFontLoads?.clear?.();
+                    loadedFonts.clear();
 
                     // Give browser time to clean up between fonts
                     if (i % 10 === 9) { // Every 10 fonts
@@ -755,74 +752,9 @@
             });
         }
 
-        async function loadFont(fontInfo) {
-            // Use the proper font loading from app.js (expects font name, not fontInfo object)
-            const fontName = fontInfo.name || fontInfo;
-
-            // Don't recursively call our own loadFont function
-            if (typeof window.loadFont === 'function' && window.loadFont !== loadFont) {
-                // Use the app.js loadFont function if available
-                return window.loadFont(fontName);
-            }
-
-            // Fallback: Basic WebFont loading implementation
-            if (typeof WebFont === 'undefined') {
-                return Promise.reject(new Error('WebFont Loader not available'));
-            }
-
-            const fontData = window.fontDatabase?.find(f => f.name === fontName);
-            if (!fontData) {
-                return Promise.reject(new Error(`Font not found: ${fontName}`));
-            }
-
-            return new Promise((resolve, reject) => {
-                const config = {
-                    fontactive: () => resolve(),
-                    fontinactive: () => reject(new Error(`Font failed to load: ${fontName}`)),
-                    active: resolve,
-                    inactive: () => reject(new Error(`Font loading timeout: ${fontName}`))
-                };
-
-                if (fontData.source === 'google') {
-                    config.google = {
-                        families: [fontName + ':400,700']
-                    };
-                } else if (fontData.source === 'embedded') {
-                    // Load all available variants explicitly
-                    config.custom = {
-                        families: [fontName + ':n4,n7,i4,i7'], // normal 400, normal 700, italic 400, italic 700
-                        urls: ['embedded-fonts.css']
-                    };
-
-                    // Override callbacks to wait for specific variants to be available
-                    const originalResolve = resolve;
-                    config.fontactive = () => {
-                        // Don't resolve immediately - wait for all variants
-                    };
-                    config.active = () => {
-                        // Wait for document.fonts.ready and verify variants are loaded
-                        document.fonts.ready.then(() => {
-                            setTimeout(() => {
-                                // Check if bold and italic variants are actually available
-                                const testBold = document.fonts.check(`bold 16px "${fontName}"`);
-                                const testItalic = document.fonts.check(`italic 16px "${fontName}"`);
-                                const testNormal = document.fonts.check(`16px "${fontName}"`);
-
-                                console.log(`Font variant check for ${fontName}: normal=${testNormal}, bold=${testBold}, italic=${testItalic}`);
-
-                                // Wait a bit more for font faces to be fully ready
-                                setTimeout(originalResolve, 500);
-                            }, 200);
-                        });
-                    };
-                } else {
-                    // System fonts - just resolve quickly
-                    setTimeout(resolve, 50);
-                    return;
-                }
-
-                WebFont.load(config);
-            });
+        function loadFont(fontInfo) {
+            // The app's font loader expects a font name
+            return loadAppFont(fontInfo.name || fontInfo);
         }
 
         function copyResults() {
@@ -845,7 +777,12 @@
             fontMetrics = {};
         }
 
+        // All calls go through window.log, so that scripts/extract-metrics.js can intercept the messages
         function log(message, type = 'info') {
+            window.log(message, type);
+        }
+
+        function writeLog(message, type = 'info') {
             console.log(`${type}: ${message}`);
             const progress = document.getElementById('progressContent');
             const className = type === 'warning' ? 'warning' : type === 'success' ? 'success' : 'info';
@@ -853,10 +790,11 @@
             progress.scrollTop = progress.scrollHeight;
         }
 
+        // The buttons and scripts/extract-metrics.js call these functions by name
+        Object.assign(window, { log: writeLog, loadFontDatabase, generateEmbeddedCSS, startExtraction, copyResults, clearResults, extractFontMetrics });
+
         // Auto-load font database on page load
-        window.addEventListener('load', () => {
-            setTimeout(loadFontDatabase, 500);
-        });
+        setTimeout(loadFontDatabase, 500);
     </script>
 </body>
 </html>

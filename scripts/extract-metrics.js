@@ -1,9 +1,22 @@
 #!/usr/bin/env node
 
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
-const http = require('http');
+import fs from 'node:fs';
+import { resolve } from 'node:path';
+import puppeteer from 'puppeteer';
+import { createServer } from 'vite';
+
+// Generates font-metrics.json and public/embedded-fonts.css.
+// Opens font-metrics-extractor.html in headless Chrome through the Vite dev server.
+//
+// Usage:
+//   npm run fonts:generate         metrics and CSS
+//   npm run fonts:metrics          metrics for all fonts
+//   npm run fonts:metrics -- "Fira Code"   metrics for one font, printed to stdout
+//   npm run fonts:css              CSS only
+
+const ROOT = resolve(import.meta.dirname, '..');
+const METRICS_PATH = resolve(ROOT, 'font-metrics.json');
+const EMBEDDED_CSS_PATH = resolve(ROOT, 'public/embedded-fonts.css');
 
 // Common Puppeteer configuration
 function getPuppeteerConfig() {
@@ -39,42 +52,13 @@ function setupConsoleForwarding(page) {
     });
 }
 
-// Simple HTTP server for serving files
-function startServer() {
-    return new Promise((resolve) => {
-        const server = http.createServer((req, res) => {
-            const decodedUrl = decodeURIComponent(req.url);
-            const filePath = path.join(__dirname, decodedUrl === '/' ? 'font-metrics-extractor.html' : decodedUrl);
-
-            // Basic MIME type detection
-            const ext = path.extname(filePath);
-            const mimeTypes = {
-                '.html': 'text/html',
-                '.js': 'application/javascript',
-                '.css': 'text/css',
-                '.json': 'application/json',
-                '.woff2': 'font/woff2',
-                '.woff': 'font/woff',
-                '.ttf': 'font/ttf',
-                '.otf': 'font/otf'
-            };
-            const mimeType = mimeTypes[ext] || 'text/plain';
-
-            if (fs.existsSync(filePath)) {
-                res.writeHead(200, { 'Content-Type': mimeType });
-                fs.createReadStream(filePath).pipe(res);
-            } else {
-                res.writeHead(404, { 'Content-Type': 'text/plain' });
-                res.end('File not found');
-            }
-        });
-
-        server.listen(0, () => {
-            const port = server.address().port;
-            console.log(`Started local server on port ${port}`);
-            resolve({ server, port });
-        });
-    });
+// Start the Vite dev server on a free port. It serves the extractor page and the fonts directory.
+async function startServer() {
+    const server = await createServer({ root: ROOT, logLevel: 'warn', server: { port: 0, strictPort: false } });
+    await server.listen();
+    const port = server.httpServer.address().port;
+    console.log(`Started Vite dev server on port ${port}`);
+    return { server, port };
 }
 
 async function extractMetrics() {
@@ -225,7 +209,7 @@ async function extractMetrics() {
         console.log(`Got metrics data: ${metrics.length} characters`);
 
         // Save font-metrics.json
-        fs.writeFileSync('font-metrics.json', metrics);
+        fs.writeFileSync(METRICS_PATH, metrics);
         console.log('✓ Generated font-metrics.json');
 
         await browser.close();
@@ -233,7 +217,7 @@ async function extractMetrics() {
 
     } finally {
         // Close the HTTP server
-        server.close();
+        await server.close();
         console.log('HTTP server closed');
     }
 }
@@ -276,35 +260,7 @@ async function generateEmbeddedFonts() {
     console.log('Page state:', pageState);
 
     if (pageState.buttonDisabled) {
-        console.log('Button is disabled, triggering database load and waiting for it to enable...');
-
-        // Trigger database loading
-        await page.evaluate(() => {
-            // Try to trigger any initialization functions
-            if (typeof loadDatabases === 'function') {
-                console.log('Calling loadDatabases...');
-                loadDatabases().catch(e => console.log('loadDatabases failed:', e));
-            } else if (typeof init === 'function') {
-                console.log('Calling init...');
-                init();
-            } else {
-                console.log('No init functions found, manually loading database...');
-                // Try to load font-database.json manually
-                fetch('font-database.json')
-                    .then(r => r.json())
-                    .then(data => {
-                        window.fontDatabase = data;
-                        console.log('Loaded font database manually:', data.length, 'fonts');
-                        // Manually enable button after loading database
-                        const btn = document.getElementById('generateCssBtn');
-                        if (btn) {
-                            btn.disabled = false;
-                            console.log('Button enabled after manual DB load');
-                        }
-                    })
-                    .catch(e => console.log('Manual DB load failed:', e));
-            }
-        });
+        console.log('Button is disabled, waiting for the database to load...');
 
         // Now wait for either the button to be enabled OR the database to load
         console.log('Waiting for button to be enabled or database to load...');
@@ -395,15 +351,15 @@ async function generateEmbeddedFonts() {
     console.log(`Got CSS data: ${css.length} characters`);
 
     // Save embedded-fonts.css
-    fs.writeFileSync('embedded-fonts.css', css);
-    console.log('✓ Generated embedded-fonts.css');
+    fs.writeFileSync(EMBEDDED_CSS_PATH, css);
+    console.log('✓ Generated public/embedded-fonts.css');
 
         await browser.close();
         console.log('Browser closed for CSS generation');
 
     } finally {
         // Close the HTTP server
-        server.close();
+        await server.close();
         console.log('HTTP server closed');
     }
 }
@@ -462,7 +418,7 @@ async function extractSingleFont(fontName) {
         }
 
     } finally {
-        server.close();
+        await server.close();
     }
 }
 

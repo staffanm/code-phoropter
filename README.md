@@ -37,7 +37,7 @@ Code Phoropter helps developers discover their ideal coding font, size, colors, 
 
 ## Quick Start
 
-1. Open the app on a local HTTP server (recommended)
+1. Open the app
 2. Choose a font family that appeals to you
 3. Make comparisons using keyboard shortcuts:
    - `A` - Prefer left option
@@ -49,21 +49,39 @@ Code Phoropter helps developers discover their ideal coding font, size, colors, 
 ## Installation
 
 ### Option 1: Use Online
-Visit the hosted version at [your-url-here]
+Visit [phoropter.org](https://phoropter.org)
 
 ### Option 2: Run Locally
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/code-phoropter.git
+git clone https://github.com/staffanm/code-phoropter.git
 cd code-phoropter
-
-# Serve over HTTP (recommended for loading local samples)
-python -m http.server 8000  # Then visit http://localhost:8000
-
-# Alternatively, you can open index.html directly, but note:
-# - Code samples will use a simple fallback (fetch blocked on file://)
-# - Some fonts load from Google Fonts/CDNs and require network access
+npm install
+npm run fonts:pull   # optional: download the embedded font files (4 GB) from the server
+npm run dev          # then visit the URL that Vite prints
 ```
+
+Without the `fonts/` directory, the embedded fonts fall back to a placeholder font. System fonts and Google Fonts still work.
+
+## Scripts
+
+| Command | Action |
+|---------|--------|
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Type-check, then build the site into `dist/` |
+| `npm run preview` | Serve the built site locally |
+| `npm run typecheck` | Run the TypeScript compiler without output |
+| `npm run deploy` | Build, then copy `dist/` to the web server |
+| `npm run fonts:pull` | Download the `fonts/` directory from the web server |
+| `npm run fonts:push` | Upload the `fonts/` directory to the web server. Files that are not in the local directory are deleted on the server. |
+| `npm run fonts:generate` | Regenerate `font-metrics.json` and `public/embedded-fonts.css` |
+| `npm run fonts:metrics` | Regenerate `font-metrics.json`. With `-- "Font Name"`, print the metrics for one font. |
+| `npm run fonts:css` | Regenerate `public/embedded-fonts.css` |
+| `npm run fonts:analyze` | Compare the axes in `font-database.json` with the files in `fonts/` |
+| `npm run fonts:validate` | Download and validate the fonts that the database references by URL |
+| `npm run db:ids` | Show which IDs would change in the databases. With `-- --write`, write them. |
+| `npm run db:nerd-fonts` | Update the Nerd Font entries in `font-database.json` from `fonts/*.NF` |
+
+The `fonts/` directory is not in git and is not part of the build output. In development, Vite serves it at `/fonts/`. In production, the web server serves it (see `deploy/`).
 
 ## Developer Options
 
@@ -75,8 +93,8 @@ Add query parameters to enable development behavior while testing locally:
 
 Examples:
 
-- `http://localhost:8000/index.html?dev=1`
-- `http://localhost:8000/about.html?eagerFonts=1`
+- `http://localhost:5173/index.html?dev=1`
+- `http://localhost:5173/about.html?verbose=1`
 
 ## Keyboard Shortcuts
 
@@ -179,14 +197,27 @@ Requires JavaScript and modern CSS support.
 
 ## Technologies Used
 
-- **Vanilla JavaScript**: No framework dependencies
-- **CSS3**: Modern layouts with flexbox/grid
-- **FontDetective** (local copy in `vendor/`): System font detection
-- **highlight.js** (local copy in `vendor/`): Syntax highlighting (no external theme CSS; styling comes from app CSS)
-- **JSZip** (via CDN): Client-side ZIP generation
-- **Google Fonts**: Web font loading via dynamically inserted `<link>` tags
-- **JSON Databases**: `font-database.json` and `color-schemes.json` are fetched by `app.js`
-- **Modular Architecture**: Separate databases for fonts, color schemes, and font roles
+- **TypeScript**: Strict mode, no UI framework
+- **Vite**: Dev server and build, with one entry per page (`index.html`, `about.html`, `fonts.html`)
+- **FontDetective** (local copy in `src/vendor/`): System font detection
+- **highlight.js**: Syntax highlighting (no theme CSS; styling comes from the color schemes)
+- **JSZip**: Client-side ZIP generation, loaded on demand
+- **webfontloader**: Loads Google Fonts and the embedded fonts on demand
+- **JSON Databases**: `font-database.json`, `color-schemes.json`, and `font-metrics.json` are imported by `src/data.ts`
+
+### Source layout
+
+| Path | Contents |
+|------|----------|
+| `src/entries/` | One entry module per page |
+| `src/engine.ts` | The comparison tournament and the per-role tournament |
+| `src/stages.ts` | The list of comparison stages |
+| `src/state.ts`, `src/data.ts` | Shared app state, and the databases with their lookup tables |
+| `src/fonts/` | Font loading, system font detection, categories, similarity |
+| `src/ui/` | The comparison screen, font style selector, results, theme, slider, keyboard |
+| `src/export/` | Settings string, editor config files, download package |
+| `src/pages/` | The About and Font Showcase pages |
+| `scripts/` | Font and database maintenance scripts (see Scripts) |
 
 ## Contributing
 
@@ -202,19 +233,19 @@ Contributions are welcome! Please feel free to submit a Pull Request.
    - `description` (string)
    - Optional file URLs for embedded fonts: `ttf`, `otf`, `woff2`
    - Optional `homepage`, `css`, and notes
-3. For `embedded` fonts, prefer CORS-friendly CDNs (e.g., jsDelivr). You can validate links with `validate_fonts.py` (writes `font_validation_report.json` and stores files under `fonts/`).
-4. Test font detection and categorization by running the app over HTTP.
+3. For `embedded` fonts, prefer CORS-friendly CDNs (e.g., jsDelivr). You can validate links with `npm run fonts:validate` (writes `font_validation_report.json` and stores files under `fonts/`).
+4. Run `npm run fonts:css` to regenerate `public/embedded-fonts.css`.
+5. Test font detection and categorization with `npm run dev`.
 
 ### Adding Code Samples
-1. Add files under the `samples/` directory (e.g., `.js`, `.py`, `.rs`, `.txt`).
-2. Map the new file in `codeSampleUrls` inside `app.js`.
-3. Serve over HTTP to allow `fetch()` to load samples (opening via `file://` will fall back to a simple inline sample).
-4. Keep samples concise and representative; very long files are truncated for display.
+1. Add files under the `public/samples/` directory (e.g., `.js`, `.py`, `.rs`, `.txt`).
+2. Map the new file in `codeSampleUrls` inside `src/constants.ts`, and add an option to the language select in `index.html`.
+3. Keep samples concise and representative; very long files are truncated for display.
 
 ### Adding Font Roles (Advanced)
-The roles system and presets live in `font-roles.js` and describe multi-font configurations for different syntax elements (comments, strings, keywords, etc.). The current UI focuses on single-font testing; integrating roles into the UI is planned as an advanced mode.
+The roles system and presets live in `src/font-roles.ts` and describe multi-font configurations for different syntax elements (comments, strings, keywords, etc.). The current UI focuses on single-font testing; integrating roles into the UI is planned as an advanced mode.
 
-1. Edit `font-roles.js` (`fontRoles`, `fontSuitabilityMatrix`, `multiFontPresets`).
+1. Edit `src/font-roles.ts` (`fontRoles`, `fontSuitabilityMatrix`, `multiFontPresets`).
 2. Define selectors, requirements, and examples for new roles.
 3. Add or adjust presets referencing available fonts in `font-database.json`.
 

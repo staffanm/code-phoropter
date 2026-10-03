@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Code Phoropter</title>
-    <link rel="icon" type="image/png" href="phoropter-icon-2.png">
-    <link rel="shortcut icon" type="image/png" href="phoropter-icon-2.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="/phoropter-icon-2.png">
+    <link rel="shortcut icon" type="image/png" href="/phoropter-icon-2.png">
+    <link rel="stylesheet" href="/src/style.css">
 </head>
 <body>
     <!-- Loading screen -->
     <div id="loadingScreen" class="loading-screen">
         <div class="loading-content">
-            <img src="phoropter-logo-2.png" alt="Phoropter" class="loading-logo">
+            <img src="/phoropter-logo-2.png" alt="Phoropter" class="loading-logo">
             <h2>Code Phoropter</h2>
             <p class="loading-text">Loading fonts...</p>
         </div>
@@ -21,7 +21,7 @@
     <div id="app" class="hidden">
         <div class="header">
             <div class="title-with-logo">
-                <img src="phoropter-logo-2.png" alt="Phoropter" class="logo">
+                <img src="/phoropter-logo-2.png" alt="Phoropter" class="logo">
                 <div class="title-text">
                     <h1>Code Phoropter</h1>
                     <p class="subtitle">Find your perfect code display settings</p>
@@ -50,18 +50,18 @@
             </div>
             <!-- Unified button container -->
             <div class="button-container" id="buttonContainer">
-                <button class="floating-choice-btn" id="btnA" onclick="selectOption('A')">
+                <button class="floating-choice-btn" id="btnA" data-action="selectOption" data-arg="A">
                     <span class="key-hint">[A]</span> Prefer A
                 </button>
                 <div class="center-buttons">
-                    <button class="floating-choice-btn neutral" id="btnEqual" onclick="selectOption('equal')">
+                    <button class="floating-choice-btn neutral" id="btnEqual" data-action="selectOption" data-arg="equal">
                         <span class="key-hint">[S]</span> No Preference
                     </button>
-                    <button class="floating-choice-btn skip-stage" id="btnSkipStage" onclick="skipCurrentStage()" style="display: none;">
+                    <button class="floating-choice-btn skip-stage" id="btnSkipStage" data-action="skipCurrentStage" style="display: none;">
                         <span class="key-hint">[W]</span> Skip Stage
                     </button>
                 </div>
-                <button class="floating-choice-btn" id="btnB" onclick="selectOption('B')">
+                <button class="floating-choice-btn" id="btnB" data-action="selectOption" data-arg="B">
                     <span class="key-hint">[D]</span> Prefer B
                 </button>
             </div>
@@ -88,12 +88,12 @@
                 <h4>Import Previous Settings</h4>
                 <div class="import-field">
                     <input type="text" id="importSettings" placeholder="Paste your settings string here...">
-                    <button onclick="importAndStart()">Import & Start</button>
+                    <button data-action="importAndStart">Import & Start</button>
                 </div>
             </div>
 
             <div class="lucky-section">
-                <button onclick="feelingLucky()" class="lucky-button">I'm Feeling Lucky</button>
+                <button data-action="feelingLucky" class="lucky-button">I'm Feeling Lucky</button>
                 <p class="lucky-description">Generate random settings based on your installed fonts</p>
             </div>
         </div>
@@ -106,7 +106,7 @@
             <div class="theme-toggle">
                 <label class="toggle-switch">
                     <span class="toggle-label" id="toggleLabel">Dark <u>M</u>ode</span>
-                    <input type="checkbox" id="themeToggle" onchange="toggleThemeMode()" checked>
+                    <input type="checkbox" id="themeToggle" data-action="toggleThemeMode" checked>
                     <span class="toggle-slider"></span>
                 </label>
             </div>
@@ -114,7 +114,7 @@
             <div class="slider-compare-toggle">
                 <label class="toggle-switch" title="Compare options side-by-side with a draggable slider divider instead of switching between full views">
                     <span class="toggle-label">Slider <u>C</u>ompare</span>
-                    <input type="checkbox" id="sliderCompareToggle" onchange="toggleSliderCompare()">
+                    <input type="checkbox" id="sliderCompareToggle" data-action="toggleSliderCompare">
                     <span class="toggle-slider"></span>
                 </label>
             </div>
@@ -122,12 +122,12 @@
             <div class="unique-role-fonts-toggle">
                 <label class="toggle-switch" title="Enable additional stages to choose unique fonts for keywords, strings, comments, etc. By default, only weight and style can be customized per role.">
                     <span class="toggle-label">Unique Role <u>F</u>onts</span>
-                    <input type="checkbox" id="uniqueRoleFontsToggle" onchange="toggleUniqueRoleFonts()">
+                    <input type="checkbox" id="uniqueRoleFontsToggle" data-action="toggleUniqueRoleFonts">
                     <span class="toggle-slider"></span>
                 </label>
             </div>
 
-            <select id="languageSelect" onchange="changeLanguage()" disabled>
+            <select id="languageSelect" data-action="changeLanguage" disabled>
                 <option value="javascript">JavaScript (React)</option>
                 <option value="python">Python (Async)</option>
                 <option value="rust">Rust (Cache)</option>
@@ -145,8 +145,7 @@
                 <option value="powerline">Powerline & Nerd Fonts</option>
                 <option value="custom">📁 My Own Code...</option>
             </select>
-            <button id="resetBtn" class="reset-btn" onclick="resetTest()" disabled>Start Over</button>
-            <button id="skipRoleBtn" class="skip-role-btn hidden" onclick="skipRoleStage()">Skip Role</button>
+            <button id="resetBtn" class="reset-btn" data-action="resetTest" disabled>Start Over</button>
         </div>
 
         
@@ -155,9 +154,9 @@
             <h2>Your Ideal Code Display Settings</h2>
             <div class="result-details" id="resultDetails"></div>
             <div class="result-actions">
-                <button onclick="copySettings()">Copy CSS Settings</button>
-                <button onclick="downloadFontPackage()">Download Font Package</button>
-                <button onclick="resetTest()">Try Again</button>
+                <button data-action="copySettings">Copy CSS Settings</button>
+                <button data-action="downloadFontPackage">Download Font Package</button>
+                <button data-action="resetTest">Try Again</button>
             </div>
         </div>
 
@@ -176,18 +175,6 @@
     </div>
 
 
-    <!-- Font Detective library for reliable font detection (local copy) -->
-    <script src="vendor/font-detective.js"></script>
-    <!-- WebFont Loader for loading Google Fonts and embedded fonts -->
-    <script src="vendor/webfont.js"></script>
-    <!-- JSZip library for creating zip files -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-    <!-- Databases are JSON; app.js fetches them -->
-    <!-- Multi-font roles metadata and presets -->
-    <script src="font-roles.js"></script>
-    <!-- highlight.js (local copy expected in vendor/); no theme CSS on purpose -->
-    <script src="vendor/highlight.min.js"></script>
-    <script src="text-samples.js"></script>
-    <script src="app.js"></script>
+    <script type="module" src="/src/entries/main.ts"></script>
 </body>
 </html>

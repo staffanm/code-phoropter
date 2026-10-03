@@ -1,0 +1,28 @@
+# nginx site for phoropter.org. Installed by deploy/setup-server.sh.
+# certbot adds the TLS settings and the HTTP to HTTPS redirect.
+server {
+    listen 80;
+    listen [::]:80;
+    server_name phoropter.org www.phoropter.org;
+
+    # `npm run deploy` copies the Vite build output here.
+    # `npm run fonts:push` copies the font files to /var/www/phoropter.org/fonts.
+    root /var/www/phoropter.org;
+    index index.html;
+
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    # Vite puts a content hash in these file names
+    location /assets/ {
+        expires 1y;
+    }
+
+    location /fonts/ {
+        expires 30d;
+    }
+}

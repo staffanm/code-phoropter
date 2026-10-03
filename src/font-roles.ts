@@ -1,7 +1,7 @@
 // Font roles system for multi-font syntax highlighting support
 // This extends Code Phoropter to test different fonts for different syntax elements
 
-const fontRoles = {
+export const fontRoles = {
     'base': {
         id: 0,
         name: 'Base Code',
@@ -152,7 +152,7 @@ const fontRoles = {
 };
 
 // Font suitability matrix - which fonts work well for which roles
-const fontSuitabilityMatrix = {
+export const fontSuitabilityMatrix = {
     // Fonts particularly good for comments (italic support)
     'comments-excellent': ['Victor Mono', 'Cascadia Code', 'JetBrains Mono', 'Operator Mono', 'Dank Mono'],
     'comments-good': ['Fira Code', 'Iosevka', 'Comic Code', 'Recursive'],
@@ -187,7 +187,7 @@ const fontSuitabilityMatrix = {
 };
 
 // Multi-font configuration presets
-const multiFontPresets = {
+export const multiFontPresets = {
     'vscode-default': {
         name: 'VS Code Default Style',
         description: 'Mimics VS Code\'s multi-font approach',
@@ -321,12 +321,3 @@ const multiFontPresets = {
         }
     }
 };
-
-// Export for use in other files
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = { fontRoles, fontSuitabilityMatrix, multiFontPresets };
-} else {
-    window.fontRoles = fontRoles;
-    window.fontSuitabilityMatrix = fontSuitabilityMatrix;
-    window.multiFontPresets = multiFontPresets;
-}
