@@ -66,14 +66,6 @@
 }
 
 @font-face {
-    font-family: "0xProto Nerd Font";
-    src: url("fonts/0xProto.NF/0xProtoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "3270";
     src: url("fonts/3270/3270-Regular.woff") format("woff");
     font-weight: 400;
@@ -168,14 +160,6 @@
 }
 
 @font-face {
-    font-family: "AdwaitaMono Nerd Font";
-    src: url("fonts/AdwaitaMono.NF/AdwaitaMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Agave";
     src: url("fonts/Agave/Agave-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -240,26 +224,10 @@
 }
 
 @font-face {
-    font-family: "AnonymousPro Nerd Font";
-    src: url("fonts/AnonymousPro.NF/AnonymiceProNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "AtkinsonHyperlegibleMono Nerd Font";
     src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Light.otf") format("opentype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "AtkinsonHyperlegibleMono Nerd Font";
-    src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Light-Italic.otf") format("opentype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -289,25 +257,9 @@
 
 @font-face {
     font-family: "AtkinsonHyperlegibleMono Nerd Font";
-    src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Medium-Italic.otf") format("opentype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "AtkinsonHyperlegibleMono Nerd Font";
     src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "AtkinsonHyperlegibleMono Nerd Font";
-    src: url("fonts/AtkinsonHyperlegibleMono.NF/AtkynsonMonoNerdFont-Bold-Italic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -337,25 +289,9 @@
 
 @font-face {
     font-family: "BitstreamVeraSansMono Nerd Font";
-    src: url("fonts/BitstreamVeraSansMono.NF/BitstromWeraNerdFont-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BitstreamVeraSansMono Nerd Font";
     src: url("fonts/BitstreamVeraSansMono.NF/BitstromWeraNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "BitstreamVeraSansMono Nerd Font";
-    src: url("fonts/BitstreamVeraSansMono.NF/BitstromWeraNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -369,25 +305,9 @@
 
 @font-face {
     font-family: "CascadiaCode Nerd Font";
-    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaCode Nerd Font";
     src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaCode Nerd Font";
-    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -417,25 +337,9 @@
 
 @font-face {
     font-family: "CascadiaCode Nerd Font";
-    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaCode Nerd Font";
     src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaCode Nerd Font";
-    src: url("fonts/CascadiaCode.NF/CaskaydiaCoveNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -449,25 +353,9 @@
 
 @font-face {
     font-family: "CascadiaMono Nerd Font";
-    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaMono Nerd Font";
     src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaMono Nerd Font";
-    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -497,25 +385,9 @@
 
 @font-face {
     font-family: "CascadiaMono Nerd Font";
-    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaMono Nerd Font";
     src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CascadiaMono Nerd Font";
-    src: url("fonts/CascadiaMono.NF/CaskaydiaMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -540,14 +412,6 @@
     src: url("fonts/CodeNewRoman.NF/CodeNewRomanNerdFont-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "CodeNewRoman Nerd Font";
-    src: url("fonts/CodeNewRoman.NF/CodeNewRomanNerdFont-Bold-Italic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -640,14 +504,6 @@
 }
 
 @font-face {
-    font-family: "CommitMono Nerd Font";
-    src: url("fonts/CommitMono.NF/CommitMonoNerdFont-Bold-Italic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Cousine Nerd Font";
     src: url("fonts/Cousine.NF/CousineNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -668,14 +524,6 @@
     src: url("fonts/Cousine.NF/CousineNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Cousine Nerd Font";
-    src: url("fonts/Cousine.NF/CousineNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -713,25 +561,9 @@
 
 @font-face {
     font-family: "DejaVu Sans Mono";
-    src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMonoItalic-webfont.woff") format("woff");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "DejaVu Sans Mono";
     src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMono-Bold-webfont.woff") format("woff");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "DejaVu Sans Mono";
-    src: url("fonts/DejaVu%20Sans%20Mono/DejaVuSansMonoBoldItalic-webfont.woff") format("woff");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -745,25 +577,9 @@
 
 @font-face {
     font-family: "DejaVuSansMono Nerd Font";
-    src: url("fonts/DejaVuSansMono.NF/DejaVuSansMNerdFont-Italic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "DejaVuSansMono Nerd Font";
     src: url("fonts/DejaVuSansMono.NF/DejaVuSansMNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "DejaVuSansMono Nerd Font";
-    src: url("fonts/DejaVuSansMono.NF/DejaVuSansMNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -848,14 +664,6 @@
 }
 
 @font-face {
-    font-family: "EnvyCodeR Nerd Font";
-    src: url("fonts/EnvyCodeR.NF/EnvyCodeRNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Fantasque Sans Mono";
     src: url("fonts/Fantasque%20Sans%20Mono/FantasqueSansMono-Regular.woff2") format("woff2");
     font-weight: 400;
@@ -916,14 +724,6 @@
     src: url("fonts/FantasqueSansMono.NF/FantasqueSansMNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "FantasqueSansMono Nerd Font";
-    src: url("fonts/FantasqueSansMono.NF/FantasqueSansMNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -1112,14 +912,6 @@
 }
 
 @font-face {
-    font-family: "Go-Mono Nerd Font";
-    src: url("fonts/Go-Mono.NF/GoMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Gohu Nerd Font";
     src: url("fonts/Gohu.NF/GohuFont11NerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -1184,14 +976,6 @@
 }
 
 @font-face {
-    font-family: "Hack Nerd Font";
-    src: url("fonts/Hack.NF/HackNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Hasklig";
     src: url("fonts/Hasklig/Hasklig-Regular.otf") format("opentype");
     font-weight: 400;
@@ -1236,14 +1020,6 @@
     src: url("fonts/Hasklig/Hasklig-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Hasklig";
-    src: url("fonts/Hasklig/Hasklig-RegularIt.otf") format("opentype");
-    font-weight: 400;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -1489,14 +1265,6 @@
 
 @font-face {
     font-family: "Hermit Nerd Font";
-    src: url("fonts/Hermit.NF/HurmitNerdFont-Light-Italic.otf") format("opentype");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Hermit Nerd Font";
     src: url("fonts/Hermit.NF/HurmitNerdFont-Regular.otf") format("opentype");
     font-weight: 400;
     font-style: normal;
@@ -1520,26 +1288,10 @@
 }
 
 @font-face {
-    font-family: "Hermit Nerd Font";
-    src: url("fonts/Hermit.NF/HurmitNerdFont-Bold-Italic.otf") format("opentype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "IBMPlexMono Nerd Font";
     src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -1553,25 +1305,9 @@
 
 @font-face {
     font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
     src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -1601,14 +1337,6 @@
 
 @font-face {
     font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
     src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
@@ -1617,25 +1345,9 @@
 
 @font-face {
     font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
     src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IBMPlexMono Nerd Font";
-    src: url("fonts/IBMPlexMono.NF/BlexMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -1665,14 +1377,6 @@
 
 @font-face {
     font-family: "IntelOneMono Nerd Font";
-    src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IntelOneMono Nerd Font";
     src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
@@ -1697,25 +1401,9 @@
 
 @font-face {
     font-family: "IntelOneMono Nerd Font";
-    src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IntelOneMono Nerd Font";
     src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IntelOneMono Nerd Font";
-    src: url("fonts/IntelOneMono.NF/IntoneMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2053,14 +1741,6 @@
 
 @font-face {
     font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
@@ -2069,25 +1749,9 @@
 
 @font-face {
     font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2117,25 +1781,9 @@
 
 @font-face {
     font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2149,14 +1797,6 @@
 
 @font-face {
     font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
@@ -2165,25 +1805,9 @@
 
 @font-face {
     font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-ExtraBold-Italic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
     src: url("fonts/Iosevka.NF/IosevkaNerdFont-Heavy.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Iosevka Nerd Font";
-    src: url("fonts/Iosevka.NF/IosevkaNerdFont-Heavy-Italic.ttf") format("truetype");
-    font-weight: 900;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2521,14 +2145,6 @@
 
 @font-face {
     font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
     src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
@@ -2537,25 +2153,9 @@
 
 @font-face {
     font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
     src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2585,25 +2185,9 @@
 
 @font-face {
     font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
     src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2617,25 +2201,9 @@
 
 @font-face {
     font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
     src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-ExtraBold-Italic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2648,26 +2216,10 @@
 }
 
 @font-face {
-    font-family: "IosevkaTerm Nerd Font";
-    src: url("fonts/IosevkaTerm.NF/IosevkaTermNerdFont-Heavy-Italic.ttf") format("truetype");
-    font-weight: 900;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "IosevkaTermSlab Nerd Font";
     src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTermSlab Nerd Font";
-    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2697,14 +2249,6 @@
 
 @font-face {
     font-family: "IosevkaTermSlab Nerd Font";
-    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTermSlab Nerd Font";
     src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -2713,25 +2257,9 @@
 
 @font-face {
     font-family: "IosevkaTermSlab Nerd Font";
-    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTermSlab Nerd Font";
     src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "IosevkaTermSlab Nerd Font";
-    src: url("fonts/IosevkaTermSlab.NF/IosevkaTermSlabNerdFont-ExtraBold-Italic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2796,14 +2324,6 @@
     src: url("fonts/JetBrains%20Mono/JetBrainsMono-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrains Mono";
-    src: url("fonts/JetBrains%20Mono/JetBrainsMono-RegularItalic.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2881,14 +2401,6 @@
 
 @font-face {
     font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
     src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
@@ -2897,25 +2409,9 @@
 
 @font-face {
     font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
     src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2945,25 +2441,9 @@
 
 @font-face {
     font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
     src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -2977,25 +2457,9 @@
 
 @font-face {
     font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
     src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "JetBrainsMono Nerd Font";
-    src: url("fonts/JetBrainsMono.NF/JetBrainsMonoNerdFont-ExtraBold-Italic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -3144,14 +2608,6 @@
 }
 
 @font-face {
-    font-family: "Lekton Nerd Font";
-    src: url("fonts/Lekton.NF/LektonNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Liberation Mono";
     src: url("fonts/Liberation%20Mono/LiberationMono-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -3208,14 +2664,6 @@
 }
 
 @font-face {
-    font-family: "Liberation Mono Nerd Font";
-    src: url("fonts/Liberation%20Mono.NF/LiterationMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Lilex Nerd Font";
     src: url("fonts/Lilex.NF/LilexNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
@@ -3225,25 +2673,9 @@
 
 @font-face {
     font-family: "Lilex Nerd Font";
-    src: url("fonts/Lilex.NF/LilexNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Lilex Nerd Font";
     src: url("fonts/Lilex.NF/LilexNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Lilex Nerd Font";
-    src: url("fonts/Lilex.NF/LilexNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -3273,25 +2705,9 @@
 
 @font-face {
     font-family: "Lilex Nerd Font";
-    src: url("fonts/Lilex.NF/LilexNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Lilex Nerd Font";
     src: url("fonts/Lilex.NF/LilexNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Lilex Nerd Font";
-    src: url("fonts/Lilex.NF/LilexNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -3613,14 +3029,6 @@
 
 @font-face {
     font-family: "Maple Mono";
-    src: url("fonts/Maple%20Mono/MapleMono-RegularItalic.ttf.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Maple Mono";
     src: url("fonts/Maple%20Mono/MapleMono-Medium.ttf.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
@@ -3736,14 +3144,6 @@
     src: url("fonts/Maple%20Mono.NF/MapleMono-NF-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "MapleMono Nerd Font";
-    src: url("fonts/Maple%20Mono.NF/MapleMono-NF-RegularItalic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -4139,28 +3539,10 @@
 
 @font-face {
     font-family: "Monaspace Argon Nerd Font";
-    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Argon Nerd Font";
     src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-SemiWideItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Argon Nerd Font";
-    src: url("fonts/Monaspace%20Argon.NF/MonaspaceArgonNF-Wide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -4629,28 +4011,10 @@
 
 @font-face {
     font-family: "Monaspace Krypton Nerd Font";
-    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Krypton Nerd Font";
     src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-SemiWideItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Krypton Nerd Font";
-    src: url("fonts/Monaspace%20Krypton.NF/MonaspaceKryptonNF-Wide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -5119,28 +4483,10 @@
 
 @font-face {
     font-family: "Monaspace Neon Nerd Font";
-    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Neon Nerd Font";
     src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-SemiWideItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Neon Nerd Font";
-    src: url("fonts/Monaspace%20Neon.NF/MonaspaceNeonNF-Wide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -5609,28 +4955,10 @@
 
 @font-face {
     font-family: "Monaspace Radon Nerd Font";
-    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Radon Nerd Font";
     src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-SemiWideItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Radon Nerd Font";
-    src: url("fonts/Monaspace%20Radon.NF/MonaspaceRadonNF-Wide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -6099,28 +5427,10 @@
 
 @font-face {
     font-family: "Monaspace Xenon Nerd Font";
-    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Xenon Nerd Font";
     src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-SemiWideItalic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: semi-expanded;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monaspace Xenon Nerd Font";
-    src: url("fonts/Monaspace%20Xenon.NF/MonaspaceXenonNF-Wide.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: expanded;
     font-display: swap;
 }
 
@@ -6478,14 +5788,6 @@
 }
 
 @font-face {
-    font-family: "Monofur Nerd Font";
-    src: url("fonts/Monofur.NF/MonofurNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Monoid Nerd Font";
     src: url("fonts/Monoid.NF/MonoidNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -6506,14 +5808,6 @@
     src: url("fonts/Monoid.NF/MonoidNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Monoid Nerd Font";
-    src: url("fonts/Monoid.NF/MonoidNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -6570,14 +5864,6 @@
     src: url("fonts/Mononoki.NF/MononokiNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Mononoki Nerd Font";
-    src: url("fonts/Mononoki.NF/MononokiNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -6726,14 +6012,6 @@
 }
 
 @font-face {
-    font-family: "Recursive Mono Linear Nerd Font";
-    src: url("fonts/Recursive%20Mono%20Linear.NF/RecMonoLinearNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Recursive Mono Casual Nerd Font";
     src: url("fonts/Recursive%20Mono%20Casual.NF/RecMonoCasualNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -6758,14 +6036,6 @@
 }
 
 @font-face {
-    font-family: "Recursive Mono Casual Nerd Font";
-    src: url("fonts/Recursive%20Mono%20Casual.NF/RecMonoCasualNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "RobotoMono Nerd Font";
     src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Thin.ttf") format("truetype");
     font-weight: 100;
@@ -6775,25 +6045,9 @@
 
 @font-face {
     font-family: "RobotoMono Nerd Font";
-    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono Nerd Font";
     src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono Nerd Font";
-    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -6823,14 +6077,6 @@
 
 @font-face {
     font-family: "RobotoMono Nerd Font";
-    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono Nerd Font";
     src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
@@ -6839,25 +6085,9 @@
 
 @font-face {
     font-family: "RobotoMono Nerd Font";
-    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono Nerd Font";
     src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "RobotoMono Nerd Font";
-    src: url("fonts/RobotoMono.NF/RobotoMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7102,14 +6332,6 @@
 }
 
 @font-face {
-    font-family: "SpaceMono Nerd Font";
-    src: url("fonts/SpaceMono.NF/SpaceMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "Sudo";
     src: url("fonts/Sudo/SudoVariable.woff2") format("woff2");
     font-weight: 400;
@@ -7182,14 +6404,6 @@
 }
 
 @font-face {
-    font-family: "Terminus Nerd Font";
-    src: url("fonts/Terminus.NF/TerminessNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "UbuntuMono Nerd Font";
     src: url("fonts/UbuntuMono.NF/UbuntuMonoNerdFont-Regular.ttf") format("truetype");
     font-weight: 400;
@@ -7210,14 +6424,6 @@
     src: url("fonts/UbuntuMono.NF/UbuntuMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "UbuntuMono Nerd Font";
-    src: url("fonts/UbuntuMono.NF/UbuntuMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7247,14 +6453,6 @@
 
 @font-face {
     font-family: "UbuntuSans Nerd Font";
-    src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "UbuntuSans Nerd Font";
     src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
@@ -7263,25 +6461,9 @@
 
 @font-face {
     font-family: "UbuntuSans Nerd Font";
-    src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "UbuntuSans Nerd Font";
     src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "UbuntuSans Nerd Font";
-    src: url("fonts/UbuntuSans.NF/UbuntuSansMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7295,14 +6477,6 @@
 
 @font-face {
     font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Thin-Italic.ttf") format("truetype");
-    font-weight: 100;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "VictorMono Nerd Font";
     src: url("fonts/VictorMono.NF/VictorMonoNerdFont-ExtraLight.ttf") format("truetype");
     font-weight: 200;
     font-style: normal;
@@ -7311,25 +6485,9 @@
 
 @font-face {
     font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-ExtraLight-Italic.ttf") format("truetype");
-    font-weight: 200;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "VictorMono Nerd Font";
     src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7359,25 +6517,9 @@
 
 @font-face {
     font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "VictorMono Nerd Font";
     src: url("fonts/VictorMono.NF/VictorMonoNerdFont-SemiBold.ttf") format("truetype");
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-SemiBold-Italic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7390,26 +6532,10 @@
 }
 
 @font-face {
-    font-family: "VictorMono Nerd Font";
-    src: url("fonts/VictorMono.NF/VictorMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
     font-family: "ZedMono Nerd Font";
     src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "ZedMono Nerd Font";
-    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Light-Italic.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7439,14 +6565,6 @@
 
 @font-face {
     font-family: "ZedMono Nerd Font";
-    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Medium-Italic.ttf") format("truetype");
-    font-weight: 500;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "ZedMono Nerd Font";
     src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
@@ -7455,25 +6573,9 @@
 
 @font-face {
     font-family: "ZedMono Nerd Font";
-    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "ZedMono Nerd Font";
     src: url("fonts/ZedMono.NF/ZedMonoNerdFont-ExtraBold.ttf") format("truetype");
     font-weight: 800;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "ZedMono Nerd Font";
-    src: url("fonts/ZedMono.NF/ZedMonoNerdFont-ExtraBold-Italic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
     font-display: swap;
 }
 
@@ -7498,14 +6600,6 @@
     src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Bold.ttf") format("truetype");
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "iA-Writer Nerd Font";
-    src: url("fonts/iA-Writer.NF/iMWritingMonoNerdFont-Bold-Italic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
     font-display: swap;
 }
 

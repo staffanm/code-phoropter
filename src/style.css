@@ -228,6 +228,13 @@ body.about-page code {
     font-size: 18px;
 }
 
+.font-load-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
 .about-section p, .about-section li {
     color: var(--text-secondary);
     line-height: 1.6;

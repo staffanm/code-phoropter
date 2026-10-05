@@ -16,6 +16,7 @@ export function generateAboutPageTables() {
             injectCriticalAboutFonts();
         } catch {}
         generateFontTable(fontTableContainer, installedNames);
+        void trackFontLoading();
         generateColorSchemeTable('dark', darkSchemesContainer);
         generateColorSchemeTable('light', lightSchemesContainer);
     };
@@ -36,9 +37,42 @@ export function generateAboutPageTables() {
 }
 
 
+const SAMPLE_TEXT = 'if(l==1||O[0]){$file+=~l*10}';
+
+// Show how many of the web fonts in the font table the browser has downloaded
+async function trackFontLoading(): Promise<void> {
+    const fill = document.getElementById('fontLoadFill');
+    const status = document.getElementById('fontLoadStatus');
+    if (!fill || !status) return;
+
+    const fonts = data.fontDatabase.filter(font => font.source !== 'system');
+    let loaded = 0;
+    let failed = 0;
+    const show = () => {
+        fill.style.width = `${((loaded + failed) / fonts.length) * 100}%`;
+        status.textContent = `Loaded ${loaded} out of ${fonts.length} fonts${failed ? ` (${failed} failed)` : ''}`;
+    };
+    show();
+
+    // The browser knows the font files only after the stylesheets have loaded
+    const links = [...document.querySelectorAll<HTMLLinkElement>('link[rel="stylesheet"]')];
+    await Promise.all(links.map(link => link.sheet || new Promise(resolve => {
+        link.addEventListener('load', resolve);
+        link.addEventListener('error', resolve);
+    })));
+
+    fonts.forEach(font => {
+        // Resolves with no faces when the stylesheets do not have the font
+        document.fonts.load(`16px "${font.name}"`, SAMPLE_TEXT)
+            .then(faces => { if (faces.length) loaded++; else failed++; }, () => { failed++; })
+            .then(show);
+    });
+}
+
+
 export function generateFontTable(container: HTMLElement, installedNames: Set<string>) {
     const sourceLabels = { google: 'Google Fonts', embedded: 'Embedded', system: 'System' };
-    const sampleText = 'if(l==1||O[0]){$file+=~l*10}';
+    const sampleText = SAMPLE_TEXT;
     const fonts = data.fontDatabase.slice().sort((a,b) => (a.name||'').localeCompare(b.name||''));
     let html = '';
     fonts.forEach(font => {

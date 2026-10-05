@@ -350,8 +350,20 @@ async function generateEmbeddedFonts() {
 
     console.log(`Got CSS data: ${css.length} characters`);
 
+    // The database lists some faces that have no file, such as a bold italic that the font
+    // does not have. The browser shows text in such a face in the fallback font. Without
+    // the rule, the browser makes the face from the nearest face that exists.
+    let dropped = 0;
+    const checked = css.replace(/@font-face\s*\{[^}]*\}\n*/g, rule => {
+        const url = rule.match(/url\("([^"]+)"\)/)?.[1];
+        if (!url || /^https?:/.test(url) || fs.existsSync(resolve(ROOT, decodeURIComponent(url)))) return rule;
+        dropped++;
+        return '';
+    });
+    if (dropped) console.log(`Left out ${dropped} faces that have no file in fonts/`);
+
     // Save embedded-fonts.css
-    fs.writeFileSync(EMBEDDED_CSS_PATH, css);
+    fs.writeFileSync(EMBEDDED_CSS_PATH, checked);
     console.log('✓ Generated public/embedded-fonts.css');
 
         await browser.close();
