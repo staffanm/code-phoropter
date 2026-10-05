@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Code Phoropter</title>
+    <link rel="icon" type="image/png" href="/phoropter-icon-2.png">
+    <link rel="shortcut icon" type="image/png" href="/phoropter-icon-2.png">
+  <script type="module" crossorigin src="/assets/main-BHDpWUuU.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/loader-ChK8SR_h.js">
+  <link rel="modulepreload" crossorigin href="/assets/dom-DfIiZW0k.js">
+  <link rel="modulepreload" crossorigin href="/assets/highlight-C9litwEU.js">
+  <link rel="stylesheet" crossorigin href="/assets/loader-rWX4A-rL.css">
+</head>
+<body>
+    <!-- Loading screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <img src="/phoropter-logo-2.png" alt="Phoropter" class="loading-logo">
+            <h2>Code Phoropter</h2>
+            <p class="loading-text">Loading fonts...</p>
+        </div>
+    </div>
+
+    <div id="app" class="hidden">
+        <div class="header">
+            <div class="title-with-logo">
+                <img src="/phoropter-logo-2.png" alt="Phoropter" class="logo">
+                <div class="title-text">
+                    <h1>Code Phoropter</h1>
+                    <p class="subtitle">Find your perfect code display settings</p>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p class="status" id="status">Starting calibration...</p>
+            <button class="skip-stage-link" id="btnSkipStage" data-action="skipCurrentStage" style="display: none;">
+                Skip this stage <span class="key-hint">[W]</span>
+            </button>
+        </div>
+
+
+        <!-- Stage transition notification -->
+        <div class="stage-notification" id="stageNotification"></div>
+
+        <div class="comparison-container" id="comparisonContainer">
+            <div class="code-panel" id="panelA">
+                <div class="panel-label">Option A</div>
+                <div class="panel-summary" id="summaryA"></div>
+                <pre><code id="codeA"></code></pre>
+            </div>
+            <div class="code-panel" id="panelB">
+                <div class="panel-label">Option B</div>
+                <div class="panel-summary" id="summaryB"></div>
+                <pre><code id="codeB"></code></pre>
+            </div>
+            <!-- Unified button container -->
+            <div class="button-container" id="buttonContainer">
+                <button class="floating-choice-btn" id="btnA" data-action="selectOption" data-arg="A">
+                    <span class="key-hint">[A]</span> Prefer A
+                </button>
+                <div class="center-buttons">
+                    <button class="floating-choice-btn neutral" id="btnEqual" data-action="selectOption" data-arg="equal">
+                        <span class="key-hint">[S]</span> No Preference
+                    </button>
+                </div>
+                <button class="floating-choice-btn" id="btnB" data-action="selectOption" data-arg="B">
+                    <span class="key-hint">[D]</span> Prefer B
+                </button>
+            </div>
+            <!-- Draggable divider for slider compare mode -->
+            <div class="slider-divider" id="sliderDivider" style="display: none;">
+                <div class="divider-handle">
+                    <div class="divider-grip"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="description-section">
+            <p class="description">Just like an eye doctor uses a phoropter to find your perfect vision prescription through "better 1 or 2?" comparisons, Code Phoropter helps you discover your ideal coding font, size, colors, and spacing through side-by-side A/B tests. Compare code samples across different settings until you find the combination that makes your code most readable and comfortable for long coding sessions. Once you've found your perfect settings, export them directly to your favorite editor or terminal.</p>
+        </div>
+
+        <div id="fontFamilySelector" class="font-family-selector hidden">
+            <h2>Choose Your Preferred Font Style</h2>
+            <p class="selector-subtitle">Click on the font style that appeals to you most</p>
+            <div class="font-families-grid" id="fontFamiliesGrid">
+                <!-- Font family options will be dynamically populated -->
+            </div>
+            
+            <div id="importSection" class="import-section-inline">
+                <h4>Import Previous Settings</h4>
+                <div class="import-field">
+                    <input type="text" id="importSettings" placeholder="Paste your settings string here...">
+                    <button data-action="importAndStart">Import & Start</button>
+                </div>
+            </div>
+
+            <div class="lucky-section">
+                <button data-action="feelingLucky" class="lucky-button">I'm Feeling Lucky</button>
+                <p class="lucky-description">Generate random settings based on your installed fonts</p>
+            </div>
+        </div>
+
+
+        
+
+        <div class="footer">
+            <a href="about.html" class="about-link">About</a>
+            <div class="theme-toggle">
+                <label class="toggle-switch">
+                    <span class="toggle-label" id="toggleLabel">Dark <u>M</u>ode</span>
+                    <input type="checkbox" id="themeToggle" data-action="toggleThemeMode" checked>
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="slider-compare-toggle">
+                <label class="toggle-switch" title="Compare options side-by-side with a draggable slider divider instead of switching between full views">
+                    <span class="toggle-label">Slider <u>C</u>ompare</span>
+                    <input type="checkbox" id="sliderCompareToggle" data-action="toggleSliderCompare">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <div class="unique-role-fonts-toggle">
+                <label class="toggle-switch" title="Enable additional stages to choose unique fonts for keywords, strings, comments, etc. By default, only weight and style can be customized per role.">
+                    <span class="toggle-label">Unique Role <u>F</u>onts</span>
+                    <input type="checkbox" id="uniqueRoleFontsToggle" data-action="toggleUniqueRoleFonts">
+                    <span class="toggle-slider"></span>
+                </label>
+            </div>
+
+            <select id="languageSelect" data-action="changeLanguage" disabled>
+                <option value="javascript">JavaScript (React)</option>
+                <option value="python">Python (Async)</option>
+                <option value="rust">Rust (Cache)</option>
+                <option value="go">Go (Web Service)</option>
+                <option value="java">Java (Spring Boot)</option>
+                <option value="cpp">C++ (LRU Cache)</option>
+                <option value="csharp">C# (Web API)</option>
+                <option value="php">PHP (Auth Service)</option>
+                <option value="clojure">Clojure (Ring)</option>
+                <option value="css">CSS (Normalize)</option>
+                <option value="html">HTML (Boilerplate)</option>
+                <option value="json">JSON (VS Code)</option>
+                <option value="markdown">Markdown (Unicode Scripts)</option>
+                <option value="legal">Legal (GDPR)</option>
+                <option value="powerline">Powerline & Nerd Fonts</option>
+                <option value="custom">📁 My Own Code...</option>
+            </select>
+            <button id="resetBtn" class="reset-btn" data-action="resetTest" disabled>Start Over</button>
+        </div>
+
+        
+
+        <div id="results" class="results hidden">
+            <h2>Your Ideal Code Display Settings</h2>
+            <div class="result-details" id="resultDetails"></div>
+            <div class="result-actions">
+                <button data-action="copySettings">Copy CSS Settings</button>
+                <button data-action="downloadFontPackage">Download Settings Package</button>
+                <button data-action="resetTest">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Icons/Nerd Font prompt modal -->
+        <div id="iconsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="iconsModalTitle">
+            <div class="modal-content">
+                <h3 id="iconsModalTitle">Use Powerline/Nerd Font Icons?</h3>
+                <p class="modal-text">We detected a patched icon font for your selected family. While viewing a terminal sample, you can choose to use a patched variant for powerline and file icons.</p>
+                <div id="iconsOptions" class="modal-options"></div>
+                <div class="modal-actions">
+                    <button id="iconsKeepBaseBtn">Keep Base</button>
+                    <button id="iconsUsePatchedBtn" class="primary">Use Patched</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

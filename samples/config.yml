@@ -1,0 +1,43 @@
+defaults: &defaults
+  retries: 2
+  timeout: 1000
+
+app:
+  name: code-phoropter
+  env: development
+  port: 8080
+  baseUrl: http://localhost:8080
+
+logging:
+  level: info
+  format: json
+  destinations:
+    - stdout
+    - logs/app.log
+
+database:
+  driver: postgres
+  host: 127.0.0.1
+  port: 5432
+  user: app
+  password: secret
+  name: phoropter
+  pool:
+    min: 1
+    max: 10
+
+features:
+  ligatures: true
+  ghostPreview: true
+  telemetry: false
+  on: "light"   # quoted: not YAML 1.1 boolean
+
+themes:
+  - name: Catppuccin Mocha
+    dark: true
+  - name: Solarized Light
+    dark: false
+
+staging:
+  <<: *defaults   # YAML merge key
+  env: staging

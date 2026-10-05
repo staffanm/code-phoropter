@@ -1,0 +1,32 @@
+:root {
+  --bg: #111;
+  --fg: #e6e6e6;
+  --accent: #667eea;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 1rem;
+  background: var(--bg); color: var(--fg);
+  font: 16px/1.5 system-ui, sans-serif;
+}
+
+/* comments exercise token styling */
+.card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.btn {
+  background: var(--accent);
+  color: #fff;
+  border: 0; padding: .5rem .8rem; border-radius: 4px;
+}
+
+.btn:hover { filter: brightness(1.1); }
+
+/* :where() adds no specificity — cascade trick */
+:where(.card .btn) { letter-spacing: .01em; }
+
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }

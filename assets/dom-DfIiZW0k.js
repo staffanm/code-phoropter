@@ -1,0 +1,1 @@
+function e(e){let t=document.getElementById(e);if(!t)throw Error(`Missing element #${e}`);return t}function t(e){let t=document.querySelector(e);if(!t)throw Error(`Missing element ${e}`);return t}export{t as n,e as t};

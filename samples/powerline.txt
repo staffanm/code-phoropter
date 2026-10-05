@@ -1,0 +1,38 @@
+# Powerline and Nerd Font sample (<=60 lines)
+
+Base arrows:
+      
+
+Triangles:
+      
+
+Flames/ple:
+     
+
+Devicons:
+        
+
+Octicons:
+       
+
+Codicons:
+       
+
+Weather:
+     
+
+Powerline sample prompt:
+  user@host  ~/project  main  ● 2 ✚ 1  $ 
+
+Box drawing and symbols:
+  ┏━┳━┓
+  ┃ ┃ ┃
+  ┣━╋━┫
+  ┃ ┃ ┃  ✓ ✗ ★ ☆ ⌘ ⌥ ⌦ ⌫
+  ┗━┻━┛
+
+Patched font check rows:
+   git  ﰲ build   pass   fail   gh   sc
+
+Programming ligatures (font-dependent):
+  ->  ->>  =>  ===  !=  >=  <=  ||=  &&=  /*  */
