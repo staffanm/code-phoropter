@@ -110,7 +110,7 @@ export function showNextComparison(): void {
 
     // Show/hide skip button for skippable stages
     const stageObj = getStage(stage);
-    byId('btnSkipStage').style.display = stageObj?.skippable ? 'block' : 'none';
+    byId('btnSkipStage').style.display = stageObj?.skippable ? '' : 'none';
 
     // Hide description section during A/B tests
     qs('.description-section').classList.add('hidden');
@@ -609,6 +609,7 @@ export function showStartScreen() {
     byId('fontFamilySelector').classList.remove('hidden');
     qs('.comparison-container').style.display = 'none';
     byId('status').textContent = 'Import previous settings or choose your preferred font style';
+    byId('btnSkipStage').style.display = 'none';
     
     // Populate the font family selector (but keep description/import visible)
     showFontFamilySelector(true); // Pass flag to indicate this is for start screen

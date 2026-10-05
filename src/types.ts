@@ -8,7 +8,7 @@ export interface VariantsMatrix {
     maps: Record<string, Record<string, string>>;
     cleanup?: boolean;
     rules?: { regularOnlyOnBase?: boolean; regularName?: string };
-    fallbacks?: unknown;
+    fallbacks?: Record<string, { weight?: string; style?: string }>;
 }
 
 export interface FontAxes {

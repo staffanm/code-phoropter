@@ -95,6 +95,7 @@ export function showResults(): void {
 
     byId('progressFill').style.width = '100%';
     byId('status').textContent = 'Complete!';
+    byId('btnSkipStage').style.display = 'none';
     
     byId('results').classList.remove('hidden');
 
@@ -181,7 +182,7 @@ export function showResults(): void {
                     <button data-action="downloadConfig" data-arg="gnomeTerminal">GNOME Terminal</button>
                     <button data-action="downloadConfig" data-arg="putty">PuTTY</button>
                     <button data-action="downloadConfig" data-arg="sublimeText">Sublime Text</button>
-                    <button data-action="downloadConfig" data-arg="atom">Atom</button>
+                    <button data-action="downloadConfig" data-arg="atom">Atom / Pulsar</button>
                     <button data-action="downloadConfig" data-arg="intellij">IntelliJ/JetBrains</button>
                 </div>
             </div>
@@ -257,12 +258,16 @@ export function copySettings(): void {
     
     // Base settings CSS
     let css = `/* Your optimized code display settings */
-${fontInstructions}font-family: ${results.font};
-font-size: ${results.size}px;
-font-weight: ${results.weight};
-line-height: ${results.lineHeight};
-background-color: ${results.colorScheme.bg};
-color: ${results.colorScheme.fg};
+${fontInstructions}pre, code {
+  font-family: "${fontName}", monospace;
+  font-size: ${results.size}px;
+  font-weight: ${results.weight};
+  font-stretch: ${results.fontWidth};
+  letter-spacing: ${results.letterSpacing}px;
+  line-height: ${results.lineHeight};
+  background-color: ${results.colorScheme.bg};
+  color: ${results.colorScheme.fg};
+}
 
 /* Syntax highlighting */
 .keyword { color: ${results.colorScheme.keyword}; }

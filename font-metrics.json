@@ -1575,9 +1575,6 @@
     "source": "google",
     "fontName": "Fira Code"
   },
-  "Fira Code Nerd Font": {
-    "error": "Font not loaded - measurements would use fallback font"
-  },
   "Fira Mono": {
     "avgCharWidth": {
       "12": {
@@ -5537,5 +5534,993 @@
     "monospace": true,
     "source": "embedded",
     "fontName": "iA-Writer Nerd Font"
+  },
+  "0xProto": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.4400482177734375
+      },
+      "14": {
+        "normal": 8.679962158203125
+      },
+      "16": {
+        "normal": 9.920013427734375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "0xProto"
+  },
+  "Topaz NG Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8.72406005859375
+      },
+      "14": {
+        "normal": 10.177963256835938
+      },
+      "16": {
+        "normal": 11.63201904296875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 12
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Topaz NG Code"
+  },
+  "New Heterodox Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.79205322265625
+      },
+      "14": {
+        "normal": 7.9239654541015625
+      },
+      "16": {
+        "normal": 9.056015014648438
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "New Heterodox Mono"
+  },
+  "Adwaita Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Adwaita Mono"
+  },
+  "Anka Coder": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.201171875
+      },
+      "14": {
+        "normal": 8.4013671875
+      },
+      "16": {
+        "normal": 9.6015625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Anka Coder"
+  },
+  "Annotation Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.5000457763671875
+      },
+      "14": {
+        "normal": 8.749969482421875
+      },
+      "16": {
+        "normal": 9.999984741210938
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Annotation Mono"
+  },
+  "AudioLink Console": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.900054931640625
+      },
+      "14": {
+        "normal": 8.049972534179688
+      },
+      "16": {
+        "normal": 9.20001220703125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "AudioLink Console"
+  },
+  "Old Timey Code": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.199920654296875
+      },
+      "14": {
+        "normal": 8.400115966796875
+      },
+      "16": {
+        "normal": 9.600067138671875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Old Timey Code"
+  },
+  "Monoid": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9.333251953125
+      },
+      "16": {
+        "normal": 10.666748046875
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 11
+      },
+      "14": {
+        "normal": 14
+      },
+      "16": {
+        "normal": 15
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Monoid"
+  },
+  "PseudoFont Liga Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.1953125
+      },
+      "14": {
+        "normal": 8.39453125
+      },
+      "16": {
+        "normal": 9.59375
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "PseudoFont Liga Mono"
+  },
+  "Sarasa Mono Slab": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.0000457763671875
+      },
+      "14": {
+        "normal": 6.999969482421875
+      },
+      "16": {
+        "normal": 8.000015258789062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Sarasa Mono Slab"
+  },
+  "Sarasa Gothic Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.0000457763671875
+      },
+      "14": {
+        "normal": 6.999969482421875
+      },
+      "16": {
+        "normal": 8.000015258789062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Sarasa Gothic Mono"
+  },
+  "Mona Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.416046142578125
+      },
+      "14": {
+        "normal": 8.651962280273438
+      },
+      "16": {
+        "normal": 9.888015747070312
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 10
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Mona Sans Mono"
+  },
+  "Nordwand Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Nordwand Mono"
+  },
+  "Myna": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 5.8320465087890625
+      },
+      "14": {
+        "normal": 6.8039703369140625
+      },
+      "16": {
+        "normal": 7.7760162353515625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Myna"
+  },
+  "IBM Courier": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "IBM Courier"
+  },
+  "Ioskeley Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Ioskeley Mono"
+  },
+  "Aporetic Sans Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.300048828125
+      },
+      "14": {
+        "normal": 7.3499755859375
+      },
+      "16": {
+        "normal": 8.4000244140625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Aporetic Sans Mono"
+  },
+  "Miracode": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.9998779296875
+      },
+      "14": {
+        "normal": 9.333251953125
+      },
+      "16": {
+        "normal": 10.6666259765625
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 11
+      },
+      "14": {
+        "normal": 12
+      },
+      "16": {
+        "normal": 15
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Miracode"
+  },
+  "Sergamon": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 5.999908447265625
+      },
+      "14": {
+        "normal": 6.9998931884765625
+      },
+      "16": {
+        "normal": 8.000106811523438
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 5
+      },
+      "14": {
+        "normal": 6
+      },
+      "16": {
+        "normal": 7
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 9
+      },
+      "16": {
+        "normal": 10
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Sergamon"
+  },
+  "Hack Ligatured": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.224609375
+      },
+      "14": {
+        "normal": 8.4287109375
+      },
+      "16": {
+        "normal": 9.6328125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "embedded",
+    "fontName": "Hack Ligatured"
+  },
+  "Iosevka Charon Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.0000457763671875
+      },
+      "14": {
+        "normal": 6.999969482421875
+      },
+      "16": {
+        "normal": 8.000015258789062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 13
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Iosevka Charon Mono"
+  },
+  "Lilex": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Lilex"
+  },
+  "SUSE Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.2000579833984375
+      },
+      "14": {
+        "normal": 8.39996337890625
+      },
+      "16": {
+        "normal": 9.600021362304688
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 6
+      },
+      "14": {
+        "normal": 7
+      },
+      "16": {
+        "normal": 8
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "SUSE Mono"
+  },
+  "Libertinus Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 7.6800537109375
+      },
+      "14": {
+        "normal": 8.9599609375
+      },
+      "16": {
+        "normal": 10.240020751953125
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 8
+      },
+      "14": {
+        "normal": 10
+      },
+      "16": {
+        "normal": 11
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Libertinus Mono"
+  },
+  "Xanh Mono": {
+    "avgCharWidth": {
+      "12": {
+        "normal": 6.0000457763671875
+      },
+      "14": {
+        "normal": 6.999969482421875
+      },
+      "16": {
+        "normal": 8.000015258789062
+      }
+    },
+    "xHeight": {
+      "12": {
+        "normal": 7
+      },
+      "14": {
+        "normal": 8
+      },
+      "16": {
+        "normal": 9
+      }
+    },
+    "capHeight": {
+      "12": {
+        "normal": 9
+      },
+      "14": {
+        "normal": 11
+      },
+      "16": {
+        "normal": 12
+      }
+    },
+    "monospace": true,
+    "source": "google",
+    "fontName": "Xanh Mono"
   }
 }

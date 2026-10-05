@@ -13,14 +13,17 @@
     "fonts:generate": "node scripts/extract-metrics.js",
     "fonts:metrics": "node scripts/extract-metrics.js metrics",
     "fonts:css": "node scripts/extract-metrics.js css",
+    "fonts:names": "tsx scripts/font-names.ts",
     "fonts:analyze": "tsx scripts/analyze-fonts.ts",
     "fonts:validate": "tsx scripts/validate-fonts.ts",
     "db:ids": "tsx scripts/add-ids.ts",
     "db:nerd-fonts": "tsx scripts/update-nerd-fonts.ts"
   },
   "devDependencies": {
+    "@types/fontkit": "^2.0.9",
     "@types/node": "^26.6.4",
     "@types/webfontloader": "^1.6.38",
+    "fontkit": "^2.0.4",
     "puppeteer": "^24.0.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2",

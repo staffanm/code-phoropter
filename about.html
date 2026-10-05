@@ -16,67 +16,49 @@
             <img src="b00e6c8f-2ff0-47b9-a833-bd9fab5fa2a4.png" alt="Phoropter Logo">
             <div>
                 <h1>About Code Phoropter</h1>
-                <p class="about-subtitle">The systematic approach to finding your perfect code display settings</p>
+                <p class="about-subtitle">Find the code display settings that suit your eyes</p>
             </div>
         </div>
 
         <div class="about-section">
             <h2>About This Project</h2>
             <p>
-                Code Phoropter is an open-source tool designed to help developers find their ideal code display settings through systematic A/B testing. 
-                Just as an optometrist uses a phoropter to determine your optimal vision prescription, this tool helps you discover which fonts, sizes, 
-                and colors make your code most readable and comfortable for extended coding sessions.
+                Code Phoropter helps you find the font, size, weight, line height and color scheme that you read code best with.
+                It shows the same code in two versions and asks which one you prefer, the way an optometrist asks
+                "which is better, 1 or 2?". Each answer narrows the field until one combination remains.
             </p>
             <p>
-                The project uses a tournament-style comparison system to progressively narrow down your preferences across multiple dimensions: 
-                font family, size, weight, line height, and color scheme. Each comparison you make helps build a profile of your ideal coding environment.
+                It is open source and runs in your browser.
             </p>
-            
-            <h3>Personal Background</h3>
+
+            <h3>Why I Built It</h3>
             <p>
-                As I've gotten older, I've noticed that reading code on screen has become more challenging than it used to be. 
-                What once seemed perfectly readable now strains my eyes, especially during long coding sessions or under different 
-                lighting conditions. The fonts and settings that worked well for me in my twenties no longer provide the same comfort 
-                and clarity.
+                Reading code on a screen got harder for me with age. Settings that worked in my twenties now strain my eyes,
+                most of all in long sessions and in poor light.
             </p>
             <p>
-                This realization led me to experiment with different fonts, sizes, and color schemes, but the sheer number of 
-                combinations was overwhelming. Traditional "font showcases" show individual fonts in isolation, but don't help you 
-                systematically compare options or account for how different settings interact with your specific screen, lighting 
-                conditions, and visual needs.
-            </p>
-            <p>
-                I wanted a tool that could help me methodically test different combinations in various contexts – bright daylight, 
-                dim evening light, different monitor types, and varying distances from the screen. The idea of using a systematic, 
-                optometry-inspired approach emerged: rather than guessing or randomly trying settings, why not use the proven 
-                "which is better, 1 or 2?" methodology that eye doctors have used for decades?
-            </p>
-            <p>
-                Code Phoropter was born from this need – a tool that acknowledges that code readability is highly personal and 
-                context-dependent, and provides a scientific approach to finding your optimal settings through careful comparison 
-                rather than guesswork.
+                Font showcases did not help. They show each font alone, and there are too many combinations of font, size
+                and color to try by hand. Comparing two options at a time is easy, and it happens on your own screen, in your own light.
             </p>
         </div>
 
         <div class="privacy-box">
-            <h3>🔒 Privacy & External Requests</h3>
+            <h3>🔒 Privacy</h3>
             <p>
-                This page and the main app run fully in your browser. However, some configurations may request resources from third‑party CDNs (e.g., web fonts or libraries), and those providers may collect telemetry or set cookies according to their own policies.
+                Your choices and your results stay in your browser. We do not collect them.
             </p>
             <ul>
-                <li><strong>Local processing:</strong> Comparisons and scoring run in your browser; no app‑side analytics are sent.</li>
-                <li><strong>External resources:</strong> Depending on settings, the app may load fonts or scripts from CDNs (e.g., Google Fonts, cdnjs) or self‑hosted files under <code>/fonts/</code>.</li>
-                <li><strong>System fonts:</strong> When using only system or self‑hosted fonts, no external font requests are made.</li>
-                <li><strong>GDPR considerations:</strong> Linking to Google Fonts via CSS can reveal your IP to Google. Many teams choose to self‑host fonts to avoid this.</li>
+                <li><strong>No tracking:</strong> No analytics, no cookies, no accounts.</li>
+                <li><strong>Your results:</strong> The comparisons, the scores and the exported settings are computed in your browser and are not sent to us.</li>
+                <li><strong>Your installed fonts:</strong> The app checks which coding fonts are installed on your computer so that it can offer them. That list is not sent to us.</li>
+                <li><strong>Fonts from this site:</strong> Most fonts load from phoropter.org. Our web server keeps a standard access log (IP address, time, file).</li>
+                <li><strong>Fonts from Google:</strong> Some fonts and the icons load from Google Fonts, also when the app starts. Google then sees your IP address, under its own privacy policy. One font, Comic Mono, loads from GitHub in the same way.</li>
             </ul>
-            <p>
-                <strong>Recommendations:</strong> For maximum privacy, self‑host fonts (place WOFF/TTF files under <code>/fonts/</code>) and disable remote font loading. We can add a toggle to force “local‑only” mode on request.
-            </p>
         </div>
 
         <div class="about-section">
             <h2>Available Fonts</h2>
-            <p>Code Phoropter tests and compares a comprehensive collection of coding fonts from various sources:</p>
+            <p>Code Phoropter compares these coding fonts:</p>
             
             <table class="font-table">
                 <thead>
@@ -92,15 +74,13 @@
                     <!-- Font data will be dynamically generated by src/pages/aboutTables.ts -->
                 </tbody>
             </table>
-            <p><strong>Note:</strong> System fonts are only available if
-            installed on your computer. Embedded fonts are loaded from a CDN or
-            from this site when
-            selected.</p> 
+            <p><strong>Note:</strong> System fonts are only available if installed on your computer.
+            Other fonts load from this site or from Google Fonts when selected.</p>
         </div>
 
         <div class="about-section">
             <h2>Color Schemes</h2>
-            <p>Code Phoropter includes a comprehensive collection of color schemes inspired by popular developer themes:</p>
+            <p>The color schemes follow popular editor themes:</p>
             
             <h3>Dark Themes</h3>
             <table class="font-table">
@@ -146,9 +126,6 @@
 
         <div class="about-section">
             <h2>GitHub</h2>
-            <p>
-                Code Phoropter is available on GitHub.
-            </p>
             <p>
                 <strong>Repository:</strong> <a href="https://github.com/staffanm/code-phoropter" target="_blank">github.com/staffanm/code-phoropter</a>
             </p>

@@ -2,13 +2,13 @@ import { extractFontNameFromCss } from '../fonts/detect';
 import type { ColorScheme, RoleCandidate, TokenColor, TokenStyle } from '../types';
 import hljs from '../highlight';
 import { byId, qs } from '../dom';
-import { data } from '../data';
+import { data, findFont } from '../data';
 import { textSamples } from '../text-samples';
 import { ComparisonEngine } from '../engine';
 import { importSettings } from '../export/settings';
 import { isFontAvailable } from '../fonts/detect';
 import { loadFont, loadedFonts } from '../fonts/loader';
-import { applyRoleFonts } from '../roles';
+import { applyRoleFonts, resolveFontCssStack } from '../roles';
 import { state } from '../state';
 import { showNextComparison } from './comparison';
 import { showResults } from './results';
@@ -26,6 +26,7 @@ export function showFontFamilySelector(keepDescriptionVisible = false) {
     
     // Update status
     byId('status').textContent = 'Choose your preferred font style';
+    byId('btnSkipStage').style.display = 'none';
     
     // Populate font families
     const grid = byId('fontFamiliesGrid');
@@ -345,8 +346,9 @@ export function feelingLucky() {
         const sizes = [14, 15, 16, 17, 18, 19, 20];
         const randomSize = randomPick(sizes);
 
-        // Random weight
-        const weights = [300, 400, 500, 600, 700];
+        // Random weight and width, from the ones that the font has
+        const axes = findFont(randomFont)?.axes;
+        const weights = axes?.weights?.length ? axes.weights : [400, 700];
         const randomWeight = randomPick(weights);
 
         // Random line height (1.3-1.8)
@@ -357,8 +359,7 @@ export function feelingLucky() {
         const letterSpacings = [-0.5, -0.25, 0, 0.25, 0.5, 0.75, 1];
         const randomLetterSpacing = randomPick(letterSpacings);
 
-        // Font width (normal, condensed, expanded)
-        const widths = ['normal', 'condensed', 'expanded'];
+        const widths = axes?.widths?.length ? axes.widths : ['normal'];
         const randomWidth = randomPick(widths);
 
         // Generate random role settings
@@ -382,7 +383,7 @@ export function feelingLucky() {
         // Create engine with random settings
         state.engine = new ComparisonEngine();
         state.engine.winners = {
-            font: randomFont,
+            font: resolveFontCssStack(randomFont),
             size: randomSize,
             weight: randomWeight,
             lineHeight: randomLineHeight,
@@ -400,6 +401,10 @@ export function feelingLucky() {
         byId('fontFamilySelector').classList.add('hidden');
         byId('importSection').classList.add('hidden');
         showResults();
+
+        // The start page loads only one font per family. Load the chosen fonts, then draw the preview again.
+        const fontNames = new Set([randomFont, ...Object.values(roles).map(role => role.font)]);
+        void Promise.allSettled([...fontNames].map(name => loadFont(name))).then(() => showResults());
 
         console.log('[LUCKY] Generated random settings:', state.engine.winners);
 

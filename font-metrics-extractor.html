@@ -189,14 +189,18 @@
                         const url = font.woff2 || font.ttf || font.otf;
                         const format = getFormatFromUrl(url);
                         
+                        // A variable font has one file. Declare the ranges that its axes cover.
+                        const wght = font.variableFont && font.variableAxes?.wght;
+                        const slnt = font.variableFont && font.variableAxes?.slnt;
+
                         // Skip archives and ensure CORS-friendly URLs
                         if (isValidFontUrl(url)) {
                             const srcUrl = /^https?:\/\//i.test(url) ? url : encodeURI(url);
                             css += `@font-face {\n`;
                             css += `    font-family: "${font.name}";\n`;
                             css += `    src: url("${srcUrl}") format("${format}");\n`;
-                            css += `    font-weight: 400;\n`;
-                            css += `    font-style: normal;\n`;
+                            css += `    font-weight: ${wght ? `${wght.min} ${wght.max}` : 400};\n`;
+                            css += `    font-style: ${slnt ? `oblique ${-slnt.max}deg ${-slnt.min}deg` : 'normal'};\n`;
                             css += `    font-display: swap;\n`;
                             css += `}\n\n`;
                             generatedCount++;
@@ -226,7 +230,9 @@
                         });
 
                         variants.forEach(({ weight, style, width }) => {
-                            const resolved = resolveVariantUrl(font, weight, style, width);
+                            // A fallback names the file to use for a combination that has no file of its own
+                            const fallback = font.variantsMatrix.fallbacks?.[`${weight}+${style}`];
+                            const resolved = resolveVariantUrl(font, fallback?.weight ?? weight, fallback?.style ?? style, width);
                             if (resolved) {
                                 const srcUrl = /^https?:\/\//i.test(resolved.url) ? resolved.url : encodeURI(resolved.url);
 

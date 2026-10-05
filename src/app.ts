@@ -4,7 +4,7 @@ import { initData } from './data';
 import { ComparisonEngine } from './engine';
 import { detectedFonts, filterFontFamilies } from './fonts/detect';
 import { generateFontFamilies } from './fonts/families';
-import { loadFonts } from './fonts/loader';
+import { injectCriticalAboutFonts, loadFonts } from './fonts/loader';
 import { state } from './state';
 import { hideLoadingScreen, showStartScreen } from './ui/comparison';
 import { showFontFamilySelector } from './ui/familySelector';
@@ -35,6 +35,10 @@ export function init(): void {
     state.fontFamiliesOriginal = generateFontFamilies();
     state.fontFamilies = state.fontFamiliesOriginal;
     state.engine = new ComparisonEngine();
+
+    // Every font stack ends with "Redacted Script". Without it, a font that
+    // fails to load shows in the browser default font.
+    injectCriticalAboutFonts();
 
     // Load representative fonts first, then show start screen
     loadFonts().then(() => {

@@ -76,12 +76,15 @@ Without the `fonts/` directory, the embedded fonts fall back to a placeholder fo
 | `npm run fonts:generate` | Regenerate `font-metrics.json` and `public/embedded-fonts.css` |
 | `npm run fonts:metrics` | Regenerate `font-metrics.json`. With `-- "Font Name"`, print the metrics for one font. |
 | `npm run fonts:css` | Regenerate `public/embedded-fonts.css` |
+| `npm run fonts:names` | Regenerate `font-names.json`, the installed family names and PostScript names that the exports use. Downloads the Google fonts to read their names. With `-- "Font Name"`, only that font. |
 | `npm run fonts:analyze` | Compare the axes in `font-database.json` with the files in `fonts/` |
 | `npm run fonts:validate` | Download and validate the fonts that the database references by URL |
 | `npm run db:ids` | Show which IDs would change in the databases. With `-- --write`, write them. |
 | `npm run db:nerd-fonts` | Update the Nerd Font entries in `font-database.json` from `fonts/*.NF` |
 
 The `fonts/` directory is not in git and is not part of the build output. In development, Vite serves it at `/fonts/`. In production, the web server serves it (see `deploy/`).
+
+A push to the `main` branch on GitHub deploys the site. The workflow `.github/workflows/deploy.yml` builds the site and pushes `dist/` to the `deploy` branch. The repository webhook then calls the web server, which runs `deploy/update-site.sh` to copy that branch to the web root. `npm run deploy` does the same copy from the local machine. The font files are not part of either deploy. Use `npm run fonts:push` for them.
 
 ## Developer Options
 

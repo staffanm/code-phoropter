@@ -26,7 +26,7 @@ registerActions({
     recompareStage,
     changeResultLanguage,
     copyToClipboard,
-    downloadConfig,
+    downloadConfig: (editor) => { void downloadConfig(editor); },
     selectText: (_arg, element) => (element as HTMLInputElement).select(),
     closeModal: (_arg, element) => element.closest('.instruction-modal')?.remove(),
 });

@@ -31,6 +31,9 @@
                 <div class="progress-fill" id="progressFill"></div>
             </div>
             <p class="status" id="status">Starting calibration...</p>
+            <button class="skip-stage-link" id="btnSkipStage" data-action="skipCurrentStage" style="display: none;">
+                Skip this stage <span class="key-hint">[W]</span>
+            </button>
         </div>
 
 
@@ -56,9 +59,6 @@
                 <div class="center-buttons">
                     <button class="floating-choice-btn neutral" id="btnEqual" data-action="selectOption" data-arg="equal">
                         <span class="key-hint">[S]</span> No Preference
-                    </button>
-                    <button class="floating-choice-btn skip-stage" id="btnSkipStage" data-action="skipCurrentStage" style="display: none;">
-                        <span class="key-hint">[W]</span> Skip Stage
                     </button>
                 </div>
                 <button class="floating-choice-btn" id="btnB" data-action="selectOption" data-arg="B">
@@ -155,7 +155,7 @@
             <div class="result-details" id="resultDetails"></div>
             <div class="result-actions">
                 <button data-action="copySettings">Copy CSS Settings</button>
-                <button data-action="downloadFontPackage">Download Font Package</button>
+                <button data-action="downloadFontPackage">Download Settings Package</button>
                 <button data-action="resetTest">Try Again</button>
             </div>
         </div>

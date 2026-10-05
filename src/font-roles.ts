@@ -178,7 +178,7 @@ export const fontSuitabilityMatrix = {
     'powerline-good': ['Source Code Pro', 'Ubuntu Mono', 'Inconsolata', 'Liberation Mono'],
     
     // Fonts with Nerd Font icon support (patched versions)
-    'nerd-font-excellent': ['Hack Nerd Font', 'JetBrains Mono Nerd Font', 'Fira Code Nerd Font', 'Cascadia Code Nerd Font'],
+    'nerd-font-excellent': ['Hack Nerd Font', 'JetBrains Mono Nerd Font', 'FiraCode Nerd Font', 'Cascadia Code Nerd Font'],
     'nerd-font-good': ['Source Code Pro Nerd Font', 'Ubuntu Mono Nerd Font', 'Inconsolata Nerd Font'],
     
     // Fonts that handle mixed content well (text + icons)
@@ -305,7 +305,7 @@ export const multiFontPresets = {
             terminal: 'Cascadia Code Nerd Font', // modern terminal
             documentation: 'Source Code Pro', // clean docs
             powerline: 'JetBrains Mono Nerd Font', // powerline segments
-            nerdFont: 'Fira Code Nerd Font', // file type icons
+            nerdFont: 'FiraCode Nerd Font', // file type icons
             statusBar: 'Consolas' // status information
         }
     }

@@ -47,6 +47,12 @@
       "rules": {
         "regularOnlyOnBase": true,
         "regularName": "Regular"
+      },
+      "fallbacks": {
+        "700+italic": {
+          "weight": "700",
+          "style": "normal"
+        }
       }
     },
     "id": 0
@@ -1665,20 +1671,6 @@
     "woff2": null,
     "category": "Geometric Moderns",
     "id": 48
-  },
-  {
-    "name": "Fira Code Nerd Font",
-    "source": "system",
-    "ligatures": true,
-    "description": "A modern monospaced sans\u2011serif with clean shapes, with programming ligatures.",
-    "css": "\"Fira Code Nerd Font\"",
-    "homepage": "https://github.com/ryanoasis/nerd-fonts",
-    "ttf": null,
-    "otf": null,
-    "woff2": null,
-    "icons": true,
-    "category": "Neutral Workhorses",
-    "id": 49
   },
   {
     "name": "Fira Mono",
@@ -5861,11 +5853,11 @@
     "id": 157
   },
   {
-    "name": "Xahn Mono",
+    "name": "Xanh Mono",
     "source": "google",
     "ligatures": false,
     "description": "A mono-serif typeface with a fresh and gentle look",
-    "css": "\"Xahn Mono\"",
+    "css": "\"Xanh Mono\"",
     "ttf": null,
     "otf": null,
     "woff2": null,
@@ -5894,56 +5886,6 @@
     "homepage": "https://www.nerdfonts.com/",
     "category": "Humanist Readables",
     "id": 160
-  },
-  {
-    "name": "Commit Mono",
-    "source": "embedded",
-    "ligatures": true,
-    "description": "A modern monospaced sans\u2011serif with clean shapes, with programming ligatures.",
-    "css": "\"Commit Mono\"",
-    "homepage": "https://commitmono.com/",
-    "ttf": null,
-    "otf": "fonts/Commit Mono/CommitMono-400-Regular.otf",
-    "woff2": null,
-    "category": "Expressive Experimentals",
-    "axes": {
-      "weights": [
-        400,
-        700
-      ],
-      "styles": [
-        "normal",
-        "italic"
-      ],
-      "widths": [
-        "normal"
-      ]
-    },
-    "variantsMatrix": {
-      "prefer": "ttf",
-      "files": {
-        "ttf": "fonts/pseudoFont Liga Mono/pseudoFont_Liga_Mono-{weight|map}{style|map}.otf"
-      },
-      "maps": {
-        "width": {
-          "normal": ""
-        },
-        "style": {
-          "normal": "Regular",
-          "italic": "Italic"
-        },
-        "weight": {
-          "400": "Regular",
-          "700": "Bold"
-        }
-      },
-      "cleanup": true,
-      "rules": {
-        "regularOnlyOnBase": true,
-        "regularName": "Regular"
-      }
-    },
-    "id": 161
   },
   {
     "name": "Topaz NG Code",
@@ -5985,7 +5927,7 @@
         },
         "style": {
           "normal": "",
-          "italic": "_Italic"
+          "italic": "Italic"
         }
       },
       "cleanup": true,
@@ -6228,34 +6170,31 @@
       ],
       "widths": [
         "normal",
-        "condensed",
-        "extra-condensed"
+        "semi-condensed",
+        "condensed"
       ]
     },
     "variantsMatrix": {
       "prefer": "ttf",
       "files": {
-        "ttf": "fonts/Anka Coder/AnkaCoder{width|map}-{weight|map}{style|map}.ttf"
+        "ttf": "fonts/Anka Coder/AnkaCoder{width|map}-{suffix|map}.ttf"
       },
       "maps": {
         "width": {
           "normal": "",
-          "condensed": "-C87",
-          "extra-condensed": "-C75"
+          "semi-condensed": "-C87",
+          "condensed": "-C75"
         },
-        "weight": {
-          "400": "r",
-          "700": "b"
-        },
-        "style": {
-          "normal": "",
-          "italic": "i"
+        "suffix": {
+          "400:normal": "r",
+          "400:italic": "i",
+          "700:normal": "b",
+          "700:italic": "bi"
         }
       },
       "cleanup": true,
       "rules": {
-        "regularOnlyOnBase": false,
-        "regularName": "r"
+        "regularOnlyOnBase": false
       }
     },
     "id": 173
@@ -6374,7 +6313,6 @@
     "category": "Typewriter Classics",
     "axes": {
       "weights": [
-        100,
         300,
         400
       ],
@@ -6383,8 +6321,7 @@
       ],
       "widths": [
         "normal",
-        "condensed",
-        "semi-condensed"
+        "condensed"
       ]
     },
     "variantsMatrix": {
@@ -6395,11 +6332,9 @@
       "maps": {
         "width": {
           "normal": "",
-          "semi-condensed": "Comp",
           "condensed": "Cond"
         },
         "weight": {
-          "100": "-Thin",
           "300": "-Light",
           "400": ""
         },
@@ -6477,7 +6412,7 @@
     "ligatures": true,
     "description": "A modern monospaced sans-serif with clean shapes, with programming ligatures and multiple weights/styles.",
     "css": "\"PseudoFont Liga Mono\"",
-    "homepage": "https://github.com/qzdx/psudoFont",
+    "homepage": "https://github.com/psudo-dev/psudofont-liga-mono",
     "ttf": "fonts/PseudoFont Liga Mono/psudoFont_Liga_Mono_-_Regular.ttf",
     "otf": null,
     "woff2": null,
@@ -6527,8 +6462,8 @@
     "ligatures": false,
     "description": "A modern monospaced slab-serif with clean shapes, with CJK (Chinese, Japanese, Korean) support and multiple weights/styles.",
     "css": "\"Sarasa Mono Slab\"",
-    "homepage": "https://picaq.github.io/sarasa/",
-    "ttf": "fonts/Sarara Gothic Mono Slab/SarasaMonoSlabSC-Regular.ttf",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
+    "ttf": "fonts/Sarasa Mono Slab/SarasaMonoSlabSC-Regular.ttf",
     "otf": null,
     "woff2": null,
     "category": "Neutral Workhorses",
@@ -6551,7 +6486,7 @@
     "variantsMatrix": {
       "prefer": "ttf",
       "files": {
-        "ttf": "fonts/Sarara Gothic Mono Slab/SarasaMonoSlabSC-{weight|map}{style|map}.ttf"
+        "ttf": "fonts/Sarasa Mono Slab/SarasaMonoSlabSC-{weight|map}{style|map}.ttf"
       },
       "maps": {
         "width": {
@@ -6583,8 +6518,8 @@
     "ligatures": false,
     "description": "A modern monospaced sans-serif with clean shapes, with CJK (Chinese, Japanese, Korean) support and multiple weights/styles.",
     "css": "\"Sarasa Gothic Mono\"",
-    "homepage": "https://picaq.github.io/sarasa/",
-    "ttf": "fonts/Sasara Gothic Mono/SarasaMonoSC-Regular.ttf",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
+    "ttf": "fonts/Sarasa Gothic Mono/SarasaMonoSC-Regular.ttf",
     "otf": null,
     "woff2": null,
     "category": "Neutral Workhorses",
@@ -6607,7 +6542,7 @@
     "variantsMatrix": {
       "prefer": "ttf",
       "files": {
-        "ttf": "fonts/Sasara Gothic Mono/SarasaMonoSC-{weight|map}{style|map}.ttf"
+        "ttf": "fonts/Sarasa Gothic Mono/SarasaMonoSC-{weight|map}{style|map}.ttf"
       },
       "maps": {
         "width": {
@@ -6632,5 +6567,445 @@
       }
     },
     "id": 180
+  },
+  {
+    "name": "Mona Sans Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "The monospaced companion to GitHub's Mona Sans, a variable font inspired by industrial-era grotesques.",
+    "css": "\"Mona Sans Mono\"",
+    "homepage": "https://github.com/github/mona-sans",
+    "ttf": "fonts/Mona Sans Mono/MonaSansMono-VF.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Geometric Moderns",
+    "variableFont": true,
+    "variableAxes": {
+      "wght": {
+        "min": 200,
+        "max": 900,
+        "default": 200
+      }
+    },
+    "axes": {
+      "weights": [
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "id": 181
+  },
+  {
+    "name": "Nordwand Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "A programming typeface inspired by Swiss typography, with geometric precision and programming ligatures.",
+    "css": "\"Nordwand Mono\"",
+    "homepage": "https://github.com/tywr/Nordwand-Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": "fonts/Nordwand Mono/NordwandMono-Regular.woff2",
+    "category": "Geometric Moderns",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Nordwand Mono/NordwandMono-{weight|map}{style|map}.woff2"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "100": "Thin",
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "id": 182
+  },
+  {
+    "name": "Myna",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A monospaced font that treats symbols as first-class glyphs alongside letters and digits.",
+    "css": "\"Myna\"",
+    "homepage": "https://github.com/sayyadirfanali/Myna",
+    "ttf": "fonts/Myna/Myna-Regular.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Neutral Workhorses",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Myna/Myna-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": false,
+        "regularName": "Regular"
+      }
+    },
+    "id": 183
+  },
+  {
+    "name": "IBM Courier",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "IBM's original Courier, digitized in modern file formats. This is the slashed zero variant.",
+    "css": "\"IBM Courier\"",
+    "homepage": "https://github.com/dse/font-og-courier",
+    "ttf": null,
+    "otf": null,
+    "woff2": "fonts/IBM Courier/OGCourierZeroSlash.woff2",
+    "category": "Typewriter Classics",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/IBM Courier/OGCourierZeroSlash{suffix|map}.woff2"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "suffix": {
+          "400:normal": "",
+          "400:italic": "-Italic",
+          "700:normal": "-Bold",
+          "700:italic": "-BoldItalic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": false
+      }
+    },
+    "id": 184
+  },
+  {
+    "name": "Ioskeley Mono",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "An Iosevka configuration that mimics the look and feel of Berkeley Mono.",
+    "css": "\"Ioskeley Mono\"",
+    "homepage": "https://github.com/ahatem/IoskeleyMono",
+    "ttf": null,
+    "otf": null,
+    "woff2": "fonts/Ioskeley Mono/IoskeleyMono-Regular.woff2",
+    "category": "Humanist Readables",
+    "axes": {
+      "weights": [
+        100,
+        200,
+        300,
+        400,
+        500,
+        600,
+        700,
+        800,
+        900
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal",
+        "semi-condensed"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "woff2",
+      "files": {
+        "woff2": "fonts/Ioskeley Mono/IoskeleyMono-{width|map}{weight|map}{style|map}.woff2"
+      },
+      "maps": {
+        "width": {
+          "normal": "",
+          "semi-condensed": "SemiCondensed"
+        },
+        "weight": {
+          "100": "Thin",
+          "200": "ExtraLight",
+          "300": "Light",
+          "400": "Regular",
+          "500": "Medium",
+          "600": "SemiBold",
+          "700": "Bold",
+          "800": "ExtraBold",
+          "900": "Black"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "id": 185
+  },
+  {
+    "name": "Aporetic Sans Mono",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A custom Iosevka build that favors consistency between glyphs and styles at small point sizes.",
+    "css": "\"Aporetic Sans Mono\"",
+    "homepage": "https://github.com/protesilaos/aporetic",
+    "ttf": "fonts/Aporetic Sans Mono/aporetic-sans-mono-normalregularupright.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Expressive Experimentals",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Aporetic Sans Mono/aporetic-sans-mono-normal{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "regular",
+          "700": "bold"
+        },
+        "style": {
+          "normal": "upright",
+          "italic": "italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": false,
+        "regularName": "regular"
+      }
+    },
+    "id": 186
+  },
+  {
+    "name": "Miracode",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A sharp, readable vector version of Monocraft, the programming font based on Minecraft.",
+    "css": "\"Miracode\"",
+    "homepage": "https://github.com/IdreesInc/Miracode",
+    "ttf": "fonts/Miracode/Miracode.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Expressive Experimentals",
+    "id": 187
+  },
+  {
+    "name": "Sergamon",
+    "source": "embedded",
+    "ligatures": false,
+    "description": "A pixel-perfect monospaced font for code, drawn on an 8x16 pixel grid.",
+    "css": "\"Sergamon\"",
+    "homepage": "https://sgmonda.com/sergamon",
+    "ttf": null,
+    "otf": null,
+    "woff2": "fonts/Sergamon/Sergamon.woff2",
+    "category": "Technical Specialists",
+    "id": 188
+  },
+  {
+    "name": "Hack Ligatured",
+    "source": "embedded",
+    "ligatures": true,
+    "description": "Hack, patched with the programming ligatures of Fira Code.",
+    "css": "\"Hack Ligatured\"",
+    "homepage": "https://github.com/gaplo917/Ligatured-Hack",
+    "ttf": "fonts/Hack Ligatured/HackFCLigatured-Regular.ttf",
+    "otf": null,
+    "woff2": null,
+    "category": "Neutral Workhorses",
+    "axes": {
+      "weights": [
+        400,
+        700
+      ],
+      "styles": [
+        "normal",
+        "italic"
+      ],
+      "widths": [
+        "normal"
+      ]
+    },
+    "variantsMatrix": {
+      "prefer": "ttf",
+      "files": {
+        "ttf": "fonts/Hack Ligatured/HackFCLigatured-{weight|map}{style|map}.ttf"
+      },
+      "maps": {
+        "width": {
+          "normal": ""
+        },
+        "weight": {
+          "400": "Regular",
+          "700": "Bold"
+        },
+        "style": {
+          "normal": "",
+          "italic": "Italic"
+        }
+      },
+      "cleanup": true,
+      "rules": {
+        "regularOnlyOnBase": true,
+        "regularName": "Regular"
+      }
+    },
+    "id": 189
+  },
+  {
+    "name": "Iosevka Charon Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A style variant of Iosevka, without ligatures.",
+    "css": "\"Iosevka Charon Mono\"",
+    "homepage": "https://fonts.google.com/specimen/Iosevka+Charon+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Expressive Experimentals",
+    "id": 190
+  },
+  {
+    "name": "Lilex",
+    "source": "google",
+    "ligatures": true,
+    "description": "An extended take on IBM Plex Mono with programming ligatures.",
+    "css": "\"Lilex\"",
+    "homepage": "https://fonts.google.com/specimen/Lilex",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Humanist Readables",
+    "id": 191
+  },
+  {
+    "name": "SUSE Mono",
+    "source": "google",
+    "ligatures": true,
+    "description": "The monospaced companion to the SUSE typeface, with programming ligatures.",
+    "css": "\"SUSE Mono\"",
+    "homepage": "https://fonts.google.com/specimen/SUSE+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Geometric Moderns",
+    "id": 192
+  },
+  {
+    "name": "Libertinus Mono",
+    "source": "google",
+    "ligatures": false,
+    "description": "A serif monospaced face from the Libertinus family, with a typewriter feel.",
+    "css": "\"Libertinus Mono\"",
+    "homepage": "https://fonts.google.com/specimen/Libertinus+Mono",
+    "ttf": null,
+    "otf": null,
+    "woff2": null,
+    "category": "Typewriter Classics",
+    "id": 193
   }
 ]

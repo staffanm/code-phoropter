@@ -1,0 +1,2498 @@
+{
+  "3270": {
+    "families": {
+      "normal": "IBM 3270",
+      "semi-condensed": "IBM 3270 Semi-Condensed",
+      "condensed": "IBM 3270 Condensed"
+    },
+    "ps": {
+      "400:normal:normal": "3270-Regular",
+      "400:normal:semi-condensed": "3270SemiCondensed",
+      "400:normal:condensed": "3270Condensed"
+    }
+  },
+  "0xProto": {
+    "families": {
+      "normal": "0xProto"
+    },
+    "ps": {
+      "400:normal:normal": "0xProto-Regular",
+      "400:italic:normal": "0xProto-Italic",
+      "700:normal:normal": "0xProto-Bold",
+      "700:italic:normal": "0xProto-Bold"
+    }
+  },
+  "0xProto Nerd Font": {
+    "families": {
+      "normal": "0xProto Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "0xProtoNF-Regular",
+      "400:italic:normal": "0xProtoNF-Italic",
+      "700:normal:normal": "0xProtoNF-Bold"
+    }
+  },
+  "3270 Nerd Font": {
+    "families": {
+      "normal": "3270 Nerd Font",
+      "semi-condensed": "3270 Nerd Font SemCond",
+      "condensed": "3270 Nerd Font Cond"
+    },
+    "ps": {
+      "400:normal:normal": "3270NF",
+      "400:normal:semi-condensed": "3270NF-SemCond",
+      "400:normal:condensed": "3270NF-Cond"
+    }
+  },
+  "Adwaita Mono": {
+    "families": {
+      "normal": "Adwaita Mono"
+    },
+    "ps": {
+      "400:normal:normal": "Adwaita-Mono",
+      "400:italic:normal": "Adwaita-Mono-Italic",
+      "700:normal:normal": "Adwaita-Mono-Bold",
+      "700:italic:normal": "Adwaita-Mono-Bold-Italic"
+    }
+  },
+  "AdwaitaMono Nerd Font": {
+    "families": {
+      "normal": "AdwaitaMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "AdwaitaMonoNF",
+      "400:italic:normal": "AdwaitaMonoNF-Italic",
+      "700:normal:normal": "AdwaitaMonoNF-Bold"
+    }
+  },
+  "Agave": {
+    "families": {
+      "normal": "Agave"
+    },
+    "ps": {
+      "400:normal:normal": "Agave-Regular",
+      "700:normal:normal": "Agave-Bold"
+    }
+  },
+  "Agave Nerd Font": {
+    "families": {
+      "normal": "Agave Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "AgaveNF-Regular",
+      "700:normal:normal": "AgaveNF-Bold"
+    }
+  },
+  "Andale Mono": {
+    "families": {
+      "normal": "Andale Mono"
+    },
+    "ps": {
+      "400:normal:normal": "AndaleMono"
+    }
+  },
+  "Anka Coder": {
+    "families": {
+      "normal": "Anka/Coder",
+      "semi-condensed": "Anka/Coder Condensed",
+      "condensed": "Anka/Coder Narrow"
+    },
+    "ps": {
+      "400:normal:normal": "AnkaCoder-r",
+      "400:italic:normal": "AnkaCoder-i",
+      "400:normal:semi-condensed": "AnkaCoder-C87-r",
+      "400:italic:semi-condensed": "AnkaCoder-C87-i",
+      "400:normal:condensed": "AnkaCoder-C75-r",
+      "400:italic:condensed": "AnkaCoder-C75-i",
+      "700:normal:normal": "AnkaCoder-b",
+      "700:italic:normal": "AnkaCoder-bi",
+      "700:normal:semi-condensed": "AnkaCoder-C87-b",
+      "700:italic:semi-condensed": "AnkaCoder-C87-bi",
+      "700:normal:condensed": "AnkaCoder-C75-b",
+      "700:italic:condensed": "AnkaCoder-C75-bi"
+    }
+  },
+  "Annotation Mono": {
+    "families": {
+      "normal": "Annotation Mono"
+    },
+    "ps": {
+      "100:normal:normal": "AnnotationMono-Thin",
+      "100:oblique:normal": "AnnotationMono-ThinOblique",
+      "200:normal:normal": "AnnotationMono-ExtraLight",
+      "200:oblique:normal": "AnnotationMono-ExtraLightOblique",
+      "300:normal:normal": "AnnotationMono-Light",
+      "300:oblique:normal": "AnnotationMono-LightOblique",
+      "400:normal:normal": "AnnotationMono-Regular",
+      "400:oblique:normal": "AnnotationMono-RegularOblique",
+      "500:normal:normal": "AnnotationMono-Medium",
+      "500:oblique:normal": "AnnotationMono-MediumOblique",
+      "600:normal:normal": "AnnotationMono-DemiBold",
+      "600:oblique:normal": "AnnotationMono-DemiBoldOblique",
+      "700:normal:normal": "AnnotationMono-Bold",
+      "700:oblique:normal": "AnnotationMono-BoldOblique",
+      "800:normal:normal": "AnnotationMono-ExtraBold",
+      "800:oblique:normal": "AnnotationMono-ExtraBoldOblique",
+      "900:normal:normal": "AnnotationMono-Black",
+      "900:oblique:normal": "AnnotationMono-BlackOblique",
+      "1000:normal:normal": "AnnotationMono-ExtraBlack",
+      "1000:oblique:normal": "AnnotationMono-ExtraBlackOblique"
+    }
+  },
+  "Anonymous Pro": {
+    "families": {
+      "normal": "Anonymous Pro"
+    },
+    "ps": {
+      "400:italic:normal": "AnonymousPro-Italic",
+      "700:italic:normal": "AnonymousPro-BoldItalic",
+      "400:normal:normal": "AnonymousPro-Regular",
+      "700:normal:normal": "AnonymousPro-Bold"
+    }
+  },
+  "AnonymousPro Nerd Font": {
+    "families": {
+      "normal": "AnonymicePro Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "AnonymiceProNF",
+      "400:italic:normal": "AnonymiceProNF-Italic",
+      "700:normal:normal": "AnonymiceProNF-Bold"
+    }
+  },
+  "APL2741": {
+    "families": {
+      "normal": "APL2741 Unicode"
+    },
+    "ps": {
+      "400:normal:normal": "APL2741Unicode"
+    }
+  },
+  "APL385 Unicode": {
+    "families": {
+      "normal": "APL385 Unicode"
+    },
+    "ps": {
+      "400:normal:normal": "APL385"
+    }
+  },
+  "Aporetic Sans Mono": {
+    "families": {
+      "normal": "Aporetic Sans Mono"
+    },
+    "ps": {
+      "400:normal:normal": "Aporetic-Sans-Mono",
+      "400:italic:normal": "Aporetic-Sans-Mono-Italic",
+      "700:normal:normal": "Aporetic-Sans-Mono-Bold",
+      "700:italic:normal": "Aporetic-Sans-Mono-Bold-Italic"
+    }
+  },
+  "Atkinson Hyperlegible Mono": {
+    "families": {
+      "normal": "Atkinson Hyperlegible Mono"
+    },
+    "ps": {
+      "300:italic:normal": "AtkinsonHyperlegibleMono-LightItalic",
+      "600:italic:normal": "AtkinsonHyperlegibleMono-SemiBoldItalic",
+      "500:italic:normal": "AtkinsonHyperlegibleMono-MediumItalic",
+      "200:italic:normal": "AtkinsonHyperlegibleMono-ExtraLightItalic",
+      "700:normal:normal": "AtkinsonHyperlegibleMono-Bold",
+      "700:italic:normal": "AtkinsonHyperlegibleMono-BoldItalic",
+      "200:normal:normal": "AtkinsonHyperlegibleMono-ExtraLight",
+      "400:normal:normal": "AtkinsonHyperlegibleMono-Regular",
+      "800:normal:normal": "AtkinsonHyperlegibleMono-ExtraBold",
+      "500:normal:normal": "AtkinsonHyperlegibleMono-Medium",
+      "600:normal:normal": "AtkinsonHyperlegibleMono-SemiBold",
+      "300:normal:normal": "AtkinsonHyperlegibleMono-Light",
+      "400:italic:normal": "AtkinsonHyperlegibleMono-Italic",
+      "800:italic:normal": "AtkinsonHyperlegibleMono-ExtraBoldItalic"
+    }
+  },
+  "AtkinsonHyperlegibleMono Nerd Font": {
+    "families": {
+      "normal": "AtkynsonMono Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "AtkynsonMonoNF-Light",
+      "400:normal:normal": "AtkynsonMonoNF-Regular",
+      "400:italic:normal": "AtkynsonMonoNF-Italic",
+      "500:normal:normal": "AtkynsonMonoNF-Medium",
+      "700:normal:normal": "AtkynsonMonoNF-Bold"
+    }
+  },
+  "AudioLink Console": {
+    "families": {
+      "normal": "AudioLink Console Regular"
+    },
+    "ps": {
+      "400:normal:normal": "AudioLinkConsole-Regular",
+      "300:normal:normal": "AudioLinkConsole-Light",
+      "500:normal:normal": "AudioLinkConsole-Medium",
+      "600:normal:normal": "AudioLinkConsole-Demi",
+      "700:normal:normal": "AudioLinkConsole-Bold"
+    }
+  },
+  "AurulentSansMono Nerd Font": {
+    "families": {
+      "normal": "AurulentSansM Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "AurulentSansMNF-Regular"
+    }
+  },
+  "Azeret Mono": {
+    "families": {
+      "normal": "Azeret Mono"
+    },
+    "ps": {
+      "400:italic:normal": "AzeretMono-Italic",
+      "200:italic:normal": "AzeretMono-ExtraLightItalic",
+      "500:italic:normal": "AzeretMono-MediumItalic",
+      "300:italic:normal": "AzeretMono-LightItalic",
+      "800:normal:normal": "AzeretMono-ExtraBold",
+      "300:normal:normal": "AzeretMono-Light",
+      "900:italic:normal": "AzeretMono-BlackItalic",
+      "700:italic:normal": "AzeretMono-BoldItalic",
+      "600:italic:normal": "AzeretMono-SemiBoldItalic",
+      "400:normal:normal": "AzeretMono-Regular",
+      "600:normal:normal": "AzeretMono-SemiBold",
+      "700:normal:normal": "AzeretMono-Bold",
+      "200:normal:normal": "AzeretMono-ExtraLight",
+      "500:normal:normal": "AzeretMono-Medium",
+      "900:normal:normal": "AzeretMono-Black",
+      "100:normal:normal": "AzeretMono-Thin",
+      "800:italic:normal": "AzeretMono-ExtraBoldItalic",
+      "100:italic:normal": "AzeretMono-ThinItalic"
+    }
+  },
+  "B612 Mono": {
+    "families": {
+      "normal": "B612 Mono"
+    },
+    "ps": {
+      "400:italic:normal": "B612Mono-Italic",
+      "700:italic:normal": "B612Mono-BoldItalic",
+      "400:normal:normal": "B612Mono-Regular",
+      "700:normal:normal": "B612Mono-Bold"
+    }
+  },
+  "BigBlueTerminal Nerd Font": {
+    "families": {
+      "normal": "BigBlueTerm437 Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "BigBlueTerm437NF"
+    }
+  },
+  "BitstreamVeraSansMono Nerd Font": {
+    "families": {
+      "normal": "BitstromWera Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "BitstromWeraNF",
+      "700:normal:normal": "BitstromWeraNF-Bold"
+    }
+  },
+  "Cascadia Code": {
+    "families": {
+      "normal": "Cascadia Code"
+    },
+    "ps": {
+      "400:italic:normal": "CascadiaCode-Italic",
+      "300:italic:normal": "CascadiaCode-LightItalic",
+      "500:italic:normal": "CascadiaCode-MediumItalic",
+      "200:italic:normal": "CascadiaCode-ExtraLightItalic",
+      "600:italic:normal": "CascadiaCode-SemiBoldItalic",
+      "700:italic:normal": "CascadiaCode-BoldItalic",
+      "600:normal:normal": "CascadiaCode-SemiBold",
+      "400:normal:normal": "CascadiaCode-Regular",
+      "700:normal:normal": "CascadiaCode-Bold",
+      "300:normal:normal": "CascadiaCode-Light",
+      "200:normal:normal": "CascadiaCode-ExtraLight",
+      "500:normal:normal": "CascadiaCode-Medium"
+    }
+  },
+  "CascadiaCode Nerd Font": {
+    "families": {
+      "normal": "CaskaydiaCove Nerd Font"
+    },
+    "ps": {
+      "200:normal:normal": "CaskaydiaCoveNF-ExtraLight",
+      "300:normal:normal": "CaskaydiaCoveNF-Light",
+      "400:normal:normal": "CaskaydiaCoveNF-Regular",
+      "400:italic:normal": "CaskaydiaCoveNF-Italic",
+      "600:normal:normal": "CaskaydiaCoveNF-SemiBold",
+      "700:normal:normal": "CaskaydiaCoveNF-Bold"
+    }
+  },
+  "CascadiaMono Nerd Font": {
+    "families": {
+      "normal": "CaskaydiaMono Nerd Font"
+    },
+    "ps": {
+      "200:normal:normal": "CaskaydiaMonoNF-ExtraLight",
+      "300:normal:normal": "CaskaydiaMonoNF-Light",
+      "400:normal:normal": "CaskaydiaMonoNF-Regular",
+      "400:italic:normal": "CaskaydiaMonoNF-Italic",
+      "600:normal:normal": "CaskaydiaMonoNF-SemiBold",
+      "700:normal:normal": "CaskaydiaMonoNF-Bold"
+    }
+  },
+  "CodeNewRoman Nerd Font": {
+    "families": {
+      "normal": "CodeNewRoman Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "CodeNewRomanNF",
+      "400:italic:normal": "CodeNewRomanNF-Italic",
+      "700:normal:normal": "CodeNewRomanNF-Bold"
+    }
+  },
+  "Comic Mono": {
+    "families": {
+      "normal": "Comic Mono"
+    },
+    "ps": {
+      "400:normal:normal": "ComicMono"
+    }
+  },
+  "ComicShannsMono Nerd Font": {
+    "families": {
+      "normal": "ComicShannsMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "ComicShannsMonoNF-Regular",
+      "700:normal:normal": "ComicShannsMonoNF-Bold"
+    }
+  },
+  "Commit Mono": {
+    "families": {
+      "normal": "CommitMono"
+    },
+    "ps": {
+      "400:normal:normal": "CommitMono-Regular",
+      "400:italic:normal": "CommitMono-Italic",
+      "700:normal:normal": "CommitMono-Bold",
+      "700:italic:normal": "CommitMono-BoldItalic"
+    }
+  },
+  "CommitMono Nerd Font": {
+    "families": {
+      "normal": "CommitMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "CommitMonoNF-Regular",
+      "400:italic:normal": "CommitMonoNF-Italic",
+      "700:normal:normal": "CommitMonoNF-Bold"
+    }
+  },
+  "Computer Modern Typewriter": {
+    "families": {
+      "normal": "CMU Typewriter Text"
+    },
+    "ps": {
+      "200:normal:normal": "CMUTypewriter-Light",
+      "200:italic:normal": "CMUTypewriter-LightOblique",
+      "500:normal:normal": "CMUTypewriter-Regular",
+      "500:italic:normal": "CMUTypewriter-Italic",
+      "700:normal:normal": "CMUTypewriter-Bold",
+      "700:italic:normal": "CMUTypewriter-BoldItalic"
+    }
+  },
+  "Consolas": {
+    "families": {
+      "normal": "Consolas"
+    },
+    "ps": {
+      "400:normal:normal": "Consolas",
+      "700:normal:normal": "Consolas-Bold",
+      "400:italic:normal": "Consolas-Italic",
+      "700:italic:normal": "Consolas-BoldItalic"
+    }
+  },
+  "Courier New": {
+    "families": {
+      "normal": "Courier New"
+    },
+    "ps": {
+      "400:normal:normal": "CourierNewPSMT",
+      "700:normal:normal": "CourierNewPS-BoldMT",
+      "400:italic:normal": "CourierNewPS-ItalicMT",
+      "700:italic:normal": "CourierNewPS-BoldItalicMT"
+    }
+  },
+  "Courier Prime": {
+    "families": {
+      "normal": "Courier Prime"
+    },
+    "ps": {
+      "400:italic:normal": "CourierPrime-Italic",
+      "700:normal:normal": "CourierPrime-Bold",
+      "400:normal:normal": "CourierPrime-Regular",
+      "700:italic:normal": "CourierPrime-BoldItalic"
+    }
+  },
+  "Cousine": {
+    "families": {
+      "normal": "Cousine"
+    },
+    "ps": {
+      "400:normal:normal": "Cousine-Regular",
+      "700:normal:normal": "Cousine-Bold",
+      "400:italic:normal": "Cousine-Italic",
+      "700:italic:normal": "Cousine-BoldItalic"
+    }
+  },
+  "Cousine Nerd Font": {
+    "families": {
+      "normal": "Cousine Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "CousineNF-Regular",
+      "400:italic:normal": "CousineNF-Italic",
+      "700:normal:normal": "CousineNF-Bold"
+    }
+  },
+  "Cutive Mono": {
+    "families": {
+      "normal": "Cutive Mono"
+    },
+    "ps": {
+      "400:normal:normal": "CutiveMono-Regular"
+    }
+  },
+  "D2Coding Nerd Font": {
+    "families": {
+      "normal": "D2CodingLigature Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "D2CodingLigatureNF",
+      "700:normal:normal": "D2CodingLigatureNF-Bold"
+    }
+  },
+  "DaddyTimeMono Nerd Font": {
+    "families": {
+      "normal": "DaddyTimeMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "DaddyTimeMonoNF"
+    }
+  },
+  "DejaVu Sans Mono": {
+    "families": {
+      "normal": "DejaVu Sans Mono"
+    },
+    "ps": {
+      "400:normal:normal": "DejaVuSansMono",
+      "700:normal:normal": "DejaVuSansMono-Bold"
+    }
+  },
+  "DejaVuSansMono Nerd Font": {
+    "families": {
+      "normal": "DejaVuSansM Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "DejaVuSansMNF",
+      "700:normal:normal": "DejaVuSansMNF-Bold"
+    }
+  },
+  "DepartureMono Nerd Font": {
+    "families": {
+      "normal": "DepartureMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "DepartureMonoNF-Regular"
+    }
+  },
+  "DM Mono": {
+    "families": {
+      "normal": "DM Mono"
+    },
+    "ps": {
+      "400:normal:normal": "DMMono-Regular",
+      "400:italic:normal": "DMMono-Italic",
+      "500:italic:normal": "DMMono-MediumItalic",
+      "300:normal:normal": "DMMono-Light",
+      "300:italic:normal": "DMMono-LightItalic",
+      "500:normal:normal": "DMMono-Medium"
+    }
+  },
+  "Droid Sans Mono": {
+    "families": {
+      "normal": "Droid Sans Mono"
+    },
+    "ps": {
+      "400:normal:normal": "DroidSansMono"
+    }
+  },
+  "DroidSansMono Nerd Font": {
+    "families": {
+      "normal": "DroidSansM Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "DroidSansMNF"
+    }
+  },
+  "Envy Code R": {
+    "families": {
+      "normal": "Envy Code R"
+    },
+    "ps": {
+      "400:normal:normal": "EnvyCodeR",
+      "400:italic:normal": "EnvyCodeR-Italic",
+      "700:normal:normal": "EnvyCodeR-Bold",
+      "700:italic:normal": "EnvyCodeR-Bold"
+    }
+  },
+  "EnvyCodeR Nerd Font": {
+    "families": {
+      "normal": "EnvyCodeR Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "EnvyCodeRNF",
+      "400:italic:normal": "EnvyCodeRNF-Italic",
+      "700:normal:normal": "EnvyCodeRNF-Bold"
+    }
+  },
+  "Fantasque Sans Mono": {
+    "families": {
+      "normal": "Fantasque Sans Mono"
+    },
+    "ps": {
+      "400:normal:normal": "FantasqueSansMono-Regular",
+      "400:italic:normal": "FantasqueSansMono-Italic",
+      "700:normal:normal": "FantasqueSansMono-Bold",
+      "700:italic:normal": "FantasqueSansMono-BoldItalic"
+    }
+  },
+  "FantasqueSansMono Nerd Font": {
+    "families": {
+      "normal": "FantasqueSansM Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "FantasqueSansMNF-Regular",
+      "400:italic:normal": "FantasqueSansMNF-Italic",
+      "700:normal:normal": "FantasqueSansMNF-Bold"
+    }
+  },
+  "Fira Code": {
+    "families": {
+      "normal": "Fira Code"
+    },
+    "ps": {
+      "600:normal:normal": "FiraCode-SemiBold",
+      "500:normal:normal": "FiraCode-Medium",
+      "400:normal:normal": "FiraCode-Regular",
+      "700:normal:normal": "FiraCode-Bold",
+      "300:normal:normal": "FiraCode-Light"
+    }
+  },
+  "Fira Mono": {
+    "families": {
+      "normal": "Fira Mono"
+    },
+    "ps": {
+      "500:normal:normal": "FiraMono-Medium",
+      "700:normal:normal": "FiraMono-Bold",
+      "400:normal:normal": "FiraMono-Regular"
+    }
+  },
+  "FiraCode Nerd Font": {
+    "families": {
+      "normal": "FiraCode Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "FiraCodeNF-Light",
+      "400:normal:normal": "FiraCodeNF-Reg",
+      "500:normal:normal": "FiraCodeNF-Med",
+      "600:normal:normal": "FiraCodeNF-SemBd",
+      "700:normal:normal": "FiraCodeNF-Bold"
+    }
+  },
+  "FiraMono Nerd Font": {
+    "families": {
+      "normal": "FiraMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "FiraMonoNF-Regular",
+      "500:normal:normal": "FiraMonoNF-Medium",
+      "700:normal:normal": "FiraMonoNF-Bold"
+    }
+  },
+  "Geist Mono": {
+    "families": {
+      "normal": "Geist Mono"
+    },
+    "ps": {
+      "100:normal:normal": "GeistMono-Thin",
+      "200:normal:normal": "GeistMono-ExtraLight",
+      "300:normal:normal": "GeistMono-Light",
+      "100:italic:normal": "GeistMono-ThinItalic",
+      "700:italic:normal": "GeistMono-BoldItalic",
+      "200:italic:normal": "GeistMono-ExtraLightItalic",
+      "300:italic:normal": "GeistMono-LightItalic",
+      "800:italic:normal": "GeistMono-ExtraBoldItalic",
+      "500:italic:normal": "GeistMono-MediumItalic",
+      "600:italic:normal": "GeistMono-SemiBoldItalic",
+      "900:italic:normal": "GeistMono-BlackItalic",
+      "400:italic:normal": "GeistMono-Italic",
+      "400:normal:normal": "GeistMono-Regular",
+      "900:normal:normal": "GeistMono-Black",
+      "500:normal:normal": "GeistMono-Medium",
+      "600:normal:normal": "GeistMono-SemiBold",
+      "700:normal:normal": "GeistMono-Bold",
+      "800:normal:normal": "GeistMono-ExtraBold"
+    }
+  },
+  "GeistMono Nerd Font": {
+    "families": {
+      "normal": "GeistMono Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "GeistMonoNF-Thin",
+      "300:normal:normal": "GeistMonoNF-Light",
+      "400:normal:normal": "GeistMonoNF-Regular",
+      "500:normal:normal": "GeistMonoNF-Medium",
+      "600:normal:normal": "GeistMonoNF-SemiBold",
+      "700:normal:normal": "GeistMonoNF-Bold",
+      "900:normal:normal": "GeistMonoNF-UltraBlack"
+    }
+  },
+  "Go Mono": {
+    "families": {
+      "normal": "Go Mono"
+    },
+    "ps": {
+      "400:normal:normal": "GoMono",
+      "400:italic:normal": "GoMono-Italic",
+      "700:normal:normal": "GoMono-Bold",
+      "700:italic:normal": "GoMono-BoldItalic"
+    }
+  },
+  "Go-Mono Nerd Font": {
+    "families": {
+      "normal": "GoMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "GoMonoNF",
+      "400:italic:normal": "GoMonoNF-Italic",
+      "700:normal:normal": "GoMonoNF-Bold"
+    }
+  },
+  "Gohu Nerd Font": {
+    "families": {
+      "normal": "GohuFont 11 Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "GohuFont11NF"
+    }
+  },
+  "Google Sans Code": {
+    "families": {
+      "normal": "Google Sans Code"
+    },
+    "ps": {
+      "300:normal:normal": "GoogleSansCode-Light",
+      "600:normal:normal": "GoogleSansCode-SemiBold",
+      "300:italic:normal": "GoogleSansCode-LightItalic",
+      "500:normal:normal": "GoogleSansCode-Medium",
+      "700:normal:normal": "GoogleSansCode-Bold",
+      "400:normal:normal": "GoogleSansCode-Regular",
+      "400:italic:normal": "GoogleSansCode-Italic",
+      "800:normal:normal": "GoogleSansCode-ExtraBold",
+      "500:italic:normal": "GoogleSansCode-MediumItalic",
+      "800:italic:normal": "GoogleSansCode-ExtraBoldItalic",
+      "600:italic:normal": "GoogleSansCode-SemiBoldItalic",
+      "700:italic:normal": "GoogleSansCode-BoldItalic"
+    }
+  },
+  "Hack": {
+    "families": {
+      "normal": "Hack"
+    },
+    "ps": {
+      "400:normal:normal": "Hack-Regular",
+      "400:italic:normal": "Hack-Italic",
+      "700:normal:normal": "Hack-Bold",
+      "700:italic:normal": "Hack-BoldItalic"
+    }
+  },
+  "Hack Ligatured": {
+    "families": {
+      "normal": "Hack FC Ligatured"
+    },
+    "ps": {
+      "400:normal:normal": "HackFCLigatured-Regular",
+      "400:italic:normal": "HackFCLigatured-Italic",
+      "700:normal:normal": "HackFCLigatured-Bold",
+      "700:italic:normal": "HackFCLigatured-BoldItalic"
+    }
+  },
+  "Hack Nerd Font": {
+    "families": {
+      "normal": "Hack Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "HackNF-Regular",
+      "400:italic:normal": "HackNF-Italic",
+      "700:normal:normal": "HackNF-Bold"
+    }
+  },
+  "Hasklig": {
+    "families": {
+      "normal": "Hasklig"
+    },
+    "ps": {
+      "400:normal:normal": "Hasklig-Regular",
+      "200:normal:normal": "Hasklig-ExtraLight",
+      "200:italic:normal": "Hasklig-ExtraLightIt",
+      "300:normal:normal": "Hasklig-Light",
+      "300:italic:normal": "Hasklig-LightIt",
+      "500:normal:normal": "Hasklig-Medium",
+      "500:italic:normal": "Hasklig-MediumIt",
+      "600:normal:normal": "Hasklig-Semibold",
+      "600:italic:normal": "Hasklig-SemiboldIt",
+      "700:normal:normal": "Hasklig-Bold",
+      "700:italic:normal": "Hasklig-BoldIt",
+      "900:normal:normal": "Hasklig-Black",
+      "900:italic:normal": "Hasklig-BlackIt"
+    }
+  },
+  "Hasklig Nerd Font": {
+    "families": {
+      "normal": "Hasklug Nerd Font"
+    },
+    "ps": {
+      "200:normal:normal": "HasklugNF-ExtLt",
+      "200:italic:normal": "HasklugNF-ExtLtItalic",
+      "300:normal:normal": "HasklugNF-Light",
+      "300:italic:normal": "HasklugNF-LightItalic",
+      "400:normal:normal": "HasklugNF",
+      "400:italic:normal": "HasklugNF-Italic",
+      "500:normal:normal": "HasklugNF-Med",
+      "500:italic:normal": "HasklugNF-MedItalic",
+      "600:normal:normal": "HasklugNF-SemBd",
+      "600:italic:normal": "HasklugNF-SemBdItalic",
+      "700:normal:normal": "HasklugNF-Bold",
+      "700:italic:normal": "HasklugNF-BoldItalic",
+      "900:normal:normal": "HasklugNF-Black",
+      "900:italic:normal": "HasklugNF-BlackItalic"
+    }
+  },
+  "Hermit": {
+    "families": {
+      "normal": "Hermit"
+    },
+    "ps": {
+      "400:normal:normal": "Hermit-Regular",
+      "300:normal:normal": "Hermit-Light",
+      "300:italic:normal": "Hermit-LightItalic",
+      "400:italic:normal": "Hermit-RegularItalic",
+      "700:normal:normal": "Hermit-Bold",
+      "700:italic:normal": "Hermit-BoldItalic"
+    }
+  },
+  "Hermit Nerd Font": {
+    "families": {
+      "normal": "Hurmit Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "HurmitNF-Light",
+      "400:normal:normal": "HurmitNF-Regular",
+      "400:italic:normal": "HurmitNF-Italic",
+      "700:normal:normal": "HurmitNF-Bold"
+    }
+  },
+  "iA-Writer Nerd Font": {
+    "families": {
+      "normal": "iMWritingMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "IMWritingMonoNF-Regular",
+      "400:italic:normal": "IMWritingMonoNF-Italic",
+      "700:normal:normal": "IMWritingMonoNF-Bold"
+    }
+  },
+  "IBM Courier": {
+    "families": {
+      "normal": "OG Courier Zero Slash"
+    },
+    "ps": {
+      "400:normal:normal": "Gourier",
+      "400:italic:normal": "Gourier-Italic",
+      "700:normal:normal": "Gourier-Bold",
+      "700:italic:normal": "Gourier-BoldItalic"
+    }
+  },
+  "IBM Plex Mono": {
+    "families": {
+      "normal": "IBM Plex Mono"
+    },
+    "ps": {
+      "300:normal:normal": "IBMPlexMono-Light",
+      "400:normal:normal": "IBMPlexMono-Regular",
+      "100:normal:normal": "IBMPlexMono-Thin",
+      "200:normal:normal": "IBMPlexMono-ExtraLight",
+      "600:normal:normal": "IBMPlexMono-SemiBold",
+      "500:normal:normal": "IBMPlexMono-Medium",
+      "700:normal:normal": "IBMPlexMono-Bold",
+      "200:italic:normal": "IBMPlexMono-ExtraLightItalic",
+      "100:italic:normal": "IBMPlexMono-ThinItalic",
+      "400:italic:normal": "IBMPlexMono-Italic",
+      "600:italic:normal": "IBMPlexMono-SemiBoldItalic",
+      "300:italic:normal": "IBMPlexMono-LightItalic",
+      "500:italic:normal": "IBMPlexMono-MediumItalic",
+      "700:italic:normal": "IBMPlexMono-BoldItalic"
+    }
+  },
+  "IBMPlexMono Nerd Font": {
+    "families": {
+      "normal": "BlexMono Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "BlexMonoNF-Thin",
+      "200:normal:normal": "BlexMonoNF-ExtraLight",
+      "300:normal:normal": "BlexMonoNF-Light",
+      "400:normal:normal": "BlexMonoNF",
+      "400:italic:normal": "BlexMonoNF-Italic",
+      "500:normal:normal": "BlexMonoNF-Medium",
+      "600:normal:normal": "BlexMonoNF-SemiBold",
+      "700:normal:normal": "BlexMonoNF-Bold"
+    }
+  },
+  "Inconsolata": {
+    "families": {
+      "normal": "Inconsolata"
+    },
+    "ps": {
+      "300:normal:normal": "Inconsolata-Light",
+      "600:normal:normal": "Inconsolata-SemiBold",
+      "400:normal:normal": "Inconsolata-Regular",
+      "800:normal:normal": "Inconsolata-ExtraBold",
+      "500:normal:normal": "Inconsolata-Medium",
+      "700:normal:normal": "Inconsolata-Bold",
+      "900:normal:normal": "Inconsolata-Black",
+      "200:normal:normal": "Inconsolata-ExtraLight"
+    }
+  },
+  "Inconsolata Nerd Font": {
+    "families": {
+      "normal": "Inconsolata Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "InconsolataNF-Regular",
+      "700:normal:normal": "InconsolataNF-Bold"
+    }
+  },
+  "Intel One Mono": {
+    "families": {
+      "normal": "Intel One Mono"
+    },
+    "ps": {
+      "300:normal:normal": "IntelOneMono-Light",
+      "500:italic:normal": "IntelOneMono-MediumItalic",
+      "400:normal:normal": "IntelOneMono-Regular",
+      "300:italic:normal": "IntelOneMono-LightItalic",
+      "700:normal:normal": "IntelOneMono-Bold",
+      "400:italic:normal": "IntelOneMono-Italic",
+      "500:normal:normal": "IntelOneMono-Medium",
+      "700:italic:normal": "IntelOneMono-BoldItalic",
+      "600:italic:normal": "IntelOneMono-SemiBoldItalic",
+      "600:normal:normal": "IntelOneMono-SemiBold"
+    }
+  },
+  "IntelOneMono Nerd Font": {
+    "families": {
+      "normal": "IntoneMono Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "IntoneMonoNF-Light",
+      "400:normal:normal": "IntoneMonoNF",
+      "400:italic:normal": "IntoneMonoNF-Italic",
+      "500:normal:normal": "IntoneMonoNF-Medium",
+      "700:normal:normal": "IntoneMonoNF-Bold"
+    }
+  },
+  "Iosevka": {
+    "families": {
+      "normal": "Iosevka",
+      "expanded": "Iosevka Extended"
+    },
+    "ps": {
+      "100:normal:normal": "Iosevka-Thin",
+      "100:italic:normal": "Iosevka-Thin-Italic",
+      "100:normal:expanded": "Iosevka-Thin-Extended",
+      "100:italic:expanded": "Iosevka-Thin-Extended-Italic",
+      "200:normal:normal": "Iosevka-Extralight",
+      "200:italic:normal": "Iosevka-Extralight-Italic",
+      "200:normal:expanded": "Iosevka-Extralight-Extended",
+      "200:italic:expanded": "Iosevka-Extralight-Extended-Italic",
+      "300:normal:normal": "Iosevka-Light",
+      "300:italic:normal": "Iosevka-Light-Italic",
+      "300:normal:expanded": "Iosevka-Light-Extended",
+      "300:italic:expanded": "Iosevka-Light-Extended-Italic",
+      "400:normal:normal": "Iosevka",
+      "400:italic:normal": "Iosevka-Italic",
+      "400:normal:expanded": "Iosevka-Extended",
+      "400:italic:expanded": "Iosevka-Extended-Italic",
+      "500:normal:normal": "Iosevka-Medium",
+      "500:italic:normal": "Iosevka-Medium-Italic",
+      "500:normal:expanded": "Iosevka-Medium-Extended",
+      "500:italic:expanded": "Iosevka-Medium-Extended-Italic",
+      "600:normal:normal": "Iosevka-Semibold",
+      "600:italic:normal": "Iosevka-Semibold-Italic",
+      "600:normal:expanded": "Iosevka-Semibold-Extended",
+      "600:italic:expanded": "Iosevka-Semibold-Extended-Italic",
+      "700:normal:normal": "Iosevka-Bold",
+      "700:italic:normal": "Iosevka-Bold-Italic",
+      "700:normal:expanded": "Iosevka-Bold-Extended",
+      "700:italic:expanded": "Iosevka-Bold-Extended-Italic",
+      "800:normal:normal": "Iosevka-Extrabold",
+      "800:italic:normal": "Iosevka-Extrabold-Italic",
+      "800:normal:expanded": "Iosevka-Extrabold-Extended",
+      "800:italic:expanded": "Iosevka-Extrabold-Extended-Italic",
+      "900:normal:normal": "Iosevka-Heavy",
+      "900:italic:normal": "Iosevka-Heavy-Italic",
+      "900:normal:expanded": "Iosevka-Heavy-Extended",
+      "900:italic:expanded": "Iosevka-Heavy-Extended-Italic"
+    }
+  },
+  "Iosevka Charon Mono": {
+    "families": {
+      "normal": "Iosevka Charon Mono"
+    },
+    "ps": {
+      "400:italic:normal": "IosevkaCharonMono-Italic",
+      "700:italic:normal": "IosevkaCharonMono-BoldItalic",
+      "300:normal:normal": "IosevkaCharonMono-Light",
+      "500:italic:normal": "IosevkaCharonMono-MediumItalic",
+      "300:italic:normal": "IosevkaCharonMono-LightItalic",
+      "400:normal:normal": "IosevkaCharonMono-Regular",
+      "700:normal:normal": "IosevkaCharonMono-Bold",
+      "500:normal:normal": "IosevkaCharonMono-Medium"
+    }
+  },
+  "Iosevka Nerd Font": {
+    "families": {
+      "normal": "Iosevka Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "IosevkaNF-Thin",
+      "200:normal:normal": "IosevkaNF-ExtraLight",
+      "300:normal:normal": "IosevkaNF-Light",
+      "400:normal:normal": "IosevkaNF",
+      "400:italic:normal": "IosevkaNF-Italic",
+      "500:normal:normal": "IosevkaNF-Medium",
+      "600:normal:normal": "IosevkaNF-SemiBold",
+      "700:normal:normal": "IosevkaNF-Bold",
+      "800:normal:normal": "IosevkaNF-ExtraBold",
+      "900:normal:normal": "IosevkaNF-Heavy"
+    }
+  },
+  "Iosevka Slab": {
+    "families": {
+      "normal": "Iosevka Slab",
+      "expanded": "Iosevka Slab Extended"
+    },
+    "ps": {
+      "100:normal:normal": "Iosevka-Slab-Thin",
+      "100:italic:normal": "Iosevka-Slab-Thin-Italic",
+      "100:normal:expanded": "Iosevka-Slab-Thin-Extended",
+      "100:italic:expanded": "Iosevka-Slab-Thin-Extended-Italic",
+      "200:normal:normal": "Iosevka-Slab-Extralight",
+      "200:italic:normal": "Iosevka-Slab-Extralight-Italic",
+      "200:normal:expanded": "Iosevka-Slab-Extralight-Extended",
+      "200:italic:expanded": "Iosevka-Slab-Extralight-Extended-Italic",
+      "300:normal:normal": "Iosevka-Slab-Light",
+      "300:italic:normal": "Iosevka-Slab-Light-Italic",
+      "300:normal:expanded": "Iosevka-Slab-Light-Extended",
+      "300:italic:expanded": "Iosevka-Slab-Light-Extended-Italic",
+      "400:normal:normal": "Iosevka-Slab",
+      "400:italic:normal": "Iosevka-Slab-Italic",
+      "400:normal:expanded": "Iosevka-Slab-Extended",
+      "400:italic:expanded": "Iosevka-Slab-Extended-Italic",
+      "500:normal:normal": "Iosevka-Slab-Medium",
+      "500:italic:normal": "Iosevka-Slab-Medium-Italic",
+      "500:normal:expanded": "Iosevka-Slab-Medium-Extended",
+      "500:italic:expanded": "Iosevka-Slab-Medium-Extended-Italic",
+      "600:normal:normal": "Iosevka-Slab-Semibold",
+      "600:italic:normal": "Iosevka-Slab-Semibold-Italic",
+      "600:normal:expanded": "Iosevka-Slab-Semibold-Extended",
+      "600:italic:expanded": "Iosevka-Slab-Semibold-Extended-Italic",
+      "700:normal:normal": "Iosevka-Slab-Bold",
+      "700:italic:normal": "Iosevka-Slab-Bold-Italic",
+      "700:normal:expanded": "Iosevka-Slab-Bold-Extended",
+      "700:italic:expanded": "Iosevka-Slab-Bold-Extended-Italic",
+      "800:normal:normal": "Iosevka-Slab-Extrabold",
+      "800:italic:normal": "Iosevka-Slab-Extrabold-Italic",
+      "800:normal:expanded": "Iosevka-Slab-Extrabold-Extended",
+      "800:italic:expanded": "Iosevka-Slab-Extrabold-Extended-Italic",
+      "900:normal:normal": "Iosevka-Slab-Heavy",
+      "900:italic:normal": "Iosevka-Slab-Heavy-Italic",
+      "900:normal:expanded": "Iosevka-Slab-Heavy-Extended",
+      "900:italic:expanded": "Iosevka-Slab-Heavy-Extended-Italic"
+    }
+  },
+  "IosevkaTerm Nerd Font": {
+    "families": {
+      "normal": "IosevkaTerm Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "IosevkaTermNF-Thin",
+      "200:normal:normal": "IosevkaTermNF-ExtraLight",
+      "300:normal:normal": "IosevkaTermNF-Light",
+      "400:normal:normal": "IosevkaTermNF",
+      "400:italic:normal": "IosevkaTermNF-Italic",
+      "500:normal:normal": "IosevkaTermNF-Medium",
+      "600:normal:normal": "IosevkaTermNF-SemiBold",
+      "700:normal:normal": "IosevkaTermNF-Bold",
+      "800:normal:normal": "IosevkaTermNF-ExtraBold",
+      "900:normal:normal": "IosevkaTermNF-Heavy"
+    }
+  },
+  "IosevkaTermSlab Nerd Font": {
+    "families": {
+      "normal": "IosevkaTermSlab Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "IosevkaTermSlabNF-Light",
+      "400:normal:normal": "IosevkaTermSlabNF",
+      "400:italic:normal": "IosevkaTermSlabNF-Italic",
+      "500:normal:normal": "IosevkaTermSlabNF-Medium",
+      "700:normal:normal": "IosevkaTermSlabNF-Bold",
+      "800:normal:normal": "IosevkaTermSlabNF-ExtraBold"
+    }
+  },
+  "Ioskeley Mono": {
+    "families": {
+      "normal": "Ioskeley Mono",
+      "semi-condensed": "Ioskeley Mono Semi-Condensed"
+    },
+    "ps": {
+      "400:normal:normal": "Ioskeley-Mono",
+      "100:normal:normal": "Ioskeley-Mono-Thin",
+      "100:italic:normal": "Ioskeley-Mono-Thin-Italic",
+      "100:normal:semi-condensed": "Ioskeley-Mono-Thin-Semi-Condensed",
+      "100:italic:semi-condensed": "Ioskeley-Mono-Thin-Semi-Condensed-Italic",
+      "200:normal:normal": "Ioskeley-Mono-Extralight",
+      "200:italic:normal": "Ioskeley-Mono-Extralight-Italic",
+      "200:normal:semi-condensed": "Ioskeley-Mono-Extralight-Semi-Condensed",
+      "200:italic:semi-condensed": "Ioskeley-Mono-Extralight-Semi-Condensed-Italic",
+      "300:normal:normal": "Ioskeley-Mono-Light",
+      "300:italic:normal": "Ioskeley-Mono-Light-Italic",
+      "300:normal:semi-condensed": "Ioskeley-Mono-Light-Semi-Condensed",
+      "300:italic:semi-condensed": "Ioskeley-Mono-Light-Semi-Condensed-Italic",
+      "400:italic:normal": "Ioskeley-Mono-Italic",
+      "400:normal:semi-condensed": "Ioskeley-Mono-Semi-Condensed",
+      "400:italic:semi-condensed": "Ioskeley-Mono-Semi-Condensed-Italic",
+      "500:normal:normal": "Ioskeley-Mono-Medium",
+      "500:italic:normal": "Ioskeley-Mono-Medium-Italic",
+      "500:normal:semi-condensed": "Ioskeley-Mono-Medium-Semi-Condensed",
+      "500:italic:semi-condensed": "Ioskeley-Mono-Medium-Semi-Condensed-Italic",
+      "600:normal:normal": "Ioskeley-Mono-Semibold",
+      "600:italic:normal": "Ioskeley-Mono-Semibold-Italic",
+      "600:normal:semi-condensed": "Ioskeley-Mono-Semibold-Semi-Condensed",
+      "600:italic:semi-condensed": "Ioskeley-Mono-Semibold-Semi-Condensed-Italic",
+      "700:normal:normal": "Ioskeley-Mono-Bold",
+      "700:italic:normal": "Ioskeley-Mono-Bold-Italic",
+      "700:normal:semi-condensed": "Ioskeley-Mono-Bold-Semi-Condensed",
+      "700:italic:semi-condensed": "Ioskeley-Mono-Bold-Semi-Condensed-Italic",
+      "800:normal:normal": "Ioskeley-Mono-Extrabold",
+      "800:italic:normal": "Ioskeley-Mono-Extrabold-Italic",
+      "800:normal:semi-condensed": "Ioskeley-Mono-Extrabold-Semi-Condensed",
+      "800:italic:semi-condensed": "Ioskeley-Mono-Extrabold-Semi-Condensed-Italic",
+      "900:normal:normal": "Ioskeley-Mono-Heavy",
+      "900:italic:normal": "Ioskeley-Mono-Heavy-Italic",
+      "900:normal:semi-condensed": "Ioskeley-Mono-Heavy-Semi-Condensed",
+      "900:italic:semi-condensed": "Ioskeley-Mono-Heavy-Semi-Condensed-Italic"
+    }
+  },
+  "JetBrains Mono": {
+    "families": {
+      "normal": "JetBrains Mono"
+    },
+    "ps": {
+      "400:normal:normal": "JetBrainsMono-Regular",
+      "100:normal:normal": "JetBrainsMono-Thin",
+      "100:italic:normal": "JetBrainsMono-ThinItalic",
+      "200:normal:normal": "JetBrainsMono-ExtraLight",
+      "200:italic:normal": "JetBrainsMono-ExtraLightItalic",
+      "300:normal:normal": "JetBrainsMono-Light",
+      "300:italic:normal": "JetBrainsMono-LightItalic",
+      "500:normal:normal": "JetBrainsMono-Medium",
+      "500:italic:normal": "JetBrainsMono-MediumItalic",
+      "600:normal:normal": "JetBrainsMono-SemiBold",
+      "600:italic:normal": "JetBrainsMono-SemiBoldItalic",
+      "700:normal:normal": "JetBrainsMono-Bold",
+      "700:italic:normal": "JetBrainsMono-BoldItalic",
+      "800:normal:normal": "JetBrainsMono-ExtraBold",
+      "800:italic:normal": "JetBrainsMono-ExtraBoldItalic"
+    }
+  },
+  "JetBrainsMono Nerd Font": {
+    "families": {
+      "normal": "JetBrainsMono Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "JetBrainsMonoNF-Thin",
+      "200:normal:normal": "JetBrainsMonoNF-ExtraLight",
+      "300:normal:normal": "JetBrainsMonoNF-Light",
+      "400:normal:normal": "JetBrainsMonoNF-Regular",
+      "400:italic:normal": "JetBrainsMonoNF-Italic",
+      "500:normal:normal": "JetBrainsMonoNF-Medium",
+      "600:normal:normal": "JetBrainsMonoNF-SemiBold",
+      "700:normal:normal": "JetBrainsMonoNF-Bold",
+      "800:normal:normal": "JetBrainsMonoNF-ExtraBold"
+    }
+  },
+  "JuliaMono": {
+    "families": {
+      "normal": "JuliaMono"
+    },
+    "ps": {
+      "400:normal:normal": "JuliaMono-Regular",
+      "300:normal:normal": "JuliaMono-Light",
+      "300:italic:normal": "JuliaMono-LightItalic",
+      "400:italic:normal": "JuliaMono-RegularItalic",
+      "500:normal:normal": "JuliaMono-Medium",
+      "500:italic:normal": "JuliaMono-MediumItalic",
+      "600:normal:normal": "JuliaMono-SemiBold",
+      "600:italic:normal": "JuliaMono-SemiBoldItalic",
+      "700:normal:normal": "JuliaMono-Bold",
+      "700:italic:normal": "JuliaMono-BoldItalic",
+      "800:normal:normal": "JuliaMono-ExtraBold",
+      "800:italic:normal": "JuliaMono-ExtraBoldItalic",
+      "900:normal:normal": "JuliaMono-Black",
+      "900:italic:normal": "JuliaMono-BlackItalic"
+    }
+  },
+  "Lekton": {
+    "families": {
+      "normal": "Lekton"
+    },
+    "ps": {
+      "400:italic:normal": "Lekton-Italic",
+      "400:normal:normal": "Lekton-Regular",
+      "700:normal:normal": "Lekton-Bold"
+    }
+  },
+  "Lekton Nerd Font": {
+    "families": {
+      "normal": "Lekton Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "LektonNF",
+      "400:italic:normal": "LektonNF-Italic",
+      "700:normal:normal": "LektonNF-Bold"
+    }
+  },
+  "Liberation Mono": {
+    "families": {
+      "normal": "Liberation Mono"
+    },
+    "ps": {
+      "400:normal:normal": "LiberationMono",
+      "400:italic:normal": "LiberationMono-Italic",
+      "700:normal:normal": "LiberationMono-Bold",
+      "700:italic:normal": "LiberationMono-BoldItalic"
+    }
+  },
+  "Liberation Mono Nerd Font": {
+    "families": {
+      "normal": "LiterationMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "LiterationMonoNF",
+      "400:italic:normal": "LiterationMonoNF-Italic",
+      "700:normal:normal": "LiterationMonoNF-Bold"
+    }
+  },
+  "Libertinus Mono": {
+    "families": {
+      "normal": "Libertinus Mono"
+    },
+    "ps": {
+      "400:normal:normal": "LibertinusMono-Regular"
+    }
+  },
+  "Lilex": {
+    "families": {
+      "normal": "Lilex"
+    },
+    "ps": {
+      "200:italic:normal": "Lilex-ExtraLightItalic",
+      "500:italic:normal": "Lilex-MediumItalic",
+      "100:italic:normal": "Lilex-ThinItalic",
+      "700:italic:normal": "Lilex-BoldItalic",
+      "300:italic:normal": "Lilex-LightItalic",
+      "600:italic:normal": "Lilex-SemiBoldItalic",
+      "100:normal:normal": "Lilex-Thin",
+      "400:italic:normal": "Lilex-Italic",
+      "300:normal:normal": "Lilex-Light",
+      "500:normal:normal": "Lilex-Medium",
+      "600:normal:normal": "Lilex-SemiBold",
+      "200:normal:normal": "Lilex-ExtraLight",
+      "700:normal:normal": "Lilex-Bold",
+      "400:normal:normal": "Lilex-Regular"
+    }
+  },
+  "Lilex Nerd Font": {
+    "families": {
+      "normal": "Lilex Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "LilexNF-Thin",
+      "200:normal:normal": "LilexNF-ExtraLight",
+      "400:normal:normal": "LilexNF-Regular",
+      "400:italic:normal": "LilexNF-Italic",
+      "500:normal:normal": "LilexNF-Medium",
+      "700:normal:normal": "LilexNF-Bold"
+    }
+  },
+  "Lucida Console": {
+    "families": {
+      "normal": "Lucida Console"
+    },
+    "ps": {
+      "400:normal:normal": "LucidaConsole"
+    }
+  },
+  "M Plus Code": {
+    "families": {
+      "normal": "M PLUS Code Latin 50",
+      "expanded": "M PLUS Code Latin 60"
+    },
+    "ps": {
+      "100:normal:normal": "MPLUSCodeLatin50-Thin",
+      "100:normal:expanded": "MPLUSCodeLatin60-Thin",
+      "200:normal:normal": "MPLUSCodeLatin50-ExtraLight",
+      "200:normal:expanded": "MPLUSCodeLatin60-ExtraLight",
+      "300:normal:normal": "MPLUSCodeLatin50-Light",
+      "300:normal:expanded": "MPLUSCodeLatin60-Light",
+      "400:normal:normal": "MPLUSCodeLatin50-Regular",
+      "400:normal:expanded": "MPLUSCodeLatin60-Regular",
+      "500:normal:normal": "MPLUSCodeLatin50-Medium",
+      "500:normal:expanded": "MPLUSCodeLatin60-Medium",
+      "600:normal:normal": "MPLUSCodeLatin50-SemiBold",
+      "600:normal:expanded": "MPLUSCodeLatin60-SemiBold",
+      "700:normal:normal": "MPLUSCodeLatin50-Bold",
+      "700:normal:expanded": "MPLUSCodeLatin60-Bold"
+    }
+  },
+  "Major Mono Display": {
+    "families": {
+      "normal": "Major Mono Display"
+    },
+    "ps": {
+      "400:normal:normal": "MajorMonoDisplay-Regular"
+    }
+  },
+  "Maple Mono": {
+    "families": {
+      "normal": "Maple Mono"
+    },
+    "ps": {
+      "400:normal:normal": "MapleMono-Regular",
+      "100:normal:normal": "MapleMono-Thin",
+      "100:italic:normal": "MapleMono-ThinItalic",
+      "200:normal:normal": "MapleMono-ExtraLight",
+      "200:italic:normal": "MapleMono-ExtraLightItalic",
+      "300:normal:normal": "MapleMono-Light",
+      "300:italic:normal": "MapleMono-LightItalic",
+      "500:normal:normal": "MapleMono-Medium",
+      "500:italic:normal": "MapleMono-MediumItalic",
+      "600:normal:normal": "MapleMono-SemiBold",
+      "600:italic:normal": "MapleMono-SemiBoldItalic",
+      "700:normal:normal": "MapleMono-Bold",
+      "700:italic:normal": "MapleMono-BoldItalic",
+      "800:normal:normal": "MapleMono-ExtraBold",
+      "800:italic:normal": "MapleMono-ExtraBoldItalic"
+    }
+  },
+  "MapleMono Nerd Font": {
+    "families": {
+      "normal": "Maple Mono NF"
+    },
+    "ps": {
+      "100:normal:normal": "MapleMono-NF-Thin",
+      "100:italic:normal": "MapleMono-NF-ThinItalic",
+      "200:normal:normal": "MapleMono-NF-ExtraLight",
+      "200:italic:normal": "MapleMono-NF-ExtraLightItalic",
+      "300:normal:normal": "MapleMono-NF-Light",
+      "300:italic:normal": "MapleMono-NF-LightItalic",
+      "400:normal:normal": "MapleMono-NF-Regular",
+      "500:normal:normal": "MapleMono-NF-Medium",
+      "500:italic:normal": "MapleMono-NF-MediumItalic",
+      "600:normal:normal": "MapleMono-NF-SemiBold",
+      "600:italic:normal": "MapleMono-NF-SemiBoldItalic",
+      "700:normal:normal": "MapleMono-NF-Bold",
+      "700:italic:normal": "MapleMono-NF-BoldItalic",
+      "800:normal:normal": "MapleMono-NF-ExtraBold",
+      "800:italic:normal": "MapleMono-NF-ExtraBoldItalic"
+    }
+  },
+  "Martian Mono": {
+    "families": {
+      "normal": "Martian Mono"
+    },
+    "ps": {
+      "100:normal:normal": "MartianMono-Thin",
+      "300:normal:normal": "MartianMono-Light",
+      "200:normal:normal": "MartianMono-ExtraLight",
+      "400:normal:normal": "MartianMono-Regular",
+      "600:normal:normal": "MartianMono-SemiBold",
+      "500:normal:normal": "MartianMono-Medium",
+      "800:normal:normal": "MartianMono-ExtraBold",
+      "700:normal:normal": "MartianMono-Bold"
+    }
+  },
+  "MartianMono Nerd Font": {
+    "families": {
+      "normal": "MartianMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "MartianMonoNF-Reg",
+      "500:normal:normal": "MartianMonoNF-Med",
+      "700:normal:normal": "MartianMonoNF-Bold"
+    }
+  },
+  "Menlo": {
+    "families": {
+      "normal": "Menlo"
+    },
+    "ps": {
+      "400:normal:normal": "Menlo-Regular",
+      "700:normal:normal": "Menlo-Bold",
+      "400:italic:normal": "Menlo-Italic",
+      "700:italic:normal": "Menlo-BoldItalic"
+    }
+  },
+  "Meslo LG": {
+    "families": {
+      "normal": "Meslo LG S"
+    },
+    "ps": {
+      "400:normal:normal": "MesloLGS-Regular",
+      "400:italic:normal": "MesloLGS-Italic",
+      "700:normal:normal": "MesloLGS-Bold",
+      "700:italic:normal": "MesloLGS-BoldItalic"
+    }
+  },
+  "Meslo Nerd Font": {
+    "families": {
+      "normal": "MesloLGS Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "MesloLGSNF-Regular",
+      "400:italic:normal": "MesloLGSNF-Italic",
+      "700:normal:normal": "MesloLGSNF-Bold",
+      "700:italic:normal": "MesloLGSNF-BoldItalic"
+    }
+  },
+  "Miracode": {
+    "families": {
+      "normal": "Miracode"
+    },
+    "ps": {
+      "400:normal:normal": "Miracode"
+    }
+  },
+  "Mona Sans Mono": {
+    "families": {
+      "normal": "Mona Sans Mono VF"
+    },
+    "ps": {
+      "200:normal:normal": "MonaSansMonoVF-ExtraLight",
+      "300:normal:normal": "MonaSansMonoVF-Light",
+      "400:normal:normal": "MonaSansMonoVF-Regular",
+      "500:normal:normal": "MonaSansMonoVF-Medium",
+      "600:normal:normal": "MonaSansMonoVF-SemiBold",
+      "700:normal:normal": "MonaSansMonoVF-Bold",
+      "800:normal:normal": "MonaSansMonoVF-ExtraBold",
+      "900:normal:normal": "MonaSansMonoVF-Black"
+    }
+  },
+  "Monaco": {
+    "families": {
+      "normal": "Monaco"
+    },
+    "ps": {
+      "400:normal:normal": "Monaco"
+    }
+  },
+  "Monaspace Argon": {
+    "families": {
+      "normal": "Monaspace Argon Var"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "200:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "300:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "300:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "400:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "400:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "500:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "500:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "600:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "600:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "700:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "700:italic:normal": "MonaspaceArgonVar-ExtraLight",
+      "800:normal:normal": "MonaspaceArgonVar-ExtraLight",
+      "800:italic:normal": "MonaspaceArgonVar-ExtraLight"
+    }
+  },
+  "Monaspace Argon Nerd Font": {
+    "families": {
+      "normal": "Monaspace Argon NF",
+      "semi-expanded": "Monaspace Argon NF SemiWide",
+      "expanded": "Monaspace Argon NF Wide"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceArgonNF-ExtraLight",
+      "200:italic:normal": "MonaspaceArgonNF-ExtraLightItalic",
+      "200:normal:semi-expanded": "MonaspaceArgonNF-SemiWideExtraLight",
+      "200:italic:semi-expanded": "MonaspaceArgonNF-SemiWideExtraLightItalic",
+      "200:normal:expanded": "MonaspaceArgonNF-WideExtraLight",
+      "200:italic:expanded": "MonaspaceArgonNF-WideExtraLightItalic",
+      "300:normal:normal": "MonaspaceArgonNF-Light",
+      "300:italic:normal": "MonaspaceArgonNF-LightItalic",
+      "300:normal:semi-expanded": "MonaspaceArgonNF-SemiWideLight",
+      "300:italic:semi-expanded": "MonaspaceArgonNF-SemiWideLightItalic",
+      "300:normal:expanded": "MonaspaceArgonNF-WideLight",
+      "300:italic:expanded": "MonaspaceArgonNF-WideLightItalic",
+      "400:normal:normal": "MonaspaceArgonNF-Regular",
+      "400:italic:normal": "MonaspaceArgonNF-Italic",
+      "400:italic:semi-expanded": "MonaspaceArgonNF-SemiWideItalic",
+      "400:italic:expanded": "MonaspaceArgonNF-WideItalic",
+      "500:normal:normal": "MonaspaceArgonNF-Medium",
+      "500:italic:normal": "MonaspaceArgonNF-MediumItalic",
+      "500:normal:semi-expanded": "MonaspaceArgonNF-SemiWideMedium",
+      "500:italic:semi-expanded": "MonaspaceArgonNF-SemiWideMediumItalic",
+      "500:normal:expanded": "MonaspaceArgonNF-WideMedium",
+      "500:italic:expanded": "MonaspaceArgonNF-WideMediumItalic",
+      "600:normal:normal": "MonaspaceArgonNF-SemiBold",
+      "600:italic:normal": "MonaspaceArgonNF-SemiBoldItalic",
+      "600:normal:semi-expanded": "MonaspaceArgonNF-SemiWideSemiBold",
+      "600:italic:semi-expanded": "MonaspaceArgonNF-SemiWideSemiBoldItalic",
+      "600:normal:expanded": "MonaspaceArgonNF-WideSemiBold",
+      "600:italic:expanded": "MonaspaceArgonNF-WideSemiBoldItalic",
+      "700:normal:normal": "MonaspaceArgonNF-Bold",
+      "700:italic:normal": "MonaspaceArgonNF-BoldItalic",
+      "700:normal:semi-expanded": "MonaspaceArgonNF-SemiWideBold",
+      "700:italic:semi-expanded": "MonaspaceArgonNF-SemiWideBoldItalic",
+      "700:normal:expanded": "MonaspaceArgonNF-WideBold",
+      "700:italic:expanded": "MonaspaceArgonNF-WideBoldItalic",
+      "800:normal:normal": "MonaspaceArgonNF-ExtraBold",
+      "800:italic:normal": "MonaspaceArgonNF-ExtraBoldItalic",
+      "800:normal:semi-expanded": "MonaspaceArgonNF-SemiWideExtraBold",
+      "800:italic:semi-expanded": "MonaspaceArgonNF-SemiWideExtraBoldItalic",
+      "800:normal:expanded": "MonaspaceArgonNF-WideExtraBold",
+      "800:italic:expanded": "MonaspaceArgonNF-WideExtraBoldItalic"
+    }
+  },
+  "Monaspace Krypton": {
+    "families": {
+      "normal": "Monaspace Krypton Var"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "200:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "300:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "300:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "400:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "400:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "500:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "500:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "600:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "600:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "700:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "700:italic:normal": "MonaspaceKryptonVar-ExtraLight",
+      "800:normal:normal": "MonaspaceKryptonVar-ExtraLight",
+      "800:italic:normal": "MonaspaceKryptonVar-ExtraLight"
+    }
+  },
+  "Monaspace Krypton Nerd Font": {
+    "families": {
+      "normal": "Monaspace Krypton NF",
+      "semi-expanded": "Monaspace Krypton NF SemiWide",
+      "expanded": "Monaspace Krypton NF Wide"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceKryptonNF-ExtraLight",
+      "200:italic:normal": "MonaspaceKryptonNF-ExtraLightItalic",
+      "200:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideExtraLight",
+      "200:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideExtraLightItalic",
+      "200:normal:expanded": "MonaspaceKryptonNF-WideExtraLight",
+      "200:italic:expanded": "MonaspaceKryptonNF-WideExtraLightItalic",
+      "300:normal:normal": "MonaspaceKryptonNF-Light",
+      "300:italic:normal": "MonaspaceKryptonNF-LightItalic",
+      "300:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideLight",
+      "300:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideLightItalic",
+      "300:normal:expanded": "MonaspaceKryptonNF-WideLight",
+      "300:italic:expanded": "MonaspaceKryptonNF-WideLightItalic",
+      "400:normal:normal": "MonaspaceKryptonNF-Regular",
+      "400:italic:normal": "MonaspaceKryptonNF-Italic",
+      "400:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideItalic",
+      "400:italic:expanded": "MonaspaceKryptonNF-WideItalic",
+      "500:normal:normal": "MonaspaceKryptonNF-Medium",
+      "500:italic:normal": "MonaspaceKryptonNF-MediumItalic",
+      "500:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideMedium",
+      "500:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideMediumItalic",
+      "500:normal:expanded": "MonaspaceKryptonNF-WideMedium",
+      "500:italic:expanded": "MonaspaceKryptonNF-WideMediumItalic",
+      "600:normal:normal": "MonaspaceKryptonNF-SemiBold",
+      "600:italic:normal": "MonaspaceKryptonNF-SemiBoldItalic",
+      "600:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideSemiBold",
+      "600:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideSemiBoldItalic",
+      "600:normal:expanded": "MonaspaceKryptonNF-WideSemiBold",
+      "600:italic:expanded": "MonaspaceKryptonNF-WideSemiBoldItalic",
+      "700:normal:normal": "MonaspaceKryptonNF-Bold",
+      "700:italic:normal": "MonaspaceKryptonNF-BoldItalic",
+      "700:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideBold",
+      "700:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideBoldItalic",
+      "700:normal:expanded": "MonaspaceKryptonNF-WideBold",
+      "700:italic:expanded": "MonaspaceKryptonNF-WideBoldItalic",
+      "800:normal:normal": "MonaspaceKryptonNF-ExtraBold",
+      "800:italic:normal": "MonaspaceKryptonNF-ExtraBoldItalic",
+      "800:normal:semi-expanded": "MonaspaceKryptonNF-SemiWideExtraBold",
+      "800:italic:semi-expanded": "MonaspaceKryptonNF-SemiWideExtraBoldItalic",
+      "800:normal:expanded": "MonaspaceKryptonNF-WideExtraBold",
+      "800:italic:expanded": "MonaspaceKryptonNF-WideExtraBoldItalic"
+    }
+  },
+  "Monaspace Neon": {
+    "families": {
+      "normal": "Monaspace Neon Var"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "200:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "300:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "300:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "400:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "400:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "500:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "500:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "600:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "600:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "700:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "700:italic:normal": "MonaspaceNeonVar-ExtraLight",
+      "800:normal:normal": "MonaspaceNeonVar-ExtraLight",
+      "800:italic:normal": "MonaspaceNeonVar-ExtraLight"
+    }
+  },
+  "Monaspace Neon Nerd Font": {
+    "families": {
+      "normal": "Monaspace Neon NF",
+      "semi-expanded": "Monaspace Neon NF SemiWide",
+      "expanded": "Monaspace Neon NF Wide"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceNeonNF-ExtraLight",
+      "200:italic:normal": "MonaspaceNeonNF-ExtraLightItalic",
+      "200:normal:semi-expanded": "MonaspaceNeonNF-SemiWideExtraLight",
+      "200:italic:semi-expanded": "MonaspaceNeonNF-SemiWideExtraLightItalic",
+      "200:normal:expanded": "MonaspaceNeonNF-WideExtraLight",
+      "200:italic:expanded": "MonaspaceNeonNF-WideExtraLightItalic",
+      "300:normal:normal": "MonaspaceNeonNF-Light",
+      "300:italic:normal": "MonaspaceNeonNF-LightItalic",
+      "300:normal:semi-expanded": "MonaspaceNeonNF-SemiWideLight",
+      "300:italic:semi-expanded": "MonaspaceNeonNF-SemiWideLightItalic",
+      "300:normal:expanded": "MonaspaceNeonNF-WideLight",
+      "300:italic:expanded": "MonaspaceNeonNF-WideLightItalic",
+      "400:normal:normal": "MonaspaceNeonNF-Regular",
+      "400:italic:normal": "MonaspaceNeonNF-Italic",
+      "400:italic:semi-expanded": "MonaspaceNeonNF-SemiWideItalic",
+      "400:italic:expanded": "MonaspaceNeonNF-WideItalic",
+      "500:normal:normal": "MonaspaceNeonNF-Medium",
+      "500:italic:normal": "MonaspaceNeonNF-MediumItalic",
+      "500:normal:semi-expanded": "MonaspaceNeonNF-SemiWideMedium",
+      "500:italic:semi-expanded": "MonaspaceNeonNF-SemiWideMediumItalic",
+      "500:normal:expanded": "MonaspaceNeonNF-WideMedium",
+      "500:italic:expanded": "MonaspaceNeonNF-WideMediumItalic",
+      "600:normal:normal": "MonaspaceNeonNF-SemiBold",
+      "600:italic:normal": "MonaspaceNeonNF-SemiBoldItalic",
+      "600:normal:semi-expanded": "MonaspaceNeonNF-SemiWideSemiBold",
+      "600:italic:semi-expanded": "MonaspaceNeonNF-SemiWideSemiBoldItalic",
+      "600:normal:expanded": "MonaspaceNeonNF-WideSemiBold",
+      "600:italic:expanded": "MonaspaceNeonNF-WideSemiBoldItalic",
+      "700:normal:normal": "MonaspaceNeonNF-Bold",
+      "700:italic:normal": "MonaspaceNeonNF-BoldItalic",
+      "700:normal:semi-expanded": "MonaspaceNeonNF-SemiWideBold",
+      "700:italic:semi-expanded": "MonaspaceNeonNF-SemiWideBoldItalic",
+      "700:normal:expanded": "MonaspaceNeonNF-WideBold",
+      "700:italic:expanded": "MonaspaceNeonNF-WideBoldItalic",
+      "800:normal:normal": "MonaspaceNeonNF-ExtraBold",
+      "800:italic:normal": "MonaspaceNeonNF-ExtraBoldItalic",
+      "800:normal:semi-expanded": "MonaspaceNeonNF-SemiWideExtraBold",
+      "800:italic:semi-expanded": "MonaspaceNeonNF-SemiWideExtraBoldItalic",
+      "800:normal:expanded": "MonaspaceNeonNF-WideExtraBold",
+      "800:italic:expanded": "MonaspaceNeonNF-WideExtraBoldItalic"
+    }
+  },
+  "Monaspace Radon": {
+    "families": {
+      "normal": "Monaspace Radon Var"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "200:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "300:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "300:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "400:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "400:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "500:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "500:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "600:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "600:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "700:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "700:italic:normal": "MonaspaceRadonVar-ExtraLight",
+      "800:normal:normal": "MonaspaceRadonVar-ExtraLight",
+      "800:italic:normal": "MonaspaceRadonVar-ExtraLight"
+    }
+  },
+  "Monaspace Radon Nerd Font": {
+    "families": {
+      "normal": "Monaspace Radon NF",
+      "semi-expanded": "Monaspace Radon NF SemiWide",
+      "expanded": "Monaspace Radon NF Wide"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceRadonNF-ExtraLight",
+      "200:italic:normal": "MonaspaceRadonNF-ExtraLightItalic",
+      "200:normal:semi-expanded": "MonaspaceRadonNF-SemiWideExtraLight",
+      "200:italic:semi-expanded": "MonaspaceRadonNF-SemiWideExtraLightItalic",
+      "200:normal:expanded": "MonaspaceRadonNF-WideExtraLight",
+      "200:italic:expanded": "MonaspaceRadonNF-WideExtraLightItalic",
+      "300:normal:normal": "MonaspaceRadonNF-Light",
+      "300:italic:normal": "MonaspaceRadonNF-LightItalic",
+      "300:normal:semi-expanded": "MonaspaceRadonNF-SemiWideLight",
+      "300:italic:semi-expanded": "MonaspaceRadonNF-SemiWideLightItalic",
+      "300:normal:expanded": "MonaspaceRadonNF-WideLight",
+      "300:italic:expanded": "MonaspaceRadonNF-WideLightItalic",
+      "400:normal:normal": "MonaspaceRadonNF-Regular",
+      "400:italic:normal": "MonaspaceRadonNF-Italic",
+      "400:italic:semi-expanded": "MonaspaceRadonNF-SemiWideItalic",
+      "400:italic:expanded": "MonaspaceRadonNF-WideItalic",
+      "500:normal:normal": "MonaspaceRadonNF-Medium",
+      "500:italic:normal": "MonaspaceRadonNF-MediumItalic",
+      "500:normal:semi-expanded": "MonaspaceRadonNF-SemiWideMedium",
+      "500:italic:semi-expanded": "MonaspaceRadonNF-SemiWideMediumItalic",
+      "500:normal:expanded": "MonaspaceRadonNF-WideMedium",
+      "500:italic:expanded": "MonaspaceRadonNF-WideMediumItalic",
+      "600:normal:normal": "MonaspaceRadonNF-SemiBold",
+      "600:italic:normal": "MonaspaceRadonNF-SemiBoldItalic",
+      "600:normal:semi-expanded": "MonaspaceRadonNF-SemiWideSemiBold",
+      "600:italic:semi-expanded": "MonaspaceRadonNF-SemiWideSemiBoldItalic",
+      "600:normal:expanded": "MonaspaceRadonNF-WideSemiBold",
+      "600:italic:expanded": "MonaspaceRadonNF-WideSemiBoldItalic",
+      "700:normal:normal": "MonaspaceRadonNF-Bold",
+      "700:italic:normal": "MonaspaceRadonNF-BoldItalic",
+      "700:normal:semi-expanded": "MonaspaceRadonNF-SemiWideBold",
+      "700:italic:semi-expanded": "MonaspaceRadonNF-SemiWideBoldItalic",
+      "700:normal:expanded": "MonaspaceRadonNF-WideBold",
+      "700:italic:expanded": "MonaspaceRadonNF-WideBoldItalic",
+      "800:normal:normal": "MonaspaceRadonNF-ExtraBold",
+      "800:italic:normal": "MonaspaceRadonNF-ExtraBoldItalic",
+      "800:normal:semi-expanded": "MonaspaceRadonNF-SemiWideExtraBold",
+      "800:italic:semi-expanded": "MonaspaceRadonNF-SemiWideExtraBoldItalic",
+      "800:normal:expanded": "MonaspaceRadonNF-WideExtraBold",
+      "800:italic:expanded": "MonaspaceRadonNF-WideExtraBoldItalic"
+    }
+  },
+  "Monaspace Xenon": {
+    "families": {
+      "normal": "Monaspace Xenon Var"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "200:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "300:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "300:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "400:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "400:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "500:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "500:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "600:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "600:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "700:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "700:italic:normal": "MonaspaceXenonVar-ExtraLight",
+      "800:normal:normal": "MonaspaceXenonVar-ExtraLight",
+      "800:italic:normal": "MonaspaceXenonVar-ExtraLight"
+    }
+  },
+  "Monaspace Xenon Nerd Font": {
+    "families": {
+      "normal": "Monaspace Xenon NF",
+      "semi-expanded": "Monaspace Xenon NF SemiWide",
+      "expanded": "Monaspace Xenon NF Wide"
+    },
+    "ps": {
+      "200:normal:normal": "MonaspaceXenonNF-ExtraLight",
+      "200:italic:normal": "MonaspaceXenonNF-ExtraLightItalic",
+      "200:normal:semi-expanded": "MonaspaceXenonNF-SemiWideExtraLight",
+      "200:italic:semi-expanded": "MonaspaceXenonNF-SemiWideExtraLightItalic",
+      "200:normal:expanded": "MonaspaceXenonNF-WideExtraLight",
+      "200:italic:expanded": "MonaspaceXenonNF-WideExtraLightItalic",
+      "300:normal:normal": "MonaspaceXenonNF-Light",
+      "300:italic:normal": "MonaspaceXenonNF-LightItalic",
+      "300:normal:semi-expanded": "MonaspaceXenonNF-SemiWideLight",
+      "300:italic:semi-expanded": "MonaspaceXenonNF-SemiWideLightItalic",
+      "300:normal:expanded": "MonaspaceXenonNF-WideLight",
+      "300:italic:expanded": "MonaspaceXenonNF-WideLightItalic",
+      "400:normal:normal": "MonaspaceXenonNF-Regular",
+      "400:italic:normal": "MonaspaceXenonNF-Italic",
+      "400:italic:semi-expanded": "MonaspaceXenonNF-SemiWideItalic",
+      "400:italic:expanded": "MonaspaceXenonNF-WideItalic",
+      "500:normal:normal": "MonaspaceXenonNF-Medium",
+      "500:italic:normal": "MonaspaceXenonNF-MediumItalic",
+      "500:normal:semi-expanded": "MonaspaceXenonNF-SemiWideMedium",
+      "500:italic:semi-expanded": "MonaspaceXenonNF-SemiWideMediumItalic",
+      "500:normal:expanded": "MonaspaceXenonNF-WideMedium",
+      "500:italic:expanded": "MonaspaceXenonNF-WideMediumItalic",
+      "600:normal:normal": "MonaspaceXenonNF-SemiBold",
+      "600:italic:normal": "MonaspaceXenonNF-SemiBoldItalic",
+      "600:normal:semi-expanded": "MonaspaceXenonNF-SemiWideSemiBold",
+      "600:italic:semi-expanded": "MonaspaceXenonNF-SemiWideSemiBoldItalic",
+      "600:normal:expanded": "MonaspaceXenonNF-WideSemiBold",
+      "600:italic:expanded": "MonaspaceXenonNF-WideSemiBoldItalic",
+      "700:normal:normal": "MonaspaceXenonNF-Bold",
+      "700:italic:normal": "MonaspaceXenonNF-BoldItalic",
+      "700:normal:semi-expanded": "MonaspaceXenonNF-SemiWideBold",
+      "700:italic:semi-expanded": "MonaspaceXenonNF-SemiWideBoldItalic",
+      "700:normal:expanded": "MonaspaceXenonNF-WideBold",
+      "700:italic:expanded": "MonaspaceXenonNF-WideBoldItalic",
+      "800:normal:normal": "MonaspaceXenonNF-ExtraBold",
+      "800:italic:normal": "MonaspaceXenonNF-ExtraBoldItalic",
+      "800:normal:semi-expanded": "MonaspaceXenonNF-SemiWideExtraBold",
+      "800:italic:semi-expanded": "MonaspaceXenonNF-SemiWideExtraBoldItalic",
+      "800:normal:expanded": "MonaspaceXenonNF-WideExtraBold",
+      "800:italic:expanded": "MonaspaceXenonNF-WideExtraBoldItalic"
+    }
+  },
+  "Monocraft": {
+    "families": {
+      "normal": "Monocraft"
+    },
+    "ps": {
+      "400:normal:normal": "Monocraft",
+      "200:normal:normal": "Monocraft-ExtraLight",
+      "200:italic:normal": "Monocraft-ExtraLight-Italic",
+      "300:normal:normal": "Monocraft-Light",
+      "300:italic:normal": "Monocraft-Light-Italic",
+      "400:italic:normal": "Monocraft-Italic",
+      "600:normal:normal": "Monocraft-SemiBold",
+      "600:italic:normal": "Monocraft-SemiBold-Italic",
+      "700:normal:normal": "Monocraft-Bold",
+      "700:italic:normal": "Monocraft-Bold-Italic",
+      "900:normal:normal": "Monocraft-Black",
+      "900:italic:normal": "Monocraft-Black-Italic"
+    }
+  },
+  "Monofur Nerd Font": {
+    "families": {
+      "normal": "Monofur Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "MonofurNF",
+      "400:italic:normal": "MonofurNF-Italic",
+      "700:normal:normal": "MonofurNF-Bold"
+    }
+  },
+  "Monoid": {
+    "families": {
+      "normal": "Monoid"
+    },
+    "ps": {
+      "400:normal:normal": "Monoid-Regular",
+      "400:italic:normal": "Monoid-Italic",
+      "700:normal:normal": "Monoid-Bold",
+      "700:italic:normal": "Monoid-Bold"
+    }
+  },
+  "Monoid Nerd Font": {
+    "families": {
+      "normal": "Monoid Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "MonoidNF-Regular",
+      "400:italic:normal": "MonoidNF-Italic",
+      "700:normal:normal": "MonoidNF-Bold"
+    }
+  },
+  "Mononoki": {
+    "families": {
+      "normal": "mononoki"
+    },
+    "ps": {
+      "400:normal:normal": "mononoki-Regular",
+      "400:italic:normal": "mononoki-Italic",
+      "700:normal:normal": "mononoki-Bold",
+      "700:italic:normal": "mononoki-BoldItalic"
+    }
+  },
+  "Mononoki Nerd Font": {
+    "families": {
+      "normal": "Mononoki Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "MononokiNF-Regular",
+      "400:italic:normal": "MononokiNF-Italic",
+      "700:normal:normal": "MononokiNF-Bold"
+    }
+  },
+  "MPlus Nerd Font": {
+    "families": {
+      "normal": "M+CodeLat50 Nerd Font",
+      "expanded": "M+CodeLat60 Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "M+CodeLat50NF-Thin",
+      "100:normal:expanded": "M+CodeLat60NF-Thin",
+      "200:normal:normal": "M+CodeLat50NF-ExtLt",
+      "200:normal:expanded": "M+CodeLat60NF-ExtLt",
+      "300:normal:normal": "M+CodeLat50NF-Light",
+      "300:normal:expanded": "M+CodeLat60NF-Light",
+      "400:normal:normal": "M+CodeLat50NF-Reg",
+      "400:normal:expanded": "M+CodeLat60NF-Reg",
+      "500:normal:normal": "M+CodeLat50NF-Med",
+      "500:normal:expanded": "M+CodeLat60NF-Med",
+      "600:normal:normal": "M+CodeLat50NF-SemBd",
+      "600:normal:expanded": "M+CodeLat60NF-SemBd",
+      "700:normal:normal": "M+CodeLat50NF-Bold",
+      "700:normal:expanded": "M+CodeLat60NF-Bold"
+    }
+  },
+  "Myna": {
+    "families": {
+      "normal": "Myna"
+    },
+    "ps": {
+      "400:normal:normal": "Myna-Regular",
+      "400:italic:normal": "Myna-RegularItalic",
+      "700:normal:normal": "Myna-Bold",
+      "700:italic:normal": "Myna-BoldItalic"
+    }
+  },
+  "Nanum Gothic Coding": {
+    "families": {
+      "normal": "NanumGothicCoding"
+    },
+    "ps": {
+      "400:normal:normal": "NanumGothicCoding",
+      "700:normal:normal": "NanumGothicCoding-Bold"
+    }
+  },
+  "New Heterodox Mono": {
+    "families": {
+      "normal": "New Heterodox Mono"
+    },
+    "ps": {
+      "400:normal:normal": "NewHeterodoxMono-Book",
+      "700:normal:normal": "NewHeterodoxMono-Bold"
+    }
+  },
+  "Nordwand Mono": {
+    "families": {
+      "normal": "Nordwand Mono"
+    },
+    "ps": {
+      "400:normal:normal": "Nordwand Mono-Regular",
+      "100:normal:normal": "Nordwand Mono-Thin",
+      "100:italic:normal": "Nordwand Mono-ThinItalic",
+      "200:normal:normal": "Nordwand Mono-ExtraLight",
+      "200:italic:normal": "Nordwand Mono-ExtraLightItalic",
+      "300:normal:normal": "Nordwand Mono-Light",
+      "300:italic:normal": "Nordwand Mono-LightItalic",
+      "400:italic:normal": "Nordwand Mono-Italic",
+      "500:normal:normal": "Nordwand Mono-Medium",
+      "500:italic:normal": "Nordwand Mono-MediumItalic",
+      "600:normal:normal": "Nordwand Mono-SemiBold",
+      "600:italic:normal": "Nordwand Mono-SemiBoldItalic",
+      "700:normal:normal": "Nordwand Mono-Bold",
+      "700:italic:normal": "Nordwand Mono-BoldItalic"
+    }
+  },
+  "Noto Sans Mono": {
+    "families": {
+      "normal": "Noto Sans Mono"
+    },
+    "ps": {
+      "100:normal:normal": "NotoSansMono-Thin",
+      "200:normal:normal": "NotoSansMono-ExtraLight",
+      "300:normal:normal": "NotoSansMono-Light",
+      "500:normal:normal": "NotoSansMono-Medium",
+      "600:normal:normal": "NotoSansMono-SemiBold",
+      "900:normal:normal": "NotoSansMono-Black",
+      "700:normal:normal": "NotoSansMono-Bold",
+      "800:normal:normal": "NotoSansMono-ExtraBold",
+      "400:normal:normal": "NotoSansMono-Regular"
+    }
+  },
+  "Noto Sans Mono Nerd Font": {
+    "families": {
+      "normal": "NotoSansM Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "NotoSansMNF-Thin",
+      "200:normal:normal": "NotoSansMNF-ExtLt",
+      "300:normal:normal": "NotoSansMNF-Light",
+      "400:normal:normal": "NotoSansMNF-Reg",
+      "500:normal:normal": "NotoSansMNF-Med",
+      "600:normal:normal": "NotoSansMNF-SemBd",
+      "700:normal:normal": "NotoSansMNF-Bold",
+      "800:normal:normal": "NotoSansMNF-ExtBd",
+      "900:normal:normal": "NotoSansMNF-Black"
+    }
+  },
+  "Nova Mono": {
+    "families": {
+      "normal": "NovaMono"
+    },
+    "ps": {
+      "400:normal:normal": "NovaMono"
+    }
+  },
+  "Old Timey Code": {
+    "families": {
+      "normal": "Old Timey Code",
+      "condensed": "Old Timey Code Condensed"
+    },
+    "ps": {
+      "400:normal:normal": "OldTimeyCode",
+      "300:normal:normal": "OldTimeyCode-Light",
+      "300:normal:condensed": "OldTimeyCode-LightCond",
+      "400:normal:condensed": "OldTimeyCode-Cond"
+    }
+  },
+  "Overpass Mono": {
+    "families": {
+      "normal": "Overpass Mono"
+    },
+    "ps": {
+      "400:normal:normal": "OverpassMono-Regular",
+      "500:normal:normal": "OverpassMono-Medium",
+      "300:normal:normal": "OverpassMono-Light",
+      "600:normal:normal": "OverpassMono-SemiBold",
+      "700:normal:normal": "OverpassMono-Bold"
+    }
+  },
+  "Overpass Nerd Font": {
+    "families": {
+      "normal": "OverpassM Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "OverpassMNF-Light",
+      "400:normal:normal": "OverpassMNF-Reg",
+      "600:normal:normal": "OverpassMNF-SemBd",
+      "700:normal:normal": "OverpassMNF-Bold"
+    }
+  },
+  "Oxygen Mono": {
+    "families": {
+      "normal": "Oxygen Mono"
+    },
+    "ps": {
+      "400:normal:normal": "OxygenMono-Regular"
+    }
+  },
+  "Press Start 2P": {
+    "families": {
+      "normal": "Press Start 2P"
+    },
+    "ps": {
+      "400:normal:normal": "PressStart2P-Regular"
+    }
+  },
+  "ProFont Nerd Font": {
+    "families": {
+      "normal": "ProFont IIx Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "ProFontIIxNF"
+    }
+  },
+  "Proggy Vector": {
+    "families": {
+      "normal": "ProggyVector"
+    },
+    "ps": {
+      "400:normal:normal": "ProggyVector"
+    }
+  },
+  "PseudoFont Liga Mono": {
+    "families": {
+      "normal": "psudoFont Liga Mono"
+    },
+    "ps": {
+      "400:normal:normal": "psudoFont_Liga_Mono_-_Regular",
+      "400:italic:normal": "psudoFont_Liga_Mono_-_Italic",
+      "700:normal:normal": "psudoFont_Liga_Mono_-_Bold",
+      "700:italic:normal": "psudoFont_Liga_Mono_-_BoldItalic"
+    }
+  },
+  "PT Mono": {
+    "families": {
+      "normal": "PT Mono"
+    },
+    "ps": {
+      "400:normal:normal": "PTMono-Regular"
+    }
+  },
+  "Recursive Mono Casual": {
+    "families": {
+      "normal": "Rec Mono Casual"
+    },
+    "ps": {
+      "400:normal:normal": "RecMonoCasual-Regular",
+      "700:normal:normal": "RecMonoCasual-Bold",
+      "400:italic:normal": "RecMonoCasual-Italic",
+      "700:italic:normal": "RecMonoCasual-BoldItalic"
+    }
+  },
+  "Recursive Mono Casual Nerd Font": {
+    "families": {
+      "normal": "RecMonoCasual Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "RecMonoCasualNF",
+      "400:italic:normal": "RecMonoCasualNF-Italic",
+      "700:normal:normal": "RecMonoCasualNF-Bold"
+    }
+  },
+  "Recursive Mono Linear": {
+    "families": {
+      "normal": "Rec Mono Linear"
+    },
+    "ps": {
+      "400:normal:normal": "RecMonoLinear-Regular",
+      "700:normal:normal": "RecMonoLinear-Bold",
+      "400:italic:normal": "RecMonoLinear-Italic",
+      "700:italic:normal": "RecMonoLinear-BoldItalic"
+    }
+  },
+  "Recursive Mono Linear Nerd Font": {
+    "families": {
+      "normal": "RecMonoLinear Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "RecMonoLinearNF",
+      "400:italic:normal": "RecMonoLinearNF-Italic",
+      "700:normal:normal": "RecMonoLinearNF-Bold"
+    }
+  },
+  "Red Hat Mono": {
+    "families": {
+      "normal": "Red Hat Mono"
+    },
+    "ps": {
+      "400:italic:normal": "RedHatMono-Italic",
+      "500:italic:normal": "RedHatMono-MediumItalic",
+      "600:italic:normal": "RedHatMono-SemiBoldItalic",
+      "300:italic:normal": "RedHatMono-LightItalic",
+      "700:normal:normal": "RedHatMono-Bold",
+      "600:normal:normal": "RedHatMono-SemiBold",
+      "300:normal:normal": "RedHatMono-Light",
+      "700:italic:normal": "RedHatMono-BoldItalic",
+      "500:normal:normal": "RedHatMono-Medium",
+      "400:normal:normal": "RedHatMono-Regular"
+    }
+  },
+  "Roboto Mono": {
+    "families": {
+      "normal": "Roboto Mono"
+    },
+    "ps": {
+      "400:italic:normal": "RobotoMono-Italic",
+      "300:italic:normal": "RobotoMono-LightItalic",
+      "200:italic:normal": "RobotoMono-ExtraLightItalic",
+      "100:italic:normal": "RobotoMono-ThinItalic",
+      "300:normal:normal": "RobotoMono-Light",
+      "200:normal:normal": "RobotoMono-ExtraLight",
+      "700:normal:normal": "RobotoMono-Bold",
+      "100:normal:normal": "RobotoMono-Thin",
+      "600:normal:normal": "RobotoMono-SemiBold",
+      "400:normal:normal": "RobotoMono-Regular",
+      "500:normal:normal": "RobotoMono-Medium",
+      "600:italic:normal": "RobotoMono-SemiBoldItalic",
+      "500:italic:normal": "RobotoMono-MediumItalic",
+      "700:italic:normal": "RobotoMono-BoldItalic"
+    }
+  },
+  "RobotoMono Nerd Font": {
+    "families": {
+      "normal": "RobotoMono Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "RobotoMonoNF-Th",
+      "300:normal:normal": "RobotoMonoNF-Lt",
+      "400:normal:normal": "RobotoMonoNF-Rg",
+      "400:italic:normal": "RobotoMonoNF-It",
+      "500:normal:normal": "RobotoMonoNF-Md",
+      "600:normal:normal": "RobotoMonoNF-SmBd",
+      "700:normal:normal": "RobotoMonoNF-Bd"
+    }
+  },
+  "Sarasa Gothic Mono": {
+    "families": {
+      "normal": "Sarasa Mono SC"
+    },
+    "ps": {
+      "400:normal:normal": "Sarasa-Mono-SC-Regular",
+      "200:normal:normal": "Sarasa-Mono-SC-ExtraLight",
+      "200:italic:normal": "Sarasa-Mono-SC-ExtraLight-Italic",
+      "300:normal:normal": "Sarasa-Mono-SC-Light",
+      "300:italic:normal": "Sarasa-Mono-SC-Light-Italic",
+      "400:italic:normal": "Sarasa-Mono-SC-Italic",
+      "600:normal:normal": "Sarasa-Mono-SC-SemiBold",
+      "600:italic:normal": "Sarasa-Mono-SC-SemiBold-Italic",
+      "700:normal:normal": "Sarasa-Mono-SC-Bold",
+      "700:italic:normal": "Sarasa-Mono-SC-Bold-Italic"
+    }
+  },
+  "Sarasa Mono Slab": {
+    "families": {
+      "normal": "Sarasa Mono Slab SC"
+    },
+    "ps": {
+      "400:normal:normal": "Sarasa-Mono-Slab-SC-Regular",
+      "200:normal:normal": "Sarasa-Mono-Slab-SC-ExtraLight",
+      "200:italic:normal": "Sarasa-Mono-Slab-SC-ExtraLight-Italic",
+      "300:normal:normal": "Sarasa-Mono-Slab-SC-Light",
+      "300:italic:normal": "Sarasa-Mono-Slab-SC-Light-Italic",
+      "400:italic:normal": "Sarasa-Mono-Slab-SC-Italic",
+      "600:normal:normal": "Sarasa-Mono-Slab-SC-SemiBold",
+      "600:italic:normal": "Sarasa-Mono-Slab-SC-SemiBold-Italic",
+      "700:normal:normal": "Sarasa-Mono-Slab-SC-Bold",
+      "700:italic:normal": "Sarasa-Mono-Slab-SC-Bold-Italic"
+    }
+  },
+  "Sergamon": {
+    "families": {
+      "normal": "Sergamon"
+    },
+    "ps": {
+      "400:normal:normal": "Sergamon-Regular"
+    }
+  },
+  "Serious Shanns": {
+    "families": {
+      "normal": "Serious Shanns"
+    },
+    "ps": {
+      "300:normal:normal": "SeriousShannsLight",
+      "300:italic:normal": "SeriousShannsLightItalic",
+      "400:normal:normal": "SeriousShanns",
+      "400:italic:normal": "SeriousShannsItalic",
+      "700:normal:normal": "SeriousShannsBold",
+      "700:italic:normal": "SeriousShannsBoldItalic"
+    }
+  },
+  "Serious Shanns Nerd Font": {
+    "families": {
+      "normal": "SeriousShanns Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "SeriousShannsNF-Lt",
+      "300:italic:normal": "SeriousShannsNF-LtIt",
+      "400:normal:normal": "SeriousShannsNF",
+      "400:italic:normal": "SeriousShannsNF-It",
+      "700:normal:normal": "SeriousShannsNF-Bd",
+      "700:italic:normal": "SeriousShannsNF-BdIt"
+    }
+  },
+  "SF Mono": {
+    "families": {
+      "normal": "SF Mono"
+    },
+    "ps": {
+      "400:normal:normal": "SFMono-Regular",
+      "700:normal:normal": "SFMono-Bold",
+      "400:italic:normal": "SFMono-RegularItalic",
+      "700:italic:normal": "SFMono-BoldItalic"
+    }
+  },
+  "Share Tech Mono": {
+    "families": {
+      "normal": "Share Tech Mono"
+    },
+    "ps": {
+      "400:normal:normal": "ShareTechMono-Regular"
+    }
+  },
+  "ShareTechMono Nerd Font": {
+    "families": {
+      "normal": "ShureTechMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "ShureTechMonoNF"
+    }
+  },
+  "Sometype Mono": {
+    "families": {
+      "normal": "Sometype Mono"
+    },
+    "ps": {
+      "600:italic:normal": "SometypeMono-SemiBoldItalic",
+      "500:italic:normal": "SometypeMono-MediumItalic",
+      "700:italic:normal": "SometypeMono-BoldItalic",
+      "400:italic:normal": "SometypeMono-Italic",
+      "500:normal:normal": "SometypeMono-Medium",
+      "700:normal:normal": "SometypeMono-Bold",
+      "400:normal:normal": "SometypeMono-Regular",
+      "600:normal:normal": "SometypeMono-SemiBold"
+    }
+  },
+  "Source Code Pro": {
+    "families": {
+      "normal": "Source Code Pro"
+    },
+    "ps": {
+      "300:italic:normal": "SourceCodePro-LightItalic",
+      "400:italic:normal": "SourceCodePro-Italic",
+      "200:italic:normal": "SourceCodePro-ExtraLightItalic",
+      "500:italic:normal": "SourceCodePro-MediumItalic",
+      "900:italic:normal": "SourceCodePro-BlackItalic",
+      "600:italic:normal": "SourceCodePro-SemiBoldItalic",
+      "700:italic:normal": "SourceCodePro-BoldItalic",
+      "800:italic:normal": "SourceCodePro-ExtraBoldItalic",
+      "900:normal:normal": "SourceCodePro-Black",
+      "200:normal:normal": "SourceCodePro-ExtraLight",
+      "400:normal:normal": "SourceCodePro-Regular",
+      "600:normal:normal": "SourceCodePro-SemiBold",
+      "500:normal:normal": "SourceCodePro-Medium",
+      "700:normal:normal": "SourceCodePro-Bold",
+      "800:normal:normal": "SourceCodePro-ExtraBold",
+      "300:normal:normal": "SourceCodePro-Light"
+    }
+  },
+  "SourceCodePro Nerd Font": {
+    "families": {
+      "normal": "SauceCodePro Nerd Font"
+    },
+    "ps": {
+      "200:normal:normal": "SauceCodeProNF-ExtraLight",
+      "200:italic:normal": "SauceCodeProNF-ExtraLightItalic",
+      "300:normal:normal": "SauceCodeProNF-Light",
+      "300:italic:normal": "SauceCodeProNF-LightItalic",
+      "400:normal:normal": "SauceCodeProNF",
+      "400:italic:normal": "SauceCodeProNF-Italic",
+      "500:normal:normal": "SauceCodeProNF-Medium",
+      "500:italic:normal": "SauceCodeProNF-MediumItalic",
+      "600:normal:normal": "SauceCodeProNF-SemiBold",
+      "600:italic:normal": "SauceCodeProNF-SemiBoldItalic",
+      "700:normal:normal": "SauceCodeProNF-Bold",
+      "700:italic:normal": "SauceCodeProNF-BoldItalic",
+      "900:normal:normal": "SauceCodeProNF-Black",
+      "900:italic:normal": "SauceCodeProNF-BlackItalic"
+    }
+  },
+  "Space Mono": {
+    "families": {
+      "normal": "Space Mono"
+    },
+    "ps": {
+      "700:normal:normal": "SpaceMono-Bold",
+      "400:normal:normal": "SpaceMono-Regular",
+      "700:italic:normal": "SpaceMono-BoldItalic",
+      "400:italic:normal": "SpaceMono-Italic"
+    }
+  },
+  "SpaceMono Nerd Font": {
+    "families": {
+      "normal": "SpaceMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "SpaceMonoNF",
+      "400:italic:normal": "SpaceMonoNF-Italic",
+      "700:normal:normal": "SpaceMonoNF-Bold"
+    }
+  },
+  "Spline Sans Mono": {
+    "families": {
+      "normal": "Spline Sans Mono"
+    },
+    "ps": {
+      "400:italic:normal": "SplineSansMono-Italic",
+      "300:italic:normal": "SplineSansMono-LightItalic",
+      "600:italic:normal": "SplineSansMono-SemiBoldItalic",
+      "500:italic:normal": "SplineSansMono-MediumItalic",
+      "700:italic:normal": "SplineSansMono-BoldItalic",
+      "500:normal:normal": "SplineSansMono-Medium",
+      "300:normal:normal": "SplineSansMono-Light",
+      "700:normal:normal": "SplineSansMono-Bold",
+      "400:normal:normal": "SplineSansMono-Regular",
+      "600:normal:normal": "SplineSansMono-SemiBold"
+    }
+  },
+  "Sudo": {
+    "families": {
+      "normal": "Sudo Var"
+    },
+    "ps": {
+      "400:normal:normal": "SudoVar-Regular"
+    }
+  },
+  "SUSE Mono": {
+    "families": {
+      "normal": "SUSE Mono"
+    },
+    "ps": {
+      "200:italic:normal": "SUSEMono-ExtraLightItalic",
+      "300:italic:normal": "SUSEMono-LightItalic",
+      "100:italic:normal": "SUSEMono-ThinItalic",
+      "800:italic:normal": "SUSEMono-ExtraBoldItalic",
+      "600:italic:normal": "SUSEMono-SemiBoldItalic",
+      "500:italic:normal": "SUSEMono-MediumItalic",
+      "400:italic:normal": "SUSEMono-Italic",
+      "100:normal:normal": "SUSEMono-Thin",
+      "800:normal:normal": "SUSEMono-ExtraBold",
+      "300:normal:normal": "SUSEMono-Light",
+      "500:normal:normal": "SUSEMono-Medium",
+      "600:normal:normal": "SUSEMono-SemiBold",
+      "700:normal:normal": "SUSEMono-Bold",
+      "400:normal:normal": "SUSEMono-Regular",
+      "200:normal:normal": "SUSEMono-ExtraLight",
+      "700:italic:normal": "SUSEMono-BoldItalic"
+    }
+  },
+  "Syne Mono": {
+    "families": {
+      "normal": "Syne Mono"
+    },
+    "ps": {
+      "400:normal:normal": "SyneMono-Regular"
+    }
+  },
+  "Terminus": {
+    "families": {
+      "normal": "Terminus (TTF) for Windows"
+    },
+    "ps": {
+      "400:normal:normal": "TerminusTTFWindows",
+      "400:italic:normal": "TerminusTTFWindows-Italic",
+      "700:normal:normal": "TerminusTTFWindows-Bold",
+      "700:italic:normal": "TerminusTTFWindows-Bold-Italic"
+    }
+  },
+  "Terminus Nerd Font": {
+    "families": {
+      "normal": "Terminess Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "TerminessNF",
+      "400:italic:normal": "TerminessNF-Italic",
+      "700:normal:normal": "TerminessNF-Bold"
+    }
+  },
+  "Topaz NG Code": {
+    "families": {
+      "normal": "TopazNG Code"
+    },
+    "ps": {
+      "400:normal:normal": "TopazNG_Code-Regular",
+      "400:italic:normal": "TopazNG_Code-Italic",
+      "700:normal:normal": "TopazNG_Code-Bold",
+      "700:italic:normal": "TopazNG_Code-BoldItalic"
+    }
+  },
+  "Ubuntu Mono": {
+    "families": {
+      "normal": "Ubuntu Mono"
+    },
+    "ps": {
+      "700:normal:normal": "UbuntuMono-Bold",
+      "400:normal:normal": "UbuntuMono-Regular",
+      "700:italic:normal": "UbuntuMono-BoldItalic",
+      "400:italic:normal": "UbuntuMono-Italic"
+    }
+  },
+  "UbuntuMono Nerd Font": {
+    "families": {
+      "normal": "UbuntuMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "UbuntuMonoNF",
+      "400:italic:normal": "UbuntuMonoNF-Italic",
+      "700:normal:normal": "UbuntuMonoNF-Bold"
+    }
+  },
+  "UbuntuSans Nerd Font": {
+    "families": {
+      "normal": "UbuntuSansMono Nerd Font"
+    },
+    "ps": {
+      "400:normal:normal": "UbuntuSansMonoNF-Regular",
+      "400:italic:normal": "UbuntuSansMonoNF-Italic",
+      "500:normal:normal": "UbuntuSansMonoNF-Medium",
+      "600:normal:normal": "UbuntuSansMonoNF-SemiBold",
+      "700:normal:normal": "UbuntuSansMonoNF-Bold"
+    }
+  },
+  "Victor Mono": {
+    "families": {
+      "normal": "Victor Mono"
+    },
+    "ps": {
+      "200:italic:normal": "VictorMono-ExtraLightItalic",
+      "300:italic:normal": "VictorMono-LightItalic",
+      "400:italic:normal": "VictorMono-Italic",
+      "100:italic:normal": "VictorMono-ThinItalic",
+      "700:normal:normal": "VictorMono-Bold",
+      "100:normal:normal": "VictorMono-Thin",
+      "500:normal:normal": "VictorMono-Medium",
+      "400:normal:normal": "VictorMono-Regular",
+      "600:normal:normal": "VictorMono-SemiBold",
+      "300:normal:normal": "VictorMono-Light",
+      "200:normal:normal": "VictorMono-ExtraLight",
+      "500:italic:normal": "VictorMono-MediumItalic",
+      "600:italic:normal": "VictorMono-SemiBoldItalic",
+      "700:italic:normal": "VictorMono-BoldItalic"
+    }
+  },
+  "VictorMono Nerd Font": {
+    "families": {
+      "normal": "VictorMono Nerd Font"
+    },
+    "ps": {
+      "100:normal:normal": "VictorMonoNF-Thin",
+      "200:normal:normal": "VictorMonoNF-ExtraLight",
+      "300:normal:normal": "VictorMonoNF-Light",
+      "400:normal:normal": "VictorMonoNF-Regular",
+      "400:italic:normal": "VictorMonoNF-Italic",
+      "500:normal:normal": "VictorMonoNF-Medium",
+      "600:normal:normal": "VictorMonoNF-SemiBold",
+      "700:normal:normal": "VictorMonoNF-Bold"
+    }
+  },
+  "VT323": {
+    "families": {
+      "normal": "VT323"
+    },
+    "ps": {
+      "400:normal:normal": "VT323-Regular"
+    }
+  },
+  "Xanh Mono": {
+    "families": {
+      "normal": "Xanh Mono"
+    },
+    "ps": {
+      "400:normal:normal": "XanhMono-Regular",
+      "400:italic:normal": "XanhMono-Italic"
+    }
+  },
+  "ZedMono Nerd Font": {
+    "families": {
+      "normal": "ZedMono Nerd Font"
+    },
+    "ps": {
+      "300:normal:normal": "ZedMonoNF-Light",
+      "400:normal:normal": "ZedMonoNF",
+      "400:italic:normal": "ZedMonoNF-Italic",
+      "500:normal:normal": "ZedMonoNF-Medium",
+      "700:normal:normal": "ZedMonoNF-Bold",
+      "800:normal:normal": "ZedMonoNF-ExtraBold"
+    }
+  }
+}
